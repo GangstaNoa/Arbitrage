@@ -32,25 +32,23 @@ export default function SectionDetail({
         <PrintButton />
       </div>
 
-      <p className="mb-4 text-sm leading-relaxed text-jarvis-cyan/90">
+      <p className="mb-4 border-l-2 border-jarvis-cyan/40 pl-3 text-[14px] leading-relaxed text-jarvis-ink/90">
         {section.description}
       </p>
 
       <div className="mb-4 grid grid-cols-2 gap-2 sm:grid-cols-2">
-        <div className="flex aspect-video items-center justify-center rounded border border-dashed border-jarvis-border text-[11px] text-jarvis-dim">
-          📷 Photo before removal
-          <br />
-          (placeholder)
+        <div className="flex aspect-video flex-col items-center justify-center gap-1 rounded border border-dashed border-jarvis-border/70 text-[11px] text-jarvis-dim">
+          <span className="text-lg">📷</span>
+          Photo before removal
         </div>
-        <div className="flex aspect-video items-center justify-center rounded border border-dashed border-jarvis-border text-[11px] text-jarvis-dim">
-          📷 Photo after removal
-          <br />
-          (placeholder)
+        <div className="flex aspect-video flex-col items-center justify-center gap-1 rounded border border-dashed border-jarvis-border/70 text-[11px] text-jarvis-dim">
+          <span className="text-lg">📷</span>
+          Photo after removal
         </div>
       </div>
 
       <Section title="Removal Steps">
-        <ol className="list-decimal space-y-1 pl-4 text-sm text-jarvis-cyan/85">
+        <ol className="list-decimal space-y-1.5 pl-4 text-[14px] leading-relaxed text-jarvis-ink/90">
           {section.removalSteps.map((s, i) => (
             <li key={i}>{s}</li>
           ))}
@@ -58,7 +56,7 @@ export default function SectionDetail({
       </Section>
 
       <Section title="Inspection Points">
-        <ul className="list-disc space-y-1 pl-4 text-sm text-jarvis-cyan/85">
+        <ul className="list-disc space-y-1.5 pl-4 text-[14px] leading-relaxed text-jarvis-ink/90">
           {section.inspectionPoints.map((s, i) => (
             <li key={i}>{s}</li>
           ))}
@@ -76,9 +74,9 @@ export default function SectionDetail({
             {specs.map((spec) => (
               <div
                 key={spec.id}
-                className="flex flex-wrap items-center justify-between gap-2 rounded border border-jarvis-amber/30 bg-jarvis-amber/5 px-2.5 py-1.5 text-xs"
+                className="flex flex-wrap items-center justify-between gap-2 rounded border border-jarvis-amber/30 bg-jarvis-amber/5 px-2.5 py-1.5 text-[13px]"
               >
-                <span className="text-jarvis-cyan/90">{spec.fastener}</span>
+                <span className="text-jarvis-ink/90">{spec.fastener}</span>
                 <span className="font-semibold text-jarvis-amber">
                   {spec.torqueValue}
                 </span>
@@ -89,7 +87,7 @@ export default function SectionDetail({
       </Section>
 
       <Section title="Common Mistakes" tone="red">
-        <ul className="list-disc space-y-1 pl-4 text-sm text-jarvis-red/90">
+        <ul className="list-disc space-y-1.5 pl-4 text-[14px] leading-relaxed text-jarvis-ink/90">
           {section.commonMistakes.map((s, i) => (
             <li key={i}>{s}</li>
           ))}
@@ -97,12 +95,12 @@ export default function SectionDetail({
       </Section>
 
       <Section title="Reconnect Checklist">
-        <ul className="space-y-1.5">
+        <ul className="space-y-2">
           {section.reconnectChecklist.map((text, i) => {
             const itemId = `item-${i}`;
             const checked = isChecked(checklistId, itemId);
             return (
-              <li key={itemId} className="flex items-start gap-2 text-sm">
+              <li key={itemId} className="flex items-start gap-2 text-[14px]">
                 <input
                   type="checkbox"
                   checked={checked}
@@ -110,7 +108,7 @@ export default function SectionDetail({
                   className="mt-0.5 accent-cyan-400 no-print"
                 />
                 <span
-                  className={checked ? "text-jarvis-green line-through" : "text-jarvis-cyan/85"}
+                  className={checked ? "text-jarvis-green line-through" : "text-jarvis-ink/90"}
                 >
                   {text}
                 </span>

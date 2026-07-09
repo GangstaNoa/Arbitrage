@@ -214,11 +214,11 @@ export default function WireForm({
         .input {
           width: 100%;
           border-radius: 4px;
-          border: 1px solid rgba(28, 58, 82, 0.9);
-          background: rgba(4, 7, 13, 0.6);
+          border: 1px solid rgba(76, 79, 86, 0.9);
+          background: rgba(38, 40, 44, 0.6);
           padding: 0.4rem 0.6rem;
           font-size: 0.8rem;
-          color: #d8f4ff;
+          color: #f2f3f5;
         }
         .input:focus {
           outline: none;

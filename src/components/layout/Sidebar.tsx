@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { exportAllData, downloadJson } from "@/lib/storage";
 
@@ -45,7 +45,14 @@ const nav = [
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleSignOut = async () => {
+    await fetch("/api/auth/logout", { method: "POST" });
+    router.push("/login");
+    router.refresh();
+  };
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -108,12 +115,20 @@ export default function Sidebar() {
         >
           ⬇ Export Project Data
         </button>
+        <button
+          onClick={handleSignOut}
+          className="mb-2 w-full rounded border border-jarvis-border px-2.5 py-1.5 text-[11px] uppercase tracking-wide text-jarvis-dim hover:border-jarvis-red/50 hover:text-jarvis-red"
+        >
+          ⏻ Sign Out
+        </button>
         <div className="text-[10px] leading-relaxed text-jarvis-dim">
           2009 BMW X5 E70 xDrive35d
           <br />
           VIN WBAFF01070L319611
           <br />
-          <span className="text-jarvis-cyan/80">All data stored locally.</span>
+          <span className="text-jarvis-cyan/80">
+            Local storage, synced to the cloud if configured.
+          </span>
         </div>
       </div>
     </div>

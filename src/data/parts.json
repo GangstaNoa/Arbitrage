@@ -3,62 +3,62 @@
     "id": "PT-001",
     "name": "Replacement engine — M57TU2D30 (long block or complete, low mileage)",
     "system": "Engine",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "VERIFY OEM # — look up via RealOEM.com using this VIN",
     "recommendedBrand": "BMW genuine / reputable low-mileage donor (import salvage)",
     "priceEstimateDkk": 25000,
     "priority": "critical",
     "status": "needed",
-    "notes": "Confirm engine code suffix and injector/turbo compatibility matches VIN WBAFF01070L319611 build date before purchase."
+    "notes": "Confirm engine code suffix and injector/turbo compatibility matches VIN WBAFF01070L319611 build date before purchase. Complete engines aren't a single OEM part number — match by engine code (306D5) and build-date casting revision, not by number alone."
   },
   {
     "id": "PT-002",
     "name": "Engine gasket set (full overhaul kit)",
     "system": "Engine",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "VERIFY OEM # — look up via RealOEM.com using this VIN",
     "recommendedBrand": "Elring / Victor Reinz",
     "priceEstimateDkk": 2200,
     "priority": "critical",
     "status": "needed",
-    "notes": "Includes head gasket, sump gasket, timing cover seals."
+    "notes": "Includes head gasket, sump gasket, timing cover seals. Full overhaul kits are typically sold as aftermarket (Elring/Reinz) kits rather than one single BMW part number — confirm the kit is specifically listed for M57TU2D30, not the petrol M57/N57 variants."
   },
   {
     "id": "PT-003",
     "name": "Main bearing set (standard, size to be measured)",
     "system": "Engine",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "VERIFY OEM # — bearing color/size code must match measured crank journal",
     "recommendedBrand": "BMW genuine / Glyco",
     "priceEstimateDkk": 1400,
     "priority": "high",
     "status": "needed",
-    "notes": "Only required if replacement engine bottom end is being serviced/inspected."
+    "notes": "Only required if replacement engine bottom end is being serviced/inspected. BMW bearings are sold in graded undersizes/color codes — the correct number depends on a measured crank journal, not the VIN alone."
   },
   {
     "id": "PT-004",
     "name": "Connecting rod bearing set",
     "system": "Engine",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "VERIFY OEM # — bearing color/size code must match measured crank journal",
     "recommendedBrand": "BMW genuine / Glyco",
     "priceEstimateDkk": 1100,
     "priority": "high",
     "status": "needed",
-    "notes": "Root-cause failure component on the old engine — inspect replacement engine bearings regardless of stated mileage."
+    "notes": "Root-cause failure component on the old engine — inspect replacement engine bearings regardless of stated mileage. Same graded-size caveat as the main bearing set."
   },
   {
     "id": "PT-005",
     "name": "Timing chain kit (chain, guides, tensioner)",
     "system": "Engine",
-    "oemNumber": "VERIFY OEM #",
-    "recommendedBrand": "Febi / INA",
+    "oemNumber": "11 31 8 506 869 (chain) — kits also sold as \"11318506869K\" upper timing chain overhaul kit",
+    "recommendedBrand": "Febi / INA / BMW genuine",
     "priceEstimateDkk": 3200,
     "priority": "high",
     "status": "needed",
-    "notes": "Recommended preventive replacement on high-mileage donor engines."
+    "notes": "Recommended preventive replacement on high-mileage donor engines. Part number is commonly cited across E90 335d / E70 X5 35d parts catalogs for the M57 upper timing chain — confirm it covers guides and tensioner or buy those separately."
   },
   {
     "id": "PT-006",
     "name": "Engine oil (low-ash diesel spec, 5W-30)",
     "system": "Engine",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "N/A — spec-matched fluid, not a single part number",
     "recommendedBrand": "BMW LongLife-04 approved oil",
     "priceEstimateDkk": 650,
     "priority": "high",
@@ -69,73 +69,73 @@
     "id": "PT-007",
     "name": "Oil filter housing gasket + filter",
     "system": "Engine",
-    "oemNumber": "VERIFY OEM #",
-    "recommendedBrand": "Mahle",
+    "oemNumber": "11 42 7 788 460",
+    "recommendedBrand": "Mahle / Mann",
     "priceEstimateDkk": 220,
     "priority": "medium",
     "status": "needed",
-    "notes": ""
+    "notes": "Commonly cited OEM oil filter number for E90 335d / E70 X5 xDrive35d (M57). Confirm on RealOEM against this VIN before ordering."
   },
   {
     "id": "PT-008",
     "name": "Engine mount set (left + right hydraulic)",
     "system": "Engine mounts",
-    "oemNumber": "VERIFY OEM #",
-    "recommendedBrand": "Lemförder",
+    "oemNumber": "22 11 6 795 418 (commonly cited single P/N; some catalogs list the L/R pair separately as 22116795417 / 22116793016)",
+    "recommendedBrand": "Lemförder / BMW genuine",
     "priceEstimateDkk": 1800,
     "priority": "high",
     "status": "needed",
-    "notes": "Inspect old mounts for fluid leaks / collapse before deciding to reuse."
+    "notes": "Inspect old mounts for fluid leaks / collapse before deciding to reuse. Sources disagree on whether left and right share one part number or use two — confirm both sides on RealOEM for this VIN before ordering."
   },
   {
     "id": "PT-009",
     "name": "Radiator (complete pack)",
     "system": "Cooling",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "17 11 7 533 472",
     "recommendedBrand": "Nissens / Behr",
     "priceEstimateDkk": 2100,
     "priority": "high",
     "status": "needed",
-    "notes": "Diesel radiator pack differs from petrol X5 — confirm part fits xDrive35d."
+    "notes": "Diesel radiator pack differs from petrol X5 — commonly cited OEM/Nissens/Behr number covers E70 X5 35i/35d and E71 X6 35i. Confirm fitment for xDrive35d specifically."
   },
   {
     "id": "PT-010",
     "name": "Coolant hose set (upper/lower + heater hoses)",
     "system": "Cooling",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "VERIFY OEM # — sold as several individual hose numbers, not one kit P/N",
     "recommendedBrand": "BMW genuine",
     "priceEstimateDkk": 1500,
     "priority": "high",
     "status": "needed",
-    "notes": "Replace all accessible hoses proactively during an engine-out job."
+    "notes": "Replace all accessible hoses proactively during an engine-out job. Don't forget the specific water-pump-to-EGR-cooler and EGR-cooler-to-return-pipe hoses — both are named, separately sold parts on this platform."
   },
   {
     "id": "PT-011",
     "name": "Thermostat + housing",
     "system": "Cooling",
-    "oemNumber": "VERIFY OEM #",
-    "recommendedBrand": "Wahler",
+    "oemNumber": "11 51 7 805 811",
+    "recommendedBrand": "Wahler / BMW genuine",
     "priceEstimateDkk": 700,
     "priority": "medium",
     "status": "needed",
-    "notes": ""
+    "notes": "Commonly cited OEM thermostat housing assembly number for E90 335d / E70 X5 35d (M57). Often sold as a combined kit with the water pump (see PT-012)."
   },
   {
     "id": "PT-012",
     "name": "Water pump",
     "system": "Cooling",
-    "oemNumber": "VERIFY OEM #",
-    "recommendedBrand": "Pierburg",
+    "oemNumber": "11 51 7 801 063",
+    "recommendedBrand": "Pierburg / BMW genuine",
     "priceEstimateDkk": 1900,
     "priority": "high",
     "status": "needed",
-    "notes": "Confirm mechanical vs electric pump variant."
+    "notes": "Confirm mechanical vs electric pump variant. Frequently sold as a combined water pump + thermostat kit alongside PT-011 (11517801063 + 11517805811) — worth buying together since labor to reach both is shared."
   },
   {
     "id": "PT-013",
     "name": "Intercooler",
     "system": "Turbo / intake",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "VERIFY OEM # — look up via RealOEM.com using this VIN",
     "recommendedBrand": "Nissens",
     "priceEstimateDkk": 1600,
     "priority": "medium",
@@ -146,18 +146,18 @@
     "id": "PT-014",
     "name": "Turbocharger set (small + large, sequential)",
     "system": "Turbo",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "VERIFY OEM # — small and large stage are different part numbers, look up separately via RealOEM using this VIN",
     "recommendedBrand": "Garrett / BorgWarner reman",
     "priceEstimateDkk": 9500,
     "priority": "medium",
     "status": "needed",
-    "notes": "Only needed if donor engine turbos fail inspection or bench test."
+    "notes": "Only needed if donor engine turbos fail inspection or bench test. Confirm both stages match the 306D5 sequential-turbo system specifically — visually similar M57 turbos on other variants are not interchangeable."
   },
   {
     "id": "PT-015",
     "name": "Vacuum line / hose repair kit",
     "system": "Turbo / vacuum",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "VERIFY OEM # — look up via RealOEM.com using this VIN",
     "recommendedBrand": "BMW genuine",
     "priceEstimateDkk": 450,
     "priority": "low",
@@ -168,18 +168,18 @@
     "id": "PT-016",
     "name": "Fuel injector set (6x, reconditioned or new)",
     "system": "Fuel",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "VERIFY OEM # — look up via RealOEM.com using this VIN",
     "recommendedBrand": "Bosch reman",
     "priceEstimateDkk": 9000,
     "priority": "medium",
     "status": "needed",
-    "notes": "Requires injector coding to ECU after installation — plan diagnostics session."
+    "notes": "Requires injector coding to ECU after installation — plan diagnostics session. Injector part numbers vary by production run within the same engine code, so match against this VIN rather than a generic \"M57 injector\" listing."
   },
   {
     "id": "PT-017",
     "name": "High pressure fuel pump",
     "system": "Fuel",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "VERIFY OEM # — look up via RealOEM.com using this VIN",
     "recommendedBrand": "Bosch",
     "priceEstimateDkk": 4200,
     "priority": "low",
@@ -190,29 +190,29 @@
     "id": "PT-018",
     "name": "Fuel filter",
     "system": "Fuel",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "13 32 7 822 499 (standard) — 13 32 8 572 515 for the heated-element variant shared with F10 535d / F01 740d",
     "recommendedBrand": "Mann Filter",
     "priceEstimateDkk": 300,
     "priority": "high",
     "status": "needed",
-    "notes": "Replace as standard practice with any fuel system work."
+    "notes": "Replace as standard practice with any fuel system work. Confirm whether this VIN has the heated fuel filter option before ordering the standard version."
   },
   {
     "id": "PT-019",
     "name": "Glow plug set (6x)",
     "system": "Electrical",
-    "oemNumber": "VERIFY OEM #",
-    "recommendedBrand": "Beru",
+    "oemNumber": "12 23 7 807 277",
+    "recommendedBrand": "Beru / BMW genuine",
     "priceEstimateDkk": 900,
     "priority": "medium",
     "status": "needed",
-    "notes": "Replace as a set — mixed old/new causes uneven cold start."
+    "notes": "Replace as a set — mixed old/new causes uneven cold start. Commonly cited OEM glow plug number for E70 X5 xDrive35d / E90 335d."
   },
   {
     "id": "PT-020",
     "name": "Glow plug control module",
     "system": "Electrical",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "12 21 8 591 724",
     "recommendedBrand": "BMW genuine",
     "priceEstimateDkk": 1800,
     "priority": "low",
@@ -223,12 +223,12 @@
     "id": "PT-021",
     "name": "Battery (AGM, correct capacity for diesel + start/stop)",
     "system": "Electrical",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "61 21 2 353 814 (105 Ah, Group 49 / H8 AGM)",
     "recommendedBrand": "Varta AGM",
     "priceEstimateDkk": 1600,
     "priority": "high",
     "status": "needed",
-    "notes": "Battery registration required via coding tool after replacement."
+    "notes": "Battery registration required via coding tool after replacement. Confirm this VIN takes the 105 Ah spec and not a different Ah/CCA rating sometimes fitted to this platform."
   },
   {
     "id": "PT-022",
@@ -267,12 +267,12 @@
     "id": "PT-025",
     "name": "Brake pad + rotor set (front and rear)",
     "system": "Brakes",
-    "oemNumber": "VERIFY OEM #",
+    "oemNumber": "Front rotor 34 11 6 793 244, front pads 34 11 6 852 253 — rear numbers vary by brake generation, verify separately",
     "recommendedBrand": "Zimmermann / Textar",
     "priceEstimateDkk": 3200,
     "priority": "medium",
     "status": "needed",
-    "notes": ""
+    "notes": "Front numbers are commonly cited for E70 X5 30si/35d/35i. Rear rotor/pad part numbers were not confidently sourced here — confirm via RealOEM for this VIN."
   },
   {
     "id": "PT-026",
@@ -328,5 +328,16 @@
     "priority": "low",
     "status": "needed",
     "notes": ""
+  },
+  {
+    "id": "PT-031",
+    "name": "EGR cooler",
+    "system": "Cooling / Emissions",
+    "oemNumber": "11 71 7 807 927 (lower EGR cooler) — some catalogs list the assembly as 11 71 8 576 450 (Mahle-Behr)",
+    "recommendedBrand": "Mahle-Behr / BMW genuine",
+    "priceEstimateDkk": 3800,
+    "priority": "high",
+    "status": "needed",
+    "notes": "Not in the original build list but added after research: this is a well-documented failure point on this exact engine/chassis (internal coolant leak causing white/sweet-smelling exhaust smoke, mistaken for a head gasket failure). Worth proactive inspection/replacement while the engine is already out, even if not currently showing symptoms."
   }
 ]

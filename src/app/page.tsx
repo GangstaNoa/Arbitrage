@@ -66,8 +66,8 @@ export default function DashboardPage() {
   const criticalPartsNeeded = parts.filter(
     (p) => p.priority === "critical" && p.status !== "installed"
   ).length;
-  const torqueUnverified = (torqueSpecs as { source: string }[]).filter(
-    (t) => t.source === "UNVERIFIED"
+  const torqueUnverified = (torqueSpecs as { torqueValue: string }[]).filter(
+    (t) => t.torqueValue.startsWith("VERIFY IN BMW TIS")
   ).length;
 
   const nextTasks = useMemo(() => {
@@ -102,7 +102,7 @@ export default function DashboardPage() {
 
   const warnings: { text: string; tone: "amber" | "red" }[] = [
     {
-      text: `${torqueUnverified} safety-critical torque specs are UNVERIFIED — confirm every value in BMW TIS before final assembly.`,
+      text: `${torqueUnverified} torque specs have no researched value at all (VERIFY IN BMW TIS) — and even the populated reference figures on other specs should be cross-checked in BMW TIS before final assembly.`,
       tone: "red",
     },
   ];

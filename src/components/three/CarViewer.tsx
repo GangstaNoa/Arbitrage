@@ -1,85 +1,88 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Html, Grid } from "@react-three/drei";
+import {
+  OrbitControls,
+  Html,
+  Grid,
+  Environment,
+  Lightformer,
+  ContactShadows,
+  useGLTF,
+} from "@react-three/drei";
 import * as THREE from "three";
 import type { GarageZone } from "@/lib/types";
 
 const CYAN = "#39f4ff";
 
-function Wheel({ position }: { position: [number, number, number] }) {
+const MODEL_URL = "/models/bmw-x5.glb";
+
+// BMW 354 "Titan(ium) Silver Metallic" — warm-toned medium silver.
+const TITAN_SILVER = "#a3a19b";
+
+function RealCarBody() {
+  const { scene } = useGLTF(MODEL_URL);
+
+  useEffect(() => {
+    scene.traverse((obj) => {
+      if (!(obj instanceof THREE.Mesh)) return;
+      obj.castShadow = true;
+      obj.receiveShadow = true;
+
+      const materials = Array.isArray(obj.material) ? obj.material : [obj.material];
+      materials.forEach((mat, i) => {
+        if (!(mat instanceof THREE.MeshStandardMaterial)) return;
+
+        if (mat.name === "_091614SSUV_bodycolor") {
+          // Swap in a physical material for a proper glossy clearcoat paint look.
+          const paint = new THREE.MeshPhysicalMaterial({
+            color: new THREE.Color(TITAN_SILVER),
+            metalness: 0.75,
+            roughness: 0.25,
+            clearcoat: 1,
+            clearcoatRoughness: 0.1,
+          });
+          if (Array.isArray(obj.material)) obj.material[i] = paint;
+          else obj.material = paint;
+        } else if (mat.name === "_091614SSUV_glass") {
+          mat.color.set("#0d161c");
+          mat.transparent = true;
+          mat.opacity = 0.6;
+          mat.roughness = 0.05;
+          mat.metalness = 0.1;
+        } else if (mat.name === "_091614SSUV_reflective") {
+          mat.metalness = 0.95;
+          mat.roughness = 0.15;
+        } else if (mat.name === "_091614SSUV_trims") {
+          mat.metalness = 0.1;
+          mat.roughness = 0.75;
+        } else if (mat.name === "_091614SSUV_HD_wheeltyre") {
+          mat.metalness = 0.05;
+          mat.roughness = 0.85;
+        } else if (mat.name === "_091614SSUV_HD_wheelrim") {
+          mat.metalness = 0.85;
+          mat.roughness = 0.3;
+        }
+      });
+    });
+  }, [scene]);
+
+  // Model is authored close to real-world scale (~4.85m long) with its
+  // origin roughly at mid-height — nudge it down so wheels sit on the grid.
   return (
-    <group position={position}>
-      <mesh rotation={[0, 0, Math.PI / 2]} castShadow>
-        <cylinderGeometry args={[0.36, 0.36, 0.28, 24]} />
-        <meshStandardMaterial color="#2a3542" roughness={0.55} metalness={0.4} />
-      </mesh>
-      <mesh rotation={[0, 0, Math.PI / 2]}>
-        <torusGeometry args={[0.36, 0.025, 8, 24]} />
-        <meshStandardMaterial color={CYAN} emissive={CYAN} emissiveIntensity={1.4} />
-      </mesh>
+    <group scale={0.88} position={[0, 0.32, 0]}>
+      <primitive object={scene} />
     </group>
   );
 }
 
-function CarBody({ exploded }: { exploded: boolean }) {
-  const hoodOffset = exploded ? 0.55 : 0;
-  const cabinOffset = exploded ? 0.35 : 0;
-  const bumperOffset = exploded ? 0.6 : 0;
-  const glassColor = "#274357";
-  const bodyColor = "#25384a";
-  const edgeColor = CYAN;
-
+function ProceduralFallback() {
   return (
-    <group>
-      {/* Lower chassis / subframe */}
-      <mesh position={[0, 0.22, 0]} receiveShadow>
-        <boxGeometry args={[1.85, 0.22, 4.5]} />
-        <meshStandardMaterial color="#1a2735" roughness={0.75} metalness={0.25} />
-      </mesh>
-
-      {/* Main body shell */}
-      <mesh position={[0, 0.62, -0.2]} castShadow>
-        <boxGeometry args={[1.9, 0.62, 3.9]} />
-        <meshStandardMaterial color={bodyColor} roughness={0.35} metalness={0.55} />
-      </mesh>
-
-      {/* Cabin */}
-      <mesh position={[0, 1.05 + cabinOffset * 0.2, -0.5]} castShadow>
-        <boxGeometry args={[1.7, 0.5, 2.1]} />
-        <meshStandardMaterial color={glassColor} roughness={0.15} metalness={0.6} transparent opacity={0.88} />
-      </mesh>
-
-      {/* Hood (front) */}
-      <mesh position={[0, 0.78 + hoodOffset, 1.6]} rotation={[0.05, 0, 0]} castShadow>
-        <boxGeometry args={[1.75, 0.14, 1.5]} />
-        <meshStandardMaterial color="#2e4459" roughness={0.3} metalness={0.6} />
-      </mesh>
-
-      {/* Front bumper */}
-      <mesh position={[0, 0.42, 2.35 + bumperOffset]} castShadow>
-        <boxGeometry args={[1.85, 0.42, 0.28]} />
-        <meshStandardMaterial color="#22333f" roughness={0.45} metalness={0.45} />
-      </mesh>
-      {/* Front glow strip */}
-      <mesh position={[0, 0.55, 2.5 + bumperOffset]}>
-        <boxGeometry args={[1.6, 0.04, 0.02]} />
-        <meshStandardMaterial color={edgeColor} emissive={edgeColor} emissiveIntensity={1.6} />
-      </mesh>
-
-      {/* Rear bumper */}
-      <mesh position={[0, 0.42, -2.35]} castShadow>
-        <boxGeometry args={[1.85, 0.42, 0.28]} />
-        <meshStandardMaterial color="#22333f" roughness={0.45} metalness={0.45} />
-      </mesh>
-
-      {/* Wheels */}
-      <Wheel position={[0.98, 0.36, 1.35]} />
-      <Wheel position={[-0.98, 0.36, 1.35]} />
-      <Wheel position={[0.98, 0.36, -1.55]} />
-      <Wheel position={[-0.98, 0.36, -1.55]} />
-    </group>
+    <mesh position={[0, 0.6, 0]}>
+      <boxGeometry args={[1.9, 1.2, 4.5]} />
+      <meshStandardMaterial color={TITAN_SILVER} wireframe opacity={0.4} transparent />
+    </mesh>
   );
 }
 
@@ -125,7 +128,7 @@ function ZoneMarker({
       </mesh>
       {(hover || active) && (
         <Html distanceFactor={8} center>
-          <div className="pointer-events-none whitespace-nowrap rounded border border-cyan-400/60 bg-[#04070d]/90 px-2 py-1 text-[11px] text-cyan-300 shadow-[0_0_8px_rgba(57,244,255,0.5)]">
+          <div className="pointer-events-none whitespace-nowrap rounded border border-cyan-400/60 bg-[#26282c]/95 px-2 py-1 text-[11px] text-cyan-300 shadow-[0_0_8px_rgba(57,244,255,0.5)]">
             {orderMode ? `#${zone.disassemblyOrder} · ` : ""}
             {zone.name}
           </div>
@@ -163,30 +166,77 @@ export default function CarViewer({
 
   return (
     <Canvas shadows camera={{ position: [4.5, 3, 5.5], fov: 42 }}>
-      <color attach="background" args={["#04070d"]} />
-      <fog attach="fog" args={["#04070d", 10, 24]} />
-      <ambientLight intensity={0.75} />
-      <hemisphereLight args={["#3aa9ff", "#04070d", 0.6]} />
+      <color attach="background" args={["#1c1e22"]} />
+      <fog attach="fog" args={["#1c1e22", 11, 26]} />
+      <ambientLight intensity={0.6} />
+      <hemisphereLight args={["#9a9c9f", "#1c1e22", 0.5]} />
       <directionalLight
         position={[5, 8, 4]}
-        intensity={1.6}
+        intensity={1.9}
         castShadow
-        shadow-mapSize={[1024, 1024]}
+        shadow-mapSize={[2048, 2048]}
+        shadow-camera-left={-6}
+        shadow-camera-right={6}
+        shadow-camera-top={6}
+        shadow-camera-bottom={-6}
       />
-      <directionalLight position={[-5, 4, -3]} intensity={0.5} color="#8fd9ff" />
-      <pointLight position={[-4, 2, -4]} intensity={0.8} color="#2d8fff" />
-      <pointLight position={[0, 1.5, 4]} intensity={1} color={CYAN} />
+      <directionalLight position={[-5, 4, -3]} intensity={0.3} color="#cfe3ec" />
+      <pointLight position={[-4, 2, -4]} intensity={0.25} color="#4a90d9" />
+      <pointLight position={[0, 1.5, 4]} intensity={0.3} color={CYAN} />
+
+      {/* Synthetic studio environment (no external HDRI fetch, stays offline-first) */}
+      <Environment environmentIntensity={0.6} resolution={128}>
+        <Lightformer
+          form="rect"
+          intensity={2}
+          position={[0, 4, 3]}
+          scale={[6, 3, 1]}
+          color="#dfeaff"
+        />
+        <Lightformer
+          form="rect"
+          intensity={1.2}
+          position={[-4, 2, -2]}
+          scale={[4, 3, 1]}
+          rotation={[0, Math.PI / 3, 0]}
+          color="#f3f1ea"
+        />
+        <Lightformer
+          form="rect"
+          intensity={1}
+          position={[4, 1.5, -2]}
+          scale={[4, 2, 1]}
+          rotation={[0, -Math.PI / 3, 0]}
+          color="#e9e7e0"
+        />
+        <Lightformer
+          form="ring"
+          intensity={0.8}
+          position={[0, 3, -5]}
+          scale={5}
+          color="#ffffff"
+        />
+      </Environment>
 
       <Grid
         position={[0, 0, 0]}
         args={[30, 30]}
-        cellColor="#0e2a3a"
-        sectionColor="#1c5a72"
+        cellColor="#33373d"
+        sectionColor="#4c4f56"
         fadeDistance={20}
         infiniteGrid
       />
+      <ContactShadows
+        position={[0, 0.01, 0]}
+        opacity={0.55}
+        scale={12}
+        blur={2.2}
+        far={3}
+      />
 
-      <CarBody exploded={exploded} />
+      <Suspense fallback={<ProceduralFallback />}>
+        <RealCarBody />
+      </Suspense>
 
       {expandedZones.map((zone) => (
         <ZoneMarker
@@ -209,3 +259,5 @@ export default function CarViewer({
     </Canvas>
   );
 }
+
+useGLTF.preload(MODEL_URL);

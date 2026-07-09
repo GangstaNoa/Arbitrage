@@ -49,6 +49,8 @@ export interface Chapter {
   warnings: string[];
   steps: ChapterStep[];
   checklist: string[];
+  proTips: string[];
+  commonMistakes: string[];
 }
 
 export interface TorqueSpec {
