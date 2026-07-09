@@ -7,7 +7,10 @@ import StatusBadge, { statusToTone } from "@/components/ui/StatusBadge";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { STORAGE_KEYS, downloadJson } from "@/lib/storage";
 import { generateId } from "@/lib/id";
-import chapters from "@/data/chapters.json";
+import chaptersEn from "@/data/chapters.json";
+import chaptersFo from "@/data/chapters.fo.json";
+import { useLanguage, useLocalizedData } from "@/lib/i18n/LanguageContext";
+import type { DictKey } from "@/lib/i18n/dictionary";
 import type { Chapter, PhotoNote } from "@/lib/types";
 
 const statuses: PhotoNote["status"][] = ["planned", "in-progress", "done", "issue"];
@@ -22,6 +25,8 @@ function fileToDataUrl(file: File): Promise<string> {
 }
 
 export default function PhotosPage() {
+  const { t } = useLanguage();
+  const chapters = useLocalizedData(chaptersEn, chaptersFo) as Chapter[];
   const [entries, setEntries] = useLocalStorage<PhotoNote[]>(
     STORAGE_KEYS.photoNotes,
     []
@@ -67,7 +72,7 @@ export default function PhotosPage() {
     <div className="space-y-4">
       <GlassPanel className="p-4">
         <h2 className="mb-3 font-display text-sm font-bold uppercase tracking-widest text-jarvis-cyan">
-          Log a Photo / Note
+          {t("photos.logPhotoNote")}
         </h2>
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
           <select
@@ -75,8 +80,8 @@ export default function PhotosPage() {
             onChange={(e) => setForm((s) => ({ ...s, chapterSlug: e.target.value }))}
             className="rounded border border-jarvis-border bg-jarvis-bg/60 px-2 py-1.5 text-sm text-jarvis-cyan"
           >
-            <option value="">No chapter</option>
-            {(chapters as Chapter[]).map((c) => (
+            <option value="">{t("photos.noChapter")}</option>
+            {chapters.map((c) => (
               <option key={c.slug} value={c.slug}>
                 {c.title}
               </option>
@@ -85,7 +90,7 @@ export default function PhotosPage() {
           <input
             value={form.stepText}
             onChange={(e) => setForm((s) => ({ ...s, stepText: e.target.value }))}
-            placeholder="Step / description"
+            placeholder={t("photos.stepDescription")}
             className="rounded border border-jarvis-border bg-jarvis-bg/60 px-2 py-1.5 text-sm sm:col-span-2 lg:col-span-1"
           />
           <input
@@ -103,7 +108,7 @@ export default function PhotosPage() {
           >
             {statuses.map((s) => (
               <option key={s} value={s}>
-                {s}
+                {t(`photos.status.${s}` as DictKey)}
               </option>
             ))}
           </select>
@@ -119,11 +124,11 @@ export default function PhotosPage() {
           <textarea
             value={form.note}
             onChange={(e) => setForm((s) => ({ ...s, note: e.target.value }))}
-            placeholder="Note"
+            placeholder={t("photos.note")}
             rows={1}
             className="rounded border border-jarvis-border bg-jarvis-bg/60 px-2 py-1.5 text-sm sm:col-span-2 lg:col-span-3"
           />
-          <GlowButton onClick={addEntry}>+ Add Entry</GlowButton>
+          <GlowButton onClick={addEntry}>{t("photos.addEntry")}</GlowButton>
         </div>
       </GlassPanel>
 
@@ -134,27 +139,27 @@ export default function PhotosPage() {
             onChange={(e) => setChapterFilter(e.target.value)}
             className="rounded border border-jarvis-border bg-jarvis-bg/60 px-2 py-1.5 text-sm text-jarvis-cyan"
           >
-            <option value="all">All chapters</option>
-            {(chapters as Chapter[]).map((c) => (
+            <option value="all">{t("photos.allChapters")}</option>
+            {chapters.map((c) => (
               <option key={c.slug} value={c.slug}>
                 {c.title}
               </option>
             ))}
           </select>
-          <span className="text-xs text-jarvis-dim">{filtered.length} entries</span>
+          <span className="text-xs text-jarvis-dim">{filtered.length} {t("photos.entriesCount")}</span>
           <div className="ml-auto">
             <GlowButton
               size="sm"
               variant="ghost"
               onClick={() => downloadJson(`photo-notes-${Date.now()}.json`, entries)}
             >
-              ⬇ Export JSON
+              ⬇ {t("common.exportJson")}
             </GlowButton>
           </div>
         </div>
 
         {filtered.length === 0 ? (
-          <p className="text-sm text-jarvis-dim">No photo notes logged yet.</p>
+          <p className="text-sm text-jarvis-dim">{t("photos.noPhotoNotesYet")}</p>
         ) : (
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((e) => (
@@ -171,12 +176,14 @@ export default function PhotosPage() {
                   />
                 ) : (
                   <div className="mb-2 flex h-32 w-full items-center justify-center rounded border border-dashed border-jarvis-border text-[11px] text-jarvis-dim">
-                    📷 No photo
+                    📷 {t("photos.noPhoto")}
                   </div>
                 )}
                 <div className="flex items-start justify-between gap-2">
                   <span className="text-sm text-jarvis-cyan/90">{e.stepText}</span>
-                  <StatusBadge tone={statusToTone(e.status)}>{e.status}</StatusBadge>
+                  <StatusBadge tone={statusToTone(e.status)}>
+                    {t(`photos.status.${e.status}` as DictKey)}
+                  </StatusBadge>
                 </div>
                 {e.note && <p className="mt-1 text-xs text-jarvis-dim">{e.note}</p>}
                 <div className="mt-2 flex items-center justify-between text-[11px] text-jarvis-dim">
@@ -185,7 +192,7 @@ export default function PhotosPage() {
                     onClick={() => removeEntry(e.id)}
                     className="text-jarvis-red hover:underline"
                   >
-                    Delete
+                    {t("photos.delete")}
                   </button>
                 </div>
               </div>

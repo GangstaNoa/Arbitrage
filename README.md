@@ -19,6 +19,25 @@ in **localStorage** on your own device.
 
 ---
 
+## Language: English / Faroese
+
+The whole app — every page, the manual chapters, and all the databases — is
+available in English or Faroese via the **EN / FO** toggle in the top bar
+(also present on the login screen). Technical/automotive terms (turbo, EGR,
+DPF, ECU, TIS, part numbers, engine codes, etc.) are intentionally left in
+English in the Faroese text, matching how these terms are actually used in
+spoken Faroese workshop contexts. The choice is remembered per device via
+`localStorage`.
+
+Under the hood: `src/lib/i18n/dictionary.ts` holds UI-chrome strings (nav,
+buttons, labels), and each data file in `src/data/` has a `*.fo.json` sibling
+with the same structure — `src/lib/i18n/LanguageContext.tsx`'s
+`useLocalizedData()` picks the right one based on the active language. If you
+edit `src/data/*.json`, make the equivalent edit in the `*.fo.json` file to
+keep both languages in sync.
+
+---
+
 ## Tech stack
 
 - **Next.js 14** (App Router) + **React 18** + **TypeScript**

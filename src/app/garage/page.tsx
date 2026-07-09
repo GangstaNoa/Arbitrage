@@ -5,7 +5,9 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import GlassPanel from "@/components/ui/GlassPanel";
 import GlowButton from "@/components/ui/GlowButton";
-import zones from "@/data/garageZones.json";
+import zonesEn from "@/data/garageZones.json";
+import zonesFo from "@/data/garageZones.fo.json";
+import { useLanguage, useLocalizedData } from "@/lib/i18n/LanguageContext";
 import type { GarageZone } from "@/lib/types";
 
 const CarViewer = dynamic(() => import("@/components/three/CarViewer"), {
@@ -18,6 +20,9 @@ const CarViewer = dynamic(() => import("@/components/three/CarViewer"), {
 });
 
 export default function GaragePage() {
+  const { t } = useLanguage();
+  const zones = useLocalizedData(zonesEn, zonesFo);
+
   const [exploded, setExploded] = useState(false);
   const [orderMode, setOrderMode] = useState(false);
   const [orderIndex, setOrderIndex] = useState(1);
@@ -25,7 +30,7 @@ export default function GaragePage() {
 
   const sortedZones = useMemo(
     () => [...(zones as GarageZone[])].sort((a, b) => a.disassemblyOrder - b.disassemblyOrder),
-    []
+    [zones]
   );
 
   const currentOrderZone = sortedZones.find((z) => z.disassemblyOrder === orderIndex);
@@ -39,7 +44,7 @@ export default function GaragePage() {
             variant={exploded ? "success" : "ghost"}
             onClick={() => setExploded((v) => !v)}
           >
-            {exploded ? "Exploded View: ON" : "Exploded View"}
+            {exploded ? t("garage.explodedOn") : t("garage.exploded")}
           </GlowButton>
           <GlowButton
             size="sm"
@@ -49,7 +54,7 @@ export default function GaragePage() {
               setOrderIndex(1);
             }}
           >
-            {orderMode ? "Disassembly Mode: ON" : "Disassembly Order Mode"}
+            {orderMode ? t("garage.disassemblyModeOn") : t("garage.disassemblyOrderMode")}
           </GlowButton>
         </div>
 
@@ -63,7 +68,7 @@ export default function GaragePage() {
               ◀
             </GlowButton>
             <span className="min-w-[7rem] text-center text-xs text-jarvis-cyan">
-              Step {orderIndex} / {sortedZones.length}
+              {t("garage.step")} {orderIndex} / {sortedZones.length}
             </span>
             <GlowButton
               size="sm"
@@ -87,9 +92,7 @@ export default function GaragePage() {
         />
 
         <div className="no-print absolute bottom-3 left-3 right-3 z-10 rounded border border-jarvis-border/60 bg-jarvis-bg/80 px-3 py-2 text-[11px] text-jarvis-dim backdrop-blur">
-          Drag to rotate · Pinch/scroll to zoom · Tap a glowing node to open its
-          chapter. Model repainted to BMW 354 Titanium Silver Metallic to match
-          this car.
+          {t("garage.hint")}
         </div>
       </GlassPanel>
 
@@ -97,7 +100,7 @@ export default function GaragePage() {
         {orderMode && currentOrderZone && (
           <GlassPanel glow className="p-4">
             <div className="text-[11px] uppercase tracking-widest text-jarvis-amber">
-              Disassembly Step {orderIndex}
+              {t("garage.disassemblyStep")} {orderIndex}
             </div>
             <div className="mt-1 font-display text-lg font-bold text-jarvis-cyan">
               {currentOrderZone.name}
@@ -105,7 +108,7 @@ export default function GaragePage() {
             <p className="mt-1 text-sm text-jarvis-dim">{currentOrderZone.description}</p>
             <Link href={`/manual/${currentOrderZone.chapterSlug}`}>
               <GlowButton size="sm" className="mt-3">
-                Open Chapter →
+                {t("common.openChapter")}
               </GlowButton>
             </Link>
           </GlassPanel>
@@ -114,7 +117,7 @@ export default function GaragePage() {
         {selected && !orderMode && (
           <GlassPanel glow className="p-4">
             <div className="text-[11px] uppercase tracking-widest text-jarvis-dim">
-              Selected Zone
+              {t("garage.selectedZone")}
             </div>
             <div className="mt-1 font-display text-lg font-bold text-jarvis-cyan">
               {selected.name}
@@ -122,7 +125,7 @@ export default function GaragePage() {
             <p className="mt-1 text-sm text-jarvis-dim">{selected.description}</p>
             <Link href={`/manual/${selected.chapterSlug}`}>
               <GlowButton size="sm" className="mt-3">
-                Open Chapter →
+                {t("common.openChapter")}
               </GlowButton>
             </Link>
           </GlassPanel>
@@ -130,7 +133,7 @@ export default function GaragePage() {
 
         <GlassPanel className="p-4">
           <h2 className="mb-3 font-display text-sm font-bold uppercase tracking-widest text-jarvis-cyan">
-            All Zones
+            {t("garage.allZones")}
           </h2>
           <ul className="max-h-[50vh] space-y-1.5 overflow-y-auto">
             {sortedZones.map((z) => (

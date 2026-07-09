@@ -4,18 +4,22 @@ import { useState } from "react";
 import GlassPanel from "@/components/ui/GlassPanel";
 import PrintButton from "@/components/ui/PrintButton";
 import { useChecklistState } from "@/hooks/useChecklistState";
-import checklistDefs from "@/data/checklists.json";
+import checklistDefsEn from "@/data/checklists.json";
+import checklistDefsFo from "@/data/checklists.fo.json";
+import { useLanguage, useLocalizedData } from "@/lib/i18n/LanguageContext";
 
 export default function ChecklistsPage() {
+  const { t } = useLanguage();
+  const checklistDefs = useLocalizedData(checklistDefsEn, checklistDefsFo);
   const { isChecked, toggle } = useChecklistState();
   const [activeId, setActiveId] = useState(checklistDefs[0].id);
-  const active = checklistDefs.find((c) => c.id === activeId)!;
+  const active = checklistDefs.find((c) => c.id === activeId) ?? checklistDefs[0];
 
   return (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-4">
       <GlassPanel className="no-print p-3 lg:col-span-1">
         <h2 className="mb-2 px-1 font-display text-xs font-bold uppercase tracking-widest text-jarvis-dim">
-          Checklists
+          {t("checklists.title")}
         </h2>
         <div className="space-y-1">
           {checklistDefs.map((c) => {

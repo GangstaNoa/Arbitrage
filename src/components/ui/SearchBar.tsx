@@ -5,6 +5,7 @@ import Link from "next/link";
 import { globalSearch, SearchResultType } from "@/lib/search";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { STORAGE_KEYS } from "@/lib/storage";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 import type { WireLabel } from "@/lib/types";
 
 const typeLabels: Record<SearchResultType, string> = {
@@ -21,10 +22,11 @@ export default function SearchBar() {
   const [open, setOpen] = useState(false);
   const [wireLabels] = useLocalStorage<WireLabel[]>(STORAGE_KEYS.wireLabels, []);
   const inputRef = useRef<HTMLInputElement>(null);
+  const { t, language } = useLanguage();
 
   const results = useMemo(
-    () => globalSearch(query, wireLabels),
-    [query, wireLabels]
+    () => globalSearch(query, wireLabels, language),
+    [query, wireLabels, language]
   );
 
   return (
@@ -40,7 +42,7 @@ export default function SearchBar() {
           }}
           onFocus={() => setOpen(true)}
           onBlur={() => setTimeout(() => setOpen(false), 150)}
-          placeholder="Ask JARVIS — search chapters, parts, tools, torque, codes, wires…"
+          placeholder={t("search.placeholder")}
           className="w-full bg-transparent text-sm text-jarvis-cyan placeholder:text-jarvis-dim focus:outline-none"
         />
       </div>
@@ -48,7 +50,7 @@ export default function SearchBar() {
         <div className="absolute z-50 mt-1 max-h-96 w-full overflow-y-auto rounded border border-jarvis-border bg-jarvis-panel/95 backdrop-blur-md shadow-panel">
           {results.length === 0 ? (
             <div className="px-3 py-3 text-xs text-jarvis-dim">
-              No matches. Try a different term.
+              {t("search.noResults")}
             </div>
           ) : (
             results.map((r) => (

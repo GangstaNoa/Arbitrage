@@ -1,5 +1,7 @@
 "use client";
 
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+import type { DictKey } from "@/lib/i18n/dictionary";
 import type { EngineBaySection } from "@/lib/types";
 
 type SystemTag = "cooling" | "turbo" | "fuel" | "electrical" | "drivetrain";
@@ -12,12 +14,12 @@ const systemColor: Record<SystemTag, string> = {
   drivetrain: "#a3a6ac",
 };
 
-const systemLabel: Record<SystemTag, string> = {
-  cooling: "Cooling",
-  turbo: "Turbo / Intake",
-  fuel: "Fuel",
-  electrical: "Electrical",
-  drivetrain: "Drivetrain / Mounts",
+const systemLabelKey: Record<SystemTag, DictKey> = {
+  cooling: "engineBay.system.cooling",
+  turbo: "engineBay.system.turbo",
+  fuel: "engineBay.system.fuel",
+  electrical: "engineBay.system.electrical",
+  drivetrain: "engineBay.system.drivetrain",
 };
 
 // Maps each interactive section id to a system tag, purely for marker coloring.
@@ -120,6 +122,7 @@ export default function EngineBaySchematic({
   selectedId: string | null;
   onSelect: (section: EngineBaySection) => void;
 }) {
+  const { t } = useLanguage();
   return (
     <div className="w-full">
       <div className="relative aspect-[3/4] w-full overflow-hidden rounded border border-jarvis-border/60 bg-jarvis-bg/60 hud-grid-bg">
@@ -133,10 +136,10 @@ export default function EngineBaySchematic({
           <BackgroundShapes />
 
           <text x="50" y="9.5" textAnchor="middle" fontSize="2.6" fill="#39f4ff" opacity="0.7" letterSpacing="0.15">
-            FRONT
+            {t("engineBay.front")}
           </text>
           <text x="50" y="96" textAnchor="middle" fontSize="2.6" fill="#39f4ff" opacity="0.7" letterSpacing="0.15">
-            FIREWALL
+            {t("engineBay.firewall")}
           </text>
         </svg>
 
@@ -178,13 +181,13 @@ export default function EngineBaySchematic({
       </div>
 
       <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5">
-        {(Object.keys(systemLabel) as SystemTag[]).map((tag) => (
+        {(Object.keys(systemLabelKey) as SystemTag[]).map((tag) => (
           <div key={tag} className="flex items-center gap-1.5 text-[10px] text-jarvis-dim">
             <span
               className="h-2 w-2 rounded-full"
               style={{ backgroundColor: systemColor[tag] }}
             />
-            {systemLabel[tag]}
+            {t(systemLabelKey[tag])}
           </div>
         ))}
       </div>

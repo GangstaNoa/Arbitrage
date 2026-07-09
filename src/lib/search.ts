@@ -1,9 +1,15 @@
-import chapters from "@/data/chapters.json";
-import parts from "@/data/parts.json";
-import tools from "@/data/tools.json";
-import torqueSpecs from "@/data/torqueSpecs.json";
-import faultCodes from "@/data/faultCodes.json";
+import chaptersEn from "@/data/chapters.json";
+import chaptersFo from "@/data/chapters.fo.json";
+import partsEn from "@/data/parts.json";
+import partsFo from "@/data/parts.fo.json";
+import toolsEn from "@/data/tools.json";
+import toolsFo from "@/data/tools.fo.json";
+import torqueSpecsEn from "@/data/torqueSpecs.json";
+import torqueSpecsFo from "@/data/torqueSpecs.fo.json";
+import faultCodesEn from "@/data/faultCodes.json";
+import faultCodesFo from "@/data/faultCodes.fo.json";
 import type { Chapter, Part, Tool, TorqueSpec, FaultCode, WireLabel } from "@/lib/types";
+import { dictionary, type Lang } from "@/lib/i18n/dictionary";
 
 export type SearchResultType =
   | "chapter"
@@ -27,11 +33,25 @@ function matches(haystack: string, query: string): boolean {
 
 export function globalSearch(
   query: string,
-  wireLabels: WireLabel[] = []
+  wireLabels: WireLabel[] = [],
+  lang: Lang = "en"
 ): SearchResult[] {
   const q = query.trim();
   if (!q) return [];
   const results: SearchResult[] = [];
+  const chapters = lang === "fo" ? chaptersFo : chaptersEn;
+  const parts = lang === "fo" ? partsFo : partsEn;
+  const tools = lang === "fo" ? toolsFo : toolsEn;
+  const torqueSpecs = lang === "fo" ? torqueSpecsFo : torqueSpecsEn;
+  const faultCodes = lang === "fo" ? faultCodesFo : faultCodesEn;
+  const label = {
+    manual: dictionary["search.manual"][lang],
+    part: dictionary["search.part"][lang],
+    tool: dictionary["search.tool"][lang],
+    torqueSpec: dictionary["search.torqueSpec"][lang],
+    faultCode: dictionary["search.faultCode"][lang],
+    wireLabel: dictionary["search.wireLabel"][lang],
+  };
 
   (chapters as Chapter[]).forEach((c) => {
     if (matches(`${c.title} ${c.objective} ${c.category}`, q)) {
@@ -39,7 +59,7 @@ export function globalSearch(
         type: "chapter",
         id: c.slug,
         title: c.title,
-        subtitle: `Manual · ${c.category}`,
+        subtitle: `${label.manual} · ${c.category}`,
         href: `/manual/${c.slug}`,
       });
     }
@@ -51,7 +71,7 @@ export function globalSearch(
         type: "part",
         id: p.id,
         title: p.name,
-        subtitle: `Part · ${p.system}`,
+        subtitle: `${label.part} · ${p.system}`,
         href: `/parts`,
       });
     }
@@ -63,7 +83,7 @@ export function globalSearch(
         type: "tool",
         id: t.id,
         title: t.name,
-        subtitle: `Tool · ${t.purpose}`,
+        subtitle: `${label.tool} · ${t.purpose}`,
         href: `/tools`,
       });
     }
@@ -75,7 +95,7 @@ export function globalSearch(
         type: "torque",
         id: t.id,
         title: `${t.component} — ${t.fastener}`,
-        subtitle: `Torque Spec · ${t.torqueValue}`,
+        subtitle: `${label.torqueSpec} · ${t.torqueValue}`,
         href: `/torque`,
       });
     }
@@ -87,7 +107,7 @@ export function globalSearch(
         type: "fault-code",
         id: f.code,
         title: `${f.code} — ${f.description}`,
-        subtitle: `Fault Code · ${f.system}`,
+        subtitle: `${label.faultCode} · ${f.system}`,
         href: `/fault-codes`,
       });
     }
@@ -99,7 +119,7 @@ export function globalSearch(
         type: "wire",
         id: w.id,
         title: `${w.connectorId} — ${w.name}`,
-        subtitle: `Wire Label · ${w.system}`,
+        subtitle: `${label.wireLabel} · ${w.system}`,
         href: `/wires`,
       });
     }

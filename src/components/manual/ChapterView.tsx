@@ -7,6 +7,8 @@ import PrintButton from "@/components/ui/PrintButton";
 import { useChecklistState } from "@/hooks/useChecklistState";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { STORAGE_KEYS } from "@/lib/storage";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+import type { DictKey } from "@/lib/i18n/dictionary";
 import type { Chapter } from "@/lib/types";
 
 const difficultyTone: Record<string, "green" | "cyan" | "amber" | "red"> = {
@@ -22,7 +24,15 @@ interface Section {
   show: boolean;
 }
 
-export default function ChapterView({ chapter }: { chapter: Chapter }) {
+export default function ChapterView({
+  chapterEn,
+  chapterFo,
+}: {
+  chapterEn: Chapter;
+  chapterFo: Chapter;
+}) {
+  const { t, language } = useLanguage();
+  const chapter = language === "fo" ? chapterFo : chapterEn;
   const { isChecked, toggle } = useChecklistState();
   const checklistId = `chapter:${chapter.slug}`;
   const [notes, setNotes] = useLocalStorage<Record<string, string>>(
@@ -37,26 +47,29 @@ export default function ChapterView({ chapter }: { chapter: Chapter }) {
   const checklistPct =
     checklistTotal > 0 ? Math.round((doneCount / checklistTotal) * 100) : 0;
 
+  const difficultyKey = `difficulty.${chapter.difficulty}` as DictKey;
+  const categoryKey = `category.${chapter.category}` as DictKey;
+
   const sections: Section[] = [
-    { id: "warnings", label: "Warnings", show: chapter.warnings.length > 0 },
-    { id: "pro-tips", label: "Pro Tips", show: chapter.proTips.length > 0 },
+    { id: "warnings", label: t("chapter.warnings"), show: chapter.warnings.length > 0 },
+    { id: "pro-tips", label: t("chapter.proTips"), show: chapter.proTips.length > 0 },
     {
       id: "common-mistakes",
-      label: "Watch Out For",
+      label: t("chapter.watchOutFor"),
       show: chapter.commonMistakes.length > 0,
     },
     {
       id: "loadout",
-      label: "Tools & Parts",
+      label: t("chapter.toolsAndParts"),
       show: chapter.tools.length > 0 || chapter.parts.length > 0,
     },
-    { id: "procedure", label: "Procedure", show: chapter.steps.length > 0 },
+    { id: "procedure", label: t("chapter.stepByStep"), show: chapter.steps.length > 0 },
     {
       id: "checklist",
-      label: "Checklist",
+      label: t("chapter.checklist"),
       show: chapter.checklist.length > 0,
     },
-    { id: "notes", label: "Notes", show: true },
+    { id: "notes", label: t("chapter.notes"), show: true },
   ].filter((s) => s.show);
 
   return (
@@ -69,11 +82,11 @@ export default function ChapterView({ chapter }: { chapter: Chapter }) {
               href="/manual"
               className="no-print mb-2 inline-block text-xs text-jarvis-dim hover:text-jarvis-cyan"
             >
-              ← All chapters
+              {t("chapter.allChapters")}
             </Link>
             <div className="text-[11px] uppercase tracking-widest text-jarvis-dim">
-              Chapter {chapter.number.toString().padStart(2, "0")} ·{" "}
-              {chapter.category}
+              {t("chapter.chapterLabel")} {chapter.number.toString().padStart(2, "0")} ·{" "}
+              {t(categoryKey)}
             </div>
             <h1 className="mt-1 font-display text-2xl font-bold leading-tight text-jarvis-cyan text-glow sm:text-3xl">
               {chapter.title}
@@ -81,7 +94,7 @@ export default function ChapterView({ chapter }: { chapter: Chapter }) {
           </div>
           <div className="flex items-center gap-2">
             <StatusBadge tone={difficultyTone[chapter.difficulty]}>
-              {chapter.difficulty}
+              {t(difficultyKey)}
             </StatusBadge>
             <PrintButton />
           </div>
@@ -94,11 +107,11 @@ export default function ChapterView({ chapter }: { chapter: Chapter }) {
 
         {/* Quick facts */}
         <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <MiniStat label="Difficulty" value={chapter.difficulty} />
-          <MiniStat label="Est. Time" value={chapter.estimatedTime} />
-          <MiniStat label="Tools" value={String(chapter.tools.length)} />
+          <MiniStat label={t("chapter.difficulty")} value={t(difficultyKey)} />
+          <MiniStat label={t("chapter.estTime")} value={chapter.estimatedTime} />
+          <MiniStat label={t("chapter.tools")} value={String(chapter.tools.length)} />
           <MiniStat
-            label="Checklist"
+            label={t("chapter.checklist")}
             value={`${doneCount}/${checklistTotal}`}
           />
         </div>
@@ -106,7 +119,7 @@ export default function ChapterView({ chapter }: { chapter: Chapter }) {
         {/* Jump nav */}
         {sections.length > 1 && (
           <nav
-            aria-label="Jump to section"
+            aria-label={t("chapter.jumpToSection")}
             className="no-print mb-8 flex flex-wrap gap-1.5 border-y border-jarvis-border/50 py-3"
           >
             {sections.map((s) => (
@@ -123,13 +136,13 @@ export default function ChapterView({ chapter }: { chapter: Chapter }) {
 
         <div className="space-y-9">
           {chapter.warnings.length > 0 && (
-            <Section id="warnings" title="Warnings" tone="red" icon="⚠">
+            <Section id="warnings" title={t("chapter.warnings")} tone="red" icon="⚠">
               <BulletList items={chapter.warnings} tone="red" />
             </Section>
           )}
 
           {chapter.proTips.length > 0 && (
-            <Section id="pro-tips" title="Pro Tips" tone="green" icon="✓">
+            <Section id="pro-tips" title={t("chapter.proTips")} tone="green" icon="✓">
               <BulletList items={chapter.proTips} tone="green" />
             </Section>
           )}
@@ -137,7 +150,7 @@ export default function ChapterView({ chapter }: { chapter: Chapter }) {
           {chapter.commonMistakes.length > 0 && (
             <Section
               id="common-mistakes"
-              title="Watch Out For"
+              title={t("chapter.watchOutFor")}
               tone="amber"
               icon="◆"
             >
@@ -146,12 +159,12 @@ export default function ChapterView({ chapter }: { chapter: Chapter }) {
           )}
 
           {(chapter.tools.length > 0 || chapter.parts.length > 0) && (
-            <Section id="loadout" title="Tools &amp; Parts" tone="cyan">
+            <Section id="loadout" title={t("chapter.toolsAndParts")} tone="cyan">
               <div className="space-y-4">
                 {chapter.tools.length > 0 && (
                   <div>
                     <div className="mb-1.5 text-[11px] uppercase tracking-widest text-jarvis-dim">
-                      Tools Required
+                      {t("chapter.toolsRequired")}
                     </div>
                     <ChipRow items={chapter.tools} />
                   </div>
@@ -159,7 +172,7 @@ export default function ChapterView({ chapter }: { chapter: Chapter }) {
                 {chapter.parts.length > 0 && (
                   <div>
                     <div className="mb-1.5 text-[11px] uppercase tracking-widest text-jarvis-dim">
-                      Parts Referenced
+                      {t("chapter.partsReferenced")}
                     </div>
                     <ChipRow items={chapter.parts} />
                   </div>
@@ -169,7 +182,7 @@ export default function ChapterView({ chapter }: { chapter: Chapter }) {
           )}
 
           {chapter.steps.length > 0 && (
-            <Section id="procedure" title="Step-by-Step Procedure" tone="cyan">
+            <Section id="procedure" title={t("chapter.stepByStep")} tone="cyan">
               <ol className="divide-y divide-jarvis-border/40">
                 {chapter.steps.map((s) => (
                   <li key={s.order} className="flex gap-3 py-3 first:pt-0 last:pb-0">
@@ -186,7 +199,7 @@ export default function ChapterView({ chapter }: { chapter: Chapter }) {
           )}
 
           {chapter.checklist.length > 0 && (
-            <Section id="checklist" title="Chapter Checklist" tone="cyan">
+            <Section id="checklist" title={t("chapter.chapterChecklist")} tone="cyan">
               <div className="mb-3 h-1.5 w-full overflow-hidden rounded-full bg-jarvis-bg/60">
                 <div
                   className="h-full rounded-full bg-jarvis-green shadow-glow-green transition-all duration-300"
@@ -221,14 +234,14 @@ export default function ChapterView({ chapter }: { chapter: Chapter }) {
             </Section>
           )}
 
-          <Section id="notes" title="Notes" tone="cyan">
+          <Section id="notes" title={t("chapter.notes")} tone="cyan">
             <textarea
               value={notes[chapter.slug] ?? ""}
               onChange={(e) =>
                 setNotes((prev) => ({ ...prev, [chapter.slug]: e.target.value }))
               }
               rows={5}
-              placeholder="Personal notes for this chapter — dates, part numbers used, deviations from plan…"
+              placeholder={t("chapter.notesPlaceholder")}
               className="w-full rounded border border-jarvis-border bg-jarvis-bg/60 p-3 text-[15px] leading-7 text-jarvis-ink/90 focus:border-jarvis-cyan/60 focus:outline-none"
             />
           </Section>

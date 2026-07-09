@@ -3,31 +3,31 @@
 import { useMemo, useState } from "react";
 import GlassPanel from "@/components/ui/GlassPanel";
 import PrintButton from "@/components/ui/PrintButton";
-import faultCodes from "@/data/faultCodes.json";
+import faultCodesEn from "@/data/faultCodes.json";
+import faultCodesFo from "@/data/faultCodes.fo.json";
+import { useLanguage, useLocalizedData } from "@/lib/i18n/LanguageContext";
 import type { FaultCode } from "@/lib/types";
 
 export default function FaultCodesPage() {
+  const { t } = useLanguage();
+  const faultCodesData = useLocalizedData(faultCodesEn, faultCodesFo);
+  const faultCodes = faultCodesData as FaultCode[];
   const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
-    return (faultCodes as FaultCode[]).filter((f) =>
+    return faultCodes.filter((f) =>
       query.trim()
         ? `${f.code} ${f.system} ${f.description} ${f.commonCauses.join(" ")}`
             .toLowerCase()
             .includes(query.toLowerCase())
         : true
     );
-  }, [query]);
+  }, [faultCodes, query]);
 
   return (
     <div className="space-y-4">
       <GlassPanel className="p-4">
-        <p className="text-sm text-jarvis-amber">
-          ⚠ These descriptions are general references for common OBD-II/BMW
-          fault codes on this platform. Always confirm exact meaning, freeze
-          frame data, and repair guidance in ISTA for this specific vehicle
-          before ordering parts.
-        </p>
+        <p className="text-sm text-jarvis-amber">⚠ {t("faultCodes.banner")}</p>
       </GlassPanel>
 
       <GlassPanel className="p-4">
@@ -35,10 +35,10 @@ export default function FaultCodesPage() {
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search fault codes…"
+            placeholder={t("faultCodes.searchPlaceholder")}
             className="w-64 rounded border border-jarvis-border bg-jarvis-bg/60 px-2 py-1.5 text-sm focus:border-jarvis-cyan/60 focus:outline-none"
           />
-          <span className="text-xs text-jarvis-dim">{filtered.length} codes</span>
+          <span className="text-xs text-jarvis-dim">{filtered.length} {t("faultCodes.codesCount")}</span>
           <div className="ml-auto">
             <PrintButton />
           </div>
@@ -60,7 +60,7 @@ export default function FaultCodesPage() {
               </div>
               <p className="mt-1 text-sm text-jarvis-cyan/90">{f.description}</p>
               <div className="mt-1.5 text-xs text-jarvis-dim">
-                <strong className="text-jarvis-cyan/70">Common causes:</strong>{" "}
+                <strong className="text-jarvis-cyan/70">{t("faultCodes.commonCausesLabel")}</strong>{" "}
                 {f.commonCauses.join(", ")}
               </div>
               {f.notes && (

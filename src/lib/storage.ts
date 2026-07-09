@@ -12,6 +12,7 @@ export const STORAGE_KEYS = {
   maintenanceLog: `${STORAGE_PREFIX}maintenance-log`,
   chapterNotes: `${STORAGE_PREFIX}chapter-notes`,
   vehicle: `${STORAGE_PREFIX}vehicle`,
+  language: `${STORAGE_PREFIX}language`,
 } as const;
 
 export function readStorage<T>(key: string, fallback: T): T {

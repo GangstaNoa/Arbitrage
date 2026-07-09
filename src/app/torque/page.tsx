@@ -3,36 +3,38 @@
 import { useMemo, useState } from "react";
 import GlassPanel from "@/components/ui/GlassPanel";
 import PrintButton from "@/components/ui/PrintButton";
-import torqueSpecs from "@/data/torqueSpecs.json";
+import torqueSpecsEn from "@/data/torqueSpecs.json";
+import torqueSpecsFo from "@/data/torqueSpecs.fo.json";
+import { useLanguage, useLocalizedData } from "@/lib/i18n/LanguageContext";
 import type { TorqueSpec } from "@/lib/types";
 
 export default function TorquePage() {
+  const { t } = useLanguage();
+  const torqueSpecsData = useLocalizedData(torqueSpecsEn, torqueSpecsFo);
+  const torqueSpecs = torqueSpecsData as TorqueSpec[];
   const [query, setQuery] = useState("");
   const [component, setComponent] = useState("all");
 
   const components = useMemo(
-    () => ["all", ...Array.from(new Set((torqueSpecs as TorqueSpec[]).map((t) => t.component)))],
-    []
+    () => ["all", ...Array.from(new Set(torqueSpecs.map((t) => t.component)))],
+    [torqueSpecs]
   );
 
   const filtered = useMemo(() => {
-    return (torqueSpecs as TorqueSpec[]).filter((t) => {
+    return torqueSpecs.filter((t) => {
       const matchesComponent = component === "all" || t.component === component;
       const matchesQuery = query.trim()
         ? `${t.component} ${t.fastener} ${t.notes}`.toLowerCase().includes(query.toLowerCase())
         : true;
       return matchesComponent && matchesQuery;
     });
-  }, [query, component]);
+  }, [torqueSpecs, query, component]);
 
   return (
     <div className="space-y-4">
       <GlassPanel className="p-4">
         <p className="text-sm text-jarvis-amber">
-          ⚠ All values marked <strong>VERIFY IN BMW TIS</strong> are
-          placeholders. Do not torque any safety-critical fastener to a guessed
-          value — confirm the exact spec (and angle stage, if applicable) in
-          BMW TIS before use.
+          ⚠ {t("torque.verifyBanner")}
         </p>
       </GlassPanel>
 
@@ -41,7 +43,7 @@ export default function TorquePage() {
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search component, fastener, notes…"
+            placeholder={t("torque.searchPlaceholder")}
             className="w-64 rounded border border-jarvis-border bg-jarvis-bg/60 px-2 py-1.5 text-sm focus:border-jarvis-cyan/60 focus:outline-none"
           />
           <select
@@ -51,11 +53,11 @@ export default function TorquePage() {
           >
             {components.map((c) => (
               <option key={c} value={c}>
-                {c}
+                {c === "all" ? t("common.all") : c}
               </option>
             ))}
           </select>
-          <span className="text-xs text-jarvis-dim">{filtered.length} specs</span>
+          <span className="text-xs text-jarvis-dim">{filtered.length} {t("torque.specsCount")}</span>
           <div className="ml-auto">
             <PrintButton />
           </div>
@@ -65,12 +67,12 @@ export default function TorquePage() {
           <table className="w-full min-w-[720px] text-left text-sm">
             <thead>
               <tr className="border-b border-jarvis-border text-[11px] uppercase tracking-wide text-jarvis-dim">
-                <th className="py-2 pr-3">Component</th>
-                <th className="py-2 pr-3">Fastener</th>
-                <th className="py-2 pr-3">Torque</th>
-                <th className="py-2 pr-3">Angle</th>
-                <th className="py-2 pr-3">Notes</th>
-                <th className="py-2 pr-3">Source</th>
+                <th className="py-2 pr-3">{t("torque.component")}</th>
+                <th className="py-2 pr-3">{t("torque.fastener")}</th>
+                <th className="py-2 pr-3">{t("torque.torque")}</th>
+                <th className="py-2 pr-3">{t("torque.angle")}</th>
+                <th className="py-2 pr-3">{t("torque.notes")}</th>
+                <th className="py-2 pr-3">{t("torque.source")}</th>
               </tr>
             </thead>
             <tbody>

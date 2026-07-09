@@ -1,0 +1,514 @@
+[
+  {
+    "id": "battery",
+    "name": "Bilroynd",
+    "x": 78,
+    "y": 86,
+    "description": "AGM-bilroynd staðsett í bagasjarúminum á flestu E70 dieselum, við einum jump/positive-terminal-post í motorrúminum. Kobla altíð frá fyrst og aftur til síðst.",
+    "removalSteps": [
+      "Slokk tendran og tak lykilin burtur frá vognsins nærleika.",
+      "Kobla negativa terminalin frá fyrst, isolerra klampan.",
+      "Kobla positiva terminalin frá, isolerra klampan.",
+      "Tak bilroyndar-halda-klampan av.",
+      "Lyft bilroyndina út, hildandi hana upprættis."
+    ],
+    "inspectionPoints": [
+      "Terminal-rusti",
+      "Kassi-tútnaðan ella skaði",
+      "Álagstest / heilsustøði",
+      "Bilroyndar-datokoda ímóti vognaraldri"
+    ],
+    "torqueSpecRefs": ["TQ-025"],
+    "commonMistakes": [
+      "At kobla positivan frá áðrenn negativan (váði fyri stuttslutning ímóti bygningin)",
+      "At gloyma bilroyndar-skráseting/coding eftir útskifting við eini nýggjari bilroynd",
+      "At ikki skriva niður radio-/infotainment-kotur áðrenn frákobling"
+    ],
+    "reconnectChecklist": [
+      "Terminalir reinir og rustfríir",
+      "Negativur koblaður aftur til síðst",
+      "Halda-klampi trektaður og trygdur",
+      "Bilroynd skrásett við kodingamboðnum um útskift",
+      "Vátta at øll komfort-elektronikkur (rúður, sunroof) er endurlærd"
+    ]
+  },
+  {
+    "id": "ecu-box",
+    "name": "ECU-Boks (DDE)",
+    "x": 60,
+    "y": 88,
+    "description": "Digital Diesel Electronics (DDE) stýringareind-húsing aftast í motorrúminum nær brandveggnum. Stýrir brenniinnsprøjting, turbo-boost, gløðingsplugg, og útlát.",
+    "removalSteps": [
+      "Kobla bilroyndina frá sambært Bilroynd-økinum fyrst.",
+      "Loys ECU-boks-lokið latch-arnar.",
+      "Kobla hovdsleiðingarnetskoblingar frá — merk hvørja við merkingarskipanini áðrenn burturtøku.",
+      "Tak ECU-boks-festingarbrakketið av.",
+      "Lyft ECU/boks-samansetingina út."
+    ],
+    "inspectionPoints": [
+      "Koblingsstøð-pinn-rusti",
+      "Vatnsinnbrot í boksinum",
+      "Festingar-gummi-isolatorir standi"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "At skifta ECU millum vognar uttan ISN (immobilizer-samstilling) samsvaran",
+      "At ikki merkja fleiri-pinna koblingar áðrenn frákobling",
+      "At trýsta koblingar-latchar við makt — BMW-koblingar sleppa við eini serstakari drag-/spakrørslu"
+    ],
+    "reconnectChecklist": [
+      "Allar leiðingarnetskoblingar fulliga sitandi og latchaðar",
+      "Boks-lok sealed",
+      "Jarðsambandsreimar til ECU-brakket koblaðar aftur til",
+      "Feilkotur lisnar eftir fyrstu strøymuppkoyring"
+    ]
+  },
+  {
+    "id": "intake",
+    "name": "Inntaksskipan",
+    "x": 40,
+    "y": 50,
+    "description": "Luftinntaksleið frá luftkassa gjøgnum MAF-sensorin til turbo-inntakið, íroknað inntaks-resonator og røgar.",
+    "removalSteps": [
+      "Loys inntaksrøgva-klampar.",
+      "Kobla MAF-sensorsins elektriska koblingsstøð frá.",
+      "Tak luftkassa-lok og filtur av.",
+      "Tak luftkassa-botnin av um full burturtøka er neyðug."
+    ],
+    "inspectionPoints": [
+      "Luftfilturs standi/óreinska",
+      "Røgva-sprungur ella leysir klampar (boost-/vacuum-leka-uppspring)",
+      "Oljuleivdir inni í inntakinum (kann benda á turbo-selslitning)"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "At lata inntaksklampar sita leyst, orsakandi ómátaða luft/boost-lekar",
+      "Ruskul latin eftir í inntaksleiðini undir motor-úti-arbeiði"
+    ],
+    "reconnectChecklist": [
+      "Allir røgva-klampar tættir",
+      "MAF-koblingsstøð sitandi",
+      "Nýtt luftfiltur ásett",
+      "Ongin fremmandlutir í inntaksleiðini áðrenn fyrsta start"
+    ]
+  },
+  {
+    "id": "maf-sensor",
+    "name": "MAF-Sensor",
+    "x": 30,
+    "y": 45,
+    "description": "Mass Air Flow-sensor, ið mátar inntaks-luftrúmdina, ásettur í inntaksrøgvini frammanfyri turbo-inntakið.",
+    "removalSteps": [
+      "Kobla elektriska koblingsstøðið frá — merk sum sítt egna leiðingar-ID.",
+      "Loys halda-klampan ella skrúvurnar.",
+      "Skjót sensorin varisliga út úr húsingini — hot-wire-elementið er brøkligt."
+    ],
+    "inspectionPoints": [
+      "Hot-wire-elements reinliki",
+      "Koblingsstøð-pinn-standi",
+      "O-ring-/sel-standi"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "At nerta ella reinsa víratráðar-elementið við skeivum loysievni",
+      "At trýsta sensor-húsingina við makt, skaðandi elementið"
+    ],
+    "reconnectChecklist": [
+      "Sensor fulliga sitandi og klampaður",
+      "Koblingsstøð latchað",
+      "Livandi MAF-dáta váttaði via diagnostikamboðnum eftir fyrsta start"
+    ]
+  },
+  {
+    "id": "map-sensor",
+    "name": "MAP-/Boost-Sensor",
+    "x": 46,
+    "y": 55,
+    "description": "Manifold Absolute Pressure-sensor, ið lesur inntaksmanifold-boost-trýst, brúkt av DDE-ini til turbo-boost-stýring.",
+    "removalSteps": [
+      "Kobla elektriska koblingsstøðið frá — merk leiðingar-ID.",
+      "Tak einstøku halda-skrúvuna ella klipið av.",
+      "Drag sensorin út úr manifold-portinum."
+    ],
+    "inspectionPoints": [
+      "Port-reinliki (kol-/oljuuppsavning)",
+      "Sensor-sel/O-ring-standi"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "At endurbrúka ein skaddan O-ring, orsakandi falskar boost-lesingar"
+    ],
+    "reconnectChecklist": [
+      "Fulliga sitandi í manifold-portinum",
+      "Koblingsstøð latchað",
+      "Livandi boost-dáta trúverdig í tómgongd/rev eftir fyrsta start"
+    ]
+  },
+  {
+    "id": "glow-plug-controller",
+    "name": "Gløðingsplugg-Stýring",
+    "x": 56,
+    "y": 70,
+    "description": "Relé-/stýringareind, ið stýrir gløðingsplugg-forhitingar-tíming til kaldur-start, ásett á ella nær inntaksmanifoldinum.",
+    "removalSteps": [
+      "Kobla bilroyndina frá fyrst.",
+      "Kobla hovdsleiðingarnetskoblingsstøðið frá — merk leiðingar-ID.",
+      "Kobla einstøku gløðingsplugg-leiðingar frá.",
+      "Tak stýringina av festingarbrakketinum."
+    ],
+    "inspectionPoints": [
+      "Hitaskaði/litbroyting á húsingini",
+      "Koblingsstøð-pinn-rusti"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "At rugla einstøku gløðingsplugg-leiðingar-røðina saman",
+      "At ikki kanna fyri eina skylda feilkotu áðrenn stýringin verður dømd"
+    ],
+    "reconnectChecklist": [
+      "Allar 6 gløðingsplugg-leiðingar koblaðar aftur til rætta sylindur",
+      "Hovdskoblingsstøð latchað",
+      "Gløðingsplugg-koyring váttað via diagnostikamboðnum"
+    ]
+  },
+  {
+    "id": "injectors",
+    "name": "Brenniinjectorar",
+    "x": 50,
+    "y": 60,
+    "description": "Piezo-/solenoid common-rail-injectorar, ein per sylindur, ásettir gjøgnum sylindarhovudið undir ventillokinum.",
+    "removalSteps": [
+      "Lætta brenniskipanartrýstið sambært framleiðandans framgongd.",
+      "Kobla injector-koblingsstøð frá — merk hvørt leiðingar-ID eftir sylindarnummari.",
+      "Tak brenniskrána av sambært Brenniskrá-økinum.",
+      "Tak injector-klampuboltar av (sí trektspecifikatión TQ-016).",
+      "Tak injectorar út við einum røttum trekkjaramboði — brúka ongantíð havspaka."
+    ],
+    "inspectionPoints": [
+      "Injector-sel/washer-standi (skift altíð)",
+      "Kolauppsavning á injector-oddinum",
+      "Injector-koda-merki lisiligt til ECU-coding"
+    ],
+    "torqueSpecRefs": ["TQ-016"],
+    "commonMistakes": [
+      "At endurbrúka gamlar injector-selir (orsakar brenslu-leka)",
+      "At ikki skriva niður injector-rættingarkotur áðrenn innseting — krevjað til ECU-coding",
+      "At óreinska injector-oddar/hol við ruskuli"
+    ],
+    "reconnectChecklist": [
+      "Nýggjar selir ásettar",
+      "Klampuboltar trektaðir sambært TQ-016 við vinkilstig",
+      "Injector-rættingarkotur innskrivaðar í ECU via diagnostikamboðnum",
+      "Leak-off-afturkomu-leiðingar koblaðar aftur til"
+    ]
+  },
+  {
+    "id": "fuel-rail",
+    "name": "Brenniskrá (Høgtrýstis)",
+    "x": 50,
+    "y": 58,
+    "description": "Common rail brenni-útbýtingarmanifold, ið matar allar 6 injectorar við høgtrýst frá HP brenniievnispumpuni.",
+    "removalSteps": [
+      "Lætta skipanartrýstið og reinsa øki fyri at forða óreinska.",
+      "Kobla skrátrýst-sensor-koblingsstøðið frá — merk leiðingar-ID.",
+      "Kobla høgtrýstis-matileiðsluna frá pumpuni.",
+      "Kobla einstøku injector-høgtrýstisleiðingar frá.",
+      "Tak skrá-festingarboltar av (TQ-015) og lyft skrána út."
+    ],
+    "inspectionPoints": [
+      "Høgtrýstisleiðslu-sealflatir fyri skaða",
+      "Skrátrýst-sensor-standi"
+    ],
+    "torqueSpecRefs": ["TQ-015"],
+    "commonMistakes": [
+      "Nøkur óreinska inn í opnar brenniievnisleiðingar — koppa beinanvegin tá frákobluð",
+      "At endurbrúka crush washers/selir á høgtrýstisleiðslu-festingum"
+    ],
+    "reconnectChecklist": [
+      "Allar høgtrýstisleiðslu-festingar javnt trektaðar",
+      "Skrá-festingarboltar trektaðir sambært TQ-015",
+      "Trýst-sensor-koblingsstøð latchað",
+      "Skipan primed og lekakannað áðrenn full start"
+    ]
+  },
+  {
+    "id": "turbochargers",
+    "name": "Turboskipan (sequential twin-turbo)",
+    "x": 50,
+    "y": 40,
+    "description": "Lítil høgtrýstis- og stór lágtrýstis-turboar, ið arbeiða sequential, ásett frammantil á motorinum á útlátsmanifoldinum.",
+    "removalSteps": [
+      "Tapp kælivatn av um turboin er vatnkældur á hesum stigi.",
+      "Kobla olju-mati- og afturkomu-leiðingar frá — koppa beinanvegin.",
+      "Kobla vacuum-aktuatorleiðingar frá — merk hvørja.",
+      "Tak útlátsmanifold-mutrar av (TQ-011).",
+      "Tak turbo-til-downpipe-sameiningina av.",
+      "Stuðla og tak turbo-samansetingina av."
+    ],
+    "inspectionPoints": [
+      "Akselleiku (radial og aksial) á báðum turboum",
+      "Oljuleivdir í compressor-húsinum (sel-slitings-indikator)",
+      "Aktuator-longing smøkkurt virksemi",
+      "Wastegate/VNC-mekanismu-standi"
+    ],
+    "torqueSpecRefs": ["TQ-011", "TQ-012"],
+    "commonMistakes": [
+      "At ikki prime oljumatileiðsluna áðrenn fyrsta start (orsakar turran-start-legusliting)",
+      "At endurbrúka manifold-gaskets/mutrar heldur enn nýggjar",
+      "At blanda lítla/stóra turbo olju- og vacuum-leiðingarretning saman"
+    ],
+    "reconnectChecklist": [
+      "Oljumatileiðsla primed og trektað sambært TQ-012",
+      "Manifold-mutrar trektaðir sambært TQ-011",
+      "Vacuum-aktuatorleiðingar rætt leiddar og merktar",
+      "Boost-lekatest gjørdur eftir start"
+    ]
+  },
+  {
+    "id": "vacuum-lines",
+    "name": "Vacuum-Leiðingar",
+    "x": 42,
+    "y": 48,
+    "description": "Vacuum-sløngu-net, ið stýrir turbo-aktuatorar, inntaksflaps, og EGR-komponentar.",
+    "removalSteps": [
+      "Tak mynd/merk retningina áðrenn nakað verður frákoblað.",
+      "Kobla hvørja leiðing frá við manifold- og komponent-endan, merkjandi við leiðingar-/sløngu-ID.",
+      "Koppa opnar portar fyri at forða ruskul-innbroti."
+    ],
+    "inspectionPoints": [
+      "Sprungur, harðnaðan, ella samanfall í sløngutilfarinum",
+      "Rætt retning ímóti verksmiðjudiagraminum"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "At leiða leiðingar skeivt, orsakandi turbo-aktuator-feilir ella limp mode",
+      "At endurbrúka sprøkar gamlar vacuum-sløngur"
+    ],
+    "reconnectChecklist": [
+      "Allar leiðingar samsvaraðar merktu ID-num",
+      "Ongar knekkir ella klemmupunktar",
+      "Vacuum-skipanin heldur trýst í roykleka-/vacuum-test"
+    ]
+  },
+  {
+    "id": "coolant-hoses",
+    "name": "Kælivatnssløngur",
+    "x": 35,
+    "y": 30,
+    "description": "Efri/niðari radiator-sløngur, hitakjarna-sløngur, og turbo-kæliliðingar, ið mynda kælikretsin.",
+    "removalSteps": [
+      "Tapp kælivatnsskipanina heilt av í eina reina íløtu.",
+      "Loys sløngu-klampar á hvørjum enda.",
+      "Merk hvørja sløngu við sítt leiðingar-/sløngu-ID áðrenn burturtøku."
+    ],
+    "inspectionPoints": [
+      "Sløngu-mýkt/tútnaðan ella harðnaðan",
+      "Klampi-standi — skift fjaðurklampar við worm-drive-klampar um ofta endurbrúktir"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "Luftboblur latnar í skipanini eftir áfylling (diesel-kælivatnsskipanir tørva rætta blæðingarframgongd)",
+      "At endurbrúka niðurbrotnar verksmiðju-sløngu-klampar"
+    ],
+    "reconnectChecklist": [
+      "Allar sløngur samsvaraðar rættum portum",
+      "Klampar trygdir",
+      "Skipan blædd sambært Kælivatnsskipan-kapitulins framgongd",
+      "Ongir lekar eftir upphitingarsyklus"
+    ]
+  },
+  {
+    "id": "radiator",
+    "name": "Radiator",
+    "x": 50,
+    "y": 8,
+    "description": "Frumligi kælivatnsradiatorurin frammantil í radiatorpakkanum, frammanfyri intercooler og kondensator.",
+    "removalSteps": [
+      "Tapp kælivatn av.",
+      "Kobla efri/niðari sløngur frá.",
+      "Kobla vifta-shroud og elektriskar koblingar frá um ásett.",
+      "Tak radiator-festingarboltar av (TQ-013).",
+      "Lyft radiatorin út, vernandi finnurnar."
+    ],
+    "inspectionPoints": [
+      "Fin-skaði/steppan",
+      "Endatanka-sprungur (plastikktankar eru vanligur brotspunktur)",
+      "Kjarna fyri innaneftir steppan/rust"
+    ],
+    "torqueSpecRefs": ["TQ-013"],
+    "commonMistakes": [
+      "At ov-trekta plastikk-endatanka-festingar",
+      "At beygja finnur undir innseting"
+    ],
+    "reconnectChecklist": [
+      "Festingar trektaðar sambært TQ-013",
+      "Sløngur koblaðar aftur til og klampaðar",
+      "Vifta-shroud javnaður og trygdur",
+      "Skipan áfylt og blædd"
+    ]
+  },
+  {
+    "id": "intercooler",
+    "name": "Intercooler",
+    "x": 50,
+    "y": 15,
+    "description": "Charge air cooler ásettur í frambumper-festingini, ið kælir samprest luft millum turbo-stig og inntaksmanifoldið.",
+    "removalSteps": [
+      "Tak frambumper ella atkomupanel av sambært kapitulins framgongd.",
+      "Kobla charge-røgar frá við báðar endar.",
+      "Tak festingarbrakket av.",
+      "Lyft intercooler út."
+    ],
+    "inspectionPoints": [
+      "Oljuleivdir inni í kjarnanum (turbo-sel-slitings-indikator)",
+      "Fin-/kjarna-skaði",
+      "Charge-røgva-sel-standi"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "At ikki klampa charge-røgar fulliga — boost-leka eftir samanseting",
+      "At krossmenga intercooler-kjarnan við oljuleivdum ikki reinsaðum áðrenn innseting"
+    ],
+    "reconnectChecklist": [
+      "Charge-røgar klampaðar tætt við báðar endar",
+      "Festingarbrakket trygt",
+      "Boost-lekatest gjørdur"
+    ]
+  },
+  {
+    "id": "fan",
+    "name": "Kælivifta-Samanseting",
+    "x": 50,
+    "y": 20,
+    "description": "Elektrisk ella viscous-kobling-vifta-samanseting aftanfyri radiatorin, ið drigur luft gjøgnum radiatorpakkan.",
+    "removalSteps": [
+      "Kobla vifta-koblingsstøðið frá ella tak viscous-koblingina av (serstakt amboð, øvug skrúgongd).",
+      "Tak vifta-shroud-halda-klip av.",
+      "Lyft vifta-samansetingina út."
+    ],
+    "inspectionPoints": [
+      "Blað-sprungur",
+      "Viscous-kobling frí rørsla (um ásett)",
+      "Elektrisk koblingsstøð-standi"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "At brúka skeiva rotatiónsretning á viscous-kobling-burturtøku-amboðnum (vinstruhent skrúgongd á nógvum BMW-viftum)"
+    ],
+    "reconnectChecklist": [
+      "Vifta snýr frítt uttan kontakt við shroud",
+      "Koblingsstøð latchað",
+      "Vifta-virkjan váttað via diagnostikamboðnum ella hitatest"
+    ]
+  },
+  {
+    "id": "engine-mounts",
+    "name": "Motorfestingar",
+    "x": 50,
+    "y": 75,
+    "description": "Vinstru og høgru hydrauliskar motorfestingar, ið kobla blokkina at framundirvognini, isolerandi skjálvi.",
+    "removalSteps": [
+      "Stuðla motorin trygt við lyftara ella undirmotorstudning áðrenn burturtøku.",
+      "Tak festing-til-brakket-boltar av (TQ-008).",
+      "Tak festing-til-undirvogn-boltar av (TQ-007).",
+      "Lyft festingina út."
+    ],
+    "inspectionPoints": [
+      "Hydraulisk vøkuleki",
+      "Gummi-sprungur ella skiljing",
+      "Brakket-sprungur"
+    ],
+    "torqueSpecRefs": ["TQ-007", "TQ-008"],
+    "commonMistakes": [
+      "At taka báðar festingar av samstundis uttan motorstudning — motorurin kann skifta seg og skaða komponentar",
+      "At undirtrekta festingarboltar eftir at motorurin er sittandi á teimum"
+    ],
+    "reconnectChecklist": [
+      "Festingar trektaðar sambært TQ-007 og TQ-008",
+      "Motorurin situr javnur, eingin strekking á sløngum/leiðingum",
+      "Endurkanna trekt eftir at motorurin er sittin undir sínari egnu vekt"
+    ]
+  },
+  {
+    "id": "transmission-bellhousing",
+    "name": "Gearkassa-Bellhousing",
+    "x": 50,
+    "y": 90,
+    "description": "Sameining millum motor og ZF 6-gongdar automatgearkassa, ið hýsir koblingsomformaran.",
+    "removalSteps": [
+      "Stuðla gearkassan sjálvstøðugt áðrenn skiljing frá motorinum.",
+      "Tak koblingsomformar-boltar av gjøgnum eftirlitslokið (TQ-010).",
+      "Tak bellhousing-boltar av (TQ-009).",
+      "Skil motor og gearkassa varisliga sundur, hildandi teimum javnaðum á dowels."
+    ],
+    "inspectionPoints": [
+      "Koblingsomformar-sel-/pilot-standi",
+      "Dowel-sleeve-standi",
+      "Svinghjóls-/flexplate-sliting"
+    ],
+    "torqueSpecRefs": ["TQ-009", "TQ-010"],
+    "commonMistakes": [
+      "At lata gearkassan hanga óstudda á inntaksakslinum",
+      "Koblingsomformar ikki fulliga sittandi áðrenn boltun til flexplate — mát gapið fyrst"
+    ],
+    "reconnectChecklist": [
+      "Koblingsomformar váttaður fulliga sittandi áðrenn boltun",
+      "Bellhousing-boltar trektaðir sambært TQ-009",
+      "Omformarboltar trektaðir sambært TQ-010",
+      "Gearkassaoljustøði kannað eftir samanseting"
+    ]
+  },
+  {
+    "id": "grounding-straps",
+    "name": "Jarðsambandsreimar",
+    "x": 66,
+    "y": 80,
+    "description": "Motor-til-bygning og motor-til-chassis jarðsambandsreimar, avgerandi fyri álítisverdan CAN bus-sambandsdálk, gløðingsplugg-virksemi, og starter-strøymleið.",
+    "removalSteps": [
+      "Nota reim-støðir og merk hvørja við einum leiðingar-ID.",
+      "Tak reim-festingarboltar av (TQ-026).",
+      "Legg reimar til viks til reinsan."
+    ],
+    "inspectionPoints": [
+      "Rusti á reim-endum",
+      "Reim-fletta heilsemi (ongar brotnar/rivnar trádir)"
+    ],
+    "torqueSpecRefs": ["TQ-026"],
+    "commonMistakes": [
+      "At sleppa reimar undir samanseting — orsakar intermitterandi elektriskar feilir, ið eru torføri at diagnostisera seinni",
+      "At mála yvir jarðsambandspunktar heldur enn at maska tey"
+    ],
+    "reconnectChecklist": [
+      "Allar møtandi flatir reinsaðar til nakið metall",
+      "Reimar trektaðar sambært TQ-026",
+      "Kontinuitet kannað við multimeter motor-til-bygning og motor-til-bilroyndar-negativ"
+    ]
+  },
+  {
+    "id": "wiring-harness",
+    "name": "Motorleiðingarnet",
+    "x": 58,
+    "y": 52,
+    "description": "Hovdsmotorleiðingarnet, ið leiðir strøym, jarðsamband, og signalleiðingar til sensorar, injectorar, gløðingsplugg, og DDE-ina.",
+    "removalSteps": [
+      "Arbeið skipiliga frammanífrá-og-aftureftir, merkjandi hvørja koblingsstøð við Merkingarskipanini fyri Leiðingar áðrenn frákobling.",
+      "Loys leiðingarnetsklip og leiðingarrør frá brakketum.",
+      "Loys leiðingarnetið frá motorinum og lyft tað út, vernandi koblingarnar."
+    ],
+    "inspectionPoints": [
+      "Gnídd ella smeltað isolering, serstakliga nær turbo-/útláts-hitauppspringum",
+      "Koblingsstøð-læsi-flipur-standi",
+      "Rusti við eyðsædum spleisingum"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "At ikki merkja koblingsstaðir áðrenn burturtøku — førir til giskan undir samanseting",
+      "At leggja leiðingarnetið ov nær heitum turbo-komponentum undir innseting"
+    ],
+    "reconnectChecklist": [
+      "Hvør koblingsstøð samsvaraður sínum merkta ID og merktur aftursettur",
+      "Leiðingarnet klipsað burtur frá hitauppspringum og rørandi partum",
+      "Fullur feilkotu-skan gjørdur eftir fyrsta start fyri at vátta ongar opnar rásir"
+    ]
+  }
+]

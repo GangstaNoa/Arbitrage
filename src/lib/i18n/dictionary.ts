@@ -1,0 +1,440 @@
+// Central UI-string dictionary for the EN/FO language toggle.
+// Data content (chapters, parts, tools, torque specs, etc.) is translated
+// separately as sibling *.fo.json files — this file only covers UI chrome:
+// nav, buttons, headers, static copy. Technical/automotive terms are kept
+// in English inline in the Faroese strings on purpose (matches how these
+// terms are actually used in spoken Faroese workshop contexts).
+
+export type Lang = "en" | "fo";
+
+export const dictionary = {
+  // Sidebar / nav
+  "nav.group.command": { en: "Command", fo: "Stjórn" },
+  "nav.group.documentation": { en: "Documentation", fo: "Dokumentasjón" },
+  "nav.group.databases": { en: "Databases", fo: "Dátugrunnar" },
+  "nav.group.project": { en: "Project", fo: "Verkætlan" },
+  "nav.dashboard": { en: "Dashboard", fo: "Yvirlit" },
+  "nav.garage": { en: "3D Garage Viewer", fo: "3D Verkstaðurin" },
+  "nav.engineBay": { en: "Engine Bay", fo: "Motorrúmið" },
+  "nav.manual": { en: "Manual Chapters", fo: "Handbókarkapitlar" },
+  "nav.wires": { en: "Wire Labeling", fo: "Merking av Leiðingum" },
+  "nav.photos": { en: "Photo Notes", fo: "Myndanotatar" },
+  "nav.torque": { en: "Torque Specs", fo: "Trektspecifikatiónir" },
+  "nav.parts": { en: "Parts Database", fo: "Partadátugrunnur" },
+  "nav.tools": { en: "Tools Database", fo: "Amboðsdátugrunnur" },
+  "nav.faultCodes": { en: "Fault Codes", fo: "Feilkotur" },
+  "nav.checklists": { en: "Checklists", fo: "Sjekklistar" },
+  "nav.budget": { en: "Budget Tracker", fo: "Budsjettyvirlit" },
+  "nav.soundSystem": { en: "Sound System", fo: "Ljóðskipan" },
+  "nav.codingDiagnostics": { en: "Coding & Diagnostics", fo: "Coding & Diagnostikk" },
+  "nav.restoration": { en: "Restoration Planner", fo: "Restavreringsætlan" },
+  "sidebar.subtitle": { en: "Garage OS", fo: "Verkstaðskervi" },
+  "sidebar.export": { en: "Export Project Data", fo: "Útflyt Verkætlanardáta" },
+  "sidebar.signOut": { en: "Sign Out", fo: "Rita Út" },
+  "sidebar.storageNote": {
+    en: "Local storage, synced to the cloud if configured.",
+    fo: "Goymt lokalt, og samstillt við skýggjað um sett upp.",
+  },
+
+  // Language toggle
+  "lang.toggleLabel": { en: "Language", fo: "Mál" },
+
+  // TopBar page titles (mirrors nav labels but standalone for the title slot)
+  "title.dashboard": { en: "Dashboard", fo: "Yvirlit" },
+  "title.garage": { en: "3D Garage Viewer", fo: "3D Verkstaðurin" },
+  "title.engineBay": { en: "Interactive Engine Bay", fo: "Interaktivt Motorrúm" },
+  "title.manual": { en: "Manual Chapters", fo: "Handbókarkapitlar" },
+  "title.wires": { en: "Wire Labeling System", fo: "Merkingarskipan fyri Leiðingar" },
+  "title.photos": { en: "Photo Notes", fo: "Myndanotatar" },
+  "title.torque": { en: "Torque Spec Database", fo: "Trektspecifikatión Dátugrunnur" },
+  "title.parts": { en: "Parts Database", fo: "Partadátugrunnur" },
+  "title.tools": { en: "Tools Database", fo: "Amboðsdátugrunnur" },
+  "title.faultCodes": { en: "Fault Code Library", fo: "Savn av Feilkotum" },
+  "title.checklists": { en: "Checklists", fo: "Sjekklistar" },
+  "title.budget": { en: "Budget Tracker", fo: "Budsjettyvirlit" },
+  "title.soundSystem": { en: "Sound System Planner", fo: "Ljóðskipanarætlan" },
+  "title.codingDiagnostics": { en: "Coding & Diagnostics", fo: "Coding & Diagnostikk" },
+  "title.restoration": { en: "Restoration Planner", fo: "Restavreringsætlan" },
+  "title.fallback": { en: "JARVIS X5 GARAGE OS", fo: "JARVIS X5 GARAGE OS" },
+
+  // Common / shared UI
+  "common.search": { en: "Search…", fo: "Leita…" },
+  "common.print": { en: "Print", fo: "Prenta" },
+  "common.exportJson": { en: "Export JSON", fo: "Útflyt JSON" },
+  "common.close": { en: "Close", fo: "Lat aftur" },
+  "common.save": { en: "Save", fo: "Goym" },
+  "common.cancel": { en: "Cancel", fo: "Ógilda" },
+  "common.delete": { en: "Delete", fo: "Strika" },
+  "common.edit": { en: "Edit", fo: "Rætta" },
+  "common.add": { en: "Add", fo: "Legg afturat" },
+  "common.status": { en: "Status", fo: "Støða" },
+  "common.notes": { en: "Notes", fo: "Notatar" },
+  "common.chapter": { en: "Chapter", fo: "Kapittul" },
+  "common.openChapter": { en: "Open Chapter →", fo: "Lat kapittul upp →" },
+  "common.all": { en: "All", fo: "Alt" },
+  "common.loading": { en: "Loading…", fo: "Innlesur…" },
+
+  // Global search result-type labels
+  "search.manual": { en: "Manual", fo: "Handbók" },
+  "search.part": { en: "Part", fo: "Partur" },
+  "search.tool": { en: "Tool", fo: "Amboð" },
+  "search.torqueSpec": { en: "Torque Spec", fo: "Trektspecifikatión" },
+  "search.faultCode": { en: "Fault Code", fo: "Feilkoda" },
+  "search.wireLabel": { en: "Wire Label", fo: "Leiðingarmerki" },
+  "search.placeholder": { en: "Search…", fo: "Leita…" },
+  "search.noResults": { en: "No results found.", fo: "Ongin úrslit funnin." },
+
+  // Garage viewer page
+  "garage.explodedOn": { en: "Exploded View: ON", fo: "Sundurspjaddur Sjónur: TIL" },
+  "garage.exploded": { en: "Exploded View", fo: "Sundurspjaddur Sjónur" },
+  "garage.disassemblyModeOn": { en: "Disassembly Mode: ON", fo: "Sundurtøku-Bólkur: TIL" },
+  "garage.disassemblyOrderMode": { en: "Disassembly Order Mode", fo: "Sundurtøku-Røð-Bólkur" },
+  "garage.step": { en: "Step", fo: "Stig" },
+  "garage.hint": {
+    en: "Drag to rotate · Pinch/scroll to zoom · Tap a glowing node to open its chapter. Model repainted to BMW 354 Titanium Silver Metallic to match this car.",
+    fo: "Drag fyri at snúgva · Klip/rull fyri at zooma · Trykk á ein lýsandi knút fyri at lata upp hansara kapittul. Modellurin er endurmálaður til BMW 354 Titanium Silver Metallic fyri at samsvara hesum vogni.",
+  },
+  "garage.disassemblyStep": { en: "Disassembly Step", fo: "Sundurtøku-Stig" },
+  "garage.selectedZone": { en: "Selected Zone", fo: "Valt Øki" },
+  "garage.allZones": { en: "All Zones", fo: "Øll Øki" },
+
+  // Engine bay page
+  "engineBay.schematicTitle": { en: "Top-Down Engine Bay Schematic", fo: "Ovanífrá Motorrúms-Skema" },
+  "engineBay.hint": {
+    en: "Tap any node to open its full teardown/reinstall reference. This layout is a schematic approximation, not to scale.",
+    fo: "Trykk á ein knút fyri at lata upp fulla sundurtøku-/innsetingar-referansuna. Hesin skipanin er ein skematisk nálæging, ikki í rættum mátbýti.",
+  },
+  "engineBay.front": { en: "FRONT", fo: "FRAMMANTIL" },
+  "engineBay.firewall": { en: "FIREWALL", fo: "BRANDVEGGUR" },
+  "engineBay.system.cooling": { en: "Cooling", fo: "Kæling" },
+  "engineBay.system.turbo": { en: "Turbo / Intake", fo: "Turbo / Inntak" },
+  "engineBay.system.fuel": { en: "Fuel", fo: "Brenni" },
+  "engineBay.system.electrical": { en: "Electrical", fo: "Elektronikkur" },
+  "engineBay.system.drivetrain": { en: "Drivetrain / Mounts", fo: "Drivverk / Festingar" },
+  "engineBay.sectionLabel": { en: "Engine Bay Section", fo: "Motorrúms-Øki" },
+  "engineBay.photoBefore": { en: "Photo before removal", fo: "Mynd áðrenn burturtøku" },
+  "engineBay.photoAfter": { en: "Photo after removal", fo: "Mynd eftir burturtøku" },
+  "engineBay.removalSteps": { en: "Removal Steps", fo: "Burturtøku-Stig" },
+  "engineBay.inspectionPoints": { en: "Inspection Points", fo: "Eftirlitspunktar" },
+  "engineBay.torqueSpecs": { en: "Torque Specs", fo: "Trektspecifikatiónir" },
+  "engineBay.noTorqueSpecs": {
+    en: "No torque-critical fasteners referenced for this section. VERIFY IN BMW TIS for any fastener not listed here.",
+    fo: "Ongar trekt-kritiskar festingar ávístar til hetta økið. VÁTTA Í BMW TIS fyri hvørja festing, ið ikki er listað her.",
+  },
+  "engineBay.commonMistakes": { en: "Common Mistakes", fo: "Vanlig Feil" },
+  "engineBay.reconnectChecklist": { en: "Reconnect Checklist", fo: "Aftur-Koblingar-Sjekklisti" },
+
+  // Chapter difficulty / category labels (canonical data values stay English; these are display-only)
+  "difficulty.Beginner": { en: "Beginner", fo: "Byrjandi" },
+  "difficulty.Intermediate": { en: "Intermediate", fo: "Miðjustig" },
+  "difficulty.Advanced": { en: "Advanced", fo: "Frammarkaði" },
+  "difficulty.Expert": { en: "Expert", fo: "Ekspert" },
+  "category.Getting Started": { en: "Getting Started", fo: "Byrjan" },
+  "category.Engine Replacement": { en: "Engine Replacement", fo: "Motorútskifting" },
+  "category.Systems": { en: "Systems", fo: "Skipanir" },
+  "category.Drivetrain": { en: "Drivetrain", fo: "Drivverk" },
+  "category.Chassis": { en: "Chassis", fo: "Understell" },
+  "category.Electrical & Coding": { en: "Electrical & Coding", fo: "Elektronikkur & Coding" },
+  "category.Restoration": { en: "Restoration", fo: "Restavrering" },
+  "category.Reference": { en: "Reference", fo: "Heimildir" },
+
+  // Chapter view
+  "chapter.allChapters": { en: "← All chapters", fo: "← Allir kapitlar" },
+  "chapter.chapterLabel": { en: "Chapter", fo: "Kapittul" },
+  "chapter.difficulty": { en: "Difficulty", fo: "Torfaldsstig" },
+  "chapter.estTime": { en: "Est. Time", fo: "Mett Tíð" },
+  "chapter.tools": { en: "Tools", fo: "Amboð" },
+  "chapter.checklist": { en: "Checklist", fo: "Sjekklisti" },
+  "chapter.jumpToSection": { en: "Jump to section", fo: "Far til bólk" },
+  "chapter.warnings": { en: "Warnings", fo: "Ávaringar" },
+  "chapter.proTips": { en: "Pro Tips", fo: "Fakligar Ábendingar" },
+  "chapter.watchOutFor": { en: "Watch Out For", fo: "Gev Gætur Eftir" },
+  "chapter.toolsAndParts": { en: "Tools & Parts", fo: "Amboð & Partar" },
+  "chapter.toolsRequired": { en: "Tools Required", fo: "Neyðug Amboð" },
+  "chapter.partsReferenced": { en: "Parts Referenced", fo: "Ávístir Partar" },
+  "chapter.stepByStep": { en: "Step-by-Step Procedure", fo: "Stig-fyri-Stig Framgongd" },
+  "chapter.chapterChecklist": { en: "Chapter Checklist", fo: "Kapituls-Sjekklisti" },
+  "chapter.notes": { en: "Notes", fo: "Notatar" },
+  "chapter.notesPlaceholder": {
+    en: "Personal notes for this chapter — dates, part numbers used, deviations from plan…",
+    fo: "Persónlig notatar til hendan kapitulin — dagfesting, partanummar brúkt, frábrigdi frá ætlanini…",
+  },
+
+  // Manual list page
+  "manual.intro": {
+    en: "28 chapters covering the full engine replacement project, from first-day planning through ongoing maintenance. Each one now includes researched pro tips and common mistakes specific to the M57TU2D30 (306D5) engine and E70 xDrive35d platform, not just generic steps.",
+    fo: "28 kapitlar, ið fevna um alla motorútskiftingar-verkætlanina, frá fyrsta-dags-ætlanarlegging til løbandi viðlíkahald. Hvør kapittul inniheldur nú rannsóknarbygdar fakligar ábendingar og vanlig feil serstøk fyri M57TU2D30 (306D5)-motorin og E70 xDrive35d-plattformuna, ikki bara generisk stig.",
+  },
+  "manual.chapterAbbr": { en: "Ch.", fo: "Kap." },
+  "manual.chapterSingular": { en: "chapter", fo: "kapittul" },
+  "manual.chapterPlural": { en: "chapters", fo: "kapitlar" },
+  "manual.proTipSingular": { en: "pro tip", fo: "fakliga ábending" },
+  "manual.proTipPlural": { en: "pro tips", fo: "fakligar ábendingar" },
+
+  // Dashboard
+  "dashboard.projectStatus": { en: "Project Status", fo: "Verkætlanarstøði" },
+  "dashboard.currentPhase": { en: "Current phase:", fo: "Núverandi bólkur:" },
+  "dashboard.percentComplete": { en: "% Complete", fo: "% Liðugt" },
+  "dashboard.totalEstCost": { en: "Total Est. Cost", fo: "Mett Heildarkostnaður" },
+  "dashboard.actual": { en: "Actual", fo: "Veruligt" },
+  "dashboard.partsNeeded": { en: "Parts Needed", fo: "Partar Tørvast" },
+  "dashboard.partsOrdered": { en: "Parts Ordered", fo: "Partar Pantaðir" },
+  "dashboard.partsInstalled": { en: "Parts Installed", fo: "Partar Ásettir" },
+  "dashboard.requiredTools": { en: "Required Tools", fo: "Neyðug Amboð" },
+  "dashboard.wireLabelsLogged": { en: "Wire Labels Logged", fo: "Leiðingarmerki Skrásett" },
+  "dashboard.next10Tasks": { en: "Next 10 Tasks", fo: "Næstu 10 Uppgávur" },
+  "dashboard.viewAllChecklists": { en: "View all checklists →", fo: "Sí allar sjekklistar →" },
+  "dashboard.allTasksComplete": {
+    en: "All tracked checklist items are complete. Excellent work.",
+    fo: "Allir eftirlitnu sjekklista-lutir eru liðugir. Frálíkt arbeitt.",
+  },
+  "dashboard.warnings": { en: "Warnings", fo: "Ávaringar" },
+  "dashboard.torqueUnverifiedWarning": {
+    en: "{n} torque specs have no researched value at all (VERIFY IN BMW TIS) — and even the populated reference figures on other specs should be cross-checked in BMW TIS before final assembly.",
+    fo: "{n} trektspecifikatiónir hava ongan rannsóknarbygdan virði yvirhøvur (VERIFY IN BMW TIS) — og sjálvt tey útfyltu referansutølini á øðrum specifikatiónum eiga at verða samanborin í BMW TIS áðrenn síðsta samanseting.",
+  },
+  "dashboard.criticalPartsWarning": {
+    en: "{n} critical-priority part(s) not yet installed. Review the Parts Database.",
+    fo: "{n} kritiskt-prioriteraður(ir) partur/partar ikki ásett(ir) enn. Kanna Partadátugrunnin.",
+  },
+  "dashboard.noWireLabelsWarning": {
+    en: "No wire labels logged yet. Start labeling connectors before disconnecting anything in the engine bay.",
+    fo: "Ongar leiðingarmerki skrásettar enn. Byrja at merkja koblingsstaðir áðrenn nakað verður frákoblað í motorrúminum.",
+  },
+  "dashboard.maintenanceLog": { en: "Maintenance Log", fo: "Viðlíkahaldslogg" },
+  "dashboard.entryTitlePlaceholder": { en: "Entry title", fo: "Heiti á lut" },
+  "dashboard.mileagePlaceholder": { en: "Mileage (km)", fo: "Mílutal (km)" },
+  "dashboard.addEntry": { en: "+ Add Entry", fo: "+ Legg Afturat" },
+  "dashboard.detailsPlaceholder": { en: "Details", fo: "Nágreiningar" },
+
+  // Jarvis assistant panel
+  "jarvis.online": { en: "Jarvis Assistant — Online", fo: "Jarvis Hjálparfólk — Á Net" },
+
+  // Torque spec page
+  "torque.verifyBanner": {
+    en: "All values marked VERIFY IN BMW TIS are placeholders. Do not torque any safety-critical fastener to a guessed value — confirm the exact spec (and angle stage, if applicable) in BMW TIS before use.",
+    fo: "Øll virðir merkt VERIFY IN BMW TIS eru plasshaldarar. Trekta onga sikkerheitskritiska festing til eitt giskað virði — vátta nágreiniligu specifikatiónina (og vinkilstig, um viðkomandi) í BMW TIS áðrenn brúk.",
+  },
+  "torque.searchPlaceholder": { en: "Search component, fastener, notes…", fo: "Leita komponent, festing, notatar…" },
+  "torque.specsCount": { en: "specs", fo: "specifikatiónir" },
+  "torque.component": { en: "Component", fo: "Komponentur" },
+  "torque.fastener": { en: "Fastener", fo: "Festing" },
+  "torque.torque": { en: "Torque", fo: "Trekt" },
+  "torque.angle": { en: "Angle", fo: "Vinkul" },
+  "torque.notes": { en: "Notes", fo: "Notatar" },
+  "torque.source": { en: "Source", fo: "Heimild" },
+
+  // Tools page
+  "tools.totalTools": { en: "Total Tools", fo: "Amboð Íalt" },
+  "tools.required": { en: "Required", fo: "Neyðugt" },
+  "tools.estTotal": { en: "Est. Total", fo: "Mett Íalt" },
+  "tools.searchPlaceholder": { en: "Search tools…", fo: "Leita amboð…" },
+  "tools.requiredOnly": { en: "Required only", fo: "Bert neyðug" },
+  "tools.toolsCount": { en: "tools", fo: "amboð" },
+  "tools.tool": { en: "Tool", fo: "Amboð" },
+  "tools.size": { en: "Size", fo: "Stødd" },
+  "tools.requiredCol": { en: "Required?", fo: "Neyðugt?" },
+  "tools.purpose": { en: "Purpose", fo: "Endamál" },
+  "tools.estPrice": { en: "Est. Price", fo: "Mettur Prísur" },
+  "tools.notes": { en: "Notes", fo: "Notatar" },
+  "tools.requiredBadge": { en: "Required", fo: "Neyðugt" },
+  "tools.optionalBadge": { en: "Optional", fo: "Valfrítt" },
+
+  // Parts page
+  "parts.needed": { en: "Needed", fo: "Tørvast" },
+  "parts.ordered": { en: "Ordered", fo: "Pantað" },
+  "parts.installed": { en: "Installed", fo: "Ásett" },
+  "parts.estTotal": { en: "Est. Total", fo: "Mett Íalt" },
+  "parts.searchPlaceholder": { en: "Search parts…", fo: "Leita partar…" },
+  "parts.allStatuses": { en: "all statuses", fo: "allar støður" },
+  "parts.partsCount": { en: "parts", fo: "partar" },
+  "parts.part": { en: "Part", fo: "Partur" },
+  "parts.system": { en: "System", fo: "Skipan" },
+  "parts.oemNumber": { en: "OEM #", fo: "OEM #" },
+  "parts.brand": { en: "Brand", fo: "Merki" },
+  "parts.estPrice": { en: "Est. Price", fo: "Mettur Prísur" },
+  "parts.priority": { en: "Priority", fo: "Prioritet" },
+  "parts.status": { en: "Status", fo: "Støða" },
+  "parts.status.needed": { en: "needed", fo: "tørvar" },
+  "parts.status.ordered": { en: "ordered", fo: "pantað" },
+  "parts.status.installed": { en: "installed", fo: "ásett" },
+  "parts.priority.critical": { en: "critical", fo: "kritiskt" },
+  "parts.priority.high": { en: "high", fo: "høgt" },
+  "parts.priority.medium": { en: "medium", fo: "miðal" },
+  "parts.priority.low": { en: "low", fo: "lágt" },
+
+  // Fault codes page
+  "faultCodes.banner": {
+    en: "These descriptions are general references for common OBD-II/BMW fault codes on this platform. Always confirm exact meaning, freeze frame data, and repair guidance in ISTA for this specific vehicle before ordering parts.",
+    fo: "Hesar lýsingar eru almennar referansur fyri vanligar OBD-II/BMW feilkotur á hesi plattformuni. Vátta altíð nágreiniliga merking, freeze-frame-dátu, og viðgerðarleiðbeining í ISTA fyri hendan sjálva vognin áðrenn partar verða pantaðir.",
+  },
+  "faultCodes.commonCausesLabel": { en: "Common causes:", fo: "Vanligar orsøkir:" },
+
+  // Sound system page
+  "soundSystem.currentSystem": { en: "Current System (As Found)", fo: "Núverandi Skipan (Sum Funnin)" },
+  "soundSystem.headUnit": { en: "Head Unit", fo: "Hovudeind" },
+  "soundSystem.amp": { en: "Amp", fo: "Amp" },
+  "soundSystem.speakers": { en: "Speakers", fo: "Hátalarar" },
+  "soundSystem.notesPlaceholder": {
+    en: "Log what you actually find once you open the trunk trim / doors…",
+    fo: "Skriva niður hvat tú veruliga finnur tá bagasjarúms-trim / durar verða opnaðar…",
+  },
+  "soundSystem.upgradeTiers": { en: "Upgrade Tiers", fo: "Uppgraderingarstig" },
+  "soundSystem.amplifier": { en: "Amplifier", fo: "Amplifikator" },
+  "soundSystem.subwoofer": { en: "Subwoofer", fo: "Subwoofer" },
+  "soundSystem.wiringNotes": { en: "Wiring notes:", fo: "Leiðingarnotatar:" },
+
+  // Photos page
+  "photos.logPhotoNote": { en: "Log a Photo / Note", fo: "Skráset Mynd / Notat" },
+  "photos.noChapter": { en: "No chapter", fo: "Eingin kapittul" },
+  "photos.stepDescription": { en: "Step / description", fo: "Stig / lýsing" },
+  "photos.note": { en: "Note", fo: "Notat" },
+  "photos.addEntry": { en: "+ Add Entry", fo: "+ Legg Afturat" },
+  "photos.allChapters": { en: "All chapters", fo: "Allir kapitlar" },
+  "photos.entriesCount": { en: "entries", fo: "lutir" },
+  "photos.noPhotoNotesYet": { en: "No photo notes logged yet.", fo: "Ongar myndanotatar skrásettar enn." },
+  "photos.noPhoto": { en: "No photo", fo: "Ongin mynd" },
+  "photos.delete": { en: "Delete", fo: "Strika" },
+  "photos.status.planned": { en: "planned", fo: "ætlað" },
+  "photos.status.in-progress": { en: "in-progress", fo: "í gongd" },
+  "photos.status.done": { en: "done", fo: "liðugt" },
+  "photos.status.issue": { en: "issue", fo: "trupulleiki" },
+
+  // Checklists page
+  "checklists.title": { en: "Checklists", fo: "Sjekklistar" },
+
+  // Budget page
+  "budget.totalEstimate": { en: "Total Estimate", fo: "Mett Íalt" },
+  "budget.actualSpent": { en: "Actual Spent (logged)", fo: "Veruliga Brúkt (skrásett)" },
+  "budget.runningTotal": { en: "Running Total (actual or estimate)", fo: "Løbandi Íalt (veruligt ella mett)" },
+  "budget.category": { en: "Category", fo: "Bólkur" },
+  "budget.label": { en: "Label", fo: "Heiti" },
+  "budget.estimateDkk": { en: "Estimate (DKK)", fo: "Mát (DKK)" },
+  "budget.addLineItem": { en: "+ Add Line Item", fo: "+ Legg Linju Afturat" },
+  "budget.item": { en: "Item", fo: "Lutur" },
+  "budget.estimate": { en: "Estimate", fo: "Mát" },
+  "budget.actual": { en: "Actual", fo: "Veruligt" },
+  "budget.notes": { en: "Notes", fo: "Notatar" },
+  "budget.delete": { en: "Delete", fo: "Strika" },
+
+  // Coding & diagnostics page
+  "coding.intro.pre": { en: "Full step-by-step guidance lives in", fo: "Full stig-fyri-stig leiðbeining er í" },
+  "coding.intro.link": { en: "Manual → Coding & Diagnostics", fo: "Handbók → Coding & Diagnostikk" },
+  "coding.intro.post": {
+    en: ". This page is your quick-access console for interface setup and a running log of every coding/diagnostic action performed on this VIN.",
+    fo: ". Henda síðan er tín skjóta atkomu-konsol til interface-uppseting og eina løbandi log av hvørjum coding-/diagnostikk-tiltaki gjørdum á hesum VIN.",
+  },
+  "coding.recommendedToolchain": { en: "Recommended Toolchain", fo: "Viðmælt Amboðskeðja" },
+  "coding.batteryReminder": {
+    en: "Always keep the battery on a maintainer during coding — an interrupted write can brick a module.",
+    fo: "Hav altíð bilroyndina á einum maintainer undir coding — ein avbrotin skriving kann brikkja eina eind.",
+  },
+  "coding.log": { en: "Coding / Diagnostics Log", fo: "Coding-/Diagnostikk-Logg" },
+  "coding.toolUsedPlaceholder": { en: "Tool used", fo: "Amboð brúkt" },
+  "coding.resultPlaceholder": { en: "Result / notes", fo: "Úrslit / notatar" },
+  "coding.logAction": { en: "+ Log Action", fo: "+ Skráset Tiltak" },
+  "coding.noneLoggedYet": { en: "No coding actions logged yet.", fo: "Ongin coding-tiltøk skrásett enn." },
+
+  // Restoration page
+  "restoration.area.Exterior": { en: "Exterior", fo: "Uttanhýsi" },
+  "restoration.area.Interior": { en: "Interior", fo: "Innanhýsi" },
+  "restoration.area.Paint": { en: "Paint", fo: "Farvi" },
+  "restoration.area.M Sport": { en: "M Sport", fo: "M Sport" },
+  "restoration.blurb.Exterior": { en: "Body panels, trim, rust checks", fo: "Bygningarpanel, trim, rustkanning" },
+  "restoration.blurb.Interior": { en: "Seats, dash, trim, electronics", fo: "Sessir, panel, trim, elektronikkur" },
+  "restoration.blurb.Paint": { en: "Correction, polishing, protection", fo: "Rætting, póléring, vernan" },
+  "restoration.blurb.M Sport": {
+    en: "Optional M Sport aesthetic/handling package",
+    fo: "Valfrí M Sport útsjóndar-/koyriliga-pakki",
+  },
+  "restoration.openChapter": { en: "Open chapter →", fo: "Lat kapittul upp →" },
+  "restoration.taskBoard": { en: "Restoration Task Board", fo: "Restavrerings-Uppgávutavla" },
+  "restoration.taskDescription": { en: "Task description", fo: "Uppgávulýsing" },
+  "restoration.addTask": { en: "+ Add Task", fo: "+ Legg Uppgávu Afturat" },
+  "restoration.noTasksYet": {
+    en: "No restoration tasks logged yet. Add exterior, interior, paint, or M Sport tasks above.",
+    fo: "Ongar restavreringsuppgávur skrásettar enn. Legg uttanhýsis-, innanhýsis-, farva-, ella M Sport-uppgávur afturat omanfyri.",
+  },
+  "restoration.delete": { en: "Delete", fo: "Strika" },
+
+  // Wire category / status labels (canonical values stay English in data)
+  "wire.category.sensor": { en: "sensor", fo: "sensor" },
+  "wire.category.injector": { en: "injector", fo: "injector" },
+  "wire.category.ground": { en: "ground", fo: "jarðsamband" },
+  "wire.category.power": { en: "power", fo: "strøymur" },
+  "wire.category.vacuum": { en: "vacuum", fo: "vacuum" },
+  "wire.category.coolant": { en: "coolant", fo: "kælivatn" },
+  "wire.category.fuel": { en: "fuel", fo: "brenni" },
+  "wire.category.unknown": { en: "unknown", fo: "ókent" },
+  "wire.category.all": { en: "all", fo: "alt" },
+  "wire.status.connected": { en: "connected", fo: "koblað" },
+  "wire.status.disconnected": { en: "disconnected", fo: "frákoblað" },
+  "wire.status.unknown": { en: "unknown", fo: "ókent" },
+
+  // Wires page
+  "wires.intro": {
+    en: "Log every connector before you disconnect it. Each label gets an auto-incrementing ID (C001, C002, …). Print the sheet below and tape labels near each connector, or export as JSON for backup.",
+    fo: "Skráset hvørja koblingsstøð áðrenn tú koblar hana frá. Hvørt merki fær eitt sjálvvirkandi vaksandi ID (C001, C002, …). Prenta blaðið niðanfyri og tape merki nær hvørjari koblingsstøð, ella útflyt sum JSON til backup.",
+  },
+  "wires.searchPlaceholder": { en: "Search labels…", fo: "Leita merki…" },
+  "wires.printLabels": { en: "Print Labels", fo: "Prenta Merki" },
+  "wires.printTitle": { en: "JARVIS X5 Garage OS — Wire / Connector Labels", fo: "JARVIS X5 Garage OS — Leiðingar-/Koblingsmerki" },
+  "wires.noLabelsYet": { en: "No wire labels yet. Add your first connector above.", fo: "Ongin leiðingarmerki enn. Legg tína fyrstu koblingsstøð afturat omanfyri." },
+
+  // Wire form
+  "wireForm.newConnectorLabel": { en: "+ New Connector Label", fo: "+ Nýtt Koblingsmerki" },
+  "wireForm.newConnectorTitle": { en: "New Connector — will be assigned", fo: "Nýggj Kobling — verður úthlutað" },
+  "wireForm.name": { en: "Name", fo: "Navn" },
+  "wireForm.namePlaceholder": { en: "e.g. MAF sensor connector", fo: "t.d. MAF-sensor-kobling" },
+  "wireForm.systemCategory": { en: "System / Category", fo: "Skipan / Bólkur" },
+  "wireForm.location": { en: "Location", fo: "Staðseting" },
+  "wireForm.locationPlaceholder": { en: "e.g. driver side, near intake", fo: "t.d. koyrarasíðu, nær inntaki" },
+  "wireForm.connectorShape": { en: "Connector Shape", fo: "Koblings Form" },
+  "wireForm.connectorShapePlaceholder": { en: "e.g. 3-pin black rectangular", fo: "t.d. 3-pinnur svartur ferhyrndur" },
+  "wireForm.wireColors": { en: "Wire Colors", fo: "Leiðingarlitir" },
+  "wireForm.wireColorsPlaceholder": { en: "e.g. brown / grey / red", fo: "t.d. brúnt / grátt / reytt" },
+  "wireForm.connectsTo": { en: "Connects To", fo: "Koblar Til" },
+  "wireForm.connectsToPlaceholder": { en: "e.g. DDE main harness pin 42", fo: "t.d. DDE hovudleiðingarnet pinnur 42" },
+  "wireForm.removalDate": { en: "Removal Date", fo: "Burturtøkudagfesting" },
+  "wireForm.status": { en: "Status", fo: "Støða" },
+  "wireForm.photoBefore": { en: "Photo Before Removal", fo: "Mynd Áðrenn Burturtøku" },
+  "wireForm.photoAfter": { en: "Photo After Removal", fo: "Mynd Eftir Burturtøku" },
+  "wireForm.notes": { en: "Notes", fo: "Notatar" },
+  "wireForm.save": { en: "Save Connector Label", fo: "Goym Koblingsmerki" },
+  "wireForm.storageNote": {
+    en: "Photos are stored locally in your browser (localStorage). Large or many photos may exceed browser storage limits — keep images small.",
+    fo: "Myndir verða goymdar lokalt í tínum kaga (localStorage). Stórar ella nógvar myndir kunnu fara yvir kagans goymslutakmark — hav myndir smáar.",
+  },
+
+  // Wire card
+  "wireCard.location": { en: "Location", fo: "Staðseting" },
+  "wireCard.shape": { en: "Shape", fo: "Form" },
+  "wireCard.wireColors": { en: "Wire Colors", fo: "Leiðingarlitir" },
+  "wireCard.connectsTo": { en: "Connects To", fo: "Koblar Til" },
+  "wireCard.removalDate": { en: "Removal Date", fo: "Burturtøkudagfesting" },
+  "wireCard.notes": { en: "Notes", fo: "Notatar" },
+  "wireCard.reinstalled": { en: "Reinstalled", fo: "Ásett Aftur" },
+  "wireCard.delete": { en: "Delete", fo: "Strika" },
+  "wireCard.beforeRemoval": { en: "Before removal", fo: "Áðrenn burturtøku" },
+  "wireCard.afterRemoval": { en: "After removal", fo: "Eftir burturtøku" },
+
+  // Print button
+  "print.print": { en: "Print", fo: "Prenta" },
+
+  // Login page
+  "login.subtitle": { en: "Garage OS — Access Locked", fo: "Garage OS — Atkoma Læst" },
+  "login.incorrectPasscode": { en: "Incorrect passcode.", fo: "Skeivur passkoda." },
+  "login.connectionError": { en: "Could not reach the server. Check your connection.", fo: "Kundi ikki náa til ambætaran. Kanna tína sambindingina." },
+  "login.enterPasscode": { en: "Enter passcode", fo: "Skriva passkoda" },
+  "login.verifying": { en: "Verifying…", fo: "Váttar…" },
+  "login.unlock": { en: "Unlock", fo: "Lat Upp" },
+  "faultCodes.searchPlaceholder": { en: "Search fault codes…", fo: "Leita feilkotur…" },
+  "faultCodes.codesCount": { en: "codes", fo: "kotur" },
+  "faultCodes.code": { en: "Code", fo: "Koda" },
+  "faultCodes.system": { en: "System", fo: "Skipan" },
+  "faultCodes.description": { en: "Description", fo: "Lýsing" },
+  "faultCodes.commonCauses": { en: "Common Causes", fo: "Vanligar Orsøkir" },
+  "faultCodes.notes": { en: "Notes", fo: "Notatar" },
+} satisfies Record<string, Record<Lang, string>>;
+
+export type DictKey = keyof typeof dictionary;

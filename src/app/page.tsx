@@ -12,14 +12,22 @@ import { useChecklistState } from "@/hooks/useChecklistState";
 import { STORAGE_KEYS } from "@/lib/storage";
 import { applyOverlay } from "@/lib/overlay";
 import { generateId } from "@/lib/id";
+import { useLanguage, useLocalizedData } from "@/lib/i18n/LanguageContext";
 
-import vehicle from "@/data/vehicle.json";
-import partsBase from "@/data/parts.json";
-import toolsBase from "@/data/tools.json";
-import torqueSpecs from "@/data/torqueSpecs.json";
-import checklistDefs from "@/data/checklists.json";
-import budgetBase from "@/data/budget.json";
-import maintenanceLogBase from "@/data/maintenanceLog.json";
+import vehicleEn from "@/data/vehicle.json";
+import vehicleFo from "@/data/vehicle.fo.json";
+import partsBaseEn from "@/data/parts.json";
+import partsBaseFo from "@/data/parts.fo.json";
+import toolsBaseEn from "@/data/tools.json";
+import toolsBaseFo from "@/data/tools.fo.json";
+import torqueSpecsEn from "@/data/torqueSpecs.json";
+import torqueSpecsFo from "@/data/torqueSpecs.fo.json";
+import checklistDefsEn from "@/data/checklists.json";
+import checklistDefsFo from "@/data/checklists.fo.json";
+import budgetBaseEn from "@/data/budget.json";
+import budgetBaseFo from "@/data/budget.fo.json";
+import maintenanceLogBaseEn from "@/data/maintenanceLog.json";
+import maintenanceLogBaseFo from "@/data/maintenanceLog.fo.json";
 import type {
   Part,
   Tool,
@@ -29,6 +37,15 @@ import type {
 } from "@/lib/types";
 
 export default function DashboardPage() {
+  const { t } = useLanguage();
+  const vehicle = useLocalizedData(vehicleEn, vehicleFo);
+  const partsBase = useLocalizedData(partsBaseEn, partsBaseFo);
+  const toolsBase = useLocalizedData(toolsBaseEn, toolsBaseFo);
+  const torqueSpecs = useLocalizedData(torqueSpecsEn, torqueSpecsFo);
+  const checklistDefs = useLocalizedData(checklistDefsEn, checklistDefsFo);
+  const budgetBase = useLocalizedData(budgetBaseEn, budgetBaseFo);
+  const maintenanceLogBase = useLocalizedData(maintenanceLogBaseEn, maintenanceLogBaseFo);
+
   const [partsOverlay] = useLocalStorage<Record<string, Partial<Part>>>(
     STORAGE_KEYS.partsOverlay,
     {}
@@ -45,11 +62,11 @@ export default function DashboardPage() {
 
   const parts = useMemo(
     () => applyOverlay<Part>(partsBase as Part[], partsOverlay),
-    [partsOverlay]
+    [partsBase, partsOverlay]
   );
   const budget = useMemo(
     () => applyOverlay<BudgetItem>(budgetBase as BudgetItem[], budgetOverlay),
-    [budgetOverlay]
+    [budgetBase, budgetOverlay]
   );
 
   const partsNeeded = parts.filter((p) => p.status === "needed").length;
@@ -71,19 +88,19 @@ export default function DashboardPage() {
   ).length;
 
   const nextTasks = useMemo(() => {
-    const tasks: { checklistId: string; checklistTitle: string; text: string }[] =
+    const tasks: { checklistId: string; itemId: string; checklistTitle: string; text: string }[] =
       [];
     for (const cl of checklistDefs) {
       for (const item of cl.items) {
         if (!checklistState[cl.id]?.[item.id]) {
-          tasks.push({ checklistId: cl.id, checklistTitle: cl.title, text: item.text });
+          tasks.push({ checklistId: cl.id, itemId: item.id, checklistTitle: cl.title, text: item.text });
         }
         if (tasks.length >= 10) break;
       }
       if (tasks.length >= 10) break;
     }
     return tasks;
-  }, [checklistState]);
+  }, [checklistState, checklistDefs]);
 
   const [newLog, setNewLog] = useState({ title: "", details: "", mileageKm: "" });
 
@@ -102,19 +119,19 @@ export default function DashboardPage() {
 
   const warnings: { text: string; tone: "amber" | "red" }[] = [
     {
-      text: `${torqueUnverified} torque specs have no researched value at all (VERIFY IN BMW TIS) — and even the populated reference figures on other specs should be cross-checked in BMW TIS before final assembly.`,
+      text: t("dashboard.torqueUnverifiedWarning").replace("{n}", String(torqueUnverified)),
       tone: "red",
     },
   ];
   if (criticalPartsNeeded > 0) {
     warnings.push({
-      text: `${criticalPartsNeeded} critical-priority part(s) not yet installed. Review the Parts Database.`,
+      text: t("dashboard.criticalPartsWarning").replace("{n}", String(criticalPartsNeeded)),
       tone: "amber",
     });
   }
   if (wireLabels.length === 0) {
     warnings.push({
-      text: "No wire labels logged yet. Start labeling connectors before disconnecting anything in the engine bay.",
+      text: t("dashboard.noWireLabelsWarning"),
       tone: "amber",
     });
   }
@@ -128,17 +145,17 @@ export default function DashboardPage() {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <div className="text-[11px] uppercase tracking-widest text-jarvis-dim">
-              Project Status
+              {t("dashboard.projectStatus")}
             </div>
             <div className="mt-1 font-display text-xl font-bold text-jarvis-cyan text-glow">
               {vehicle.status}
             </div>
             <div className="mt-1 text-sm text-jarvis-dim">
-              Current phase:{" "}
+              {t("dashboard.currentPhase")}{" "}
               <span className="text-jarvis-cyan">{vehicle.currentPhase}</span>
             </div>
           </div>
-          <StatusBadge tone="cyan">{vehicle.progressPercent}% Complete</StatusBadge>
+          <StatusBadge tone="cyan">{vehicle.progressPercent}{t("dashboard.percentComplete")}</StatusBadge>
         </div>
         <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-jarvis-bg">
           <div
@@ -150,12 +167,12 @@ export default function DashboardPage() {
 
       {/* Stat grid */}
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-        <StatCard label="Total Est. Cost" value={`${totalEstimate.toLocaleString()} DKK`} sub={`Actual: ${totalActual.toLocaleString()} DKK`} />
-        <StatCard label="Parts Needed" value={partsNeeded} tone="amber" />
-        <StatCard label="Parts Ordered" value={partsOrdered} tone="cyan" />
-        <StatCard label="Parts Installed" value={partsInstalled} tone="green" />
-        <StatCard label="Required Tools" value={toolsRequired} />
-        <StatCard label="Wire Labels Logged" value={wireLabels.length} />
+        <StatCard label={t("dashboard.totalEstCost")} value={`${totalEstimate.toLocaleString()} DKK`} sub={`${t("dashboard.actual")}: ${totalActual.toLocaleString()} DKK`} />
+        <StatCard label={t("dashboard.partsNeeded")} value={partsNeeded} tone="amber" />
+        <StatCard label={t("dashboard.partsOrdered")} value={partsOrdered} tone="cyan" />
+        <StatCard label={t("dashboard.partsInstalled")} value={partsInstalled} tone="green" />
+        <StatCard label={t("dashboard.requiredTools")} value={toolsRequired} />
+        <StatCard label={t("dashboard.wireLabelsLogged")} value={wireLabels.length} />
       </div>
 
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
@@ -163,36 +180,29 @@ export default function DashboardPage() {
         <GlassPanel className="p-4 lg:col-span-2">
           <div className="mb-3 flex items-center justify-between">
             <h2 className="font-display text-sm font-bold uppercase tracking-widest text-jarvis-cyan">
-              Next 10 Tasks
+              {t("dashboard.next10Tasks")}
             </h2>
             <Link href="/checklists" className="text-xs text-jarvis-dim hover:text-jarvis-cyan">
-              View all checklists →
+              {t("dashboard.viewAllChecklists")}
             </Link>
           </div>
           {nextTasks.length === 0 ? (
-            <p className="text-sm text-jarvis-dim">
-              All tracked checklist items are complete. Excellent work.
-            </p>
+            <p className="text-sm text-jarvis-dim">{t("dashboard.allTasksComplete")}</p>
           ) : (
             <ul className="space-y-2">
-              {nextTasks.map((t, i) => (
+              {nextTasks.map((task, i) => (
                 <li
-                  key={`${t.checklistId}-${i}`}
+                  key={`${task.checklistId}-${i}`}
                   className="flex items-start gap-2.5 rounded border border-jarvis-border/50 bg-jarvis-bg/40 px-3 py-2 text-sm"
                 >
                   <input
                     type="checkbox"
                     className="mt-0.5 accent-cyan-400"
-                    onChange={() => {
-                      const item = checklistDefs
-                        .find((c) => c.id === t.checklistId)
-                        ?.items.find((it) => it.text === t.text);
-                      if (item) toggle(t.checklistId, item.id);
-                    }}
+                    onChange={() => toggle(task.checklistId, task.itemId)}
                   />
                   <div>
-                    <div className="text-jarvis-cyan/90">{t.text}</div>
-                    <div className="text-[11px] text-jarvis-dim">{t.checklistTitle}</div>
+                    <div className="text-jarvis-cyan/90">{task.text}</div>
+                    <div className="text-[11px] text-jarvis-dim">{task.checklistTitle}</div>
                   </div>
                 </li>
               ))}
@@ -203,7 +213,7 @@ export default function DashboardPage() {
         {/* Warnings */}
         <GlassPanel className="p-4">
           <h2 className="mb-3 font-display text-sm font-bold uppercase tracking-widest text-jarvis-red">
-            Warnings
+            {t("dashboard.warnings")}
           </h2>
           <ul className="space-y-2">
             {warnings.map((w, i) => (
@@ -225,28 +235,28 @@ export default function DashboardPage() {
       {/* Maintenance log */}
       <GlassPanel className="p-4">
         <h2 className="mb-3 font-display text-sm font-bold uppercase tracking-widest text-jarvis-cyan">
-          Maintenance Log
+          {t("dashboard.maintenanceLog")}
         </h2>
         <div className="mb-3 grid grid-cols-1 gap-2 sm:grid-cols-4">
           <input
             value={newLog.title}
             onChange={(e) => setNewLog((s) => ({ ...s, title: e.target.value }))}
-            placeholder="Entry title"
+            placeholder={t("dashboard.entryTitlePlaceholder")}
             className="rounded border border-jarvis-border bg-jarvis-bg/60 px-2 py-1.5 text-sm sm:col-span-2 focus:border-jarvis-cyan/60 focus:outline-none"
           />
           <input
             value={newLog.mileageKm}
             onChange={(e) => setNewLog((s) => ({ ...s, mileageKm: e.target.value }))}
-            placeholder="Mileage (km)"
+            placeholder={t("dashboard.mileagePlaceholder")}
             className="rounded border border-jarvis-border bg-jarvis-bg/60 px-2 py-1.5 text-sm focus:border-jarvis-cyan/60 focus:outline-none"
           />
           <GlowButton size="sm" onClick={addLogEntry}>
-            + Add Entry
+            {t("dashboard.addEntry")}
           </GlowButton>
           <input
             value={newLog.details}
             onChange={(e) => setNewLog((s) => ({ ...s, details: e.target.value }))}
-            placeholder="Details"
+            placeholder={t("dashboard.detailsPlaceholder")}
             className="rounded border border-jarvis-border bg-jarvis-bg/60 px-2 py-1.5 text-sm sm:col-span-4 focus:border-jarvis-cyan/60 focus:outline-none"
           />
         </div>
