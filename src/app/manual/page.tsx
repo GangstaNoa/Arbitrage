@@ -19,16 +19,27 @@ export default function ManualPage() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-10">
+      <p className="max-w-2xl text-sm leading-relaxed text-jarvis-ink/80">
+        28 chapters covering the full engine replacement project, from
+        first-day planning through ongoing maintenance. Each one now includes
+        researched pro tips and common mistakes specific to the M57TU2D30
+        (306D5) engine and E70 xDrive35d platform, not just generic steps.
+      </p>
       {Array.from(byCategory.entries()).map(([category, list]) => (
         <div key={category}>
-          <h2 className="mb-2 font-display text-xs font-bold uppercase tracking-widest text-jarvis-dim">
-            {category}
-          </h2>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mb-3 flex items-baseline gap-2 border-b border-jarvis-border/50 pb-2">
+            <h2 className="font-display text-sm font-bold uppercase tracking-widest text-jarvis-cyan">
+              {category}
+            </h2>
+            <span className="text-[11px] text-jarvis-dim">
+              {list.length} chapter{list.length === 1 ? "" : "s"}
+            </span>
+          </div>
+          <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
             {list.map((c) => (
               <Link key={c.slug} href={`/manual/${c.slug}`}>
-                <GlassPanel className="h-full p-4 transition-all hover:border-jarvis-cyan/60 hover:shadow-glow">
+                <GlassPanel className="h-full p-5 transition-all hover:border-jarvis-cyan/60 hover:shadow-glow">
                   <div className="flex items-start justify-between gap-2">
                     <span className="text-[11px] text-jarvis-dim">
                       Ch. {c.number.toString().padStart(2, "0")}
@@ -37,15 +48,20 @@ export default function ManualPage() {
                       {c.difficulty}
                     </StatusBadge>
                   </div>
-                  <h3 className="mt-1 font-display text-base font-bold text-jarvis-cyan text-glow">
+                  <h3 className="mt-1.5 font-display text-base font-bold text-jarvis-cyan text-glow">
                     {c.title}
                   </h3>
-                  <p className="mt-1 line-clamp-2 text-xs text-jarvis-dim">
+                  <p className="mt-1.5 line-clamp-2 text-[13px] leading-relaxed text-jarvis-ink/70">
                     {c.objective}
                   </p>
-                  <p className="mt-2 text-[11px] text-jarvis-dim">
-                    ⏱ {c.estimatedTime}
-                  </p>
+                  <div className="mt-3 flex items-center justify-between text-[11px] text-jarvis-dim">
+                    <span>⏱ {c.estimatedTime}</span>
+                    {c.proTips.length > 0 && (
+                      <span className="text-jarvis-green/80">
+                        ✓ {c.proTips.length} pro tip{c.proTips.length === 1 ? "" : "s"}
+                      </span>
+                    )}
+                  </div>
                 </GlassPanel>
               </Link>
             ))}

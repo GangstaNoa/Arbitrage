@@ -5,7 +5,7 @@
     "fastener": "Main bearing cap bolts (M57TU2D30)",
     "torqueValue": "VERIFY IN BMW TIS",
     "angle": "VERIFY IN BMW TIS",
-    "notes": "Safety-critical. Likely multi-stage torque-to-yield with angle spec. Replace bolts if TIS specifies single-use.",
+    "notes": "Safety-critical. Likely multi-stage torque-to-yield with angle spec. Replace bolts if TIS specifies single-use. Commonly-published enthusiast/workshop reference figures for this bolt on M57-family engines are in the rough neighborhood of an initial ~20 Nm followed by a ~50° angle stage — treat that as context only, not a value to torque to; get the exact figure and stage count for this specific casting from TIS.",
     "source": "UNVERIFIED"
   },
   {
@@ -14,7 +14,7 @@
     "fastener": "Connecting rod bearing cap bolts (M57TU2D30)",
     "torqueValue": "VERIFY IN BMW TIS",
     "angle": "VERIFY IN BMW TIS",
-    "notes": "Safety-critical, root cause of failure event. Always use new bolts and new bearings. Confirm bearing color/size code against crank journal measurement.",
+    "notes": "Safety-critical, root cause of failure event. Always use new bolts and new bearings. Confirm bearing color/size code against crank journal measurement. Commonly-published reference figures for this bolt on M57-family engines are roughly a ~5 Nm settle stage, then ~20 Nm, then a further angle stage around ~70° — again, context only, not a substitute for the exact TIS spec.",
     "source": "UNVERIFIED"
   },
   {
@@ -23,7 +23,7 @@
     "fastener": "Cylinder head bolts",
     "torqueValue": "VERIFY IN BMW TIS",
     "angle": "VERIFY IN BMW TIS",
-    "notes": "Torque-to-yield, multi-stage sequence required. Single-use bolts — replace every time.",
+    "notes": "Torque-to-yield, multi-stage sequence required. Single-use bolts — replace every time. Commonly-published reference figures for M57-family head bolts describe a sequence roughly like ~80 Nm, fully loosen, ~50 Nm, then two further ~90° angle stages — this pattern (torque, loosen, re-torque, angle, angle) is a useful sanity check that you're following the right shape of procedure, but the exact numbers and stage count must come from TIS for this casting.",
     "source": "UNVERIFIED"
   },
   {

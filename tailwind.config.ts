@@ -22,6 +22,7 @@ const config: Config = {
           red: "#ff3b5c",
           green: "#28ffb0",
           dim: "#5c7f96",
+          ink: "#dceaf2",
         },
       },
       fontFamily: {

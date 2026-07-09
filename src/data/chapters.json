@@ -13,17 +13,30 @@
       "This manual is a personal project workspace, not an official BMW repair manual. Always cross-reference safety-critical values against BMW TIS/ISTA before acting on them."
     ],
     "steps": [
-      { "order": 1, "text": "Record full vehicle identification: 2009 BMW X5 E70 xDrive35d, engine M57TU2D30 (306D5), VIN WBAFF01070L319611." },
+      { "order": 1, "text": "Record full vehicle identification: 2009 BMW X5 E70 xDrive35d, engine M57TU2D30 (BMW engine code 306D5), VIN WBAFF01070L319611." },
       { "order": 2, "text": "Document the failure: engine failure with crankshaft and connecting rod bearing damage confirmed. Photograph any evidence (metal in oil, oil pan debris, etc.)." },
-      { "order": 3, "text": "Decide on replacement strategy: complete used engine swap vs. short block rebuild. This manual assumes a replacement engine swap." },
-      { "order": 4, "text": "Set up this app as the single source of truth: enter parts, tools, budget, and timeline before starting teardown." },
-      { "order": 5, "text": "Walk the vehicle and take baseline photos of exterior, interior, engine bay, and undercarriage for a before/after record." }
+      { "order": 3, "text": "Before deciding anything else, figure out *why* the bearings failed — see the Pro Tips below. Bolting in a good engine on top of the same root cause (a clogged oil pickup, extended oil-change intervals, low oil level) just buys you a second failure." },
+      { "order": 4, "text": "Decide on replacement strategy: complete used engine swap vs. machine-shop short block rebuild of the original block. This manual assumes a replacement (used/low-mileage) engine swap, since that's the far more common route for this failure on this platform." },
+      { "order": 5, "text": "Set up this app as the single source of truth: enter parts, tools, budget, and timeline before starting teardown." },
+      { "order": 6, "text": "Walk the vehicle and take baseline photos of exterior, interior, engine bay, and undercarriage for a before/after record." }
     ],
     "checklist": [
       "Vehicle details logged",
       "Failure documented with photos",
+      "Root cause theory recorded, not just the failure itself",
       "Replacement strategy decided",
       "Baseline photo set captured"
+    ],
+    "proTips": [
+      "306D5 is BMW's engine code for the sequential twin-turbo M57TU2D30 — a small fixed-geometry turbo for quick low-rpm response feeding a larger variable-geometry (VGT) turbo for top-end flow. Don't confuse it with the single-VGT-turbo M57TU2D30 \"TOP\" fitted to some other markets/models — parts, especially turbos and their vacuum/oil lines, are not interchangeable between the two.",
+      "The M57 family (this engine's predecessor and this exact generation) has a genuinely good reputation for long-block durability — the common failure paths on THIS specific chassis/engine combo are almost all secondary: timing chain guides going brittle and shedding plastic debris into the oil pickup, extended/neglected oil change intervals, or running low on oil after a slow leak (turbo seals, oil filter housing gasket, oil pan gasket) went unnoticed. Bearing failure is very often a symptom of one of those, not a random defect.",
+      "Before you buy a replacement engine, pull the old oil filter and cut it open, and inspect the oil pickup screen if you can get to it. Metal flake plus timing chain guide plastic fragments together strongly points to chain guide failure causing oil starvation — worth knowing before you spend money, and worth specifically checking on the replacement engine too.",
+      "Officially BMW rates this era of diesel oil-change interval on a 'Condition Based Service' flexible schedule that can stretch past 15,000 miles. In practice this is one of the most common contributors to sludge and bearing wear on high-mileage examples — plenty of experienced independent BMW diesel techs recommend a flat 10,000 km / 6,000 mile interval with a proper low-ash diesel-spec oil regardless of what the dash says."
+    ],
+    "commonMistakes": [
+      "Buying and installing a replacement engine without ever figuring out why the original one failed, then being surprised when the same failure mode repeats a year later.",
+      "Assuming a low-mileage seller claim on the replacement engine means the bottom end is healthy — see the Replacement Engine Inspection chapter. Mileage alone tells you nothing about oil-change history.",
+      "Treating this as a single weekend project. A full engine-out swap on this platform routinely runs 8–14 hours of removal alone, plus inspection, plus a similar install window — budget in days, not hours."
     ]
   },
   {
@@ -38,23 +51,36 @@
     "parts": [],
     "warnings": [
       "Never work under a vehicle supported only by a jack — always use rated jack stands.",
-      "Diesel fuel system operates at very high pressure — relieve pressure per procedure before opening any line.",
+      "Diesel fuel system operates at very high pressure (well over 2,000 bar in the common rail) — relieve pressure per procedure before opening any line.",
       "Disconnect the battery before working on wiring, fuel injection, or airbag-adjacent components.",
-      "Diesel exhaust and running engines in an enclosed garage can cause carbon monoxide buildup — ensure ventilation."
+      "Diesel exhaust and running engines in an enclosed garage can cause carbon monoxide buildup — ensure ventilation.",
+      "This engine uses a sequential turbo setup, high-pressure common-rail diesel injection, and multiple torque-to-yield (single-use) fasteners in the bottom end and head. None of these forgive shortcuts — when in doubt, stop and look it up rather than guessing."
     ],
     "steps": [
       { "order": 1, "text": "Clear a dedicated workspace with good lighting and ventilation." },
       { "order": 2, "text": "Stage fire extinguisher and first aid kit within reach." },
-      { "order": 3, "text": "Confirm engine hoist and jack stand ratings exceed the loads you'll apply." },
+      { "order": 3, "text": "Confirm engine hoist and jack stand ratings exceed the loads you'll apply — this engine plus ancillaries is roughly 200+ kg." },
       { "order": 4, "text": "Establish a fluid disposal plan (used oil, coolant, fuel) compliant with local regulations." },
       { "order": 5, "text": "Set a rule: disconnect battery before any electrical or fuel system work, no exceptions." },
-      { "order": 6, "text": "Keep a phone charged and reachable at all times when working alone." }
+      { "order": 6, "text": "Keep a phone charged and reachable at all times when working alone." },
+      { "order": 7, "text": "Keep a written or photographed torque/angle reference sheet on the bench for every torque-to-yield fastener you'll encounter (head bolts, main bearing bolts, rod bolts) so you're never tempted to \"just snug it and move on.\"" }
     ],
     "checklist": [
       "Workspace clear and ventilated",
       "Jack stands rated and positioned correctly",
       "Fire extinguisher accessible",
-      "Battery disconnect is standard procedure before wiring/fuel work"
+      "Battery disconnect is standard procedure before wiring/fuel work",
+      "Torque-to-yield fasteners identified in advance, new ones on hand before disassembly"
+    ],
+    "proTips": [
+      "Head bolts, main bearing cap bolts, and connecting rod bolts on this engine are torque-to-yield (TTY) fasteners — they're designed to stretch slightly during final torquing and are single-use by design. Reusing a stretched TTY bolt risks it snapping or losing clamping force under load. Order a full new set of all three before you start, not after you find out mid-reassembly that you need them.",
+      "A cold start rattle from the front of the engine lasting 5–30 seconds that fades as oil pressure builds is the classic sign of timing chain tensioner/guide wear on this engine family — worth listening for specifically on both the old engine (for your failure investigation) and the replacement engine before it goes in.",
+      "This chassis is genuinely heavy (X5 E70 SUV subframe/unibody) and diesel drivetrain components are dense — an engine hoist rated well above the quoted engine weight, with a leveler, is not optional overkill here."
+    ],
+    "commonMistakes": [
+      "Using an impact gun on a torque-to-yield fastener because \"it's close enough\" — TTY bolts need a controlled torque-then-angle sequence, not a guessed final tightness.",
+      "Working alone late at night on a jack-stand-supported vehicle with no phone nearby — a genuinely common cause of minor incidents becoming serious ones.",
+      "Skipping eye protection during degreasing/pressure-washing steps — diesel engine bays accumulate baked-on oil and coolant residue that splashes further than expected."
     ]
   },
   {
@@ -72,12 +98,22 @@
       { "order": 1, "text": "Review the Tools Database page and mark which tools you already own." },
       { "order": 2, "text": "Prioritize required tools over optional tools for the current project phase." },
       { "order": 3, "text": "Budget tool purchases into the Budget Tracker under the Tools category." },
-      { "order": 4, "text": "Verify torque wrenches are calibrated/within their accuracy window before use on safety-critical fasteners." }
+      { "order": 4, "text": "Verify torque wrenches are calibrated/within their accuracy window before use on safety-critical fasteners." },
+      { "order": 5, "text": "Specifically confirm you have (or can borrow/rent) a crank-holding tool for the vibration damper bolt, a torque angle gauge for TTY fasteners, and E-Torx sockets — E70 diesels use a lot of external Torx (E-series) rather than plain hex/Allen." }
     ],
     "checklist": [
       "Tools Database reviewed",
       "Required tools acquired or on order",
-      "Torque wrenches verified accurate"
+      "Torque wrenches verified accurate",
+      "Torque angle gauge and E-Torx sockets confirmed on hand"
+    ],
+    "proTips": [
+      "A telescoping inspection mirror is cheap and earns its keep repeatedly on this platform — several of the hardest-to-reach bolts around the right engine mount and DPF bracket are only realistically found by feel plus mirror, not by sight alone.",
+      "A basic borescope/endoscope camera (phone-compatible ones are inexpensive now) is genuinely useful for inspecting the EGR cooler internally for cracking without pulling it, and for a first look at cylinder bores before committing to a full teardown."
+    ],
+    "commonMistakes": [
+      "Buying a cheap uncalibrated torque wrench for TTY bottom-end work and finding out later it was reading 15% off.",
+      "Renting an engine hoist for \"a day\" and discovering removal alone took longer than that — rent for the whole weekend or buy one outright if you'll ever do this again."
     ]
   },
   {
@@ -90,17 +126,27 @@
     "estimatedTime": "Ongoing",
     "tools": [],
     "parts": [],
-    "warnings": ["Always confirm OEM part numbers against the VIN before ordering — E70 diesel variants had running production changes."],
+    "warnings": ["Always confirm OEM part numbers against the VIN before ordering — E70 diesel variants had running production changes, and this exact 306D5 twin-turbo engine has parts (turbos especially) that are NOT shared with the later single-turbo variants of the same M57TU2D30 base engine."],
     "steps": [
       { "order": 1, "text": "Review the Parts Database and confirm priority (critical/high/medium/low) for each item." },
-      { "order": 2, "text": "Cross-reference OEM part numbers using VIN WBAFF01070L319611 via a parts catalog before ordering." },
+      { "order": 2, "text": "Cross-reference OEM part numbers using VIN WBAFF01070L319611 via a parts catalog (e.g. RealOEM or an official BMW parts lookup) before ordering." },
       { "order": 3, "text": "Update part status to 'ordered' when placed, then 'installed' once fitted, to keep dashboard progress accurate." },
-      { "order": 4, "text": "Log actual prices in the Budget Tracker as parts are purchased." }
+      { "order": 4, "text": "Log actual prices in the Budget Tracker as parts are purchased." },
+      { "order": 5, "text": "While you're sourcing the replacement engine, proactively add known-weak-point parts to the list even if they aren't broken yet: swirl flap delete kit, EGR cooler, timing chain kit (chain + guides + tensioner), vacuum pump, and injector seal washers. Fitting these while the engine is already out and accessible is far cheaper in labor than doing it later with the engine back in the car." }
     ],
     "checklist": [
       "Parts Database reviewed and prioritized",
       "OEM numbers verified against VIN",
-      "Ordering workflow established"
+      "Ordering workflow established",
+      "Preventive wear-item parts added to the list, not just failure-replacement parts"
+    ],
+    "proTips": [
+      "It's worth budgeting for a full new timing chain kit (chain + guides + tensioner) even if the replacement engine's isn't obviously stretched — guide plastic embrittles with age regardless of mileage, and you will never have easier access to it than during this swap.",
+      "Order every single-use fastener (head bolts, main/rod bearing bolts if the bottom end is touched, injector copper seal washers) up front. Discovering you need one mid-reassembly, with the engine already partially buttoned up, is a guaranteed multi-day delay."
+    ],
+    "commonMistakes": [
+      "Ordering the cheapest available aftermarket turbo or EGR cooler without checking reviews/fitment — these are exactly the parts where a bad aftermarket unit fails again in a year.",
+      "Forgetting that copper injector seal washers and other crush washers are single-use — buying one set and reusing them 'because they look fine' is a classic false economy that leads to leaks."
     ]
   },
   {
@@ -108,33 +154,47 @@
     "number": 5,
     "title": "Engine Removal",
     "category": "Engine Replacement",
-    "objective": "Safely remove the failed M57TU2D30 engine from the vehicle.",
+    "objective": "Safely remove the failed M57TU2D30 (306D5) engine from the vehicle.",
     "difficulty": "Advanced",
     "estimatedTime": "8–14 hours",
-    "tools": ["Engine hoist / crane", "Engine leveler", "Torque wrench (low + high range)", "Socket set", "Fuel line disconnect tool set", "Fluid evacuator", "Wire labeling supplies"],
+    "tools": ["Engine hoist / crane", "Engine leveler", "Torque wrench (low + high range)", "Socket set", "E-Torx socket set", "Fuel line disconnect tool set", "Fluid evacuator", "Telescoping inspection mirror", "Wire labeling supplies"],
     "parts": ["Drain plugs / crush washers (new)", "Coolant (for post-removal top-up if needed)"],
     "warnings": [
       "Engine weight is substantial — never work under a suspended engine.",
       "Relieve fuel system pressure before disconnecting any fuel line.",
-      "Label every connector with the Wire Labeling System before disconnecting — this is the single biggest time-saver on reassembly."
+      "Label every connector with the Wire Labeling System before disconnecting — this is the single biggest time-saver on reassembly.",
+      "Getting the DPF (diesel particulate filter) and right-hand engine mount bracket out is the single hardest access point on this job — read the Pro Tips below before you get to that stage, not after you're stuck."
     ],
     "steps": [
-      { "order": 1, "text": "Follow the Pre-Removal Checklist in full before starting." },
-      { "order": 2, "text": "Disconnect battery, drain fluids into labeled containers." },
+      { "order": 1, "text": "Follow the Safety chapter and Pre-Removal Checklist in full before starting." },
+      { "order": 2, "text": "Disconnect battery, drain fluids (oil, coolant) into labeled containers." },
       { "order": 3, "text": "Remove front bumper/clip for full engine bay access (see Garage Viewer front-bumper zone)." },
       { "order": 4, "text": "Remove radiator pack and set aside safely." },
-      { "order": 5, "text": "Work through the Engine Bay clickable sections systematically, labeling and disconnecting each wiring harness connector." },
+      { "order": 5, "text": "Work through the Engine Bay clickable sections systematically, labeling and disconnecting each wiring harness connector before it's disturbed." },
       { "order": 6, "text": "Disconnect fuel lines (capped immediately) and turbo oil/coolant lines." },
-      { "order": 7, "text": "Disconnect exhaust downpipe from turbo outlet." },
-      { "order": 8, "text": "Support transmission independently, then separate bellhousing per torque spec reference TQ-009/TQ-010." },
-      { "order": 9, "text": "Attach hoist and leveler, remove engine mount bolts (TQ-007/TQ-008), and lift engine clear slowly, watching for snagged lines." },
-      { "order": 10, "text": "Place engine on stand, photograph thoroughly, and begin the Engine Bay Cleaning chapter." }
+      { "order": 7, "text": "Disconnect the exhaust downpipe from the turbo outlet, then the DPF from the downpipe — leave the DPF loosely attached via its band clamp if it's in the way rather than fully removing it yet." },
+      { "order": 8, "text": "To free the right-hand engine mount, release the EGR cooler from the DPF/downpipe assembly first — the bracket cannot come out with the DPF still fully attached at that joint." },
+      { "order": 9, "text": "Lower the front subframe several inches (do not remove it fully unless needed) to gain the clearance the engine mounts need to come out — this is expected on this platform, not a sign something's wrong." },
+      { "order": 10, "text": "Support transmission independently, then separate bellhousing per torque spec reference TQ-009/TQ-010." },
+      { "order": 11, "text": "Attach hoist and leveler, remove engine mount bolts (TQ-007/TQ-008), and lift engine clear slowly, watching for snagged lines, hoses, or the subframe edge." },
+      { "order": 12, "text": "Place engine on stand, photograph thoroughly, and begin the Engine Bay Cleaning chapter." }
     ],
     "checklist": [
       "Pre-Removal Checklist completed",
       "All connectors labeled before disconnect",
+      "DPF/EGR cooler joint released before attempting right mount bracket removal",
       "Engine lifted clear without snags",
       "Old engine documented with photos for records"
+    ],
+    "proTips": [
+      "The right engine mount bracket is genuinely the tightest access point on this whole job. The documented approach: disconnect the EGR cooler from the DPF/downpipe joint first, then drop the front subframe a few inches — trying to muscle the bracket past the DPF without doing this in order is where most people get stuck.",
+      "Use a telescoping mirror plus an E-Torx socket on a wobble extension for the hard-to-see bolts around that bracket — you will not get a straight sightline on several of them.",
+      "Photograph every bracket, hose routing, and connector position before you disturb it, in addition to labeling connectors. Six months from now you will not remember which of two near-identical brackets went where."
+    ],
+    "commonMistakes": [
+      "Trying to remove the right engine mount bracket before releasing the DPF/EGR cooler joint — it physically won't clear, and forcing it risks cracking the DPF or bending the bracket.",
+      "Fully unbolting and setting aside the DPF too early, then losing track of its orientation/gaskets — leaving it loosely clamped to the turbo until you actually need it fully off avoids this.",
+      "Not lowering the subframe enough and then fighting the mount bolts at an awkward angle instead of just dropping it the extra couple of inches it needs."
     ]
   },
   {
@@ -152,16 +212,27 @@
       { "order": 1, "text": "Cover/bag any remaining electrical connectors and open lines." },
       { "order": 2, "text": "Apply degreaser, agitate with a brush, and pressure wash the bay." },
       { "order": 3, "text": "Inspect subframe, shock towers, and firewall for rust, cracks, or accident damage." },
-      { "order": 4, "text": "Clean all grounding points to bare, shiny metal." },
-      { "order": 5, "text": "Inspect the wiring harness for chafing, melted insulation near the turbo, or brittle sections — repair as needed." },
-      { "order": 6, "text": "Apply touch-up paint or rust treatment to any bare metal spots found." },
-      { "order": 7, "text": "Dry fully and photograph the clean bay before install." }
+      { "order": 4, "text": "Clean all grounding points to bare, shiny metal — a poor ground here is one of the most common causes of mystery electrical faults after any engine R&R." },
+      { "order": 5, "text": "Inspect the wiring harness for chafing, melted insulation near the turbo/exhaust, or brittle sections — repair or sleeve as needed." },
+      { "order": 6, "text": "Take the opportunity to fit any preventive parts that are far easier with the bay fully open — swirl flap delete/blanking plates on the intake manifold, in particular." },
+      { "order": 7, "text": "Apply touch-up paint or rust treatment to any bare metal spots found." },
+      { "order": 8, "text": "Dry fully and photograph the clean bay before install." }
     ],
     "checklist": [
       "Bay degreased and pressure washed",
       "Rust/damage inspected and treated",
       "Ground points cleaned to bare metal",
-      "Harness inspected and repaired if needed"
+      "Harness inspected and repaired if needed",
+      "Preventive intake work considered while everything is this accessible"
+    ],
+    "proTips": [
+      "If you haven't already decided on a swirl flap delete, this is the moment — the intake manifold is fully exposed and out of the car (or easily removable), which is dramatically easier than doing it later with the engine installed. Aluminum blanking plate kits are inexpensive and are one of the most commonly recommended preventive mods for this engine family, because a fractured flap shaft can send debris straight into a cylinder.",
+      "This is also the cheapest point in the whole project to replace the vacuum pump and inspect/replace vacuum lines — it supplies both the brake booster and EGR valve, and a hissing noise or firming-up brake pedal down the road usually traces back here."
+    ],
+    "commonMistakes": [
+      "Pressure-washing directly into open connectors or the alternator/starter without bagging them first.",
+      "Skipping the swirl flap delete decision here and having to revisit the intake manifold again later with everything reassembled.",
+      "Painting over rust without first treating it — surface rust under fresh touch-up paint just continues spreading underneath."
     ]
   },
   {
@@ -169,27 +240,43 @@
     "number": 7,
     "title": "Replacement Engine Inspection",
     "category": "Engine Replacement",
-    "objective": "Verify the replacement M57TU2D30 engine is sound before it goes into the car.",
+    "objective": "Verify the replacement M57TU2D30 (306D5) engine is sound before it goes into the car.",
     "difficulty": "Advanced",
     "estimatedTime": "4–8 hours",
-    "tools": ["Compression / leak-down tester", "Engine stand", "Torque wrench", "Digital multimeter"],
-    "parts": ["Gasket set", "Main bearing set (if inspecting bottom end)", "Rod bearing set (if inspecting bottom end)"],
-    "warnings": ["Do not trust seller mileage claims alone — this vehicle's failure started as an unnoticed bearing wear issue. Physically inspect the bottom end regardless of stated condition."],
+    "tools": ["Compression / leak-down tester", "Engine stand", "Torque wrench", "Digital multimeter", "Borescope/endoscope camera (optional but useful)"],
+    "parts": ["Gasket set", "Main bearing set (if inspecting bottom end)", "Rod bearing set (if inspecting bottom end)", "Timing chain kit (chain, guides, tensioner)"],
+    "warnings": [
+      "Do not trust seller mileage claims alone — this vehicle's failure started as an unnoticed bearing wear issue on an engine that likely also looked fine from the outside. Physically inspect the bottom end regardless of stated condition.",
+      "Confirm this is genuinely the correct twin-turbo 306D5 variant and not a visually similar but incompatible M57 variant before you commit — casting numbers and turbo configuration matter, not just the badge."
+    ],
     "steps": [
-      { "order": 1, "text": "Confirm engine code and casting numbers match required application for xDrive35d." },
+      { "order": 1, "text": "Confirm engine code and casting numbers match the required 306D5 twin-turbo application for xDrive35d." },
       { "order": 2, "text": "Mount engine on stand and rotate crank by hand — should be smooth with no binding or grinding." },
       { "order": 3, "text": "Perform compression or leak-down test on all 6 cylinders." },
-      { "order": 4, "text": "Drop the oil pan and visually inspect main and rod bearings for scoring, discoloration, or wear." },
-      { "order": 5, "text": "Inspect timing chain, guides, and tensioner for stretch/wear." },
-      { "order": 6, "text": "Bench test turbochargers for shaft play and smooth actuator movement." },
-      { "order": 7, "text": "Test all sensors and glow plugs with a multimeter where possible." },
-      { "order": 8, "text": "Clean and repaint the exterior of the engine if desired before install." }
+      { "order": 4, "text": "Drop the oil pan and visually inspect main and rod bearings for scoring, discoloration (bluish tint = overheating), or wear — this is the exact failure mode that took out the original engine, so don't skip it just because the seller says it ran fine." },
+      { "order": 5, "text": "Inspect timing chain, guides, and tensioner for stretch, play, or brittle/cracked plastic — replace preventively regardless of apparent condition if the kit isn't already fresh, since guide debris shedding into the oil pickup is one of the best-documented causes of bearing starvation on this engine family." },
+      { "order": 6, "text": "Bench test both turbochargers (small fixed-geometry + large VGT) for shaft play, oil residue in the compressor housing, and smooth, unrestricted VGT actuator/vane movement." },
+      { "order": 7, "text": "Cut open the old oil filter (from the donor engine's last service, if available) and inspect for metal or plastic debris as a health indicator." },
+      { "order": 8, "text": "Test all sensors and glow plugs with a multimeter where possible." },
+      { "order": 9, "text": "Clean and repaint the exterior of the engine if desired before install." }
     ],
     "checklist": [
+      "Correct 306D5 twin-turbo variant confirmed, not just engine family",
       "Compression/leak-down test passed on all cylinders",
       "Bottom end visually inspected regardless of stated mileage",
-      "Timing components inspected",
-      "Turbos and sensors bench-tested"
+      "Timing chain components inspected or preventively replaced",
+      "Both turbos bench-tested for shaft play and actuator movement",
+      "Sensors and glow plugs tested"
+    ],
+    "proTips": [
+      "A VGT turbo that's stiff, sticky, or won't move freely through its full actuator range is very often soot/rust buildup jamming the unison ring rather than a dead actuator motor — worth trying a careful clean before assuming you need a whole new turbo.",
+      "Underboost/overboost fault codes on this system point to a mechanical turbo/vane problem, not just the actuator — don't spend money on 'just the actuator' if the codes suggest the turbo itself needs attention.",
+      "If you can get an endoscope into the EGR cooler passages, do it now — cracking here causes coolant-into-exhaust leaks that look exactly like a head gasket failure (white/sweet-smelling smoke) but aren't, and it's far easier to address with the engine on a stand than in the car."
+    ],
+    "commonMistakes": [
+      "Skipping the bottom-end teardown inspection because the engine 'sounded fine' when it ran at the donor yard — a healthy-sounding engine can still have early-stage bearing wear that isn't audible yet.",
+      "Reusing the old timing chain kit on the replacement engine to save money, when guide brittleness is age-related and not something you can fully judge by eye.",
+      "Assuming both turbos are healthy because the engine 'made good power' at the donor — sequential turbo systems can mask a partially failing small turbo under certain load ranges."
     ]
   },
   {
@@ -200,32 +287,44 @@
     "objective": "Install the inspected replacement engine and reconnect all systems.",
     "difficulty": "Advanced",
     "estimatedTime": "8–14 hours",
-    "tools": ["Engine hoist / crane", "Engine leveler", "Torque wrench (low + high range)", "Torque angle gauge", "Socket set"],
-    "parts": ["Engine gasket set", "Engine mount set", "Coolant hose set", "New fasteners per TIS single-use call-outs"],
+    "tools": ["Engine hoist / crane", "Engine leveler", "Torque wrench (low + high range)", "Torque angle gauge", "Socket set", "E-Torx socket set"],
+    "parts": ["Engine gasket set", "Engine mount set", "Coolant hose set", "New fasteners per TIS single-use call-outs (head bolts, main/rod bearing bolts if bottom end serviced)"],
     "warnings": [
       "Never let the transmission hang unsupported on the input shaft during bellhousing mating.",
       "Confirm torque converter is fully seated (measure the gap) before bolting to the flexplate.",
-      "Follow the multi-stage torque-to-yield sequence exactly for head bolts and main/rod bearing caps if the bottom end was serviced."
+      "Follow the multi-stage torque-to-yield sequence exactly for head bolts and main/rod bearing caps if the bottom end was serviced — these are single-use fasteners, and the sequence (torque, then angle stages) matters as much as the final number."
     ],
     "steps": [
       { "order": 1, "text": "Lower engine into the bay slowly with hoist and leveler, aligning to transmission dowels." },
       { "order": 2, "text": "Bolt bellhousing per TQ-009 and torque converter per TQ-010." },
       { "order": 3, "text": "Install and torque engine mounts per TQ-007/TQ-008 once engine is supported by mounts, not the hoist." },
-      { "order": 4, "text": "Reconnect every wiring harness connector, matching each to its labeled ID from the Wire Labeling System." },
-      { "order": 5, "text": "Reconnect all grounding straps per TQ-026 to clean, bare-metal points." },
-      { "order": 6, "text": "Reinstall fuel system with new seals per the Fuel System chapter." },
-      { "order": 7, "text": "Reinstall turbo oil/coolant lines and vacuum lines, matching labeled routing." },
-      { "order": 8, "text": "Reinstall radiator pack and reconnect coolant hoses." },
-      { "order": 9, "text": "Reinstall front bumper/clip." },
-      { "order": 10, "text": "Fill all fluids (oil, coolant, transmission) to spec." },
-      { "order": 11, "text": "Do a final visual sweep of the bay for tools or rags left behind before moving to First Start." }
+      { "order": 4, "text": "Raise the subframe back into position and torque its mounting bolts before doing anything that depends on it (suspension geometry, exhaust alignment)." },
+      { "order": 5, "text": "Reconnect every wiring harness connector, matching each to its labeled ID from the Wire Labeling System." },
+      { "order": 6, "text": "Reconnect all grounding straps per TQ-026 to clean, bare-metal points." },
+      { "order": 7, "text": "Reinstall fuel system with new seals per the Fuel System chapter." },
+      { "order": 8, "text": "Reinstall turbo oil/coolant lines and vacuum lines, matching labeled routing exactly — do not mix up the small (high pressure) and large (low pressure) turbo circuits." },
+      { "order": 9, "text": "Reconnect the EGR cooler and DPF/downpipe joint you released during removal." },
+      { "order": 10, "text": "Reinstall radiator pack and reconnect coolant hoses." },
+      { "order": 11, "text": "Reinstall front bumper/clip." },
+      { "order": 12, "text": "Fill all fluids (oil, coolant, transmission) to spec." },
+      { "order": 13, "text": "Do a final visual sweep of the bay for tools or rags left behind before moving to First Start." }
     ],
     "checklist": [
       "Engine mounted and torqued per spec",
       "Every wire connector matched to its label and marked reinstalled",
       "All grounding straps reconnected",
+      "EGR cooler / DPF joint reconnected and sealed",
       "Fluids filled to correct levels",
       "Final tool sweep completed"
+    ],
+    "proTips": [
+      "Prime the new/serviced turbo's oil feed line before first start — cranking a dry turbo bearing on startup is one of the fastest ways to kill a turbo you just paid to inspect or replace. A short crank with fuel disabled, or pre-filling the feed line, both work.",
+      "Reassemble the right engine mount bracket and DPF/EGR joint in the reverse of exactly how you took it apart, using your removal photos — this is the same tight-access area that made removal hard, and it's just as easy to cross-thread or misalign something here on the way back in."
+    ],
+    "commonMistakes": [
+      "Torquing the subframe back down before final suspension/mount alignment is confirmed, then having to loosen everything again.",
+      "Swapping the small-turbo and large-turbo oil or vacuum line routing — they look similar but serve different pressure circuits.",
+      "Rushing the final tool sweep because you're eager to hear the engine run — a dropped socket or rag near a moving belt on first start is a genuinely common, entirely avoidable mistake."
     ]
   },
   {
@@ -241,16 +340,17 @@
     "warnings": [
       "Be prepared to shut down immediately at any abnormal noise, warning light, or leak.",
       "Do not rev the engine on first start — idle only, monitoring oil pressure and temperature.",
-      "Ensure adequate ventilation for diesel exhaust."
+      "Ensure adequate ventilation for diesel exhaust.",
+      "A cold-start rattle lasting more than a few seconds is not normal wear-and-tear on this engine — treat it as a stop-and-investigate signal, not something to run through."
     ],
     "steps": [
       { "order": 1, "text": "Reconnect battery (negative last) and register it via the coding tool." },
-      { "order": 2, "text": "Turn ignition to position 2 (no crank) and check for expected warning lights and DDE wake-up." },
+      { "order": 2, "text": "Turn ignition to position 2 (no crank) and check for expected warning lights and DDE (diesel engine control) wake-up." },
       { "order": 3, "text": "Run a full diagnostic scan and clear any stored faults that are expected from the disconnect (note any that persist)." },
-      { "order": 4, "text": "If possible, crank with fuel/injection disabled briefly to pre-lubricate before a full start (per accepted diesel rebuild practice)." },
+      { "order": 4, "text": "If possible, crank with fuel/injection disabled briefly to pre-lubricate before a full start (per accepted diesel rebuild practice), especially important if the turbo oil feed wasn't pre-primed." },
       { "order": 5, "text": "Start the engine and let it idle only — do not rev." },
-      { "order": 6, "text": "Watch oil pressure and coolant temperature gauges continuously for the first several minutes." },
-      { "order": 7, "text": "Inspect the entire bay for oil, coolant, fuel, or boost leaks while idling." },
+      { "order": 6, "text": "Watch oil pressure and coolant temperature gauges continuously for the first several minutes. Listen specifically for the timing-chain cold-start rattle and any turbo whine/rattle that wasn't there on the bench test." },
+      { "order": 7, "text": "Inspect the entire bay for oil, coolant, fuel, or boost leaks while idling — pay particular attention to the EGR cooler/DPF joint and turbo oil line banjo fittings you disturbed." },
       { "order": 8, "text": "Confirm injector correction codes and glow plug cycling via the diagnostic tool." },
       { "order": 9, "text": "Shut down, recheck fluid levels, and top up as needed." }
     ],
@@ -258,7 +358,16 @@
       "Battery registered",
       "Pre-start diagnostic scan clean or explained",
       "First idle completed with no abnormal noise/leak",
+      "No cold-start rattle beyond a fraction of a second",
       "Injector codes and glow plug cycle confirmed"
+    ],
+    "proTips": [
+      "Keep the first idle short — a few minutes is enough to confirm oil pressure, check for leaks, and listen for anything wrong. There's no benefit to a long first idle, and it's better to shut down, recheck everything cold, and restart than to let a developing problem run for 20 minutes.",
+      "White smoke with a faintly sweet smell at first start, especially with no obvious external coolant leak, is the classic EGR cooler internal-leak signature on this engine — don't let anyone talk you into a head gasket job before that's been ruled out with an inspection or pressure test."
+    ],
+    "commonMistakes": [
+      "Revving the engine to 'blow out cobwebs' on first start instead of a calm, monitored idle — this is exactly when a starvation or leak problem does the most damage before you can react.",
+      "Dismissing a brief cold-start rattle as 'normal for a diesel' — it's a specific, well-documented symptom on this engine family and worth a five-minute check rather than an assumption."
     ]
   },
   {
@@ -269,23 +378,37 @@
     "objective": "Service, inspect, and properly bleed the cooling system.",
     "difficulty": "Intermediate",
     "estimatedTime": "3–5 hours",
-    "tools": ["Coolant pressure test / refill kit", "Fluid evacuator", "Torque wrench"],
-    "parts": ["Radiator", "Coolant hose set", "Thermostat + housing", "Water pump", "Coolant (BMW-spec)"],
-    "warnings": ["Never open a hot cooling system — allow full cool-down before removing the expansion tank cap.", "Diesel cooling systems on this platform are prone to air pockets — follow the bleed procedure carefully."],
+    "tools": ["Coolant pressure test / refill kit", "Fluid evacuator", "Torque wrench", "Borescope/endoscope camera (optional, for EGR cooler check)"],
+    "parts": ["Radiator", "Coolant hose set", "Thermostat + housing", "Water pump", "EGR cooler (preventive or as-needed)", "Coolant (BMW-spec)"],
+    "warnings": [
+      "Never open a hot cooling system — allow full cool-down before removing the expansion tank cap.",
+      "Diesel cooling systems on this platform are prone to air pockets — follow the bleed procedure carefully.",
+      "This is a known EGR cooler failure platform — coolant loss with no visible external leak is a strong hint to check there before assuming a head gasket or hose problem."
+    ],
     "steps": [
       { "order": 1, "text": "Drain coolant fully into a clean, labeled container." },
       { "order": 2, "text": "Inspect radiator, hoses, thermostat, and water pump per the Engine Bay clickable sections." },
-      { "order": 3, "text": "Replace any hoses showing softness, swelling, or hardening." },
-      { "order": 4, "text": "Reassemble with new clamps where reused clamps show fatigue." },
-      { "order": 5, "text": "Refill with BMW-spec coolant mixed to the correct ratio." },
-      { "order": 6, "text": "Open the system bleed screw(s) and run the engine at idle/fast idle until air is purged." },
-      { "order": 7, "text": "Pressure test the system for leaks once bled and topped up." }
+      { "order": 3, "text": "If you have any history of unexplained coolant loss, white exhaust smoke, or a sweet exhaust smell, inspect or pressure-test the EGR cooler specifically before reassembling — it's a well-documented failure point on this engine, separate from the radiator/hose system." },
+      { "order": 4, "text": "Replace any hoses showing softness, swelling, or hardening." },
+      { "order": 5, "text": "Reassemble with new clamps where reused clamps show fatigue." },
+      { "order": 6, "text": "Refill with BMW-spec coolant mixed to the correct ratio." },
+      { "order": 7, "text": "Open the system bleed screw(s) and run the engine at idle/fast idle until air is purged." },
+      { "order": 8, "text": "Pressure test the system for leaks once bled and topped up." }
     ],
     "checklist": [
       "All hoses and components inspected/replaced as needed",
+      "EGR cooler specifically checked if any unexplained coolant loss history",
       "System refilled with correct coolant spec",
       "Bleed procedure completed with no trapped air",
       "Pressure test passed with no leaks"
+    ],
+    "proTips": [
+      "This exact model/engine combination was subject to a factory recall campaign for EGR cooler coolant leaks on certain model years (BMW's stated concern was coolant mixing with diesel soot creating a fire risk by smoldering in the intake manifold). A 2009 build is outside the specific recall window that was issued for later model years, so there's no free dealer fix available — treat it as a proactive inspection item rather than assuming it's covered.",
+      "Coolant disappearing with zero visible external puddle or wet hose is the signature of an internal EGR cooler leak (coolant going into the exhaust/intake side, not onto the ground). If you see that pattern, check there before spending money chasing a head gasket."
+    ],
+    "commonMistakes": [
+      "Chasing a suspected head gasket failure based on white smoke and coolant loss without first ruling out the EGR cooler, which produces near-identical symptoms and is a far more common cause on this engine.",
+      "Skipping the bleed procedure or rushing it — trapped air pockets on this cooling system layout cause overheating that looks like a totally unrelated problem."
     ]
   },
   {
@@ -296,12 +419,13 @@
     "objective": "Safely service the high-pressure common-rail diesel fuel system.",
     "difficulty": "Advanced",
     "estimatedTime": "3–6 hours",
-    "tools": ["Fuel line disconnect tool set", "Torque wrench (low range)", "Clean lint-free rags"],
-    "parts": ["Fuel injector set", "Fuel filter", "High pressure fuel pump (if required)", "Injector seal washers (new)"],
+    "tools": ["Fuel line disconnect tool set", "Torque wrench (low range)", "Torque angle gauge", "Clean lint-free rags"],
+    "parts": ["Fuel injector set", "Fuel filter", "High pressure fuel pump (if required)", "Injector seal washers (new, one set per injector, every time)"],
     "warnings": [
-      "This is a high-pressure diesel common-rail system — extreme cleanliness is required. Any contamination can destroy injectors or the pump.",
+      "This is a high-pressure diesel common-rail system, operating well over 2,000 bar — extreme cleanliness is required. Any contamination can destroy injectors or the pump.",
       "Relieve system pressure before disconnecting any line.",
-      "Cap every open fitting immediately to prevent debris ingress."
+      "Cap every open fitting immediately to prevent debris ingress.",
+      "Injector copper seal washers must be replaced every single time an injector is removed, with no exceptions — they're designed to deform once to form the seal and cannot do so a second time."
     ],
     "steps": [
       { "order": 1, "text": "Relieve fuel system pressure per the procedure noted in the Injectors and Fuel Rail engine bay sections." },
@@ -309,8 +433,8 @@
       { "order": 3, "text": "Disconnect and cap high pressure lines at pump, rail, and injectors." },
       { "order": 4, "text": "Remove injectors with a proper puller — never pry." },
       { "order": 5, "text": "Record each injector's correction code before it leaves the vehicle." },
-      { "order": 6, "text": "Install new injector seal washers on every injector, every time." },
-      { "order": 7, "text": "Torque injector clamp bolts per TQ-016 with angle stage." },
+      { "order": 6, "text": "Install new injector seal washers on every injector, every time, seated correctly before torquing down." },
+      { "order": 7, "text": "Torque injector clamp bolts per TQ-016 with angle stage — proper torque is what allows the new copper washer to deform correctly and seal; both over- and under-torquing cause leaks." },
       { "order": 8, "text": "Torque fuel rail bolts per TQ-015." },
       { "order": 9, "text": "Replace fuel filter." },
       { "order": 10, "text": "Prime the system and check for leaks before a full start." },
@@ -319,8 +443,17 @@
     "checklist": [
       "System pressure relieved before disconnecting lines",
       "Injector correction codes recorded and re-entered",
-      "New seal washers used on every injector",
+      "New seal washers used on every injector, no reuse",
       "Fittings torqued per spec and leak-checked"
+    ],
+    "proTips": [
+      "Rough idle, loss of power, or a fresh leak-related fault code shortly after any injector work is very often just an incorrectly seated or reused copper washer — check there first before assuming an injector itself is faulty.",
+      "Keep each injector's correction code paired with its cylinder position on a written label the moment you remove it — mixing these up means re-entering wrong trim values into the ECU, which subtly hurts running quality in a way that's annoying to diagnose after the fact."
+    ],
+    "commonMistakes": [
+      "Reusing a copper injector seal washer because it 'looks fine' — it cannot reseal once deformed, regardless of appearance.",
+      "Losing track of which correction code belongs to which injector/cylinder during the swap.",
+      "Under-tightening injector clamp bolts out of caution about over-torquing — both directions cause the same leak/performance problem, so follow the torque and angle spec exactly rather than guessing conservative."
     ]
   },
   {
@@ -328,30 +461,44 @@
     "number": 12,
     "title": "Turbo System",
     "category": "Systems",
-    "objective": "Inspect, service, and correctly reinstall the sequential twin-turbo system.",
+    "objective": "Inspect, service, and correctly reinstall the sequential twin-turbo system (small fixed-geometry low-pressure turbo + large variable-geometry high-pressure turbo).",
     "difficulty": "Advanced",
     "estimatedTime": "4–8 hours",
     "tools": ["Socket set", "Torque wrench", "Vacuum/smoke leak tester"],
-    "parts": ["Turbocharger set (if required)", "Intercooler (if required)", "Vacuum line repair kit"],
+    "parts": ["Turbocharger set (if required)", "Intercooler (if required)", "Vacuum line repair kit", "Exhaust manifold (cast iron replacement if cracked)"],
     "warnings": [
       "Always prime the oil feed line before first start after turbo work — dry startup rapidly wears bearings.",
-      "Do not mix up small (high pressure) and large (low pressure) turbo oil/vacuum line routing."
+      "Do not mix up small (high pressure stage) and large (low pressure stage) turbo oil/vacuum line routing.",
+      "A cracked exhaust manifold is a known issue on this engine and causes a loss of power and exhaust leak noise that's easy to mistake for a turbo problem — inspect the manifold itself, not just the turbos, if you're chasing a power loss."
     ],
     "steps": [
-      { "order": 1, "text": "Disconnect and cap oil feed/return lines, label vacuum actuator lines." },
-      { "order": 2, "text": "Remove exhaust manifold nuts (TQ-011) and separate turbo from manifold." },
-      { "order": 3, "text": "Inspect for shaft play, oil residue in compressor housing, and smooth actuator movement." },
-      { "order": 4, "text": "Inspect intercooler core for oil contamination and fin damage." },
-      { "order": 5, "text": "Reinstall with new gaskets, torque manifold nuts per TQ-011." },
-      { "order": 6, "text": "Reconnect oil feed line, torque banjo bolt per TQ-012 with new sealing washers." },
-      { "order": 7, "text": "Reconnect and re-verify vacuum line routing against labels." },
-      { "order": 8, "text": "Perform a boost/vacuum leak test before first drive." }
+      { "order": 1, "text": "Disconnect and cap oil feed/return lines, label vacuum actuator lines for both turbos separately." },
+      { "order": 2, "text": "Remove exhaust manifold nuts (TQ-011) and separate turbos from manifold." },
+      { "order": 3, "text": "Inspect the exhaust manifold itself for cracks — a known failure point on this engine, usually addressed with a cast-iron replacement rather than a lighter aftermarket tube manifold, which tends to crack again." },
+      { "order": 4, "text": "Inspect for shaft play, oil residue in the compressor housing, and smooth VGT actuator movement on the large turbo specifically." },
+      { "order": 5, "text": "If the large turbo's vanes feel stiff or sticky rather than moving freely, try cleaning soot/rust from the unison ring mechanism before assuming the actuator or turbo itself is bad." },
+      { "order": 6, "text": "Inspect intercooler core for oil contamination and fin damage." },
+      { "order": 7, "text": "Reinstall with new gaskets, torque manifold nuts per TQ-011." },
+      { "order": 8, "text": "Reconnect oil feed line, torque banjo bolt per TQ-012 with new sealing washers." },
+      { "order": 9, "text": "Reconnect and re-verify vacuum line routing against labels, keeping the two turbos' circuits separate and correctly matched." },
+      { "order": 10, "text": "Perform a boost/vacuum leak test before first drive." }
     ],
     "checklist": [
-      "Shaft play and actuator movement inspected",
+      "Exhaust manifold inspected for cracks, not just the turbos",
+      "Shaft play and actuator movement inspected on both turbos",
       "New gaskets and sealing washers used",
       "Oil line primed before first start",
       "Boost/vacuum leak test passed"
+    ],
+    "proTips": [
+      "Over-boost and under-boost fault codes point to the mechanical turbo/vane assembly, not just the electric actuator — replacing 'just the actuator' when the codes say over/underboost is a common way to spend money without fixing the actual problem.",
+      "The VGT actuator's electronics can be killed by coolant intrusion through a failed actuator gasket, corroding the internals — if you find a dead actuator, also check for a coolant leak at that joint so you don't just repeat the failure on the replacement part.",
+      "Keep the small (low-rpm) and large (VGT) turbo's oil feed, oil return, and vacuum lines clearly labeled from the moment you disconnect them — they are not interchangeable, and the two circuits look similar enough at a glance to swap by mistake."
+    ],
+    "commonMistakes": [
+      "Replacing an actuator without checking for a coolant leak at the actuator gasket that likely killed it in the first place.",
+      "Assuming a rattly or smoking exhaust is a turbo failure without first checking the exhaust manifold itself for cracks — a much cheaper and more common cause.",
+      "Cross-connecting the small and large turbo's oil/vacuum lines during reassembly, causing boost and lubrication problems that are confusing to diagnose afterward."
     ]
   },
   {
@@ -359,25 +506,35 @@
     "number": 13,
     "title": "Transmission",
     "category": "Drivetrain",
-    "objective": "Service the ZF 6-speed automatic transmission during the engine-out window.",
+    "objective": "Service the ZF 6HP26 6-speed automatic transmission during the engine-out window.",
     "difficulty": "Intermediate",
     "estimatedTime": "2–4 hours",
     "tools": ["Fluid evacuator", "Torque wrench", "Transmission jack (or hoist support)"],
-    "parts": ["Transmission fluid + filter kit (ZF Lifeguard 6)"],
-    "warnings": ["Confirm transmission type (automatic vs. manual, if converted) before ordering fluid or parts — this manual assumes the common ZF 6HP26 automatic."],
+    "parts": ["Transmission fluid + filter kit (ZF Lifeguard 6)", "Mechatronic seal/gasket (if replacing)"],
+    "warnings": ["Confirm transmission type (automatic vs. manual, if converted) before ordering fluid or parts — this manual assumes the common ZF 6HP26 automatic fitted to this platform."],
     "steps": [
       { "order": 1, "text": "With engine out, support transmission independently and confirm it is stable." },
-      { "order": 2, "text": "Drain transmission fluid into a labeled container." },
-      { "order": 3, "text": "Replace filter and refill with ZF Lifeguard 6 spec fluid, even though BMW labels it a 'lifetime' fill." },
-      { "order": 4, "text": "Inspect torque converter seal and pilot bearing area." },
-      { "order": 5, "text": "Inspect flexplate for cracks before reconnecting bellhousing." },
-      { "order": 6, "text": "Reconnect per Engine Installation chapter, verifying converter is fully seated before bolt-up." }
+      { "order": 2, "text": "Drain transmission fluid into a labeled container and inspect its color/smell for burning or excessive clutch material." },
+      { "order": 3, "text": "Replace filter and refill with ZF Lifeguard 6 spec fluid, even though BMW labels it a 'lifetime' fill — real-world experience with this transmission strongly favors a proactive fluid/filter service." },
+      { "order": 4, "text": "If you have any history of harsh shifts, a 2-1 downshift bump, delayed engagement, or a flare on the 4-5 upshift, inspect the mechatronic unit's seal — a known small seal between the mechatronic controller and the transmission case is a common failure point that causes exactly these symptoms." },
+      { "order": 5, "text": "Inspect torque converter seal and pilot bearing area." },
+      { "order": 6, "text": "Inspect flexplate for cracks before reconnecting bellhousing." },
+      { "order": 7, "text": "Reconnect per Engine Installation chapter, verifying converter is fully seated before bolt-up." }
     ],
     "checklist": [
       "Transmission fluid and filter serviced",
+      "Mechatronic seal condition checked if any shift-quality symptoms were present",
       "Torque converter seal/pilot inspected",
       "Flexplate inspected for cracks",
       "Converter seating verified before bolt-up"
+    ],
+    "proTips": [
+      "The most common root cause of ZF 6HP26 failure on these cars isn't the transmission's internals — it's a small seal (sometimes called the adapter/mechatronic seal) between the mechatronic controller and the case. When it fails, the unit can't maintain line pressure, which then damages clutches, the pump, and the torque converter clutch through secondary wear. Catching and replacing that seal proactively is far cheaper than the cascade of damage that follows if it's ignored.",
+      "Symptoms like a 2-1 downshift bump, harsh 4-5 upshift flare, or torque converter clutch overheating are well-documented on this transmission family and worth investigating specifically rather than assuming general wear."
+    ],
+    "commonMistakes": [
+      "Trusting the 'lifetime fill' label literally and never servicing the fluid — in practice this is one of the more common ways this transmission is allowed to wear prematurely.",
+      "Replacing the whole valve body/mechatronic unit when the actual fault is the small seal behind it, at much greater expense than necessary."
     ]
   },
   {
@@ -385,24 +542,38 @@
     "number": 14,
     "title": "Transfer Case",
     "category": "Drivetrain",
-    "objective": "Inspect and service the xDrive transfer case.",
+    "objective": "Inspect and service the xDrive transfer case (ATC-400 type).",
     "difficulty": "Intermediate",
     "estimatedTime": "2–3 hours",
-    "tools": ["Fluid evacuator", "Torque wrench", "Socket set"],
-    "parts": ["Transfer case fluid", "Output flange seals (if leaking)"],
-    "warnings": ["Check output flange alignment before final torque on transfer case bolts (TQ referenced in Torque Spec Database)."],
+    "tools": ["Fluid evacuator", "Torque wrench", "Socket set", "BMW diagnostic interface (for adaptation reset)"],
+    "parts": ["Transfer case fluid (BMW-spec only)", "Output flange seals (if leaking)"],
+    "warnings": [
+      "Check output flange alignment before final torque on transfer case bolts (TQ referenced in Torque Spec Database).",
+      "You must reset/relearn the transfer case adaptations via the diagnostic tool after any fluid change — skipping this step causes accelerated wear of the internal clutch pack, effectively undoing the benefit of the fluid service."
+    ],
     "steps": [
-      { "order": 1, "text": "Drain and inspect transfer case fluid condition." },
+      { "order": 1, "text": "Drain and inspect transfer case fluid condition — dark, burnt-smelling fluid or metal contamination both point to clutch pack wear." },
       { "order": 2, "text": "Inspect front and rear output flange seals for leaks." },
       { "order": 3, "text": "Check transfer case mounting bushings for wear." },
-      { "order": 4, "text": "Refill with correct spec fluid." },
-      { "order": 5, "text": "Reconnect to transmission per TQ-023 reference and verify alignment before final torque." }
+      { "order": 4, "text": "Refill with correct BMW-spec fluid only — generic 'universal' transfer case fluid is not an acceptable substitute on this unit." },
+      { "order": 5, "text": "Reconnect to transmission per TQ-023 reference and verify alignment before final torque." },
+      { "order": 6, "text": "Perform the transfer case adaptation reset via the diagnostic tool before returning the vehicle to normal driving." }
     ],
     "checklist": [
-      "Fluid drained, inspected, and refilled",
+      "Fluid drained, inspected, and refilled with BMW-spec fluid",
       "Output flange seals inspected",
       "Mounting bushings inspected",
-      "Alignment verified before final torque"
+      "Alignment verified before final torque",
+      "Adaptation reset performed after fluid change"
+    ],
+    "proTips": [
+      "BMW officially calls this a 'lifetime fill' unit, but the most common real-world failure on E70s is exactly what you'd expect from a neglected fluid: the actuator motor and multi-plate clutch pack wearing down, showing up as binding in tight low-speed turns, vibration at highway speed, or an ABS/DSC warning light. A proactive fluid change around 50,000–60,000 miles with the correct fluid is cheap insurance against a transfer case that otherwise isn't.",
+      "The adaptation reset after a fluid change is not optional — without it, the system doesn't recalibrate to the fresh fluid's characteristics and can wear the clutch pack prematurely, which defeats the purpose of servicing it in the first place."
+    ],
+    "commonMistakes": [
+      "Skipping fluid service entirely because BMW calls it 'lifetime fill' — this is one of the most cited causes of preventable transfer case failure on this generation of xDrive.",
+      "Using a generic or non-BMW-spec fluid to save money on a service that's already inexpensive relative to a transfer case replacement.",
+      "Forgetting the adaptation reset after a fluid change, which can accelerate the exact wear the service was meant to prevent."
     ]
   },
   {
@@ -427,6 +598,13 @@
       "Mounts and flanges inspected",
       "Refilled to correct level",
       "Driveshaft flange bolts torqued per TQ-024"
+    ],
+    "proTips": [
+      "Like the transfer case, both differentials are marketed as 'lifetime fill' but benefit from proactive fluid changes on a vehicle already at this age/mileage — you're already down here for the transfer case service, so the marginal extra effort is small.",
+      "A whining noise that changes with speed but not with acceleration/deceleration load usually points to the differential itself rather than a wheel bearing (which tends to change with load and steering input) — useful to distinguish before ordering parts."
+    ],
+    "commonMistakes": [
+      "Assuming any drivetrain whine is 'just the diesel being a diesel' rather than isolating which axle or component it's actually coming from."
     ]
   },
   {
@@ -456,6 +634,14 @@
       "Worn components identified and replaced",
       "All fasteners torqued per spec including angle stages",
       "Alignment checked after work"
+    ],
+    "proTips": [
+      "Because the front subframe already came down for engine access, this is the cheapest point in the whole project (in terms of labor already \"spent\") to address any known-worn control arm bushings — doing it now avoids a second subframe drop later.",
+      "If this X5 has rear self-leveling air suspension (common factory option on this model), confirm that specifically before ordering rear shock/strut parts — the parts are not interchangeable with standard coil-over-shock rear suspension."
+    ],
+    "commonMistakes": [
+      "Reusing worn subframe bolts that TIS specifies as single-use, to save a small parts cost on a structurally important fastener.",
+      "Skipping the post-work alignment check — even correctly torqued suspension work shifts alignment enough to matter for tire wear and handling."
     ]
   },
   {
@@ -468,20 +654,31 @@
     "estimatedTime": "3–5 hours",
     "tools": ["Torque wrench", "Brake fluid bleeder"],
     "parts": ["Brake pad + rotor set (front and rear)", "Brake fluid"],
-    "warnings": ["Brake caliper carrier bolts are safety-critical — always use a torque wrench, never an impact gun."],
+    "warnings": [
+      "Brake caliper carrier bolts are safety-critical — always use a torque wrench, never an impact gun.",
+      "This vehicle's brake booster depends on a vacuum pump supply (diesels have no engine vacuum of their own) — a hissing noise or a brake pedal that's hard at first press and only softens after the engine starts points to the vacuum pump or its lines, not the brake hydraulics themselves."
+    ],
     "steps": [
       { "order": 1, "text": "Inspect pads, rotors, and calipers front and rear." },
       { "order": 2, "text": "Replace pads/rotors per Parts Database recommendation." },
       { "order": 3, "text": "Torque front caliper carrier bolts per TQ-020." },
       { "order": 4, "text": "Torque rear caliper carrier bolts per TQ-021." },
       { "order": 5, "text": "Bleed brake system and replace fluid." },
-      { "order": 6, "text": "Test pedal feel and confirm no leaks before road test." }
+      { "order": 6, "text": "If pedal feel is unusually firm or inconsistent, verify the vacuum pump and its lines before assuming a hydraulic/caliper issue." },
+      { "order": 7, "text": "Test pedal feel and confirm no leaks before road test." }
     ],
     "checklist": [
       "Pads/rotors inspected and replaced as needed",
       "Caliper bolts torqued with a torque wrench",
       "Brake fluid bled and replaced",
+      "Vacuum pump ruled out if pedal feel is abnormal",
       "Pedal feel confirmed firm before driving"
+    ],
+    "proTips": [
+      "Since this is a diesel, brake assist vacuum comes entirely from a belt- or cam-driven vacuum pump rather than intake manifold vacuum. If you're chasing a hard or inconsistent pedal, check the pump and its plastic delivery line (known to crack with age) before spending money on calipers or a master cylinder."
+    ],
+    "commonMistakes": [
+      "Diagnosing a hard brake pedal as a master cylinder or booster fault without first checking whether the vacuum pump itself is actually supplying vacuum."
     ]
   },
   {
@@ -505,6 +702,12 @@
       "Steering components inspected",
       "Column pinch bolt torqued per TQ-027 if disturbed",
       "No abnormal play at steering wheel"
+    ],
+    "proTips": [
+      "If the front subframe was dropped for engine or suspension work, double-check steering rack alignment and boot condition before final subframe torque — it's easy to nick a boot against the subframe edge during the drop/raise and not notice until later."
+    ],
+    "commonMistakes": [
+      "Assuming steering is unaffected by subframe/engine work just because nothing was directly unbolted on the rack itself."
     ]
   },
   {
@@ -517,19 +720,28 @@
     "estimatedTime": "Ongoing",
     "tools": ["Digital multimeter", "Wire labeling supplies"],
     "parts": ["Battery (AGM)", "Glow plug set", "Glow plug control module (if faulty)"],
-    "warnings": ["A single missed ground strap is the most common cause of hard-to-diagnose intermittent faults after an engine R&R."],
+    "warnings": ["A single missed or poorly cleaned ground strap is the most common cause of hard-to-diagnose intermittent faults after an engine R&R."],
     "steps": [
       { "order": 1, "text": "Use the Wire Labeling System to log every connector before disconnecting it anywhere on the car." },
-      { "order": 2, "text": "Test continuity on all grounding straps after reassembly." },
+      { "order": 2, "text": "Test continuity on all grounding straps after reassembly, at bare-metal contact points specifically." },
       { "order": 3, "text": "Inspect and test glow plugs individually with a multimeter." },
-      { "order": 4, "text": "Confirm battery registration after any battery replacement." },
+      { "order": 4, "text": "Confirm battery registration after any battery replacement — an unregistered battery causes the charging system to mismanage voltage and can trigger a cascade of unrelated warning lights." },
       { "order": 5, "text": "Run a full fault code scan after any electrical work as a final check." }
     ],
     "checklist": [
       "All disturbed connectors logged in Wire Labeling System",
-      "Ground straps continuity-tested",
+      "Ground straps continuity-tested at bare metal, not just visually reconnected",
+      "Glow plugs individually tested",
       "Battery registered if replaced",
       "Post-work fault scan clean"
+    ],
+    "proTips": [
+      "A vacuum pump housing oil leak can look like an unrelated electrical or turbo fault at a glance — inspect the housing for oil seepage and worn seals if you're chasing an odd turbo-adjacent code with no obvious mechanical cause.",
+      "If you replace the glow plug control module, its behavior is closely tied to overall wiring/ground health — confirm grounds are clean first, since a marginal ground can mimic a failing module."
+    ],
+    "commonMistakes": [
+      "Reconnecting a ground strap to a point that looks clean but still has a thin layer of paint or corrosion under it, causing intermittent faults that are maddening to trace later.",
+      "Replacing a component (module, sensor, glow plug) to chase a fault that was actually a wiring/ground issue introduced during teardown."
     ]
   },
   {
@@ -537,7 +749,7 @@
     "number": 20,
     "title": "Coding & Diagnostics",
     "category": "Electrical & Coding",
-    "objective": "Set up and use BMW diagnostic/coding tools for fault reading, injector coding, and module registration.",
+    "objective": "Set up and use BMW diagnostic/coding tools for fault reading, injector coding, transfer case adaptation resets, and module registration.",
     "difficulty": "Advanced",
     "estimatedTime": "Ongoing",
     "tools": ["OBD / BMW diagnostic interface (ENET or K+DCAN)", "Laptop with ISTA-D / ISTA-P or E-Sys"],
@@ -549,14 +761,24 @@
       { "order": 3, "text": "Read and log all fault codes before starting any repair for a baseline." },
       { "order": 4, "text": "After injector replacement, enter injector correction codes via ISTA/dedicated tool." },
       { "order": 5, "text": "After battery replacement, perform battery registration." },
-      { "order": 6, "text": "After ECU/module work, verify VIN and ISN (immobilizer) data matches the vehicle." },
-      { "order": 7, "text": "Log all coding actions and results in this chapter's Notes area for future reference." }
+      { "order": 6, "text": "After transfer case fluid service, perform the transfer case adaptation reset." },
+      { "order": 7, "text": "After ECU/module work, verify VIN and ISN (immobilizer) data matches the vehicle." },
+      { "order": 8, "text": "Log all coding actions and results in this chapter's Notes area for future reference." }
     ],
     "checklist": [
       "Diagnostic interface and software set up",
       "Baseline fault scan logged",
       "Injector codes entered after injector work",
+      "Transfer case adaptation reset after fluid service",
       "Battery registered after replacement"
+    ],
+    "proTips": [
+      "Underboost/overboost codes almost always mean the turbo/vane mechanics, not the actuator alone — don't let a code reader's generic description send you straight to an actuator replacement without checking the mechanical side first.",
+      "Keep a running log (this app's Notes field works well) of every code you've seen and cleared, with date and context — recurring codes after a 'fix' are the clearest signal you addressed a symptom, not the root cause."
+    ],
+    "commonMistakes": [
+      "Interrupting a coding session on a battery that's just barely charged, risking a partially-flashed module.",
+      "Clearing codes without logging them first, losing the diagnostic trail that would have helped confirm whether a fix actually worked."
     ]
   },
   {
@@ -583,6 +805,12 @@
       "Upgrade tier selected and budgeted",
       "New wiring labeled",
       "System tested for noise/distortion issues"
+    ],
+    "proTips": [
+      "Run a dedicated, fused power wire straight to the battery for any real amplifier rather than tapping an existing circuit — it's a small extra effort during install and avoids voltage-drop distortion later."
+    ],
+    "commonMistakes": [
+      "Grounding an aftermarket amplifier to a convenient nearby bolt instead of a verified clean chassis ground point, causing alternator whine or noise in the audio."
     ]
   },
   {
@@ -608,6 +836,12 @@
       "Trim and clips inspected/replaced",
       "Electronics functionally tested",
       "Before/after photos logged"
+    ],
+    "proTips": [
+      "Photograph trim clip positions before removal — E70 interior trim uses several visually similar but differently-sized clips, and mixing them up is a common source of rattles after reassembly."
+    ],
+    "commonMistakes": [
+      "Prying trim panels without locating all hidden fasteners first, cracking aged plastic clips that are more brittle than they look."
     ]
   },
   {
@@ -632,6 +866,12 @@
       "Rust checked at common trouble spots",
       "Damaged trim identified and sourced",
       "Bodywork plan logged"
+    ],
+    "proTips": [
+      "Clear sunroof drain tubes as routine maintenance, not just when a leak shows up — clogged drains on this platform are a well-known cause of water finding its way into places it shouldn't, including the footwells."
+    ],
+    "commonMistakes": [
+      "Treating a water stain on interior carpet as a window seal problem before checking the sunroof drains first, which is the more common cause on this body style."
     ]
   },
   {
@@ -658,6 +898,12 @@
       "Test spot performed",
       "All panels corrected and protected",
       "Final photos logged"
+    ],
+    "proTips": [
+      "A noticeably thinner paint reading on one panel versus its neighbors is a reliable, objective way to spot prior repaint/accident repair even when the color match looks perfect to the eye."
+    ],
+    "commonMistakes": [
+      "Compounding a repainted panel at the same aggressiveness as factory clear coat — aftermarket respray clear coat is very often thinner and burns through much faster."
     ]
   },
   {
@@ -683,6 +929,12 @@
       "Parts confirmed compatible with sensor cutouts",
       "Components fitted and sensors transferred",
       "Alignment performed if suspension changed"
+    ],
+    "proTips": [
+      "If the car currently has rear self-leveling air suspension, converting to M Sport coil-over-shock suspension is a bigger job than swapping springs — factor in the ride-height sensor and control module differences, not just the physical parts."
+    ],
+    "commonMistakes": [
+      "Buying a full M Sport suspension kit without first confirming whether the donor parts assume standard or self-leveling rear suspension as the starting point."
     ]
   },
   {
@@ -701,13 +953,24 @@
       { "order": 2, "text": "Schedule an oil and filter check at ~1,000km after the new engine's first start." },
       { "order": 3, "text": "Re-torque wheel bolts at ~50km." },
       { "order": 4, "text": "Re-check coolant level and bleed for trapped air after the first few heat cycles." },
-      { "order": 5, "text": "Set recurring reminders for standard BMW diesel service intervals (oil, fuel filter, air filter) going forward." }
+      { "order": 5, "text": "Set a firm oil change interval rather than relying on BMW's flexible Condition Based Service estimate — a flat interval meaningfully reduces the sludge/wear risk that's believed to have contributed to the original engine's bearing failure." },
+      { "order": 6, "text": "Set recurring reminders for transfer case and differential fluid service (BMW calls these 'lifetime fill,' but proactive changes are cheap insurance relative to the components they protect)." },
+      { "order": 7, "text": "Set recurring reminders for standard BMW diesel service intervals (fuel filter, air filter) going forward." }
     ],
     "checklist": [
       "First-start logged in maintenance log",
       "Post-install oil check scheduled",
       "Wheel re-torque scheduled",
+      "Firm oil change interval set, not just the dash's flexible estimate",
+      "Transfer case / differential fluid reminders set",
       "Recurring service intervals set"
+    ],
+    "proTips": [
+      "A shorter, fixed oil-change interval than BMW's Condition Based Service suggests is one of the single highest-leverage things you can do for this engine's long-term bottom-end health, given the failure history of this exact vehicle.",
+      "Cold-start rattle, EGR-cooler-pattern coolant loss, and transfer-case symptoms (binding in tight turns, highway vibration) are all things worth actively listening/watching for at every service, not just reacting to when they become obvious."
+    ],
+    "commonMistakes": [
+      "Reverting to 'lifetime fill' assumptions for transmission, transfer case, and differential fluids once the immediate rebuild excitement fades — these intervals matter most in year two and beyond, not just at the moment of the rebuild."
     ]
   },
   {
@@ -730,6 +993,13 @@
       "Fault Code Library reviewed for any active codes",
       "Root cause confirmed before parts ordered",
       "Resolutions logged"
+    ],
+    "proTips": [
+      "Turbo boost codes (over/underboost) point to the mechanical turbo/vane system far more often than the actuator alone — check the Turbo System chapter before replacing parts based on the code description alone.",
+      "EGR-related codes combined with any unexplained coolant loss should point you straight at the EGR cooler, not just the EGR valve — they're different failure modes with very different repair costs."
+    ],
+    "commonMistakes": [
+      "Replacing the highest-cost component a fault code description mentions first, instead of following the cheaper diagnostic steps that narrow down the actual cause."
     ]
   },
   {
@@ -747,13 +1017,19 @@
       { "order": 1, "text": "BMW TIS (Technical Information System) — authoritative source for all torque specs, procedures, and wiring diagrams. VERIFY all safety-critical values here." },
       { "order": 2, "text": "ISTA-D / ISTA-P — official BMW diagnostic and programming software." },
       { "order": 3, "text": "E-Sys — coding tool for feature activation and module coding." },
-      { "order": 4, "text": "BMW E70 owner/enthusiast forums and M57TU technical communities — useful for real-world experience, cross-check against TIS before acting." },
+      { "order": 4, "text": "BMW E70 and M57TU2 owner/enthusiast forums and communities (e.g. Bimmerfest, Xoutpost, BimmerForums) — useful for real-world experience with this exact engine/chassis combination, cross-check against TIS before acting." },
       { "order": 5, "text": "Local BMW specialist / independent diesel shop — for any step you are not confident performing yourself, especially safety-critical torque-to-yield fasteners." }
     ],
     "checklist": [
       "TIS access confirmed",
       "Diagnostic software installed and tested",
       "Local specialist contact identified for fallback support"
+    ],
+    "proTips": [
+      "This manual's research draws on widely documented, real-world experience with the M57TU2D30 (306D5) engine and E70 xDrive35d platform — swirl flaps, EGR cooler, timing chain guides, turbo actuators, ZF 6HP26, and the ATC-400 transfer case are all genuinely well-documented weak points across many owners' experiences, not vehicle-specific guesses. Even so, always confirm exact procedures, torque values, and part numbers for this specific VIN in BMW TIS before final assembly."
+    ],
+    "commonMistakes": [
+      "Treating enthusiast-forum consensus as a substitute for the actual TIS procedure on safety-critical work, rather than as a useful pointer toward what to check."
     ]
   }
 ]
