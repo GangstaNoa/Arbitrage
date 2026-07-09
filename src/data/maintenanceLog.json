@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ML-001",
+    "date": "2026-06-01",
+    "title": "Vehicle acquired",
+    "details": "Purchased 2009 BMW X5 E70 xDrive35d, VIN WBAFF01070L319611, for 12,000 DKK with known engine failure (crankshaft/connecting rod bearing damage).",
+    "mileageKm": null
+  },
+  {
+    "id": "ML-002",
+    "date": "2026-06-03",
+    "title": "Initial diagnostic scan",
+    "details": "Confirmed engine mechanical failure. Recommend full teardown before committing to a rebuild-vs-replace decision. Replacement engine swap selected as project path.",
+    "mileageKm": null
+  },
+  {
+    "id": "ML-003",
+    "date": "2026-06-08",
+    "title": "Project OS set up",
+    "details": "JARVIS X5 GARAGE OS deployed as the single source of truth for parts, tools, budget, timeline, and documentation.",
+    "mileageKm": null
+  }
+]

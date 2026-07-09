@@ -1,0 +1,225 @@
+[
+  {
+    "id": "TQ-001",
+    "component": "Engine",
+    "fastener": "Main bearing cap bolts (M57TU2D30)",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "angle": "VERIFY IN BMW TIS",
+    "notes": "Safety-critical. Likely multi-stage torque-to-yield with angle spec. Replace bolts if TIS specifies single-use.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-002",
+    "component": "Engine",
+    "fastener": "Connecting rod bearing cap bolts (M57TU2D30)",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "angle": "VERIFY IN BMW TIS",
+    "notes": "Safety-critical, root cause of failure event. Always use new bolts and new bearings. Confirm bearing color/size code against crank journal measurement.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-003",
+    "component": "Engine",
+    "fastener": "Cylinder head bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "angle": "VERIFY IN BMW TIS",
+    "notes": "Torque-to-yield, multi-stage sequence required. Single-use bolts — replace every time.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-004",
+    "component": "Engine",
+    "fastener": "Oil pan bolts (lower + upper sump)",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Two-piece sump on E70 diesel. Confirm bolt length map before reinstall — mixed lengths are a common mistake.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-005",
+    "component": "Engine",
+    "fastener": "Flywheel / flexplate bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "angle": "VERIFY IN BMW TIS",
+    "notes": "Safety-critical rotating assembly fastener. Loctite per TIS if specified.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-006",
+    "component": "Engine",
+    "fastener": "Vibration damper / crank pulley bolt",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "angle": "VERIFY IN BMW TIS",
+    "notes": "High torque value — requires crank holding tool. Do not use starter motor to lock crank.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-007",
+    "component": "Engine mounts",
+    "fastener": "Engine mount to subframe bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Confirm left/right mount part numbers match xDrive35d application.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-008",
+    "component": "Engine mounts",
+    "fastener": "Engine mount to block bracket bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Inspect brackets for cracking before reuse.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-009",
+    "component": "Transmission",
+    "fastener": "Bellhousing to engine bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Confirm dowel sleeve alignment before torquing sequence.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-010",
+    "component": "Transmission",
+    "fastener": "Torque converter to flexplate bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Rotate engine to access each bolt; verify converter is fully seated (measure gap) before bolting.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-011",
+    "component": "Turbo system",
+    "fastener": "Turbocharger to exhaust manifold nuts (both stages)",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Use new gaskets and new self-locking nuts. Anti-seize on studs per TIS guidance.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-012",
+    "component": "Turbo system",
+    "fastener": "Turbo oil feed / return line banjo bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "New copper sealing washers every time. Low torque value — do not overtighten banjo bolts.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-013",
+    "component": "Cooling system",
+    "fastener": "Radiator mount bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Plastic end tank fittings — hand-tight plus small torque only, do not overtighten.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-014",
+    "component": "Cooling system",
+    "fastener": "Water pump bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Confirm mechanical vs electric pump variant for VIN before ordering.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-015",
+    "component": "Fuel system",
+    "fastener": "High pressure fuel rail bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Safety-critical, high pressure common-rail diesel system. Cleanliness is critical — zero contamination tolerance.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-016",
+    "component": "Fuel system",
+    "fastener": "Injector clamp bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "angle": "VERIFY IN BMW TIS",
+    "notes": "Safety-critical. Injector coding/matching to ECU may be required after replacement — confirm via ISTA.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-017",
+    "component": "Suspension — Front",
+    "fastener": "Front strut top mount nuts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "If self-leveling / adaptive suspension equipped, confirm correct strut variant for VIN.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-018",
+    "component": "Suspension — Front",
+    "fastener": "Lower control arm ball joint pinch bolt",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Safety-critical steering/suspension fastener.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-019",
+    "component": "Suspension — Rear",
+    "fastener": "Rear subframe to body bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "angle": "VERIFY IN BMW TIS",
+    "notes": "Safety-critical structural fastener. Torque-to-yield on many BMW subframe applications — verify single-use status.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-020",
+    "component": "Brakes",
+    "fastener": "Front caliper carrier bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Safety-critical. Torque wrench mandatory, no impact gun.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-021",
+    "component": "Brakes",
+    "fastener": "Rear caliper carrier bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Safety-critical. Torque wrench mandatory, no impact gun.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-022",
+    "component": "Wheels",
+    "fastener": "Wheel bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Safety-critical. Confirm spec for factory wheel type (alloy vs aftermarket) and re-torque after first 50km.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-023",
+    "component": "Transfer case",
+    "fastener": "Transfer case to transmission bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Check output flange alignment before final torque.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-024",
+    "component": "Driveshaft",
+    "fastener": "Driveshaft flange bolts (front & rear)",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Safety-critical rotating assembly. Use new self-locking bolts if specified.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-025",
+    "component": "Electrical",
+    "fastener": "Battery terminal clamps",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Low torque value. Disconnect negative first, connect negative last.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-026",
+    "component": "Electrical",
+    "fastener": "Engine-to-body grounding strap bolts",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Clean all mating surfaces to bare metal for good ground continuity — critical for CAN bus and glow plug system reliability.",
+    "source": "UNVERIFIED"
+  },
+  {
+    "id": "TQ-027",
+    "component": "Steering",
+    "fastener": "Steering column universal joint pinch bolt",
+    "torqueValue": "VERIFY IN BMW TIS",
+    "notes": "Safety-critical steering fastener.",
+    "source": "UNVERIFIED"
+  }
+]

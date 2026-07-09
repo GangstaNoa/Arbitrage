@@ -1,0 +1,759 @@
+[
+  {
+    "slug": "overview",
+    "number": 1,
+    "title": "Overview",
+    "category": "Getting Started",
+    "objective": "Establish the scope, goals, and reference baseline for the full engine replacement project on VIN WBAFF01070L319611.",
+    "difficulty": "Beginner",
+    "estimatedTime": "1 hour (reading + planning)",
+    "tools": ["Notebook / this app", "Camera / phone"],
+    "parts": [],
+    "warnings": [
+      "This manual is a personal project workspace, not an official BMW repair manual. Always cross-reference safety-critical values against BMW TIS/ISTA before acting on them."
+    ],
+    "steps": [
+      { "order": 1, "text": "Record full vehicle identification: 2009 BMW X5 E70 xDrive35d, engine M57TU2D30 (306D5), VIN WBAFF01070L319611." },
+      { "order": 2, "text": "Document the failure: engine failure with crankshaft and connecting rod bearing damage confirmed. Photograph any evidence (metal in oil, oil pan debris, etc.)." },
+      { "order": 3, "text": "Decide on replacement strategy: complete used engine swap vs. short block rebuild. This manual assumes a replacement engine swap." },
+      { "order": 4, "text": "Set up this app as the single source of truth: enter parts, tools, budget, and timeline before starting teardown." },
+      { "order": 5, "text": "Walk the vehicle and take baseline photos of exterior, interior, engine bay, and undercarriage for a before/after record." }
+    ],
+    "checklist": [
+      "Vehicle details logged",
+      "Failure documented with photos",
+      "Replacement strategy decided",
+      "Baseline photo set captured"
+    ]
+  },
+  {
+    "slug": "safety",
+    "number": 2,
+    "title": "Safety",
+    "category": "Getting Started",
+    "objective": "Set up a safe working environment before any wrenching begins.",
+    "difficulty": "Beginner",
+    "estimatedTime": "30 minutes",
+    "tools": ["Jack stands (4x)", "Wheel chocks", "Fire extinguisher (Class B/C)", "Safety glasses", "Nitrile gloves", "First aid kit"],
+    "parts": [],
+    "warnings": [
+      "Never work under a vehicle supported only by a jack — always use rated jack stands.",
+      "Diesel fuel system operates at very high pressure — relieve pressure per procedure before opening any line.",
+      "Disconnect the battery before working on wiring, fuel injection, or airbag-adjacent components.",
+      "Diesel exhaust and running engines in an enclosed garage can cause carbon monoxide buildup — ensure ventilation."
+    ],
+    "steps": [
+      { "order": 1, "text": "Clear a dedicated workspace with good lighting and ventilation." },
+      { "order": 2, "text": "Stage fire extinguisher and first aid kit within reach." },
+      { "order": 3, "text": "Confirm engine hoist and jack stand ratings exceed the loads you'll apply." },
+      { "order": 4, "text": "Establish a fluid disposal plan (used oil, coolant, fuel) compliant with local regulations." },
+      { "order": 5, "text": "Set a rule: disconnect battery before any electrical or fuel system work, no exceptions." },
+      { "order": 6, "text": "Keep a phone charged and reachable at all times when working alone." }
+    ],
+    "checklist": [
+      "Workspace clear and ventilated",
+      "Jack stands rated and positioned correctly",
+      "Fire extinguisher accessible",
+      "Battery disconnect is standard procedure before wiring/fuel work"
+    ]
+  },
+  {
+    "slug": "tools",
+    "number": 3,
+    "title": "Tools",
+    "category": "Getting Started",
+    "objective": "Inventory and acquire the tools required for the full project, tracked in the Tools Database.",
+    "difficulty": "Beginner",
+    "estimatedTime": "Ongoing",
+    "tools": [],
+    "parts": [],
+    "warnings": ["Do not substitute torque wrenches with impact guns on safety-critical fasteners (suspension, brakes, engine internals)."],
+    "steps": [
+      { "order": 1, "text": "Review the Tools Database page and mark which tools you already own." },
+      { "order": 2, "text": "Prioritize required tools over optional tools for the current project phase." },
+      { "order": 3, "text": "Budget tool purchases into the Budget Tracker under the Tools category." },
+      { "order": 4, "text": "Verify torque wrenches are calibrated/within their accuracy window before use on safety-critical fasteners." }
+    ],
+    "checklist": [
+      "Tools Database reviewed",
+      "Required tools acquired or on order",
+      "Torque wrenches verified accurate"
+    ]
+  },
+  {
+    "slug": "parts",
+    "number": 4,
+    "title": "Parts",
+    "category": "Getting Started",
+    "objective": "Establish the parts sourcing and ordering workflow using the Parts Database.",
+    "difficulty": "Beginner",
+    "estimatedTime": "Ongoing",
+    "tools": [],
+    "parts": [],
+    "warnings": ["Always confirm OEM part numbers against the VIN before ordering — E70 diesel variants had running production changes."],
+    "steps": [
+      { "order": 1, "text": "Review the Parts Database and confirm priority (critical/high/medium/low) for each item." },
+      { "order": 2, "text": "Cross-reference OEM part numbers using VIN WBAFF01070L319611 via a parts catalog before ordering." },
+      { "order": 3, "text": "Update part status to 'ordered' when placed, then 'installed' once fitted, to keep dashboard progress accurate." },
+      { "order": 4, "text": "Log actual prices in the Budget Tracker as parts are purchased." }
+    ],
+    "checklist": [
+      "Parts Database reviewed and prioritized",
+      "OEM numbers verified against VIN",
+      "Ordering workflow established"
+    ]
+  },
+  {
+    "slug": "engine-removal",
+    "number": 5,
+    "title": "Engine Removal",
+    "category": "Engine Replacement",
+    "objective": "Safely remove the failed M57TU2D30 engine from the vehicle.",
+    "difficulty": "Advanced",
+    "estimatedTime": "8–14 hours",
+    "tools": ["Engine hoist / crane", "Engine leveler", "Torque wrench (low + high range)", "Socket set", "Fuel line disconnect tool set", "Fluid evacuator", "Wire labeling supplies"],
+    "parts": ["Drain plugs / crush washers (new)", "Coolant (for post-removal top-up if needed)"],
+    "warnings": [
+      "Engine weight is substantial — never work under a suspended engine.",
+      "Relieve fuel system pressure before disconnecting any fuel line.",
+      "Label every connector with the Wire Labeling System before disconnecting — this is the single biggest time-saver on reassembly."
+    ],
+    "steps": [
+      { "order": 1, "text": "Follow the Pre-Removal Checklist in full before starting." },
+      { "order": 2, "text": "Disconnect battery, drain fluids into labeled containers." },
+      { "order": 3, "text": "Remove front bumper/clip for full engine bay access (see Garage Viewer front-bumper zone)." },
+      { "order": 4, "text": "Remove radiator pack and set aside safely." },
+      { "order": 5, "text": "Work through the Engine Bay clickable sections systematically, labeling and disconnecting each wiring harness connector." },
+      { "order": 6, "text": "Disconnect fuel lines (capped immediately) and turbo oil/coolant lines." },
+      { "order": 7, "text": "Disconnect exhaust downpipe from turbo outlet." },
+      { "order": 8, "text": "Support transmission independently, then separate bellhousing per torque spec reference TQ-009/TQ-010." },
+      { "order": 9, "text": "Attach hoist and leveler, remove engine mount bolts (TQ-007/TQ-008), and lift engine clear slowly, watching for snagged lines." },
+      { "order": 10, "text": "Place engine on stand, photograph thoroughly, and begin the Engine Bay Cleaning chapter." }
+    ],
+    "checklist": [
+      "Pre-Removal Checklist completed",
+      "All connectors labeled before disconnect",
+      "Engine lifted clear without snags",
+      "Old engine documented with photos for records"
+    ]
+  },
+  {
+    "slug": "engine-bay-cleaning",
+    "number": 6,
+    "title": "Engine Bay Cleaning",
+    "category": "Engine Replacement",
+    "objective": "Deep clean and inspect the empty engine bay before installing the replacement engine.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "3–6 hours",
+    "tools": ["Degreaser", "Pressure washer", "Wire brush", "Touch-up paint / rust converter", "Shop vacuum"],
+    "parts": ["Touch-up paint (as needed)", "Rust converter (as needed)"],
+    "warnings": ["Protect remaining electrical connectors and open harness ends from water intrusion during pressure washing."],
+    "steps": [
+      { "order": 1, "text": "Cover/bag any remaining electrical connectors and open lines." },
+      { "order": 2, "text": "Apply degreaser, agitate with a brush, and pressure wash the bay." },
+      { "order": 3, "text": "Inspect subframe, shock towers, and firewall for rust, cracks, or accident damage." },
+      { "order": 4, "text": "Clean all grounding points to bare, shiny metal." },
+      { "order": 5, "text": "Inspect the wiring harness for chafing, melted insulation near the turbo, or brittle sections — repair as needed." },
+      { "order": 6, "text": "Apply touch-up paint or rust treatment to any bare metal spots found." },
+      { "order": 7, "text": "Dry fully and photograph the clean bay before install." }
+    ],
+    "checklist": [
+      "Bay degreased and pressure washed",
+      "Rust/damage inspected and treated",
+      "Ground points cleaned to bare metal",
+      "Harness inspected and repaired if needed"
+    ]
+  },
+  {
+    "slug": "replacement-engine-inspection",
+    "number": 7,
+    "title": "Replacement Engine Inspection",
+    "category": "Engine Replacement",
+    "objective": "Verify the replacement M57TU2D30 engine is sound before it goes into the car.",
+    "difficulty": "Advanced",
+    "estimatedTime": "4–8 hours",
+    "tools": ["Compression / leak-down tester", "Engine stand", "Torque wrench", "Digital multimeter"],
+    "parts": ["Gasket set", "Main bearing set (if inspecting bottom end)", "Rod bearing set (if inspecting bottom end)"],
+    "warnings": ["Do not trust seller mileage claims alone — this vehicle's failure started as an unnoticed bearing wear issue. Physically inspect the bottom end regardless of stated condition."],
+    "steps": [
+      { "order": 1, "text": "Confirm engine code and casting numbers match required application for xDrive35d." },
+      { "order": 2, "text": "Mount engine on stand and rotate crank by hand — should be smooth with no binding or grinding." },
+      { "order": 3, "text": "Perform compression or leak-down test on all 6 cylinders." },
+      { "order": 4, "text": "Drop the oil pan and visually inspect main and rod bearings for scoring, discoloration, or wear." },
+      { "order": 5, "text": "Inspect timing chain, guides, and tensioner for stretch/wear." },
+      { "order": 6, "text": "Bench test turbochargers for shaft play and smooth actuator movement." },
+      { "order": 7, "text": "Test all sensors and glow plugs with a multimeter where possible." },
+      { "order": 8, "text": "Clean and repaint the exterior of the engine if desired before install." }
+    ],
+    "checklist": [
+      "Compression/leak-down test passed on all cylinders",
+      "Bottom end visually inspected regardless of stated mileage",
+      "Timing components inspected",
+      "Turbos and sensors bench-tested"
+    ]
+  },
+  {
+    "slug": "engine-installation",
+    "number": 8,
+    "title": "Engine Installation",
+    "category": "Engine Replacement",
+    "objective": "Install the inspected replacement engine and reconnect all systems.",
+    "difficulty": "Advanced",
+    "estimatedTime": "8–14 hours",
+    "tools": ["Engine hoist / crane", "Engine leveler", "Torque wrench (low + high range)", "Torque angle gauge", "Socket set"],
+    "parts": ["Engine gasket set", "Engine mount set", "Coolant hose set", "New fasteners per TIS single-use call-outs"],
+    "warnings": [
+      "Never let the transmission hang unsupported on the input shaft during bellhousing mating.",
+      "Confirm torque converter is fully seated (measure the gap) before bolting to the flexplate.",
+      "Follow the multi-stage torque-to-yield sequence exactly for head bolts and main/rod bearing caps if the bottom end was serviced."
+    ],
+    "steps": [
+      { "order": 1, "text": "Lower engine into the bay slowly with hoist and leveler, aligning to transmission dowels." },
+      { "order": 2, "text": "Bolt bellhousing per TQ-009 and torque converter per TQ-010." },
+      { "order": 3, "text": "Install and torque engine mounts per TQ-007/TQ-008 once engine is supported by mounts, not the hoist." },
+      { "order": 4, "text": "Reconnect every wiring harness connector, matching each to its labeled ID from the Wire Labeling System." },
+      { "order": 5, "text": "Reconnect all grounding straps per TQ-026 to clean, bare-metal points." },
+      { "order": 6, "text": "Reinstall fuel system with new seals per the Fuel System chapter." },
+      { "order": 7, "text": "Reinstall turbo oil/coolant lines and vacuum lines, matching labeled routing." },
+      { "order": 8, "text": "Reinstall radiator pack and reconnect coolant hoses." },
+      { "order": 9, "text": "Reinstall front bumper/clip." },
+      { "order": 10, "text": "Fill all fluids (oil, coolant, transmission) to spec." },
+      { "order": 11, "text": "Do a final visual sweep of the bay for tools or rags left behind before moving to First Start." }
+    ],
+    "checklist": [
+      "Engine mounted and torqued per spec",
+      "Every wire connector matched to its label and marked reinstalled",
+      "All grounding straps reconnected",
+      "Fluids filled to correct levels",
+      "Final tool sweep completed"
+    ]
+  },
+  {
+    "slug": "first-start",
+    "number": 9,
+    "title": "First Start",
+    "category": "Engine Replacement",
+    "objective": "Safely bring the replacement engine to life for the first time and verify baseline health.",
+    "difficulty": "Advanced",
+    "estimatedTime": "1–3 hours",
+    "tools": ["OBD / BMW diagnostic interface", "Fire extinguisher", "Digital multimeter"],
+    "parts": [],
+    "warnings": [
+      "Be prepared to shut down immediately at any abnormal noise, warning light, or leak.",
+      "Do not rev the engine on first start — idle only, monitoring oil pressure and temperature.",
+      "Ensure adequate ventilation for diesel exhaust."
+    ],
+    "steps": [
+      { "order": 1, "text": "Reconnect battery (negative last) and register it via the coding tool." },
+      { "order": 2, "text": "Turn ignition to position 2 (no crank) and check for expected warning lights and DDE wake-up." },
+      { "order": 3, "text": "Run a full diagnostic scan and clear any stored faults that are expected from the disconnect (note any that persist)." },
+      { "order": 4, "text": "If possible, crank with fuel/injection disabled briefly to pre-lubricate before a full start (per accepted diesel rebuild practice)." },
+      { "order": 5, "text": "Start the engine and let it idle only — do not rev." },
+      { "order": 6, "text": "Watch oil pressure and coolant temperature gauges continuously for the first several minutes." },
+      { "order": 7, "text": "Inspect the entire bay for oil, coolant, fuel, or boost leaks while idling." },
+      { "order": 8, "text": "Confirm injector correction codes and glow plug cycling via the diagnostic tool." },
+      { "order": 9, "text": "Shut down, recheck fluid levels, and top up as needed." }
+    ],
+    "checklist": [
+      "Battery registered",
+      "Pre-start diagnostic scan clean or explained",
+      "First idle completed with no abnormal noise/leak",
+      "Injector codes and glow plug cycle confirmed"
+    ]
+  },
+  {
+    "slug": "cooling-system",
+    "number": 10,
+    "title": "Cooling System",
+    "category": "Systems",
+    "objective": "Service, inspect, and properly bleed the cooling system.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "3–5 hours",
+    "tools": ["Coolant pressure test / refill kit", "Fluid evacuator", "Torque wrench"],
+    "parts": ["Radiator", "Coolant hose set", "Thermostat + housing", "Water pump", "Coolant (BMW-spec)"],
+    "warnings": ["Never open a hot cooling system — allow full cool-down before removing the expansion tank cap.", "Diesel cooling systems on this platform are prone to air pockets — follow the bleed procedure carefully."],
+    "steps": [
+      { "order": 1, "text": "Drain coolant fully into a clean, labeled container." },
+      { "order": 2, "text": "Inspect radiator, hoses, thermostat, and water pump per the Engine Bay clickable sections." },
+      { "order": 3, "text": "Replace any hoses showing softness, swelling, or hardening." },
+      { "order": 4, "text": "Reassemble with new clamps where reused clamps show fatigue." },
+      { "order": 5, "text": "Refill with BMW-spec coolant mixed to the correct ratio." },
+      { "order": 6, "text": "Open the system bleed screw(s) and run the engine at idle/fast idle until air is purged." },
+      { "order": 7, "text": "Pressure test the system for leaks once bled and topped up." }
+    ],
+    "checklist": [
+      "All hoses and components inspected/replaced as needed",
+      "System refilled with correct coolant spec",
+      "Bleed procedure completed with no trapped air",
+      "Pressure test passed with no leaks"
+    ]
+  },
+  {
+    "slug": "fuel-system",
+    "number": 11,
+    "title": "Fuel System",
+    "category": "Systems",
+    "objective": "Safely service the high-pressure common-rail diesel fuel system.",
+    "difficulty": "Advanced",
+    "estimatedTime": "3–6 hours",
+    "tools": ["Fuel line disconnect tool set", "Torque wrench (low range)", "Clean lint-free rags"],
+    "parts": ["Fuel injector set", "Fuel filter", "High pressure fuel pump (if required)", "Injector seal washers (new)"],
+    "warnings": [
+      "This is a high-pressure diesel common-rail system — extreme cleanliness is required. Any contamination can destroy injectors or the pump.",
+      "Relieve system pressure before disconnecting any line.",
+      "Cap every open fitting immediately to prevent debris ingress."
+    ],
+    "steps": [
+      { "order": 1, "text": "Relieve fuel system pressure per the procedure noted in the Injectors and Fuel Rail engine bay sections." },
+      { "order": 2, "text": "Clean the area around all fittings before disconnecting anything." },
+      { "order": 3, "text": "Disconnect and cap high pressure lines at pump, rail, and injectors." },
+      { "order": 4, "text": "Remove injectors with a proper puller — never pry." },
+      { "order": 5, "text": "Record each injector's correction code before it leaves the vehicle." },
+      { "order": 6, "text": "Install new injector seal washers on every injector, every time." },
+      { "order": 7, "text": "Torque injector clamp bolts per TQ-016 with angle stage." },
+      { "order": 8, "text": "Torque fuel rail bolts per TQ-015." },
+      { "order": 9, "text": "Replace fuel filter." },
+      { "order": 10, "text": "Prime the system and check for leaks before a full start." },
+      { "order": 11, "text": "Enter injector correction codes into the ECU via the diagnostic tool." }
+    ],
+    "checklist": [
+      "System pressure relieved before disconnecting lines",
+      "Injector correction codes recorded and re-entered",
+      "New seal washers used on every injector",
+      "Fittings torqued per spec and leak-checked"
+    ]
+  },
+  {
+    "slug": "turbo-system",
+    "number": 12,
+    "title": "Turbo System",
+    "category": "Systems",
+    "objective": "Inspect, service, and correctly reinstall the sequential twin-turbo system.",
+    "difficulty": "Advanced",
+    "estimatedTime": "4–8 hours",
+    "tools": ["Socket set", "Torque wrench", "Vacuum/smoke leak tester"],
+    "parts": ["Turbocharger set (if required)", "Intercooler (if required)", "Vacuum line repair kit"],
+    "warnings": [
+      "Always prime the oil feed line before first start after turbo work — dry startup rapidly wears bearings.",
+      "Do not mix up small (high pressure) and large (low pressure) turbo oil/vacuum line routing."
+    ],
+    "steps": [
+      { "order": 1, "text": "Disconnect and cap oil feed/return lines, label vacuum actuator lines." },
+      { "order": 2, "text": "Remove exhaust manifold nuts (TQ-011) and separate turbo from manifold." },
+      { "order": 3, "text": "Inspect for shaft play, oil residue in compressor housing, and smooth actuator movement." },
+      { "order": 4, "text": "Inspect intercooler core for oil contamination and fin damage." },
+      { "order": 5, "text": "Reinstall with new gaskets, torque manifold nuts per TQ-011." },
+      { "order": 6, "text": "Reconnect oil feed line, torque banjo bolt per TQ-012 with new sealing washers." },
+      { "order": 7, "text": "Reconnect and re-verify vacuum line routing against labels." },
+      { "order": 8, "text": "Perform a boost/vacuum leak test before first drive." }
+    ],
+    "checklist": [
+      "Shaft play and actuator movement inspected",
+      "New gaskets and sealing washers used",
+      "Oil line primed before first start",
+      "Boost/vacuum leak test passed"
+    ]
+  },
+  {
+    "slug": "transmission",
+    "number": 13,
+    "title": "Transmission",
+    "category": "Drivetrain",
+    "objective": "Service the ZF 6-speed automatic transmission during the engine-out window.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "2–4 hours",
+    "tools": ["Fluid evacuator", "Torque wrench", "Transmission jack (or hoist support)"],
+    "parts": ["Transmission fluid + filter kit (ZF Lifeguard 6)"],
+    "warnings": ["Confirm transmission type (automatic vs. manual, if converted) before ordering fluid or parts — this manual assumes the common ZF 6HP26 automatic."],
+    "steps": [
+      { "order": 1, "text": "With engine out, support transmission independently and confirm it is stable." },
+      { "order": 2, "text": "Drain transmission fluid into a labeled container." },
+      { "order": 3, "text": "Replace filter and refill with ZF Lifeguard 6 spec fluid, even though BMW labels it a 'lifetime' fill." },
+      { "order": 4, "text": "Inspect torque converter seal and pilot bearing area." },
+      { "order": 5, "text": "Inspect flexplate for cracks before reconnecting bellhousing." },
+      { "order": 6, "text": "Reconnect per Engine Installation chapter, verifying converter is fully seated before bolt-up." }
+    ],
+    "checklist": [
+      "Transmission fluid and filter serviced",
+      "Torque converter seal/pilot inspected",
+      "Flexplate inspected for cracks",
+      "Converter seating verified before bolt-up"
+    ]
+  },
+  {
+    "slug": "transfer-case",
+    "number": 14,
+    "title": "Transfer Case",
+    "category": "Drivetrain",
+    "objective": "Inspect and service the xDrive transfer case.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "2–3 hours",
+    "tools": ["Fluid evacuator", "Torque wrench", "Socket set"],
+    "parts": ["Transfer case fluid", "Output flange seals (if leaking)"],
+    "warnings": ["Check output flange alignment before final torque on transfer case bolts (TQ referenced in Torque Spec Database)."],
+    "steps": [
+      { "order": 1, "text": "Drain and inspect transfer case fluid condition." },
+      { "order": 2, "text": "Inspect front and rear output flange seals for leaks." },
+      { "order": 3, "text": "Check transfer case mounting bushings for wear." },
+      { "order": 4, "text": "Refill with correct spec fluid." },
+      { "order": 5, "text": "Reconnect to transmission per TQ-023 reference and verify alignment before final torque." }
+    ],
+    "checklist": [
+      "Fluid drained, inspected, and refilled",
+      "Output flange seals inspected",
+      "Mounting bushings inspected",
+      "Alignment verified before final torque"
+    ]
+  },
+  {
+    "slug": "differentials",
+    "number": 15,
+    "title": "Differentials",
+    "category": "Drivetrain",
+    "objective": "Inspect and service front and rear differentials.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "2–4 hours",
+    "tools": ["Fluid evacuator", "Torque wrench", "Socket set"],
+    "parts": ["Differential fluid (front + rear)", "Fill/drain plug crush washers"],
+    "warnings": ["Confirm correct limited-slip / open differential fluid spec if applicable before refilling."],
+    "steps": [
+      { "order": 1, "text": "Drain and inspect fluid from front and rear differentials for metal contamination." },
+      { "order": 2, "text": "Inspect differential mounts and driveshaft flanges for wear or leaks." },
+      { "order": 3, "text": "Refill with correct spec fluid to the fill plug level." },
+      { "order": 4, "text": "Torque driveshaft flange bolts per TQ-024." }
+    ],
+    "checklist": [
+      "Fluid drained and inspected for metal",
+      "Mounts and flanges inspected",
+      "Refilled to correct level",
+      "Driveshaft flange bolts torqued per TQ-024"
+    ]
+  },
+  {
+    "slug": "suspension",
+    "number": 16,
+    "title": "Suspension",
+    "category": "Chassis",
+    "objective": "Refresh front and rear suspension components while subframe access is already open.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "6–10 hours",
+    "tools": ["Spring compressor set", "Ball joint separator", "Torque wrench", "Torque angle gauge"],
+    "parts": ["Front suspension refresh kit (control arms, bushings, ball joints)"],
+    "warnings": [
+      "If self-leveling / adaptive suspension is fitted, confirm correct strut/shock variant for this VIN before ordering.",
+      "Subframe bolts may be torque-to-yield, single-use — verify in TIS before reusing."
+    ],
+    "steps": [
+      { "order": 1, "text": "Support vehicle securely on rated stands, wheels off." },
+      { "order": 2, "text": "Inspect control arms, bushings, and ball joints for wear/play." },
+      { "order": 3, "text": "Replace worn components with the refresh kit." },
+      { "order": 4, "text": "Torque strut top mount nuts per TQ-017." },
+      { "order": 5, "text": "Torque ball joint pinch bolts per TQ-018." },
+      { "order": 6, "text": "Torque subframe bolts per TQ-019 including angle stage if specified." },
+      { "order": 7, "text": "Perform a post-work alignment check/adjustment." }
+    ],
+    "checklist": [
+      "Worn components identified and replaced",
+      "All fasteners torqued per spec including angle stages",
+      "Alignment checked after work"
+    ]
+  },
+  {
+    "slug": "brakes",
+    "number": 17,
+    "title": "Brakes",
+    "category": "Chassis",
+    "objective": "Inspect and service the braking system for safe operation.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "3–5 hours",
+    "tools": ["Torque wrench", "Brake fluid bleeder"],
+    "parts": ["Brake pad + rotor set (front and rear)", "Brake fluid"],
+    "warnings": ["Brake caliper carrier bolts are safety-critical — always use a torque wrench, never an impact gun."],
+    "steps": [
+      { "order": 1, "text": "Inspect pads, rotors, and calipers front and rear." },
+      { "order": 2, "text": "Replace pads/rotors per Parts Database recommendation." },
+      { "order": 3, "text": "Torque front caliper carrier bolts per TQ-020." },
+      { "order": 4, "text": "Torque rear caliper carrier bolts per TQ-021." },
+      { "order": 5, "text": "Bleed brake system and replace fluid." },
+      { "order": 6, "text": "Test pedal feel and confirm no leaks before road test." }
+    ],
+    "checklist": [
+      "Pads/rotors inspected and replaced as needed",
+      "Caliper bolts torqued with a torque wrench",
+      "Brake fluid bled and replaced",
+      "Pedal feel confirmed firm before driving"
+    ]
+  },
+  {
+    "slug": "steering",
+    "number": 18,
+    "title": "Steering",
+    "category": "Chassis",
+    "objective": "Inspect steering components disturbed by engine bay and suspension work.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "1–3 hours",
+    "tools": ["Torque wrench", "Socket set"],
+    "parts": ["Tie rod ends (if worn)"],
+    "warnings": ["Steering column universal joint pinch bolt is safety-critical — torque per TQ-027 and never reuse a damaged bolt."],
+    "steps": [
+      { "order": 1, "text": "Inspect steering rack boots, tie rod ends, and column universal joint." },
+      { "order": 2, "text": "Torque steering column pinch bolt per TQ-027 if disturbed." },
+      { "order": 3, "text": "Check power steering fluid level/condition." },
+      { "order": 4, "text": "Verify steering wheel centered and no unusual play after reassembly." }
+    ],
+    "checklist": [
+      "Steering components inspected",
+      "Column pinch bolt torqued per TQ-027 if disturbed",
+      "No abnormal play at steering wheel"
+    ]
+  },
+  {
+    "slug": "electrical",
+    "number": 19,
+    "title": "Electrical",
+    "category": "Electrical & Coding",
+    "objective": "Maintain wiring integrity and grounding across the whole project using the Wire Labeling System.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "Ongoing",
+    "tools": ["Digital multimeter", "Wire labeling supplies"],
+    "parts": ["Battery (AGM)", "Glow plug set", "Glow plug control module (if faulty)"],
+    "warnings": ["A single missed ground strap is the most common cause of hard-to-diagnose intermittent faults after an engine R&R."],
+    "steps": [
+      { "order": 1, "text": "Use the Wire Labeling System to log every connector before disconnecting it anywhere on the car." },
+      { "order": 2, "text": "Test continuity on all grounding straps after reassembly." },
+      { "order": 3, "text": "Inspect and test glow plugs individually with a multimeter." },
+      { "order": 4, "text": "Confirm battery registration after any battery replacement." },
+      { "order": 5, "text": "Run a full fault code scan after any electrical work as a final check." }
+    ],
+    "checklist": [
+      "All disturbed connectors logged in Wire Labeling System",
+      "Ground straps continuity-tested",
+      "Battery registered if replaced",
+      "Post-work fault scan clean"
+    ]
+  },
+  {
+    "slug": "coding-diagnostics",
+    "number": 20,
+    "title": "Coding & Diagnostics",
+    "category": "Electrical & Coding",
+    "objective": "Set up and use BMW diagnostic/coding tools for fault reading, injector coding, and module registration.",
+    "difficulty": "Advanced",
+    "estimatedTime": "Ongoing",
+    "tools": ["OBD / BMW diagnostic interface (ENET or K+DCAN)", "Laptop with ISTA-D / ISTA-P or E-Sys"],
+    "parts": [],
+    "warnings": ["Coding/flashing operations carry a small risk of module bricking if interrupted — always ensure stable power (battery charger/maintainer connected) during any coding session."],
+    "steps": [
+      { "order": 1, "text": "Set up ENET or K+DCAN interface with ISTA-D (diagnostics) and/or E-Sys (coding) on a dedicated laptop." },
+      { "order": 2, "text": "Connect a battery charger/maintainer before any coding session." },
+      { "order": 3, "text": "Read and log all fault codes before starting any repair for a baseline." },
+      { "order": 4, "text": "After injector replacement, enter injector correction codes via ISTA/dedicated tool." },
+      { "order": 5, "text": "After battery replacement, perform battery registration." },
+      { "order": 6, "text": "After ECU/module work, verify VIN and ISN (immobilizer) data matches the vehicle." },
+      { "order": 7, "text": "Log all coding actions and results in this chapter's Notes area for future reference." }
+    ],
+    "checklist": [
+      "Diagnostic interface and software set up",
+      "Baseline fault scan logged",
+      "Injector codes entered after injector work",
+      "Battery registered after replacement"
+    ]
+  },
+  {
+    "slug": "sound-system",
+    "number": 21,
+    "title": "Sound System",
+    "category": "Electrical & Coding",
+    "objective": "Plan and execute an audio system upgrade using the Sound System Planner.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "4–10 hours depending on tier",
+    "tools": ["Trim removal tool set", "Digital multimeter", "Wire crimping/soldering tools"],
+    "parts": ["Amplifier (aftermarket)", "Front component speaker set", "Subwoofer + enclosure"],
+    "warnings": ["Identify whether a factory amplifier is present before wiring in aftermarket components — bypassing it incorrectly can cause distortion or damage."],
+    "steps": [
+      { "order": 1, "text": "Document the current/factory system in the Sound System Planner." },
+      { "order": 2, "text": "Choose an upgrade tier (Factory Baseline / Entry / Mid / Reference)." },
+      { "order": 3, "text": "Plan wiring routes for power, ground, remote turn-on, and signal cabling." },
+      { "order": 4, "text": "Install amplifier, speakers, and subwoofer per chosen tier." },
+      { "order": 5, "text": "Label all new wiring using the Wire Labeling System for future serviceability." },
+      { "order": 6, "text": "Test and tune the system, checking for rattles/panel resonance." }
+    ],
+    "checklist": [
+      "Current system documented",
+      "Upgrade tier selected and budgeted",
+      "New wiring labeled",
+      "System tested for noise/distortion issues"
+    ]
+  },
+  {
+    "slug": "interior-restoration",
+    "number": 22,
+    "title": "Interior Restoration",
+    "category": "Restoration",
+    "objective": "Refresh interior trim, upholstery, and electronics.",
+    "difficulty": "Beginner",
+    "estimatedTime": "Ongoing",
+    "tools": ["Trim removal tool set", "Vacuum/steam cleaner"],
+    "parts": ["Interior trim refresh kit (leather care + trim clips)"],
+    "warnings": ["Disconnect battery before removing any trim panel containing airbag wiring (side curtain, seat-mounted airbags)."],
+    "steps": [
+      { "order": 1, "text": "Deep clean seats, carpets, and headliner." },
+      { "order": 2, "text": "Inspect leather/upholstery condition and apply conditioner or repair kits as needed." },
+      { "order": 3, "text": "Replace broken interior trim clips and worn switchgear." },
+      { "order": 4, "text": "Test all electronics (windows, seats, climate control, infotainment) and log faults for the Coding & Diagnostics chapter." },
+      { "order": 5, "text": "Document before/after condition with photos." }
+    ],
+    "checklist": [
+      "Interior deep cleaned",
+      "Trim and clips inspected/replaced",
+      "Electronics functionally tested",
+      "Before/after photos logged"
+    ]
+  },
+  {
+    "slug": "exterior-restoration",
+    "number": 23,
+    "title": "Exterior Restoration",
+    "category": "Restoration",
+    "objective": "Address exterior bodywork, trim, and panel condition.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "Ongoing",
+    "tools": ["Panel gap gauge", "Basic bodywork tools"],
+    "parts": ["Exterior trim clips/fasteners as needed"],
+    "warnings": ["Inspect for prior accident repair or rust before investing in cosmetic work."],
+    "steps": [
+      { "order": 1, "text": "Inspect all panel gaps and paint condition for signs of prior accident repair." },
+      { "order": 2, "text": "Check for rust at common E70 trouble spots (rear wheel arches, tailgate, sunroof drains)." },
+      { "order": 3, "text": "Replace damaged or missing exterior trim/clips." },
+      { "order": 4, "text": "Plan and log required bodywork ahead of Paint Correction chapter." }
+    ],
+    "checklist": [
+      "Panel gaps and paint condition inspected",
+      "Rust checked at common trouble spots",
+      "Damaged trim identified and sourced",
+      "Bodywork plan logged"
+    ]
+  },
+  {
+    "slug": "paint-correction",
+    "number": 24,
+    "title": "Paint Correction",
+    "category": "Restoration",
+    "objective": "Restore paint clarity and gloss via correction and protection.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "1–2 days",
+    "tools": ["Dual-action polisher", "Paint thickness gauge", "Detailing clay"],
+    "parts": ["Paint correction / detailing consumables (compounds, pads, sealant/ceramic coating)"],
+    "warnings": ["Always measure paint thickness before aggressive compounding to avoid burning through clear coat."],
+    "steps": [
+      { "order": 1, "text": "Wash and clay bar the full exterior." },
+      { "order": 2, "text": "Measure paint thickness across panels and note any prior repaint areas." },
+      { "order": 3, "text": "Perform test spot polish to determine correction level needed." },
+      { "order": 4, "text": "Compound and polish panel by panel." },
+      { "order": 5, "text": "Apply sealant or ceramic coating for protection." },
+      { "order": 6, "text": "Photograph final results for the project record." }
+    ],
+    "checklist": [
+      "Paint thickness measured before correction",
+      "Test spot performed",
+      "All panels corrected and protected",
+      "Final photos logged"
+    ]
+  },
+  {
+    "slug": "m-sport-conversion",
+    "number": 25,
+    "title": "M Sport Conversion",
+    "category": "Restoration",
+    "objective": "Plan and optionally execute an M Sport aesthetic/handling package conversion.",
+    "difficulty": "Advanced",
+    "estimatedTime": "Ongoing / optional",
+    "tools": ["Standard trim/body tools", "Alignment equipment (post-install)"],
+    "parts": ["M Sport bumpers, side skirts, spoiler (sourced separately)", "M Sport suspension components (optional)"],
+    "warnings": ["Confirm parts compatibility with this exact chassis and options (sensors, park distance control cutouts, etc.) before purchase."],
+    "steps": [
+      { "order": 1, "text": "Define scope: cosmetic-only (bumpers/skirts/wheels) vs. full M Sport suspension conversion." },
+      { "order": 2, "text": "Source parts matching sensor cutouts (PDC, washer jets) already fitted to this VIN." },
+      { "order": 3, "text": "Fit exterior components, transferring sensors/hardware from stock parts." },
+      { "order": 4, "text": "If converting suspension, install M Sport-spec springs/dampers and realign." },
+      { "order": 5, "text": "Code any relevant options via the diagnostic tool if electronic feature activation is desired." }
+    ],
+    "checklist": [
+      "Scope defined and budgeted",
+      "Parts confirmed compatible with sensor cutouts",
+      "Components fitted and sensors transferred",
+      "Alignment performed if suspension changed"
+    ]
+  },
+  {
+    "slug": "maintenance-schedule",
+    "number": 26,
+    "title": "Maintenance Schedule",
+    "category": "Reference",
+    "objective": "Track ongoing maintenance intervals after the engine replacement is complete.",
+    "difficulty": "Beginner",
+    "estimatedTime": "Ongoing",
+    "tools": [],
+    "parts": [],
+    "warnings": ["Re-torque wheel bolts after the first 50km following any wheel-off work."],
+    "steps": [
+      { "order": 1, "text": "Log the first-start date and mileage in the Dashboard maintenance log." },
+      { "order": 2, "text": "Schedule an oil and filter check at ~1,000km after the new engine's first start." },
+      { "order": 3, "text": "Re-torque wheel bolts at ~50km." },
+      { "order": 4, "text": "Re-check coolant level and bleed for trapped air after the first few heat cycles." },
+      { "order": 5, "text": "Set recurring reminders for standard BMW diesel service intervals (oil, fuel filter, air filter) going forward." }
+    ],
+    "checklist": [
+      "First-start logged in maintenance log",
+      "Post-install oil check scheduled",
+      "Wheel re-torque scheduled",
+      "Recurring service intervals set"
+    ]
+  },
+  {
+    "slug": "fault-code-library",
+    "number": 27,
+    "title": "Fault Code Library",
+    "category": "Reference",
+    "objective": "Reference common fault codes relevant to this platform via the Fault Code Library / Torque & Search tools.",
+    "difficulty": "Beginner",
+    "estimatedTime": "Ongoing",
+    "tools": ["OBD / BMW diagnostic interface"],
+    "parts": [],
+    "warnings": ["Fault code descriptions in this app are general references — always confirm exact meaning and repair guidance in ISTA for this specific vehicle."],
+    "steps": [
+      { "order": 1, "text": "Use the Fault Code Library page to search codes as they appear during diagnostics." },
+      { "order": 2, "text": "Cross-reference common causes listed against your actual symptoms before ordering parts." },
+      { "order": 3, "text": "Log resolved codes and fixes in the Maintenance Log for future reference." }
+    ],
+    "checklist": [
+      "Fault Code Library reviewed for any active codes",
+      "Root cause confirmed before parts ordered",
+      "Resolutions logged"
+    ]
+  },
+  {
+    "slug": "resources",
+    "number": 28,
+    "title": "Resources",
+    "category": "Reference",
+    "objective": "Central list of reference resources to consult alongside this workshop OS.",
+    "difficulty": "Beginner",
+    "estimatedTime": "N/A",
+    "tools": [],
+    "parts": [],
+    "warnings": [],
+    "steps": [
+      { "order": 1, "text": "BMW TIS (Technical Information System) — authoritative source for all torque specs, procedures, and wiring diagrams. VERIFY all safety-critical values here." },
+      { "order": 2, "text": "ISTA-D / ISTA-P — official BMW diagnostic and programming software." },
+      { "order": 3, "text": "E-Sys — coding tool for feature activation and module coding." },
+      { "order": 4, "text": "BMW E70 owner/enthusiast forums and M57TU technical communities — useful for real-world experience, cross-check against TIS before acting." },
+      { "order": 5, "text": "Local BMW specialist / independent diesel shop — for any step you are not confident performing yourself, especially safety-critical torque-to-yield fasteners." }
+    ],
+    "checklist": [
+      "TIS access confirmed",
+      "Diagnostic software installed and tested",
+      "Local specialist contact identified for fallback support"
+    ]
+  }
+]

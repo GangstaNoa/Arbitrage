@@ -1,0 +1,50 @@
+{
+  "currentSystem": {
+    "headUnit": "Factory BMW Professional/CD head unit — PLACEHOLDER, confirm exact variant fitted to this VIN",
+    "amp": "Factory amplifier presence unknown — check for a factory amp module behind trunk trim (Harman/Kardon vs base Hi-Fi vs no amp)",
+    "speakers": "Factory door/dash/parcel shelf speakers — condition and count unverified",
+    "notes": "Inspect and document the as-found system before making any upgrade decisions. Many E70 units have a factory amp that can be retained or bypassed depending on chosen tier."
+  },
+  "tiers": [
+    {
+      "id": "factory-baseline",
+      "tier": "Factory Baseline",
+      "headUnit": "Retain factory head unit",
+      "amp": "Retain factory amp if present and functional",
+      "speakers": "Clean/service existing speakers, replace any blown units with factory-spec replacements",
+      "subwoofer": "None",
+      "wiringNotes": "No new wiring required beyond fixing any damaged factory harness sections found during engine bay/interior work.",
+      "estimateDkk": "0 – 1,500"
+    },
+    {
+      "id": "entry-upgrade",
+      "tier": "Entry Upgrade",
+      "headUnit": "Retain factory head unit (or add Bluetooth/CarPlay adapter)",
+      "amp": "Add compact 4-channel aftermarket amp for front stage",
+      "speakers": "Upgrade front door speakers to a quality coaxial or component set",
+      "subwoofer": "Small powered under-seat subwoofer",
+      "wiringNotes": "Tap factory speaker-level outputs into new amp via line-output converter; run new power/ground/remote wiring to trunk-mounted amp.",
+      "estimateDkk": "4,000 – 8,500"
+    },
+    {
+      "id": "mid-upgrade",
+      "tier": "Mid Upgrade",
+      "headUnit": "Aftermarket head unit with CarPlay/Android Auto (adapter harness required for steering wheel controls)",
+      "amp": "4- or 5-channel amp powering all speakers plus dedicated sub channel",
+      "speakers": "Full component speaker set (front + rear)",
+      "subwoofer": "10-12in powered enclosure in a sealed box, floor or trunk-mounted",
+      "wiringNotes": "Full RCA signal run from head unit to trunk amp, dedicated fused power wire from battery, upgraded ground point.",
+      "estimateDkk": "10,000 – 18,000"
+    },
+    {
+      "id": "reference-build",
+      "tier": "Reference Build",
+      "headUnit": "Aftermarket source unit or DSP-integrated processor retaining factory head unit as source",
+      "amp": "Multi-channel amp(s) with active crossover / DSP tuning",
+      "speakers": "High-end component set front and rear, dedicated tweeter and midrange staging",
+      "subwoofer": "Custom sealed or ported enclosure, matched to cargo-area constraints",
+      "wiringNotes": "Full DSP-based signal chain, upgraded electrical (possibly secondary battery/big-3 upgrade), professional tuning recommended.",
+      "estimateDkk": "20,000+"
+    }
+  ]
+}
