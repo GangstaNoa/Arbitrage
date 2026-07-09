@@ -8,6 +8,8 @@ import WireForm from "@/components/wires/WireForm";
 import WireCard from "@/components/wires/WireCard";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { STORAGE_KEYS, downloadJson } from "@/lib/storage";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+import type { DictKey } from "@/lib/i18n/dictionary";
 import type { WireCategory, WireLabel } from "@/lib/types";
 
 const categories: (WireCategory | "all")[] = [
@@ -23,6 +25,7 @@ const categories: (WireCategory | "all")[] = [
 ];
 
 export default function WiresPage() {
+  const { t } = useLanguage();
   const [labels, setLabels] = useLocalStorage<WireLabel[]>(
     STORAGE_KEYS.wireLabels,
     []
@@ -52,11 +55,7 @@ export default function WiresPage() {
   return (
     <div className="space-y-4">
       <GlassPanel className="p-4">
-        <p className="text-sm text-jarvis-cyan/85">
-          Log every connector before you disconnect it. Each label gets an
-          auto-incrementing ID (C001, C002, …). Print the sheet below and tape
-          labels near each connector, or export as JSON for backup.
-        </p>
+        <p className="text-sm text-jarvis-cyan/85">{t("wires.intro")}</p>
       </GlassPanel>
 
       <GlassPanel className="p-4">
@@ -68,7 +67,7 @@ export default function WiresPage() {
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search labels…"
+            placeholder={t("wires.searchPlaceholder")}
             className="w-48 rounded border border-jarvis-border bg-jarvis-bg/60 px-2 py-1.5 text-sm focus:border-jarvis-cyan/60 focus:outline-none"
           />
           <div className="flex flex-wrap gap-1.5">
@@ -82,12 +81,12 @@ export default function WiresPage() {
                     : "border-jarvis-border text-jarvis-dim hover:text-jarvis-cyan"
                 }`}
               >
-                {c}
+                {t(`wire.category.${c}` as DictKey)}
               </button>
             ))}
           </div>
           <div className="ml-auto flex gap-2">
-            <PrintButton label="Print Labels" />
+            <PrintButton label={t("wires.printLabels")} />
             <GlowButton
               size="sm"
               variant="ghost"
@@ -95,19 +94,17 @@ export default function WiresPage() {
                 downloadJson(`wire-labels-${Date.now()}.json`, labels)
               }
             >
-              ⬇ Export JSON
+              ⬇ {t("common.exportJson")}
             </GlowButton>
           </div>
         </div>
 
         <div className="print-target">
           <h2 className="mb-2 hidden font-display text-sm font-bold uppercase tracking-widest text-jarvis-cyan print:block print:text-black">
-            JARVIS X5 Garage OS — Wire / Connector Labels
+            {t("wires.printTitle")}
           </h2>
           {filtered.length === 0 ? (
-            <p className="text-sm text-jarvis-dim">
-              No wire labels yet. Add your first connector above.
-            </p>
+            <p className="text-sm text-jarvis-dim">{t("wires.noLabelsYet")}</p>
           ) : (
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
               {filtered.map((label) => (

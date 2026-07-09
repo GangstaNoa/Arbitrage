@@ -2,9 +2,13 @@
 
 import { useEffect, useState } from "react";
 import GlassPanel from "@/components/ui/GlassPanel";
-import advice from "@/data/jarvisAdvice.json";
+import adviceEn from "@/data/jarvisAdvice.json";
+import adviceFo from "@/data/jarvisAdvice.fo.json";
+import { useLanguage, useLocalizedData } from "@/lib/i18n/LanguageContext";
 
 export default function JarvisAssistantPanel() {
+  const { t } = useLanguage();
+  const advice = useLocalizedData(adviceEn, adviceFo);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -13,7 +17,7 @@ export default function JarvisAssistantPanel() {
       setIndex((i) => (i + 1) % advice.length);
     }, 9000);
     return () => clearInterval(id);
-  }, []);
+  }, [advice.length]);
 
   return (
     <GlassPanel glow className="relative overflow-hidden p-4 sm:p-5">
@@ -30,7 +34,7 @@ export default function JarvisAssistantPanel() {
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2 text-[11px] uppercase tracking-widest text-jarvis-dim">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-jarvis-green" />
-            Jarvis Assistant — Online
+            {t("jarvis.online")}
           </div>
           <p
             key={index}

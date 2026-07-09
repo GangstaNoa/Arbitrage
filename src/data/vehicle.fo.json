@@ -1,0 +1,17 @@
+{
+  "name": "JARVIS X5 GARAGE OS",
+  "year": 2009,
+  "make": "BMW",
+  "model": "X5",
+  "chassis": "E70",
+  "trim": "xDrive35d",
+  "engineCode": "M57TU2D30 / 306D5",
+  "engineName": "3.0L Twin-Turbo Beinleiðis-6 Diesel",
+  "vin": "WBAFF01070L319611",
+  "purchasePriceDkk": 12000,
+  "issue": "Motorbrot — sveivarhjóls- og stangarlegu-skaði. Full motorútskifting krevjað.",
+  "projectStart": "2026-06-01",
+  "currentPhase": "Sundurtøka & Diagnosa",
+  "progressPercent": 8,
+  "status": "AKTIVUR — BÍÐAR EFTIR ÚTSKIFTINGARMOTOR-ÚTVEGING"
+}

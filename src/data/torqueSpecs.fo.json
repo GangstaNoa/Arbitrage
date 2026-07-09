@@ -1,0 +1,225 @@
+[
+  {
+    "id": "TQ-001",
+    "component": "Motor",
+    "fastener": "Hovdslegukappa-boltar (M57TU2D30)",
+    "torqueValue": "~20 Nm",
+    "angle": "+ ~50°",
+    "notes": "Sikkerheitskritiskt, torque-to-yield, einstøku-brúks — set altíð nýggjar boltar í, endurbrúka ongantíð. Hetta er ein vanliga útgivin referansutal fyri M57-familjuna (settle-trekt + vinkilstig), samanborin um fleiri óheftar verkstaðshandbøkur, men støypu-/bolt-revisiónir kunnu munast. Vátta nágreiniliga talið og stig-talið fyri hesa støypuna í BMW TIS áðrenn síðsta samanseting — henda festingin er í upprunaorsøk-bólkinum fyri upprunamotorsins brot, so gisk ikki.",
+    "source": "Felagsskapar-/verkstaðsreferansa (M57-familja) — samanber BMW TIS"
+  },
+  {
+    "id": "TQ-002",
+    "component": "Motor",
+    "fastener": "Stangarlegukappa-boltar (M57TU2D30)",
+    "torqueValue": "~5 Nm settle, síðani ~20 Nm",
+    "angle": "+ ~70°",
+    "notes": "Sikkerheitskritiskt, torque-to-yield, einstøku-brúks — set altíð nýggjar boltar og nýggjar legur í. Vátta legu-litur/stødd-koda ímóti mátaðum sveivarhjólstappa áðrenn samanseting. Vanliga útgivin referansutal fyri M57-familjuna, samanborin um fleiri verkstaðshandbøkur. Vátta nágreiniliga talið í BMW TIS fyri hesa støypuna — hetta er nettupp tann festingarbólkurin, ið er ábyrgdur fyri upprunamotorsins brot.",
+    "source": "Felagsskapar-/verkstaðsreferansa (M57-familja) — samanber BMW TIS"
+  },
+  {
+    "id": "TQ-003",
+    "component": "Motor",
+    "fastener": "Sylindarhovudsboltar",
+    "torqueValue": "~80 Nm, loysa heilt, síðani ~50 Nm",
+    "angle": "+ ~90° + ~90°",
+    "notes": "Torque-to-yield, fleiri-stigs røð, einstøku-brúks boltar — skift hvørja ferð. Hendan trekt-loys-endurtrekt-vinkil-vinkil-formin er vanliga útgivin og samanborin um fleiri M57-verkstaðshandbøkur, men vátta nágreiniligu tølini og stig-talið fyri hesa støypuna í BMW TIS áðrenn síðsta samanseting.",
+    "source": "Felagsskapar-/verkstaðsreferansa (M57-familja) — samanber BMW TIS"
+  },
+  {
+    "id": "TQ-004",
+    "component": "Motor",
+    "fastener": "Oljupannuboltar (niðari + efri panna)",
+    "torqueValue": "VERIFY IN BMW TIS (ikki tryggliga heimildað í kanningini)",
+    "notes": "Tveir-partað panna á E70 diesel. Vátta boltalongdar-kort áðrenn ísetan — blandaðar longdir er ein vanlig feilur. Ongin álitisverd útgivin tal varð funnið fyri nettupp hesa festingina undir kanningini — hetta er ein lágkonsekvent festing (verstafall gasket-leki um undirtrektað) men vátta framvegis í TIS heldur enn at giska.",
+    "source": "UNVERIFIED — ikki funnið í kanningini"
+  },
+  {
+    "id": "TQ-005",
+    "component": "Motor",
+    "fastener": "Svinghjóls-/flexplate-boltar",
+    "torqueValue": "VERIFY IN BMW TIS (ikki tryggliga heimildað í kanningini)",
+    "angle": "VERIFY IN BMW TIS",
+    "notes": "Sikkerheitskritisk rotererandi-samansetingar-festing. Loctite sambært TIS um ávíst. Ongin álitisverd M57/E70-serstøk útgivin tal varð funnið undir kanningini — ersett ikki eina generiska BMW-tal fyri eina rotererandi-samansetingar-festing sum hesa.",
+    "source": "UNVERIFIED — ikki funnið í kanningini"
+  },
+  {
+    "id": "TQ-006",
+    "component": "Motor",
+    "fastener": "Vibratiónsdempara-/sveivarhjólsreim-bolt",
+    "torqueValue": "~40 Nm",
+    "angle": "+ ~120°",
+    "notes": "Høgt trektarvirði íalt tá vinkilstigið er lagt afturat — krevur eitt sveivarhjóls-hald-amboð. Nýt ikki starterin til at læsa sveivarhjólið. Torque-to-yield sambært vanliga útgivnum M57-verkstaðshandbóka-referansum — vátta í BMW TIS áðrenn síðsta samanseting.",
+    "source": "Felagsskapar-/verkstaðsreferansa (M57-familja) — samanber BMW TIS"
+  },
+  {
+    "id": "TQ-007",
+    "component": "Motorfestingar",
+    "fastener": "Motorfesting-til-undirvogn-boltar",
+    "torqueValue": "VERIFY IN BMW TIS (ikki tryggliga heimildað í kanningini)",
+    "notes": "Vátta at vinstru/høgru festingar-partanummar samsvara xDrive35d-útgávuna (sí Partadátugrunnur PT-008 — heimildir eru ósamdar um hvørt L/R deila eitt partanummar).",
+    "source": "UNVERIFIED — ikki funnið í kanningini"
+  },
+  {
+    "id": "TQ-008",
+    "component": "Motorfestingar",
+    "fastener": "Motorfesting-til-blokk-brakket-boltar",
+    "torqueValue": "VERIFY IN BMW TIS (ikki tryggliga heimildað í kanningini)",
+    "notes": "Eftirlit brakket fyri sprungur áðrenn endurbrúk.",
+    "source": "UNVERIFIED — ikki funnið í kanningini"
+  },
+  {
+    "id": "TQ-009",
+    "component": "Gearkassi",
+    "fastener": "Bellhousing-til-motor-boltar",
+    "torqueValue": "VERIFY IN BMW TIS (ikki tryggliga heimildað í kanningini)",
+    "notes": "Vátta dowel-sleeve-javning áðrenn trekt-røðin.",
+    "source": "UNVERIFIED — ikki funnið í kanningini"
+  },
+  {
+    "id": "TQ-010",
+    "component": "Gearkassi",
+    "fastener": "Koblingsomformar-til-flexplate-boltar",
+    "torqueValue": "VERIFY IN BMW TIS (ikki tryggliga heimildað í kanningini)",
+    "notes": "Drei motorin fyri at røkka hvønn bolt; vátta at omformarin er fulliga sittandi (mát gapið) áðrenn boltun.",
+    "source": "UNVERIFIED — ikki funnið í kanningini"
+  },
+  {
+    "id": "TQ-011",
+    "component": "Turboskipan",
+    "fastener": "Turbo-til-útlátsmanifold-mutrar (báðar stig)",
+    "torqueValue": "~220 Nm (ringmutur til manifold)",
+    "notes": "Nýt nýggjar gaskets og nýggjar sjálvlæsandi mutrar. Anti-seize á studs sambært TIS-leiðbeining. Samanborin um fleiri M57-familju official-slag verkstaðshandbøkur (E39 530d, E53 X5 3.0d, E91 335d) — talið sæst samfelt tvørtur um hesar skyldu útgávur, men vátta fyri hetta sjálva turbostig í BMW TIS.",
+    "source": "Felagsskapar-/verkstaðshandbóka-referansa (M57-familja) — samanber BMW TIS"
+  },
+  {
+    "id": "TQ-012",
+    "component": "Turboskipan",
+    "fastener": "Turbo-oljumati-/afturkomu-leiðslu-banjo-boltar",
+    "torqueValue": "~25 Nm",
+    "notes": "Nýggjar koparselir hvørja ferð. Lágt trektarvirði — ov-trekta ikki banjo-boltar (teir seala via crush washer-in, ikki bara klemmikraft). Samanborin um fleiri M57-familju verkstaðshandbøkur.",
+    "source": "Felagsskapar-/verkstaðshandbóka-referansa (M57-familja) — samanber BMW TIS"
+  },
+  {
+    "id": "TQ-013",
+    "component": "Kælivatnsskipan",
+    "fastener": "Radiator-festingarboltar",
+    "torqueValue": "VERIFY IN BMW TIS (ikki tryggliga heimildað í kanningini)",
+    "notes": "Plastikk-endatanka-festingar — hand-tætt plus bara lítið trekt, ov-trekta ikki. Lágkonsekvent festing (verstafall sprungin plastikktank um ov-trektað) — ein lættur touch hevur meira at siga her enn eitt nágreiniligt tal.",
+    "source": "UNVERIFIED — ikki funnið í kanningini"
+  },
+  {
+    "id": "TQ-014",
+    "component": "Kælivatnsskipan",
+    "fastener": "Vatnspumpuboltar",
+    "torqueValue": "VERIFY IN BMW TIS (ikki tryggliga heimildað í kanningini)",
+    "notes": "Vátta mekaniska ímóti elektriska pumpu-variant fyri VIN áðrenn pantan (sí Partadátugrunnur PT-012, vanliga nevnt sum 11517801063).",
+    "source": "UNVERIFIED — ikki funnið í kanningini"
+  },
+  {
+    "id": "TQ-015",
+    "component": "Brenniskipan",
+    "fastener": "Høgtrýstis brenniskrá-boltar",
+    "torqueValue": "~13 Nm (kring 9.5 ft-lb, lægri sikkurleiki)",
+    "notes": "Sikkerheitskritisk, høgtrýstis common-rail diesel-skipan. Reinliki er avgerandi — null tolerans fyri óreinska. Hetta talið varð bert funnið fyri generiskt-lýstar 'turbo 3-series'-útgávur heldur enn váttað serstakliga fyri M57TU2D30 — mett sum eitt grovt kanningartal einans, ikki eitt virði at trekta til uttan at vátta í TIS.",
+    "source": "Lág-sikkurheits samanberingsreferansa — vátta í BMW TIS áðrenn brúk"
+  },
+  {
+    "id": "TQ-016",
+    "component": "Brenniskipan",
+    "fastener": "Injector-klampuboltar",
+    "torqueValue": "~10 Nm (M6 klampuboltar) ella ~30 Nm (M8 klampuboltar, motor-heftandi)",
+    "angle": "VERIFY IN BMW TIS",
+    "notes": "Sikkerheitskritiskt. Injector-coding/samsvaran til ECU er krevjað eftir útskifting — vátta via ISTA. Útgivnar M57/M57TU-referansur vísa ein veruligan mismun eftir hvørjum klampubolt-stødd henda sjálvi motorurin brúkar (M6 ímóti M8) — vátta hvat ið er galdandi fyri hesa støypuna í BMW TIS heldur enn at ganga út frá.",
+    "source": "Felagsskapar-/verkstaðsreferansa (M57-familja, bolt-stødd-heftandi) — samanber BMW TIS"
+  },
+  {
+    "id": "TQ-017",
+    "component": "Fjaðring — Frammantil",
+    "fastener": "Framdempara-topp-festingarmutrar",
+    "torqueValue": "~34 Nm (3 mutrar)",
+    "notes": "Er sjálvjavnandi/adaptiv fjaðring ásett, vátta rætta dempara-variant fyri VIN. Talið er vanliga nevnt fyri skyld BMW-chassis av hesum aldri (E90/E46-nærliggjandi heimildir) — hin tyngri E70 X5 dempara-topparin kann munast, so mett sum ein referansupunkt og vátta í TIS.",
+    "source": "Tvørs-chassis-referansa (E90/E46-aldur BMW) — samanber BMW TIS fyri E70"
+  },
+  {
+    "id": "TQ-018",
+    "component": "Fjaðring — Frammantil",
+    "fastener": "Niðari kontrollarms-kulaliðs-klemmibolt",
+    "torqueValue": "~81 Nm",
+    "notes": "Sikkerheitskritisk stýris-/fjaðringarfesting. Vanliga nevnt sum steering-knuckle-til-kulaliðs klemmibolt-trekt á skyldum BMW-chassis av hesum aldri — vátta serstakliga fyri E70 í BMW TIS áðrenn síðsta samanseting.",
+    "source": "Tvørs-chassis-referansa (E90-aldur BMW) — samanber BMW TIS fyri E70"
+  },
+  {
+    "id": "TQ-019",
+    "component": "Fjaðring — Aftantil",
+    "fastener": "Aftara undirvogn-til-bygningarboltar",
+    "torqueValue": "Heimildir ósamdar: ~100 Nm nevnt sum TIS-dokumenterað fyri E90/E91/E92/E93, ~143 Nm nevnt annastaðni fyri ein líknandi aftara undirvognabolt",
+    "angle": "VERIFY IN BMW TIS",
+    "notes": "Sikkerheitskritisk bygningarlig festing, sansýnliga torque-to-yield og einstøku-brúks á nógvum BMW undirvogn-útgávum. Kanningin fann tvey munandi ymisk útgivin tøl fyri hvat kunnu vera ymiskar boltstøður ella ymisk chassis — hetta er nettupp tann slagsins ósemja, ið merkir at tú SKAL EI velja eitt og halda fram. Vátta nágreiniliga talið, støðu fyri støðu, í BMW TIS fyri hetta E70-chassis áðrenn síðsta samanseting.",
+    "source": "MÓTSTRIDANDI heimildir — brúka ikki uttan TIS-vátting"
+  },
+  {
+    "id": "TQ-020",
+    "component": "Bremsur",
+    "fastener": "Framklampiberara-boltar",
+    "torqueValue": "~110 Nm",
+    "notes": "Sikkerheitskritiskt. Trektnykil neyðugur, ongin impact gun. Vanliga nevnt fyri E70 X5 frambremsur um fleiri óheftar heimildir.",
+    "source": "Felagsskapar-/verkstaðsreferansa (E70 X5) — samanber BMW TIS"
+  },
+  {
+    "id": "TQ-021",
+    "component": "Bremsur",
+    "fastener": "Aftanklampiberara-boltar",
+    "torqueValue": "~65 Nm",
+    "notes": "Sikkerheitskritiskt. Trektnykil neyðugur, ongin impact gun. Vanliga nevnt fyri E70 X5 aftanbremsur. Klampi-leiðipinnarnir sjálvir (ein annar, minni festing) eru vanliga nevndir kring ~30 Nm — rugla ikki hesar saman undir samanseting.",
+    "source": "Felagsskapar-/verkstaðsreferansa (E70 X5) — samanber BMW TIS"
+  },
+  {
+    "id": "TQ-022",
+    "component": "Hjól",
+    "fastener": "Hjólboltar",
+    "torqueValue": "~140 Nm (14mm hjólboltar, allar E70 X5-variantir)",
+    "notes": "Sikkerheitskritiskt. Hetta talið er serstakliga og samfelt nevnt sum X5-víða specifikatiónin fyri 14mm-skrúgongd hjólboltarnar ásettar á allar E70 X5-ar — flestu aðrar BMW-modellar brúka ein minni 12mm bolt trektaðan til ~120 Nm, so tak ikki eitt tal frá einari 3-Series/5-Series-referansu við mistoku. Endurtrekta eftir teir fyrstu ~50 km eftir hvørt hjól-av-arbeiði.",
+    "source": "Felagsskapar-/verkstaðsreferansa (E70 X5-serstøk) — samanber BMW TIS"
+  },
+  {
+    "id": "TQ-023",
+    "component": "Transfer Case",
+    "fastener": "Transfer case-til-gearkassa-boltar",
+    "torqueValue": "VERIFY IN BMW TIS (ikki tryggliga heimildað í kanningini)",
+    "notes": "Kanna útgangsflangs-javning áðrenn síðsta trekt. Ger transfer case-adaptatión-endurstillingina við diagnostikamboðnum eftir hvørt oljuservis, óansæð hesa festingarinnar specifikatión.",
+    "source": "UNVERIFIED — ikki funnið í kanningini"
+  },
+  {
+    "id": "TQ-024",
+    "component": "Drivakslingur",
+    "fastener": "Drivakslinga-flangsboltar (fram & aftan)",
+    "torqueValue": "~85 Nm (aftan diff-flangs, Torx-hovd, bert tvørs-chassis-referansa)",
+    "notes": "Sikkerheitskritisk rotererandi samanseting. Nýt nýggjar sjálvlæsandi boltar um ávíst. Talið funnið undir kanningini var fyri eitt annað BMW-chassis (E46) aftan-differential-flangs, ikki váttað fyri E70 — mett sum bert eitt grovt kanningartal og vátta hitt veruliga E70-talið í BMW TIS áðrenn síðsta samanseting.",
+    "source": "Lág-sikkurheits tvørs-chassis-referansa (E46) — vátta í BMW TIS fyri E70"
+  },
+  {
+    "id": "TQ-025",
+    "component": "Elektronikkur",
+    "fastener": "Bilroynd-terminal-klampar",
+    "torqueValue": "VERIFY IN BMW TIS (ikki tryggliga heimildað í kanningini)",
+    "notes": "Lágt trektarvirði, lág konsekvens um sindur skeivt — men ein leys terminal kann framvegis orsaka intermitterandi elektriskar feilir og ein ladingsskipan-varselás. Kobla negativan frá fyrst, kobla negativan aftur til síðst.",
+    "source": "UNVERIFIED — ikki funnið í kanningini"
+  },
+  {
+    "id": "TQ-026",
+    "component": "Elektronikkur",
+    "fastener": "Motor-til-bygning jarðsambandsreim-boltar",
+    "torqueValue": "VERIFY IN BMW TIS (ikki tryggliga heimildað í kanningini)",
+    "notes": "Reinsa allar møtandi flatir til nakið metall fyri góða jarðsambands-kontinuitet — avgerandi fyri CAN bus og gløðingsplugg-skipanar álítisverki. Ein manglaður ella illa reinsaður jarðsamband er ein munandi meira vanlig verulig feilur enn ein undir-trektaður reim-bolt.",
+    "source": "UNVERIFIED — ikki funnið í kanningini"
+  },
+  {
+    "id": "TQ-027",
+    "component": "Stýri",
+    "fastener": "Stýrissúlu-universalliðs-klemmibolt",
+    "torqueValue": "VERIFY IN BMW TIS (ikki tryggliga heimildað í kanningini)",
+    "notes": "Sikkerheitskritisk stýrisfesting. Ongin álitisverd M57/E70-serstøk útgivin tal varð funnið undir kanningini — hetta er ein stýris-sikkerheits-festing, so ersett ikki við einum giskaðum ella generiskum virði.",
+    "source": "UNVERIFIED — ikki funnið í kanningini"
+  }
+]

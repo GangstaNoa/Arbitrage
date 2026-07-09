@@ -8,6 +8,8 @@ import StatusBadge from "@/components/ui/StatusBadge";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { STORAGE_KEYS } from "@/lib/storage";
 import { generateId } from "@/lib/id";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+import type { DictKey } from "@/lib/i18n/dictionary";
 import type { Priority } from "@/lib/types";
 
 interface RestorationTask {
@@ -18,11 +20,11 @@ interface RestorationTask {
   done: boolean;
 }
 
-const areaChapters: { area: RestorationTask["area"]; slug: string; blurb: string }[] = [
-  { area: "Exterior", slug: "exterior-restoration", blurb: "Body panels, trim, rust checks" },
-  { area: "Interior", slug: "interior-restoration", blurb: "Seats, dash, trim, electronics" },
-  { area: "Paint", slug: "paint-correction", blurb: "Correction, polishing, protection" },
-  { area: "M Sport", slug: "m-sport-conversion", blurb: "Optional M Sport aesthetic/handling package" },
+const areaChapters: { area: RestorationTask["area"]; slug: string }[] = [
+  { area: "Exterior", slug: "exterior-restoration" },
+  { area: "Interior", slug: "interior-restoration" },
+  { area: "Paint", slug: "paint-correction" },
+  { area: "M Sport", slug: "m-sport-conversion" },
 ];
 
 const priorities: Priority[] = ["critical", "high", "medium", "low"];
@@ -34,6 +36,7 @@ const priorityTone: Record<Priority, "red" | "amber" | "cyan" | "dim"> = {
 };
 
 export default function RestorationPage() {
+  const { t } = useLanguage();
   const [tasks, setTasks] = useLocalStorage<RestorationTask[]>(
     `${STORAGE_KEYS.chapterNotes}:restoration-tasks`,
     []
@@ -65,11 +68,13 @@ export default function RestorationPage() {
           <Link key={a.slug} href={`/manual/${a.slug}`}>
             <GlassPanel className="h-full p-4 transition-all hover:border-jarvis-cyan/60 hover:shadow-glow">
               <div className="font-display text-sm font-bold text-jarvis-cyan text-glow">
-                {a.area}
+                {t(`restoration.area.${a.area}` as DictKey)}
               </div>
-              <p className="mt-1 text-xs text-jarvis-dim">{a.blurb}</p>
+              <p className="mt-1 text-xs text-jarvis-dim">
+                {t(`restoration.blurb.${a.area}` as DictKey)}
+              </p>
               <span className="mt-2 inline-block text-[11px] text-jarvis-cyan/70">
-                Open chapter →
+                {t("restoration.openChapter")}
               </span>
             </GlassPanel>
           </Link>
@@ -78,7 +83,7 @@ export default function RestorationPage() {
 
       <GlassPanel className="p-4">
         <h2 className="mb-3 font-display text-sm font-bold uppercase tracking-widest text-jarvis-cyan">
-          Restoration Task Board
+          {t("restoration.taskBoard")}
         </h2>
         <div className="mb-3 grid grid-cols-1 gap-2 sm:grid-cols-4">
           <select
@@ -90,14 +95,14 @@ export default function RestorationPage() {
           >
             {areaChapters.map((a) => (
               <option key={a.area} value={a.area}>
-                {a.area}
+                {t(`restoration.area.${a.area}` as DictKey)}
               </option>
             ))}
           </select>
           <input
             value={form.text}
             onChange={(e) => setForm((s) => ({ ...s, text: e.target.value }))}
-            placeholder="Task description"
+            placeholder={t("restoration.taskDescription")}
             className="rounded border border-jarvis-border bg-jarvis-bg/60 px-2 py-1.5 text-sm sm:col-span-2"
           />
           <select
@@ -107,48 +112,47 @@ export default function RestorationPage() {
           >
             {priorities.map((p) => (
               <option key={p} value={p}>
-                {p}
+                {t(`parts.priority.${p}` as DictKey)}
               </option>
             ))}
           </select>
           <GlowButton onClick={addTask} className="sm:col-span-4">
-            + Add Task
+            {t("restoration.addTask")}
           </GlowButton>
         </div>
 
         {tasks.length === 0 ? (
-          <p className="text-sm text-jarvis-dim">
-            No restoration tasks logged yet. Add exterior, interior, paint, or M
-            Sport tasks above.
-          </p>
+          <p className="text-sm text-jarvis-dim">{t("restoration.noTasksYet")}</p>
         ) : (
           <ul className="space-y-1.5">
-            {tasks.map((t) => (
+            {tasks.map((task) => (
               <li
-                key={t.id}
+                key={task.id}
                 className="flex items-center justify-between gap-2 rounded border border-jarvis-border/50 bg-jarvis-bg/40 px-3 py-2 text-sm"
               >
                 <div className="flex items-center gap-2.5">
                   <input
                     type="checkbox"
-                    checked={t.done}
-                    onChange={() => toggleTask(t.id)}
+                    checked={task.done}
+                    onChange={() => toggleTask(task.id)}
                     className="accent-cyan-400"
                   />
-                  <span className={t.done ? "text-jarvis-green line-through" : "text-jarvis-cyan/90"}>
-                    {t.text}
+                  <span className={task.done ? "text-jarvis-green line-through" : "text-jarvis-cyan/90"}>
+                    {task.text}
                   </span>
                   <span className="rounded-full border border-jarvis-border px-2 py-0.5 text-[10px] text-jarvis-dim">
-                    {t.area}
+                    {t(`restoration.area.${task.area}` as DictKey)}
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <StatusBadge tone={priorityTone[t.priority]}>{t.priority}</StatusBadge>
+                  <StatusBadge tone={priorityTone[task.priority]}>
+                    {t(`parts.priority.${task.priority}` as DictKey)}
+                  </StatusBadge>
                   <button
-                    onClick={() => removeTask(t.id)}
+                    onClick={() => removeTask(task.id)}
                     className="text-[11px] text-jarvis-red hover:underline"
                   >
-                    Delete
+                    {t("restoration.delete")}
                   </button>
                 </div>
               </li>

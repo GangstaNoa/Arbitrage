@@ -1,0 +1,1035 @@
+[
+  {
+    "slug": "overview",
+    "number": 1,
+    "title": "Yvirlit",
+    "category": "Getting Started",
+    "objective": "At leggja upp umfang, mál og grundleggjandi referansu fyri alla motorútskiftingaruppgávuna á VIN WBAFF01070L319611.",
+    "difficulty": "Beginner",
+    "estimatedTime": "1 tími (lesing + ætlanarlegging)",
+    "tools": ["Notubók / hendan appin", "Kamera / telefon"],
+    "parts": [],
+    "warnings": [
+      "Hendan handbókin er ein persónligur verkætlanarrúmur, ikki ein official BMW repair manual. Samanber altíð sikkerheitskritiskar virðir við BMW TIS/ISTA áðrenn tú fer eftir teimum."
+    ],
+    "steps": [
+      { "order": 1, "text": "Skriva niður fulla vognaidentifikatión: 2009 BMW X5 E70 xDrive35d, motor M57TU2D30 (BMW motorkoda 306D5), VIN WBAFF01070L319611." },
+      { "order": 2, "text": "Dokumentera brotið: motorbrot við staðfestum skaða á sveivarhjólsstongum og legum (crankshaft and connecting rod bearings). Tak myndir av øllum prógvi (metall í oljuni, ruskul í oljupannuni, o.a.)." },
+      { "order": 3, "text": "Áðrenn tú ákvørð nakað annað, finn út av *hví* legurnar brotnaðu — sí Pro Tips niðanfyri. At bolta ein góðan motor uppii yvir sama upprunaligu orsøkina (ein steptan oljuinntak, longu oljuskiftingarintervøll, lágt oljustøði) bara keypir tær eina aðru bilun." },
+      { "order": 4, "text": "Ávar hvørja útskiftingarstrategi tú vilt fylgja: heilt brúkt motor-swap ímóti maskinstovu short-block-endurbygging av upprunamotorinum. Henda handbókin gongur út frá einum brúktum (lágmíla) motorswap, tí tað er tann meiri vanliga leiðin fyri hesa slagsbilun á hesi plattformuni." },
+      { "order": 5, "text": "Set hendan appin upp sum tína einu heimildaruppspring: skriva inn partar, amboð, budsjett og tíðarplan áðrenn tú byrjar at taka sundur." },
+      { "order": 6, "text": "Gakk runt um vognin og tak grundleggjandi myndir av uttan, innan, motorrúmi og undirvognini fyri eitt before/after skrásetingar." }
+    ],
+    "checklist": [
+      "Vognaupplýsingar skrásettar",
+      "Brotið dokumenterað við myndum",
+      "Kenning um upprunaorsøk skrásett, ikki bara sjálvt brotið",
+      "Útskiftingarstrategi ávarað",
+      "Grundleggjandi myndasett tikið"
+    ],
+    "proTips": [
+      "306D5 er BMW's motorkoda fyri hin sequential twin-turbo M57TU2D30 — ein lítil fixed-geometry turbo fyri skjóta lág-rpm-svar, ið mati eini størri variable-geometry (VGT) turbo fyri topp-flæði. Ruglaðu hann ikki saman við tann eina-VGT-turbo M57TU2D30 \"TOP\", ið er í summum øðrum marknaðum/modellum — partar, serliga turbo'ar og teirra vacuum/olju-leiðingar, eru IKKI skiftanlig millum báðar." ,
+      "M57-familjan (bæði forfarin generatión og hendan sjálvu) hevur eitt væl gott ry fyri long-block-styrki — teir vanligu brotsvegirnir á NETTOPP hesi vogn/motor-kombinatiónini eru so at siga allir sekundarir: timing chain guides ið verða sprøkur og senda plastikk-partiklar niður í oljuinntakið, longu/vanrøktar oljuskiftingarintervøll, ella lágt oljustøði eftir einum longu ómerktum lekaligi (turbo-selir, oljufiltur-húsingargasket, oljupannugasket). Legubrot er sera ofta eitt sympton av einum av hesum, ikki ein tilvildarligur defekt.",
+      "Áðrenn tú keypir ein útskiftingarmotor, tak gomlu oljufilturina og skerð hana upp, og eftirlit oljuinntaksskíggjan um tú kann koma til hana. Metallflak saman við plastikkpartiklum úr timing chain guide bendir sterkliga á at chain guide-brot hevur ført til oljumangul — vert at vita áðrenn tú brúkar pengar, og eisini vert at kanna serstakliga á útskiftingarmotorinum.",
+      "Officielt vísir BMW hesa dieselæruna til eitt 'Condition Based Service' fleksibelt skiftiintervall, ið kann strekkja seg longur enn 15.000 mílur. Í roynd er hetta ein av teimum mest vanligu orsøkunum til sludge og legubroyt á høgmíla eintøkum — nógvir royndir, óheftir BMW diesel-teknikarar mæla til eitt fast 10.000 km / 6.000 mílu intervall við skjøtum low-ash diesel-spec olju, óansæð hvat mátari vísur."
+    ],
+    "commonMistakes": [
+      "At keypa og seta inn ein útskiftingarmotor uttan at finna út av hví tann upprunaliga brotnaði, og so verða overraskaður tá sama slagsbilun kemur aftur eitt ár seinni.",
+      "At halda at ein lágmílu-sølupáboð um útskiftingarmotorin merkir at botnenden er heilsuføristandandi — sí Replacement Engine Inspection kapitulin. Mílutal eitt sindur sigur einki um oljuskiftingarsøguna.",
+      "At meta hetta sum ein einstøk vikuskiftisuppgáva. Ein full motor-út-swap á hesi plattformuni tekur vanliga 8–14 tímar bara fyri burturtøku, plus eftirlit, plus eitt sambæriligt innsetingaryvirfar — budsjettera í dagum, ikki tímum."
+    ]
+  },
+  {
+    "slug": "safety",
+    "number": 2,
+    "title": "Trygd",
+    "category": "Getting Started",
+    "objective": "At seta upp eitt trygt arbeiðsumhvørvi áðrenn nakað skrúvað byrjar.",
+    "difficulty": "Beginner",
+    "estimatedTime": "30 minuttir",
+    "tools": ["Jack stands (4x)", "Hjólkilir", "Slokkiapparat (Class B/C)", "Sikkerheitsbrillur", "Nitril-hanskar", "Fyrstuhjálparbúnaður"],
+    "parts": [],
+    "warnings": [
+      "Arbeið ongantíð undir einum vogni, ið bert er borin av einum jack — brúka altíð rated jack stands.",
+      "Diesel-brennievnisskipanin arbeiðir undir sera høgum trýsti (rúgvuliga yvir 2.000 bar í common rail-ini) — lætta trýstið eftir framgongdini áðrenn nakað leiðsluleiki verður opnað.",
+      "Kobla bilroyndina frá áðrenn arbeitt verður við leiðingum, brenslusprøytu, ella airbag-nærliggjandi partar.",
+      "Diesel-útlát og gangandi motorar í einum lokaðum bilskúri kunnu orsaka koltvíilds-uppsavning — tryggja ventilatión.",
+      "Hesin motorurin brúkar eina sequential turbo-skipan, høgtrýstis common-rail diesel-innsprøjting, og fleiri torque-to-yield (einingar-brúks) festingar í botnendanum og hovdinum. Eingin av hesum fyrigeva snarveg — ivast tú, steðga og slá upp heldur enn at giska."
+    ],
+    "steps": [
+      { "order": 1, "text": "Rudda eitt serstakt arbeiðsrúm við góðari lýsing og ventilatión." },
+      { "order": 2, "text": "Legg slokkiapparat og fyrstuhjálparbúnað innan raksvídd." },
+      { "order": 3, "text": "Vátta at motorlyftari og jack stands eru ratede fyri meira enn tær álagur tú áleggur — hesin motorurin plus tilhoyr er ísamt í kring 200+ kg." },
+      { "order": 4, "text": "Legg eina ætlan fyri burtureinsking av vøkum (brúkt olja, kælivatn, brennievni) sambært lokalum regulum." },
+      { "order": 5, "text": "Set eina regl: kobla bilroyndina frá áðrenn nakað elektriskt ella brenniskipanararbeiði, ongin undantøk." },
+      { "order": 6, "text": "Hav ein telefon opplaðaðan og tøkan alla tíðina tá tú arbeiðir eina."} ,
+      { "order": 7, "text": "Hav eitt skrivað ella myndsett trektspecifikatión/vinkil-referansublað á benkinum fyri hvørja torque-to-yield-festing tú møtir (hovdsboltar, hovdslegu-boltar, stongarboltar) so tú ongantíð freistast at 'bara herða hann og halda fram.'" }
+    ],
+    "checklist": [
+      "Arbeiðsrúm ryddjað og loftað",
+      "Jack stands rated og rætt staðsett",
+      "Slokkiapparat tøkt",
+      "Frákobling av bilroynd er standard framgongd áðrenn leiðingar/brenslu-arbeiði",
+      "Torque-to-yield-festingar eru ávaraðar frammanundan, nýggjar liggja klárar áðrenn sundurtøku"
+    ],
+    "proTips": [
+      "Hovdsboltar, hovdslegukappaboltar og stongarboltar á hesum motorinum eru torque-to-yield (TTY) festingar — teir eru gjørdir at strekkjast eitt sindur í síðsta herðingararbeiðinum og eru bara til eina brúks. At endurbrúka ein strektan TTY-bolt vágar hann brotnar ella missir klemmikraft undir álag. Panta eitt heilt nýtt sett av øllum trimum áðrenn tú byrjar, ikki eftir at tú finnur út í miðjum samansetingini at tær tørvar tey.",
+      "Eitt kaldur-start-skrallur frá framvegnum motori, ið varir 5–30 sekund og fer burtur sum oljutrýst byggir upp, er hitt klassiska tekin á sliting í timing chain tensioner/guide á hesi motorfamiljuni — vert at lurta serstakliga eftir bæði á gomlu motorinum (fyri tíni brotsrannsókn) og á útskiftingarmotorinum áðrenn hann kemur í.",
+      "Henda vognin er væl tung (X5 E70 SUV understell/unibody) og diesel-drivverk-partar eru tættir — ein motorlyftari rated langt yvir uppgivna motorvekt, við einum leveler, er ikki valfrítt yvirmál her."
+    ],
+    "commonMistakes": [
+      "At brúka ein impact gun á eina torque-to-yield-festing tí 'hon er nóg tætt' — TTY-boltar tørva ein stýrdan trektning-so-vinkil-røð, ikki eina giskaða síðstuherðing.",
+      "At arbeiða eina seint um kvøldið á einum jack-stand-bornum vogni uttan telefon í nærleikanum — ein sera vanlig orsøk til at smáir hendingar verða til stórar.",
+      "At sleppa eyguverju undir avfeitingar/høgtrýstisvasking-stigunum — diesel-motorrúm savna baktan olju- og kælivatnsrestir, ið skvetta longur enn ventað."
+    ]
+  },
+  {
+    "slug": "tools",
+    "number": 3,
+    "title": "Amboð",
+    "category": "Getting Started",
+    "objective": "At skráseta og útvega amboðini, ið tørvast fyri alla verkætlanina, skrásett í Amboðsdátugrunninum.",
+    "difficulty": "Beginner",
+    "estimatedTime": "Løbandi",
+    "tools": [],
+    "parts": [],
+    "warnings": ["Nýt ikki impact guns í staðin fyri trektnykla á sikkerheitskritiskum festingum (understell, bremsur, motorinnvøling)."],
+    "steps": [
+      { "order": 1, "text": "Kanna Amboðsdátugrunnssíðuna og merk hvørji amboð tú longu eigur." },
+      { "order": 2, "text": "Set neyðugu amboðini fyri valfríggj amboð í hesum verkætlanarbólkinum." },
+      { "order": 3, "text": "Budsjettera amboðskeyp í Budsjettyvirlitinum undir Amboð-bólkinum." },
+      { "order": 4, "text": "Vátta at trektnyklar eru kalibrerdir/innan sín nágreiniligleiki áðrenn brúk á sikkerheitskritiskum festingum." },
+      { "order": 5, "text": "Vátta serstakliga at tú hevur (ella kanst fáa lánt/leigað) eitt sveivarhjóls-hald-amboð til vibratiónsdempara-boltin, ein trektvinkilmátara til TTY-festingar, og E-Torx-toppar — E70 dieselar brúka nógv external Torx (E-serie) heldur enn vanligan hex/Allen." }
+    ],
+    "checklist": [
+      "Amboðsdátugrunnur kannaður",
+      "Neyðugu amboðini útveguð ella pantað",
+      "Trektnyklar váttaðir nágreiniligir",
+      "Trektvinkilmátari og E-Torx-toppar staðfestir í hondini"
+    ],
+    "proTips": [
+      "Ein sjónpípuspegil (telescoping inspection mirror) er ódýrur og gevur seg sjálvan aftur og aftur á hesi plattformuni — nøkur av teimum torføristu boltunum kring høgru motorfestingina og DPF-brakketið verða bert funnin við kenslu plus spegli, ikki einans við eyganum.",
+      "Ein einfaldur borescope/endoscope-kamera (telefon-samstarvandi eru nú ódýr) er sera nýtilig at eftirlita EGR-kælaran innaneftir fyri sprungur uttan at taka hann av, og fyri fyrsta glygg í sylindrarnar áðrenn tú avger tær til eina fulla sundurtøku."
+    ],
+    "commonMistakes": [
+      "At keypa ein ódýran ókalibreradan trektnykil til TTY-botnendarbeiði og so finna út seinni at hann var 15% skeivur.",
+      "At leiga ein motorlyftara fyri 'ein dag' og so uppdaga at burturtøka eina tók longur enn tað — leiga fyri alla vikuskiftið ella keyp ein sjálvur um tú nakrantíð fer at gera hetta aftur."
+    ]
+  },
+  {
+    "slug": "parts",
+    "number": 4,
+    "title": "Partar",
+    "category": "Getting Started",
+    "objective": "At seta upp partaútvegingar- og pantanarvinnuluta við Partadátugrunninum.",
+    "difficulty": "Beginner",
+    "estimatedTime": "Løbandi",
+    "tools": [],
+    "parts": [],
+    "warnings": ["Vátta altíð OEM-partanummar ímóti VIN-num áðrenn pantan — E70 diesel-variantar høvdu gongandi produktiónsbroytingar, og henda sjálva 306D5 twin-turbo motorurin hevur partar (serliga turboarnar) sum IKKI eru felags við seinni eina-turbo-variantirnar av somu M57TU2D30 grundmotorini."],
+    "steps": [
+      { "order": 1, "text": "Kanna Partadátugrunnin og vátta prioritet (critical/high/medium/low) fyri hvønn lut." },
+      { "order": 2, "text": "Samanber OEM-partanummar við VIN WBAFF01070L319611 gjøgnum ein partakatalog (t.d. RealOEM ella official BMW parts lookup) áðrenn pantan." },
+      { "order": 3, "text": "Uppdatera partastøðu til 'ordered' tá pantað, síðani 'installed' tá ásett, fyri at halda framgongdini á Yvirlitinum røttari." },
+      { "order": 4, "text": "Skriva niður veruligu prísirnar í Budsjettyvirlitinum sum partarnir verða keyptir." },
+      { "order": 5, "text": "Meðan tú útvegar útskiftingarmotorin, legg proaktivt kendar veikleikapartar afturat listanum sjálvt um teir ikki eru brotnir enn: swirl flap delete kit, EGR-kælari, timing chain kit (chain + guides + tensioner), vacuum pump, og injector seal washers. At seta hesar inn meðan motorurin longu er úti og atkomiligur er nógv billigari í arbeiðstíð enn at gera tað seinni við motorinum aftur í vogninum." }
+    ],
+    "checklist": [
+      "Partadátugrunnur kannaður og prioriteradur",
+      "OEM-nummar váttaðir ímóti VIN",
+      "Pantanarvinnulutur settur upp",
+      "Fyribyrgjandi slitpartar lagdir afturat listanum, ikki bara brots-útskiftingarpartar"
+    ],
+    "proTips": [
+      "Tað loysir seg at budsjettera fyri einum heilum nýggjum timing chain kit (chain + guides + tensioner) sjálvt um útskiftingarmotorsins ikki sjónliga er strektur — guide-plastikkur brotnar við aldri óansæð mílutal, og tú fert ongantíð at hava lættari atkomu til hann enn undir hesum swap-inum.",
+      "Panta hvørja einstøku-brúks festing (hovdsboltar, hovds-/stangarlegu-boltar um botnendin verður rørdur, injector koparselir) frammanundan. At finna út at tær tørvar eina í miðjum samansetingini, við motorinum longu partvíst afturaftur, er ein garantereda fleiri-daga forseinking."
+    ],
+    "commonMistakes": [
+      "At panta tann ódýrasta atkomiliga aftermarket-turbo ella EGR-kælara uttan at kanna umdømi/passing — hetta eru nettupp teir partarnir har ein ringur aftermarket-lutur brotnar aftur eitt ár seinni.",
+      "At gloyma at koparselir og aðrir crush washers eru einstøku-brúks — at keypa eitt sett og endurbrúka tey 'tí tey líta út at vera fín' er ein klassisk feilsparing, ið endar við lekaði."
+    ]
+  },
+  {
+    "slug": "engine-removal",
+    "number": 5,
+    "title": "Motorútbúrturtøka",
+    "category": "Engine Replacement",
+    "objective": "At taka tann brotna M57TU2D30 (306D5) motorin trygt út úr vogninum.",
+    "difficulty": "Advanced",
+    "estimatedTime": "8–14 tímar",
+    "tools": ["Motorlyftari / krani", "Motor leveler", "Trektnykil (lágt + høgt øki)", "Toppasett", "E-Torx toppasett", "Brennievnisleiðslu-frákoblingarsett", "Vøkuoyðingartól", "Sjónpípuspegil", "Merkingarútgerð til leiðingar"],
+    "parts": ["Tappaboltar / crush washers (nýggjar)", "Kælivatn (til eftir-uppfylling um neyðugt)"],
+    "warnings": [
+      "Motorvektin er munandi — arbeið ongantíð undir einum hongjandi motori.",
+      "Lætta brenniskipanartrýstið áðrenn nakað brenniievnisleiðsluleiki verður frákoblað.",
+      "Merk hvørja koblingsstað við Merkingarskipanini fyri Leiðingar áðrenn frákobling — hetta er tann størsta tíðarsparingin til samanseting.",
+      "At fáa DPF-ið (diesel-partikkelfilturin) og høgru motorfestingar-brakketið út er tann einasta torføristi atkomustaðurin á hesi uppgávuni — les Pro Tips niðanfyri áðrenn tú kemur til tað stigið, ikki eftir at tú situr fastur."
+    ],
+    "steps": [
+      { "order": 1, "text": "Fylg Trygd-kapitulinum og Fyrframburturtøku-sjekklistanum til fulnar áðrenn byrjan." },
+      { "order": 2, "text": "Kobla bilroyndina frá, tapp vøkur (olja, kælivatn) niður í merktar íløtur." },
+      { "order": 3, "text": "Tak frambumper/klip av fyri fulla atkomu til motorrúmið (sí Verkstaðurin front-bumper-øki)." },
+      { "order": 4, "text": "Tak radiatorpakkan av og legg hann trygt til viks." },
+      { "order": 5, "text": "Arbeið gjøgnum tey klikkiligu Motorrúms-økini skipiliga, merkjandi og frákoblandi hvørja leiðingsstøð áðrenn hon verður rørd." },
+      { "order": 6, "text": "Kobla brenniievnisleiðslur frá (koppaðar beinanvegin) og turbo-oljuleiðslur/kæliliðslur." },
+      { "order": 7, "text": "Kobla útlátsdownpipe'ið frá turbo-útganginum, síðani DPF-ið frá downpipe'inum — lat DPF-ið leyst sita fastgort við sítt bendklampi um tað er í vegnum heldur enn heilt at taka tað av enn." },
+      { "order": 8, "text": "Fyri at loysa høgru motorfestingina, loys fyrst EGR-kælaran frá DPF/downpipe-samlingini — brakketið kann ikki koma út meðan DPF-ið enn er heilt fastgort á tí sameiningini." },
+      { "order": 9, "text": "Lækka framundirvognina nøkur cm (tak hana ikki heilt av um ikki neyðugt) fyri at fáa tá plássið sum motorfestingarnar tørva fyri at koma út — hetta er ventað á hesi plattformuni, ikki eitt tekin um at okkurt er skeivt." },
+      { "order": 10, "text": "Halt gearkassan uppi sjálvstøðugt, skilj so bellhousing sundur eftir trektspecifikatión referansu TQ-009/TQ-010." },
+      { "order": 11, "text": "Fest lyftara og leveler, tak motorfestingarboltarnar av (TQ-007/TQ-008), og lyft motorin seint og varisliga út, hyggjandi eftir fastnýrdum leiðingum, sløngum, ella undirvognskantinum." },
+      { "order": 12, "text": "Legg motorin á ein motorstand, tak nógvar myndir, og byrja Motorrúmsreinsingar-kapitulin." }
+    ],
+    "checklist": [
+      "Fyrframburturtøku-sjekklisti klárur",
+      "Allar koblingsstaðir merktar áðrenn frákobling",
+      "DPF/EGR-kælara-sameining loyst áðrenn roynt verður at taka høgru festingarbrakketið av",
+      "Motorurin lyftur út uttan at nakað festi seg",
+      "Gamli motorurin dokumenteradur við myndum til skjalfesting"
+    ],
+    "proTips": [
+      "Høgra motorfestingarbrakketið er sera greitt tann trongasti atkomustaðurin á hesi heilu uppgávuni. Tann dokumenterda leiðin: kobla EGR-kælaran frá DPF/downpipe-sameiningini fyrst, lækka síðani framundirvognina nøkur cm — at forsøkja at trýsta brakketið framvið DPF-ið uttan at gera hetta í røttum røð er har flestu sita fastir.",
+      "Nýt ein sjónpípuspegil plus ein E-Torx topp á einari wobble-longing til teir illa-sæðu boltarnar kring tað brakketið — tú fært onga beina sjónlinju til fleiri av teimum.",
+      "Tak mynd av hvørjum brakketi, sløngurutu og koblingsstøðu áðrenn tú rørir tað, afturat at merkja koblingsstaðir. Seks mánaðir frameftir minnist tú ikki hvør av tveimum næstan-líknandi brakketum fór hvar."
+    ],
+    "commonMistakes": [
+      "At royna at taka høgra motorfestingarbrakketið av áðrenn DPF/EGR-kælara-sameiningin er loyst — tað sleppur reint ikki, og at trýsta á tað vágar at spretta DPF-ið ella bendi brakketið.",
+      "At loysa og leggja DPF-ið heilt burtur ov tíðliga, og so missa yvirlit á retningi/gaskets — at lata tað sita leyst fastgort á turboinum til tú veruliga tørvar tað heilt av forðar hesum.",
+      "At ikki lækka undirvognina nóg nógv og so stríðast við festingarboltarnar í einum óheppiligum vinkli, heldur enn bara at lækka hana teir nøkur cm meira sum hon tørvar."
+    ]
+  },
+  {
+    "slug": "engine-bay-cleaning",
+    "number": 6,
+    "title": "Motorrúmsreinsing",
+    "category": "Engine Replacement",
+    "objective": "At djúpreinsa og eftirlita hitt tóma motorrúmið áðrenn útskiftingarmotorurin verður settur inn.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "3–6 tímar",
+    "tools": ["Avfeitingarevni", "Høgtrýstisvaskari", "Vírbust", "Rættingar-farvi / rustumbroytingarevni", "Verkstaðsryksuga"],
+    "parts": ["Rættingarfarvi (um neyðugt)", "Rustumbroytingarevni (um neyðugt)"],
+    "warnings": ["Verj eftirverandi elektriskar koblingsstaðir og opnar leiðingarendar móti vatnsinnbroti undir høgtrýstisvasking."],
+    "steps": [
+      { "order": 1, "text": "Dekk/pakka inn allar eftirverandi elektriskar koblingsstaðir og opnar leiðingar." },
+      { "order": 2, "text": "Legg avfeitingarevni á, nýt eina bust, og høgtrýstisvaska rúmið." },
+      { "order": 3, "text": "Eftirlit undirvogn, demparartornir, og brandvegg fyri rust, sprungur, ella skaðar eftir vanlukku." },
+      { "order": 4, "text": "Reinsa øll jarðsambandsstøð til nakið, skínandi metall — eitt ringt jarðsamband her er ein av teimum vanligastu orsøkunum til mystisk elektriskar feilir eftir hvørt motorútskifting." },
+      { "order": 5, "text": "Eftirlit leiðingarnetið fyri gnídning, smeltan isolering nær turbo/útláti, ella sprøkar partar — gjør við ella slöngu um neyðugt." },
+      { "order": 6, "text": "Nýt høvið at seta inn allar fyribyrgjandi partar, sum eru nógv lættari at seta inn meðan rúmið er heilt opið — swirl flap delete/blindingarplátur á inntaksmanifoldinum, serliga." },
+      { "order": 7, "text": "Legg rættingarfarvi ella rustviðgerð á allar naknar metallstøðir tú finnur." },
+      { "order": 8, "text": "Turk heilt og tak myndir av hinum reina rúminum áðrenn innseting." }
+    ],
+    "checklist": [
+      "Rúmið avfeitgjørt og høgtrýstisvaskað",
+      "Rust/skaði eftirlitnir og viðgjørdir",
+      "Jarðsambandsstøð reinsað til nakið metall",
+      "Leiðingarnet eftirlitið og gjørt við um neyðugt",
+      "Fyribyrgjandi inntaksarbeiði íhugsað meðan alt er so atkomuligt"
+    ],
+    "proTips": [
+      "Hevur tú ikki longu ávarað eitt swirl flap delete, er hetta blinkurin — inntaksmanifoldið er heilt frilagt og úr vogninum (ella lætt at taka av), sum er drúgv lættari enn at gera tað seinni við motorinum settum í. Aluminium-blindingarplátusett eru ódýr og eru ein av teimum mest viðmæltu fyribyrgjandi broytingunum fyri hesa motorfamiljuna, tí ein spruttin flap-aksul kann senda ruskul beint inn í ein sylindur.",
+      "Hetta er eisini tann billigasti punkturin í allari verkætlanini at skifta vacuum pump og eftirlit/skifta vacuum-leiðingar — hon fyriskaffar bæði bremsuboosteran og EGR-ventilin, og eitt hvíslandi ljóð ella ein bremsupedalur ið stivnar afturat oyknast við tíðina spora vanliga aftur higar."
+    ],
+    "commonMistakes": [
+      "At høgtrýstisvaska beint inn í opnar koblingsstaðir ella alternator/starter uttan fyrst at pakka teir inn.",
+      "At sleppa swirl flap delete-avgerðina her og so mást fara aftur til inntaksmanifoldið seinni við øllum aftur samansett.",
+      "At mála yvir rust uttan fyrst at viðgera hana — yvirflatarust undir nýggjum rættingarfarva heldur bara fram at breiða seg undir."
+    ]
+  },
+  {
+    "slug": "replacement-engine-inspection",
+    "number": 7,
+    "title": "Eftirlit av Útskiftingarmotor",
+    "category": "Engine Replacement",
+    "objective": "At vátta at útskiftingar-M57TU2D30 (306D5) motorurin er heilbrigdur áðrenn hann kemur í vognin.",
+    "difficulty": "Advanced",
+    "estimatedTime": "4–8 tímar",
+    "tools": ["Kompressión/leak-down-mátari", "Motorstandur", "Trektnykil", "Digital multimeter", "Borescope/endoscope-kamera (valfrítt men nýtiligt)"],
+    "parts": ["Gasket-sett", "Hovdslegusett (um botnendin verður eftirlitin)", "Stangarlegusett (um botnendin verður eftirlitin)", "Timing chain kit (chain, guides, tensioner)"],
+    "warnings": [
+      "Trúgv ikki bert seljarans mílutals-páboð — hendan vognin bilaðist sum ein ómerktur legusliting á einum motori, ið sansýnliga eisini sá heilbrigdur út uttaneftir. Eftirlit botnendan fysiskt óansæð uppgivna standi.",
+      "Vátta at hetta veruliga er tann rætta twin-turbo 306D5-variantin og ikki ein sjónliga líknandi men ósambærilig M57-variant áðrenn tú avger teg — støypunummar og turbo-konfiguratión hava við at gera, ikki bara merkið."
+    ],
+    "steps": [
+      { "order": 1, "text": "Vátta at motorkoda og støypunummar samsvara við hin krøvda 306D5 twin-turbo útgávuna til xDrive35d." },
+      { "order": 2, "text": "Legg motorin á standin og drei sveivarhjólið við hondini — skal ganga smøkkurt uttan bindingar ella skrapingarljóð." },
+      { "order": 3, "text": "Ger kompressiónstest ella leak-down-test á øllum 6 sylindrunum." },
+      { "order": 4, "text": "Tak oljupannuna av og eftirlit hovds- og stangarlegur sjónliga fyri rákur, litbroyting (bláligur litur = yvirhiti), ella sliting — hetta er sjálva slagsbilanin, ið tók út upprunamotorin, so sleppa hana ikki bara tí seljarin sigur at hann gekk fínt." },
+      { "order": 5, "text": "Eftirlit timing chain, guides, og tensioner fyri strekking, leiku, ella sprøkan/sprungnan plastikk — skift fyribyrgjandi óansæð sjónligt standi um settið ikki longu er nýtt, tí guide-ruskul, ið dettur niður í oljuinntakið, er ein av teimum best dokumenteradu orsøkunum til legumangul á hesi motorfamiljuni." },
+      { "order": 6, "text": "Benkitest báðar turboarnar (lítli fixed-geometry + stóri VGT) fyri akselleiku, oljuleivdir í compressor-húsinum, og smøkkurt, óheft VGT-aktuator/vingja-rørslu." },
+      { "order": 7, "text": "Skerð upp gomlu oljufilturina (frá donor-motorsins síðstu servis, um tøkt) og eftirlit fyri metall- ella plastikkruskul sum ein heilsuindikator." },
+      { "order": 8, "text": "Prógva allar sensorar og gløðingsplugg við einum multimeter har møguligt." },
+      { "order": 9, "text": "Reinsa og endurmála uttanáliggjandi motorinum um ynskt áðrenn innseting." }
+    ],
+    "checklist": [
+      "Rætti 306D5 twin-turbo-variantin váttaður, ikki bara motorfamiljan",
+      "Kompressión/leak-down-test staðist á øllum sylindrum",
+      "Botnendin sjónliga eftirlitin óansæð uppgivnum mílutali",
+      "Timing chain komponentar eftirlitnir ella fyribyrgjandi útskiftir",
+      "Báðar turboar benkitestaðir fyri akselleiku og aktuatorrørslu",
+      "Sensorar og gløðingsplugg prógvaðir"
+    ],
+    "proTips": [
+      "Ein VGT-turbo, ið er stiv, klístrut, ella ikki rørir seg frítt gjøgnum alt sítt aktuatorøki, er sera ofta sót/rust, ið fastheldur unison ring-mekanismuna, heldur enn ein deyður aktuatormotor — vert at royna eina varisliga reinsan áðrenn tú metir tær tørva ein heilt nýggjan turbo.",
+      "Underboost/overboost feilkotur á hesi skipanini benda á eitt mekaniskt turbo/vingja-trupulleika, ikki bara aktuatorin — brúka ikki pengar á 'bert aktuatorin' um koturnar siga at sjálvi turboin tørvar viðgerð.",
+      "Kanst tú fáa ein endoscope inn í EGR-kælarans gongdir, ger tað nú — sprungur her orsaka kælivatn-inn-í-útlát-lekar, ið líta heilt út sum eitt hovdsgasket-brot (hvítur/søtligur roykur) men ikki eru tað, og tað er nógv lættari at viðgera við motorinum á standi enn í vogninum."
+    ],
+    "commonMistakes": [
+      "At sleppa botnenda-eftirlitið tí motorurin 'ljóðaði fínt' tá hann gekk á donor-plássinum — ein fínt-ljóðandi motor kann framvegis hava byrjandi legusliting, ið ikki er hoyriligt enn.",
+      "At endurbrúka gamla timing chain kitið á útskiftingarmotorinum fyri at spara pengar, tá guide-sprøkni er aldursrelaterað og ikki nakað tú kanst fulliga meta við eyganum.",
+      "At meta at báðir turboarnir eru heilbrigdir tí motorurin 'gav góða orku' hjá donor-inum — sequential turbo-skipanir kunnu fjala ein partvíst brotnan lítlan turbo undir ávísum álagsøkjum."
+    ]
+  },
+  {
+    "slug": "engine-installation",
+    "number": 8,
+    "title": "Motorinnseting",
+    "category": "Engine Replacement",
+    "objective": "At seta inn hin eftirlitna útskiftingarmotorin og kobla allar skipanir aftur til.",
+    "difficulty": "Advanced",
+    "estimatedTime": "8–14 tímar",
+    "tools": ["Motorlyftari / krani", "Motor leveler", "Trektnykil (lágt + høgt øki)", "Trektvinkilmátari", "Toppasett", "E-Torx toppasett"],
+    "parts": ["Motorgasket-sett", "Motorfestingarsett", "Kælivatnssløngusett", "Nýggjar festingar sambært TIS einingar-brúks-ávísingum (hovdsboltar, hovds-/stangarlegu-boltar um botnendin varð servisaður)"],
+    "warnings": [
+      "Lat ongantíð gearkassan hanga óstudda á inntaksakslinum undir bellhousing-samansetingini.",
+      "Vátta at koblingsomformarin (torque converter) er fulliga sittandi (mát gapið) áðrenn hann verður boltaður at flexplate-inum.",
+      "Fylg fleiri-stigs torque-to-yield-røðini nágreiniliga fyri hovdsboltar og hovds-/stangarlegukappar um botnendin varð servisaður — hesar eru einstøku-brúks festingar, og røðin (trekt, síðani vinkilstig) hevur eins nógv at siga sum síðsta talan."
+    ],
+    "steps": [
+      { "order": 1, "text": "Lækka motorin seint niður í rúmið við lyftara og leveler, sameinandi hann við gearkassunnar dowels." },
+      { "order": 2, "text": "Bolta bellhousing sambært TQ-009 og trekta koblingsomformaran sambært TQ-010." },
+      { "order": 3, "text": "Set inn og trekta motorfestingarnar sambært TQ-007/TQ-008 tá motorurin er studdur av festingunum, ikki av lyftaranum." },
+      { "order": 4, "text": "Lyft undirvognina aftur upp í støðu og trekta hennara festingarboltar áðrenn nakað gert verður, ið heftur av hesum (understellsgeometri, útlátssameining)." },
+      { "order": 5, "text": "Kobla hvørja leiðingarkoblingsstøð aftur til, samsvarandi hvørja við sítt merkta ID úr Merkingarskipanini fyri Leiðingar." },
+      { "order": 6, "text": "Kobla allar jarðsambandsreimar aftur til sambært TQ-026 til reinar, naknar metallstøðir." },
+      { "order": 7, "text": "Set brenniskipanina aftur inn við nýggjum selum sambært Brenniskipan-kapitulinum." },
+      { "order": 8, "text": "Set turbo-olju-/kæliliðslur og vacuum-leiðingar aftur inn, samsvarandi merktu retningini nágreiniliga — bland ikki tær lítlu (høgtrýst) og stóru (lágtrýst) turbo-koblarnar saman." },
+      { "order": 9, "text": "Kobla EGR-kælaran og DPF/downpipe-sameiningina, sum tú loysti undir burturtøku, aftur til." },
+      { "order": 10, "text": "Set radiatorpakkan aftur inn og kobla kælivatnssløngur aftur til." },
+      { "order": 11, "text": "Set frambumper/klip aftur á." },
+      { "order": 12, "text": "Fyll allar vøkur (olja, kælivatn, gearkassaolja) til specifikatión." },
+      { "order": 13, "text": "Ger eina síðstu sjónliga umferð av rúminum fyri amboð ella klutar eftirlatnar áðrenn tú fert til Fyrsta Start." }
+    ],
+    "checklist": [
+      "Motorurin fastgjørdur og trektaður sambært specifikatión",
+      "Hvør leiðingarkobling samsvarað við sítt merki og merkt aftursett",
+      "Allar jarðsambandsreimar koblaðar aftur til",
+      "EGR-kælari / DPF-sameining kobluð aftur til og sealed",
+      "Vøkur fyltar til røttu støði",
+      "Síðsta amboðs-umferð fullgjørd"
+    ],
+    "proTips": [
+      "Prime tann nýggja/servisaða turbosins oljuleiðslu áðrenn fyrsta start — at sveiva ein turran turbolegu undir start er ein av teim skjótastu vegunum at drepa ein turbo, tú just borgaði fyri at eftirlita ella skifta. Ein stutt sveiving við brenniskipan sløktari, ella forfylling av leiðsluni, virka báðar.",
+      "Set høgra motorfestingarbrakketið og DPF/EGR-sameiningina saman aftur nágreiniliga í øvugtu røðini av tí, sum tú tók tey sundur, við tínum burturtøku-myndum sum leiðreiðing — hetta er sama trongi atkomuøkið, ið gjørdi burturtøkuna torfør, og tað er líka lætt at skeivgenga ella feilgenga skrúvgongd her á veg inn aftur."
+    ],
+    "commonMistakes": [
+      "At trekta undirvognina aftur niður áðrenn síðsta understell-/festingarjavning er váttað, og so mást loysa alt aftur.",
+      "At blanda lítla-turbo og stóra-turbo olju- ella vacuum-leiðingarnar saman — tær líta líknandi út men tæna ymiskum trýstiskipanum.",
+      "At skunda seg við síðstu amboðs-umferðina tí tú ert spentur at hoyra motorin ganga — ein niðurfallin toppur ella klutur nær einum rørandi reim undir fyrsta start er ein sera vanlig, heilt undangeranlig feilur."
+    ]
+  },
+  {
+    "slug": "first-start",
+    "number": 9,
+    "title": "Fyrsti Start",
+    "category": "Engine Replacement",
+    "objective": "At koyra útskiftingarmotorin trygt í gongd fyrstu ferð og vátta grundleggjandi heilsu.",
+    "difficulty": "Advanced",
+    "estimatedTime": "1–3 tímar",
+    "tools": ["OBD / BMW diagnostiskt interface", "Slokkiapparat", "Digital multimeter"],
+    "parts": [],
+    "warnings": [
+      "Ver klárur at steðga beinanvegin við nøkrum ov-vanligum ljóði, varselás, ella leka.",
+      "Rev ikki motorin upp á fyrsta start — bara tómgongd, meðan oljutrýst og hiti verður eftirlitið.",
+      "Tryggja nóg ventilatión fyri diesel-útlát.",
+      "Eitt kaldur-start-skrallur, ið varir meira enn nøkur sekund, er ikki vanlig sliting á hesum motorinum — mett tað sum eitt steðga-og-rannsaka-tekin, ikki nakað at bara koyra ígjøgnum."
+    ],
+    "steps": [
+      { "order": 1, "text": "Kobla bilroyndina aftur til (negativan síðst) og skráset hana við kodingsamboðnum." },
+      { "order": 2, "text": "Snú tendran til støðu 2 (uttan sveiving) og eftirlit ventaðu varselásirnar og DDE (diesel motorstýring) vekjan." },
+      { "order": 3, "text": "Koyr ein fullan diagnostikskan og strika allar goymdar feilir, ið eru ventaðar av frákoblingini (nota tær, ið halda áfram)." },
+      { "order": 4, "text": "Um møguligt, sveiva stutt við brenniskipan/innsprøjting sløktari fyri at forsmyrja áðrenn ein full start (sambært viðurkendari diesel-endurbygging-praksis), serliga umráðandi um turbo-oljuforfylling ikki longu er gjørd." },
+      { "order": 5, "text": "Start motorin og lat hann bert ganga í tómgongd — rev ikki." },
+      { "order": 6, "text": "Fylg oljutrýst- og kælivatnshita-mátarum løgandi tey fyrstu minuttirnar. Lurta serstakliga eftir timing-chain kaldur-start-skrallinum og einum turbo-hvíslan/skrallan, ið ikki var har í benkitestinum." },
+      { "order": 7, "text": "Eftirlit alt rúmið fyri olju-, kælivatns-, brenniievnis-, ella boost-lekar meðan motorurin gongur í tómgongd — legg serliga merki til EGR-kælara/DPF-sameiningina og turbo-oljuleiðslu-banjo-festingar, sum tú rørdi." },
+      { "order": 8, "text": "Vátta injector-rættingarkotur og gløðingsplugg-koyring við diagnostikamboðnum." },
+      { "order": 9, "text": "Steðga, endurhugsa vøkustøði, og fyll uppá um neyðugt." }
+    ],
+    "checklist": [
+      "Bilroynd skrásett",
+      "Fyrframstart-diagnostikskan reinur ella forklárdur",
+      "Fyrsta tómgongd fullgjørd uttan ovvanligt ljóð/leka",
+      "Eingin kaldur-start-skrallur meira enn ein brøkpart av einum sekundi",
+      "Injector-kotur og gløðingsplugg-koyring váttað"
+    ],
+    "proTips": [
+      "Hav fyrstu tómgongdina stutta — nøkur minuttir eru nóg mikið at vátta oljutrýst, kanna fyri lekar, og lurta eftir okkurt skeivum. Tað er einki gagn í eini longri fyrstu tómgongd, og tað er betri at steðga, endurkanna alt kalt, og start aftur, enn at lata eitt veksandi trupulleika ganga í 20 minuttir.",
+      "Hvítur roykur við einum lítlum søtligum lukti á fyrsta start, serliga uttan sjónligan uttanáliggjandi kælivatnsleka, er tann klassiska EGR-kælara-innaneftir-leka-signaturin á hesum motorinum — lat ongan sannføra teg um eitt hovdsgasket-arbeiði áðrenn tað er avskrivað við einum eftirliti ella trýstitest."
+    ],
+    "commonMistakes": [
+      "At reva motorin upp fyri at 'blása kongurvevin burtur' á fyrsta start heldur enn eina roliga, eftirlitna tómgongd — tað er nøktin tá ein mangul- ella leka-trupulleiki ger mesta skaðan áðrenn tú kanst røkka.",
+      "At avskriva eitt stutt kaldur-start-skrallur sum 'vanligt fyri ein diesel' — tað er eitt serstakt, væl dokumenteradur sympton á hesi motorfamiljuni og vert eina fimm-minuttar kanning heldur enn eina ávirkan."
+    ]
+  },
+  {
+    "slug": "cooling-system",
+    "number": 10,
+    "title": "Kælivatnsskipan",
+    "category": "Systems",
+    "objective": "At servisera, eftirlita, og rætt blæða kælivatnsskipanina.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "3–5 tímar",
+    "tools": ["Kælivatnstrýst-test/áfyllingarsett", "Vøkuoyðingartól", "Trektnykil", "Borescope/endoscope-kamera (valfrítt, til EGR-kælara-kanning)"],
+    "parts": ["Radiator", "Kælivatnssløngusett", "Termostatur + húsing", "Vatnspumpa", "EGR-kælari (fyribyrgjandi ella eftir tørvi)", "Kælivatn (BMW-specifikatión)"],
+    "warnings": [
+      "Opna ongantíð eina heita kælivatnsskipan — lat hana kólna heilt áðrenn ekspansiónstankalokið verður tikið av.",
+      "Diesel-kælivatnsskipanir á hesi plattformuni eru upplagdar fyri loftboblur — fylg blæðingarframgongdini nágreiniliga.",
+      "Hetta er ein kend EGR-kælara-brotsplattform — kælivatnsmangul uttan sjónligan uttanáliggjandi leka er ein sterkur ábending um at kanna har áðrenn tú metur eitt hovdsgasket- ella sløngutrupulleika."
+    ],
+    "steps": [
+      { "order": 1, "text": "Tapp kælivatnið heilt av í eina reina, merkta íløtu." },
+      { "order": 2, "text": "Eftirlit radiator, sløngur, termostat, og vatnspumpu sambært teimum klikkiligu Motorrúms-økjunum." },
+      { "order": 3, "text": "Hevur tú nakað søgu um óforklárligan kælivatnsmangul, hvítan útlátsroyk, ella søtligan útlátslukt, eftirlit ella trýstitesta EGR-kælaran serstakliga áðrenn samanseting — hetta er ein væl dokumenteradur brotspunktur á hesum motorinum, sundur frá radiator/sløngu-skipanini." },
+      { "order": 4, "text": "Skift allar sløngur, ið vísa mýkt, tútnaðan, ella harðnaðan tilstand." },
+      { "order": 5, "text": "Set saman aftur við nýggjum klampum har endurbrúktir klampir vísa treytleika." },
+      { "order": 6, "text": "Fyll uppá við BMW-specifikaðum kælivatni blandaðum í røttum hlutfalli." },
+      { "order": 7, "text": "Opna blæðingarskrúvuna/-urnar og koyr motorin í tómgongd/skjóta tómgongd til luft er fjarlægt." },
+      { "order": 8, "text": "Trýstitesta skipanina fyri lekar tá blæðing og áfylling er fullgjørd." }
+    ],
+    "checklist": [
+      "Allar sløngur og komponentar eftirlitnir/útskiftir eftir tørvi",
+      "EGR-kælari serstakliga kannaður um nøkur søga um óforklárligan kælivatnsmangul",
+      "Skipan fylt uppá við røttum kælivatnsspecifikatión",
+      "Blæðingarframgongd fullgjørd uttan innibyrgda luft",
+      "Trýstitest staðist uttan lekar"
+    ],
+    "proTips": [
+      "Nettupp henda modell/motor-kombinatiónin varð umfataði av einum verksmiðju-tilbakakallingar-kampanju fyri EGR-kælara-kælivatnslekar á ávísum modellárum (BMW's ávirkan var at kælivatn, ið blandaðist saman við dieselsót, kundi skapa brandváða við at rúka í inntaksmanifoldinum). Ein 2009-bygging er uttanfyri tað serliga tilbakakallingarvindeyga, ið varð givið út fyri seinni modellár, so eingin ókeypis forhandlarfíksing er tøk — mett tað sum ein proaktivan eftirlitslut heldur enn at ganga út frá at tað er umfataði.",
+      "Kælivatn, ið hvørvur uttan nakran sjónligan uttanáliggjandi pøll ella vátta sløngu, er signaturin á einum innaneftir EGR-kælara-leka (kælivatn fer inn í útláts-/inntakssíðuna, ikki niður á jørðina). Sært tú hetta mynstrið, kanna har áðrenn tú brúkar pengar á at jaga eitt hovdsgasket."
+    ],
+    "commonMistakes": [
+      "At jaga eitt mistankt hovdsgasket-brot grundað á hvítan royk og kælivatnsmangul uttan fyrst at útiloka EGR-kælaran, ið gevur næstan identisk symptom og er ein munandi meira vanlig orsøk á hesum motorinum.",
+      "At sleppa ella skunda seg gjøgnum blæðingarframgongdina — innibyrgdar luftboblur á hesum kælivatnsskipanarlayoutinum orsaka yvirhita, ið líta út sum ein heilt óskyldan trupulleika."
+    ]
+  },
+  {
+    "slug": "fuel-system",
+    "number": 11,
+    "title": "Brenniskipan",
+    "category": "Systems",
+    "objective": "At servisera høgtrýstis common-rail diesel-brenniskipanina trygt.",
+    "difficulty": "Advanced",
+    "estimatedTime": "3–6 tímar",
+    "tools": ["Brenniievnisleiðslu-frákoblingarsett", "Trektnykil (lágt øki)", "Trektvinkilmátari", "Reinir loysir klutar"],
+    "parts": ["Injector-sett", "Brenniievnisfiltur", "Høgtrýstis brenniievnispumpa (um neyðugt)", "Injector-koparselir (nýggjar, eitt sett per injector, hvørja ferð)"],
+    "warnings": [
+      "Hetta er ein høgtrýstis diesel common-rail-skipan, ið arbeiðir langt yvir 2.000 bar — sera høg reinliki er neyðug. Nøkur mongd óreinska kann oyðileggja injectorar ella pumpuna.",
+      "Lætta skipanartrýstið áðrenn nakað leiðingaleiki verður frákoblað.",
+      "Koppa hvørja opna festing beinanvegin fyri at forða ruskul-innbroti.",
+      "Injector-koparselir mugu skiftast hvørja einstøku ferð ein injector verður tikin av, uttan undantøk — teir eru gjørdir at deformerast eina ferð fyri at seala, og kunnu ikki gera tað aftur eina aðru ferð."
+    ],
+    "steps": [
+      { "order": 1, "text": "Lætta brenniskipanartrýstið sambært framgongdini nótaraðari í Injector- og Brenniskrár-motorrúmsøkjunum." },
+      { "order": 2, "text": "Reinsa øki kring allar festingar áðrenn nakað verður frákoblað." },
+      { "order": 3, "text": "Kobla frá og koppa høgtrýstisleiðingar við pumpu, skrá, og injectorum." },
+      { "order": 4, "text": "Tak injectorar av við einum røttum trekkjaramboði — brúka ongantíð havspaka." },
+      { "order": 5, "text": "Skriva niður hvørs injectors rættingarkodu áðrenn hann fer úr vogninum." },
+      { "order": 6, "text": "Set nýggjar injector-koparselir á hvønn injector, hvørja ferð, sitandi rætt áðrenn trektning." },
+      { "order": 7, "text": "Trekta injector-klampuboltar sambært TQ-016 við vinkilstig — rætt trekt er tað, ið letur nýggja koparselin deformerast rætt og seala; bæði ov- og undir-trekting orsaka lekar." },
+      { "order": 8, "text": "Trekta brenniskráboltar sambært TQ-015." },
+      { "order": 9, "text": "Skift brenniievnisfiltur." },
+      { "order": 10, "text": "Prime skipanina og kanna fyri lekar áðrenn ein full start." },
+      { "order": 11, "text": "Skriva injector-rættingarkotur inn í ECU-ina við diagnostikamboðnum." }
+    ],
+    "checklist": [
+      "Skipanartrýst lætta áðrenn leiðingar frákoblaðar",
+      "Injector-rættingarkotur skrásettar og aftur innskrivaðar",
+      "Nýggjar selir nýttar á hvørjum injector, ongin endurbrúk",
+      "Festingar trektaðar sambært specifikatión og lekakannaðar"
+    ],
+    "proTips": [
+      "Ógvusligur tómgongd, orkumissur, ella ein ferskur leka-relateradur feilkotur skjótt eftir nøkur injectorarbeiði er sera ofta bert ein feilagliga sittandi ella endurbrúktur koparselir — kanna har fyrst áðrenn tú metur ein injector sjálvan at vera brotnan.",
+      "Hav hvørs injectors rættingarkodu paraða við sína sylindarstøðu á einum skrivaðum merki beinanvegin tú tekur hann av — at rugla hesar saman merkir at rangar trim-virðir verða skrivaðar inn í ECU-ina, ið fínliga skaðar gongdarkvalitetin á ein hátt, ið er ergiligt at diagnostisera eftir á."
+    ],
+    "commonMistakes": [
+      "At endurbrúka ein koparselir tí hann 'lítur fín út' — hann kann ikki sealast aftur eftir deformering, óansæð útsjónd.",
+      "At missa yvirlit á hvør rættingarkoda hoyrir til hvønn injector/sylindur undir swap-inum.",
+      "At undirtrekta injector-klampuboltar av varisemi um ov-trekting — báðar ábendingarnar orsaka sama leka-/ferðarprestatión-trupulleikan, so fylg trekt- og vinkil-specifikatiónini nágreiniliga heldur enn at giska varisliga."
+    ]
+  },
+  {
+    "slug": "turbo-system",
+    "number": 12,
+    "title": "Turboskipan",
+    "category": "Systems",
+    "objective": "At eftirlita, servisera, og rætt seta aftur inn tá sequential twin-turbo-skipanina (lítil fixed-geometry lágtrýstis-turbo + stóri variable-geometry høgtrýstis-turbo).",
+    "difficulty": "Advanced",
+    "estimatedTime": "4–8 tímar",
+    "tools": ["Toppasett", "Trektnykil", "Vacuum/roykleka-testari"],
+    "parts": ["Turbosett (um neyðugt)", "Intercooler (um neyðugt)", "Vacuum-leiðslu-rættingarsett", "Útlátsmanifold (steypujarn-útskifting um sprungin)"],
+    "warnings": [
+      "Prime altíð oljuleiðsluna áðrenn fyrsta start eftir turbo-arbeiði — turrur start slitur legur skjótt.",
+      "Bland ikki lítla (høgtrýstisstig) og stóra (lágtrýstisstig) turbo-oljuleiðslu-/vacuum-leiðslu-retningina saman.",
+      "Ein sprunginur útlátsmanifold er ein kend trupulleiki á hesum motorinum, og orsakar orkumissur og útlátsleka-ljóð, ið er lætt at rugla saman við ein turbo-trupulleika — eftirlit sjálvt manifoldið, ikki bara turboarnar, um tú jagar orkumissur."
+    ],
+    "steps": [
+      { "order": 1, "text": "Kobla frá og koppa olju-mati/-afturkomuleiðingar, merk vacuum-aktuatorleiðingar fyri báðar turboar hvør sær." },
+      { "order": 2, "text": "Tak útlátsmanifold-mutrar av (TQ-011) og skilj turboarnar frá manifoldinum." },
+      { "order": 3, "text": "Eftirlit sjálvan útlátsmanifoldin fyri sprungur — ein kendur brotspunktur á hesum motorinum, vanliga viðgjørdur við eini steypujarn-útskifting heldur enn einum lættari aftermarket-røyr-manifoldi, ið tendensar at sprunga aftur." },
+      { "order": 4, "text": "Eftirlit fyri akselleiku, oljuleivdir í compressor-húsinum, og smøkkurta VGT-aktuatorrørslu serstakliga á tí stóra turboinum." },
+      { "order": 5, "text": "Um tann stóra turbosins vingjur kennast stivar ella klístrutar heldur enn frítt rørandi, royn fyrst at reinsa sót/rust úr unison ring-mekanismuni áðrenn tú metir aktuatorin ella turboin sjálvan brotnan." },
+      { "order": 6, "text": "Eftirlit intercooler-kjarnan fyri oljumenging og finskaða." },
+      { "order": 7, "text": "Set aftur inn við nýggjum gaskets, trekta manifold-mutrar sambært TQ-011." },
+      { "order": 8, "text": "Kobla oljumatileiðsluna aftur til, trekta banjo-boltin sambært TQ-012 við nýggjum sealing-selum." },
+      { "order": 9, "text": "Kobla og endurvátta vacuum-leiðingarretningina ímóti merkjunum, hildandi báðar turboanna koblar sundur og rætt samsvaraðar." },
+      { "order": 10, "text": "Ger ein boost-/vacuum-lekatest áðrenn fyrsta koyring." }
+    ],
+    "checklist": [
+      "Útlátsmanifold eftirlitið fyri sprungur, ikki bara turboarnir",
+      "Akselleiku og aktuatorrørsla eftirlitin á báðum turboum",
+      "Nýggjar gaskets og sealing-selir nýttar",
+      "Oljuleiðsla primed áðrenn fyrsta start",
+      "Boost-/vacuum-lekatest staðist"
+    ],
+    "proTips": [
+      "Over-boost og under-boost feilkotur benda á tann mekaniska turbo-/vingja-samansetingina, ikki bara hin elektriska aktuatorin — at skifta 'bert aktuatorin' tá koturnar siga over-/underboost er ein vanlig hátt at brúka pengar uttan at loysa veruliga trupulleikan.",
+      "VGT-aktuatorsins elektronikkur kann drepast av kælivatnsinnbroti gjøgnum ein brotnan aktuator-gasket, ið rústar innvøliini — finnur tú ein deyðan aktuator, kanna eisini fyri ein kælivatnsleka á tí sameiningini so tú ikki bara endurtekur bilanina á tí nýggja partinum.",
+      "Hav lítla (lág-rpm) og stóra (VGT) turbosins olju-mati-, olju-afturkomu-, og vacuum-leiðingar greitt merktar frá tí stund tú koblar tær frá — tær eru ikki skiftanligar, og báðar koblarnir líta nóg líknandi út við eitt skjótt glygg at bland tær saman."
+    ],
+    "commonMistakes": [
+      "At skifta ein aktuator uttan at kanna fyri ein kælivatnsleka á aktuator-gasketinum, ið sansýnliga drap hann fyrsta ferð.",
+      "At meta ein skrallandi ella rúkandi útlát fyri ein turbo-brot uttan fyrst at kanna sjálvan útlátsmanifoldin fyri sprungur — ein nógv billigari og vanligari orsøk.",
+      "At krossa lítla og stóra turbosins olju-/vacuum-leiðingar saman undir samanseting, orsakandi boost- og smyrjitrupulleikar, ið eru ruglandi at diagnostisera eftir á."
+    ]
+  },
+  {
+    "slug": "transmission",
+    "number": 13,
+    "title": "Gearkassi",
+    "category": "Drivetrain",
+    "objective": "At servisera ZF 6HP26 6-gongdar automatgearkassan meðan motorurin er úti.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "2–4 tímar",
+    "tools": ["Vøkuoyðingartól", "Trektnykil", "Gearkassajack (ella lyftarastudning)"],
+    "parts": ["Gearkassaolja + filtursett (ZF Lifeguard 6)", "Mechatronic-selur/gasket (um útskiftur)"],
+    "warnings": ["Vátta gearkassaslag (automat ímóti manuellum, um broytt) áðrenn olja ella partar verða pantaðir — henda handbókin gongur út frá tí vanliga ZF 6HP26 automatinum í hesi plattformuni."],
+    "steps": [
+      { "order": 1, "text": "Við motorinum úti, hald gearkassan uppi sjálvstøðugt og vátta at hon er stødd." },
+      { "order": 2, "text": "Tapp gearkassaoljuna niður í eina merkta íløtu og eftirlit lit/lukt fyri brenda ella yvirdrivandi koblingsevni." },
+      { "order": 3, "text": "Skift filtur og fyll uppá við ZF Lifeguard 6-specifikaðari olju, sjálvt um BMW merkir hana ein 'lifetime'-áfylling — verulig royndir við hesi gearkassuni favoriserar sterkt ein proaktivan olju-/filtursservis." },
+      { "order": 4, "text": "Hevur tú søgu um harðar gongdaskifti, ein 2-1 niðurgongdarstøkk, forseinkaðan innkoblingar, ella eitt \"flare\" á 4-5 uppgongdarshiftinum, eftirlit mechatronic-einingarnar selir — ein kend lítil selur millum mechatronic-stýringina og gearkassahúsingina er ein vanligur brotspunktur, ið orsakar nettupp hesar symptomirnar." },
+      { "order": 5, "text": "Eftirlit koblingsomformar-selin og pilot-legu-økið." },
+      { "order": 6, "text": "Eftirlit flexplate fyri sprungur áðrenn bellhousing verður koblað aftur til." },
+      { "order": 7, "text": "Kobla aftur til sambært Motorinnseting-kapitulinum, váttandi at koblingsomformarin er fulliga sittandi áðrenn boltun." }
+    ],
+    "checklist": [
+      "Gearkassaolja og filtur serviserað",
+      "Mechatronic-selurin kannaður um nøkur gongdarkvalitets-sympton vóru til staðar",
+      "Koblingsomformar-selur/pilot eftirlitin",
+      "Flexplate eftirlitin fyri sprungur",
+      "Omformarsiting váttaði áðrenn boltun"
+    ],
+    "proTips": [
+      "Tann vanligasta orsøkin til ZF 6HP26-brot á hesum bilunum er ikki gearkassanunnar innvøli — tað er ein lítil selur (nakrantíð kallaður adapter-/mechatronic-selurin) millum mechatronic-stýringina og húsingina. Tá hon brotnar, kann eindin ikki halda linjutrýst, sum so skaðar koblingar, pumpuna, og koblingsomformar-koblingina gjøgnum sekundara sliting. At finna og skifta hesa selin proaktivt er nógv billigari enn skaðakaskaduna, ið fylgir um hon verður eftirlatin.",
+      "Symptom eins og eitt 2-1 niðurgongdarstøkk, hart 4-5 uppgongdar-flare, ella yvirhitandi koblingsomformar-kobling eru væl dokumenteradir á hesi gearkassafamiljuni og vert at kanna serstakliga heldur enn at meta almenna sliting."
+    ],
+    "commonMistakes": [
+      "At trúgva 'lifetime fill'-merkinum bókstavliga og ongantíð servisera oljuna — í roynd er hetta ein av teimum vanligastu vegunum hesin gearkassin verður latin sliðna fyri tíðliga.",
+      "At skifta alla ventilkroppin/mechatronic-eindina tá veruligi feilurin er tann lítla selin aftanfyri hana, við munandi størri kostnaði enn neyðugt."
+    ]
+  },
+  {
+    "slug": "transfer-case",
+    "number": 14,
+    "title": "Transfer Case",
+    "category": "Drivetrain",
+    "objective": "At eftirlita og servisera xDrive transfer case (ATC-400-slag).",
+    "difficulty": "Intermediate",
+    "estimatedTime": "2–3 tímar",
+    "tools": ["Vøkuoyðingartól", "Trektnykil", "Toppasett", "BMW diagnostiskt interface (til adaptatión-endurstilling)"],
+    "parts": ["Transfer case-olja (bert BMW-specifikatión)", "Útgangsflangs-selir (um lekandi)"],
+    "warnings": [
+      "Kanna útgangsflangs-javning áðrenn síðsta trekt á transfer case-boltarnar (TQ referereraður í Trektspecifikatión-dátugrunninum).",
+      "Tú mást endurstilla/endurlæra transfer case-adaptatiónirnar við diagnostikamboðnum eftir hvørja oljuskifting — at sleppa hesum stigi orsakar skjótari sliting av innaneftir koblingspakkanum, sum í roynd ógyldigar gagnið av oljuservisinum."
+    ],
+    "steps": [
+      { "order": 1, "text": "Tapp og eftirlit transfer case-oljustandi — myrk, brend-luktandi olja ella metalmenging benda báðar á koblingspakk-sliting." },
+      { "order": 2, "text": "Eftirlit fram- og aftanfyri útgangsflangs-selir fyri lekar." },
+      { "order": 3, "text": "Kanna transfer case-festingarbushingar fyri sliting." },
+      { "order": 4, "text": "Fyll uppá við bert rættari BMW-specifikaðari olju — generisk 'universal' transfer case-olja er ikki ein góðtakiligur ersetningur á hesari einingini." },
+      { "order": 5, "text": "Kobla aftur til gearkassan sambært TQ-023-referansu og vátta javning áðrenn síðsta trekt." },
+      { "order": 6, "text": "Ger transfer case-adaptatión-endurstillingina við diagnostikamboðnum áðrenn vognurin fer aftur í vanliga koyring." }
+    ],
+    "checklist": [
+      "Olja tappaði, eftirlitin, og áfylt við BMW-specifikaðari olju",
+      "Útgangsflangs-selir eftirlitnir",
+      "Festingarbushingar eftirlitnar",
+      "Javning váttað áðrenn síðsta trekt",
+      "Adaptatión-endurstilling gjørd eftir oljuskifting"
+    ],
+    "proTips": [
+      "BMW kallar hetta officielt ein 'lifetime fill'-eind, men tann vanligasta veruliga brotorsøkin á E70-um er nettupp tað, tú vil vænta av einari vanraktari oljuni: aktuatormotorin og fleiri-plátu-koblingspakkin sliðnandi, vísandi seg sum bindingar í trongum lágferðar-svingum, skjálvi á landavegarferð, ella ein ABS/DSC-varselás. Ein proaktiv oljuskifting kring 50.000–60.000 mílur við røttari olju er ódýr forsikring móti einum transfer case, ið annars ikki er tað.",
+      "Adaptatión-endurstillingin eftir eina oljuskifting er ikki valfrí — uttan hana endurjavnar skipanin seg ikki eftir tí fersku oljunnar eginleikum og kann sliðna koblingspakkan fyri tíðliga, sum ógyldigar sjálva orsøkina til servisinum."
+    ],
+    "commonMistakes": [
+      "At sleppa oljuservis heilt tí BMW kallar tað 'lifetime fill' — hetta er ein av teimum mest nevndu orsøkunum til fyribyrgiligan transfer case-brot á hesi xDrive-generatiónini.",
+      "At brúka ein generiska ella ikki-BMW-specifikaðari olju fyri at spara pengar á einum servis, ið longu er ódýrur samanborið við ein transfer case-útskifting.",
+      "At gloyma adaptatión-endurstillingina eftir eina oljuskifting, ið kann flýggja nettupp tá sliting, servisin var meint at forða."
+    ]
+  },
+  {
+    "slug": "differentials",
+    "number": 15,
+    "title": "Differentialar",
+    "category": "Drivetrain",
+    "objective": "At eftirlita og servisera fram- og aftandifferential.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "2–4 tímar",
+    "tools": ["Vøkuoyðingartól", "Trektnykil", "Toppasett"],
+    "parts": ["Differentialolja (fram + aftan)", "Fyllingar-/tappaboltselir"],
+    "warnings": ["Vátta rætta limited-slip-/opna-differential-oljuspecifikatión um viðkomandi áðrenn áfylling."],
+    "steps": [
+      { "order": 1, "text": "Tapp og eftirlit oljuna úr fram- og aftandifferentialum fyri metalmenging." },
+      { "order": 2, "text": "Eftirlit differentialfestingar og drivakslingaflangsir fyri sliting ella lekar." },
+      { "order": 3, "text": "Fyll uppá við røttari specifikaðari olju til fyllingarboltahædd." },
+      { "order": 4, "text": "Trekta drivakslinga-flangsboltar sambært TQ-024." }
+    ],
+    "checklist": [
+      "Olja tappaði og eftirlitin fyri metall",
+      "Festingar og flangsir eftirlitnir",
+      "Áfylt til rætta hædd",
+      "Drivakslinga-flangsboltar trektaðir sambært TQ-024"
+    ],
+    "proTips": [
+      "Sum transfer case-in eru báðir differentialarnir marknaðarførdir sum 'lifetime fill', men gagnast av proaktivum oljuskiftingum á einum vogni longu í hesum aldri/mílutali — tú ert longu her fyri transfer case-servisin, so tann marginala aukaátøkin er lítil.",
+      "Eitt súrrandi ljóð, ið broytist við ferð men ikki við akselleratión/deakselleratión-álagi, bendir vanliga á sjálvan differentialin heldur enn eina hjólalegu (sum hevur tendens at broytast við álagi og stýrisinntøku) — nýtiligt at skilja sundur áðrenn partar verða pantaðir."
+    ],
+    "commonMistakes": [
+      "At meta einhvørt drivverkssúrran fyri 'bara dieselin at vera diesel' heldur enn at skilja hvør aksil ella komponent tað veruliga kemur frá."
+    ]
+  },
+  {
+    "slug": "suspension",
+    "number": 16,
+    "title": "Fjaðring",
+    "category": "Chassis",
+    "objective": "At endurnýggja fram- og aftanfjaðringarkomponentar meðan undirvognaratkoman longu er opin.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "6–10 tímar",
+    "tools": ["Fjaðurkomprimeringssett", "Kulaliðaskiljari", "Trektnykil", "Trektvinkilmátari"],
+    "parts": ["Framfjaðringar-endurnýggjansett (armar, bushingar, kulaliðir)"],
+    "warnings": [
+      "Er sjálvjavnandi/adaptiv fjaðring ásett, vátta rætta demparavariant fyri hetta VIN áðrenn pantan.",
+      "Undirvognaboltar kunnu vera torque-to-yield, einstøku-brúks — vátta í TIS áðrenn endurbrúk."
+    ],
+    "steps": [
+      { "order": 1, "text": "Stuðla vognin trygt á rateduðum standum, hjólini av." },
+      { "order": 2, "text": "Eftirlit armar, bushingar, og kulaliðir fyri sliting/leiku." },
+      { "order": 3, "text": "Skift sliðin komponentar við endurnýggjansettinum." },
+      { "order": 4, "text": "Trekta dempararavkrónu-mutrar sambært TQ-017." },
+      { "order": 5, "text": "Trekta kulaliðs-klemmiboltar sambært TQ-018." },
+      { "order": 6, "text": "Trekta undirvognaboltar sambært TQ-019, íroknað vinkilstig um ávíst." },
+      { "order": 7, "text": "Ger eina eftir-arbeiðis javningskanning/-stilling." }
+    ],
+    "checklist": [
+      "Sliðin komponentar staðfestir og útskiftir",
+      "Allar festingar trektaðar sambært specifikatión, íroknað vinkilstig",
+      "Javning eftirlitin eftir arbeiði"
+    ],
+    "proTips": [
+      "Tí framundirvognin longu kom niður fyri motoratkomu, er hetta hin billigasti punkturin í allari verkætlanini (í mun til arbeiðstíð longu 'brúkt') at viðgera nakran kendan sliðnan armbushing — at gera tað nú forðar eini aðrari undirvognalækking seinni.",
+      "Hevur henda X5 aftara sjálvjavnandi luftfjaðring (vanligt verksmiðjuval á hesum modellinum), vátta hetta serstakliga áðrenn aftara dempara-/fjaðurpartar verða pantaðir — partarnir eru ikki skiftanligir við standard fjøður-yvir-dempara aftara fjaðring."
+    ],
+    "commonMistakes": [
+      "At endurbrúka sliðnar undirvognaboltar, ið TIS ásetir sum einstøku-brúks, fyri at spara ein lítlan partakostnað á eini bygningarliga umráðandi festing.",
+      "At sleppa eftir-arbeiðis javningskanningina — sjálvt rætt trektað fjaðringsarbeiði skiftir javning nóg mikið til at hava við at gera fyri dekkjasliting og koyriliga."
+    ]
+  },
+  {
+    "slug": "brakes",
+    "number": 17,
+    "title": "Bremsur",
+    "category": "Chassis",
+    "objective": "At eftirlita og servisera bremsuskipanina fyri trygga gongd.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "3–5 tímar",
+    "tools": ["Trektnykil", "Bremsuvøkublæðari"],
+    "parts": ["Bremsuklossar + skívu-sett (fram og aftan)", "Bremsuvøka"],
+    "warnings": [
+      "Bremsuklampiberara-boltar eru sikkerheitskritiskir — brúka altíð ein trektnykil, ongantíð ein impact gun.",
+      "Henda vognsins bremsuboostari heftur av einum vacuum pump-mati (dieselar hava onga egna motor-vacuum) — eitt hvíslandi ljóð ella ein bremsupedalur, ið er hardur við fyrsta trykk og bara mýkist eftir at motorurin er startaður, bendir á vacuum pumpuna ella hennara leiðingar, ikki sjálvu bremsu-hydraulikkin."
+    ],
+    "steps": [
+      { "order": 1, "text": "Eftirlit klossar, skívur, og klampir fram og aftan." },
+      { "order": 2, "text": "Skift klossar/skívur sambært Partadátugrunnsins tilmæli." },
+      { "order": 3, "text": "Trekta framklampiberara-boltar sambært TQ-020." },
+      { "order": 4, "text": "Trekta aftanklampiberara-boltar sambært TQ-021." },
+      { "order": 5, "text": "Blæð bremsuskipanina og skift vøkuna." },
+      { "order": 6, "text": "Er pedalkensla ovvanliga hard ella ójøvn, vátta vacuum pumpuna og hennara leiðingar áðrenn tú metur ein hydraulik-/klampi-trupulleika." },
+      { "order": 7, "text": "Prógva pedalkensluna og vátta ongar lekar áðrenn veganroynd." }
+    ],
+    "checklist": [
+      "Klossar/skívur eftirlitnar og útskiftir eftir tørvi",
+      "Klampiboltar trektaðir við trektnykli",
+      "Bremsuvøka blædd og útskift",
+      "Vacuum pumpa útiloktin um pedalkensla er ovnormal",
+      "Pedalkensla váttað hard áðrenn koyrsla"
+    ],
+    "proTips": [
+      "Tí hesin er ein diesel, kemur bremsuassistansa-vacuum heilt frá einari reim- ella kamdrivnari vacuum pump heldur enn inntaksmanifold-vacuum. Jagar tú ein hardan ella ójavnan pedal, kanna pumpuna og hennara plastikk-matileiðslu (kend at sprungna við aldri) áðrenn tú brúkar pengar á klampir ella ein hovudsylindur."
+    ],
+    "commonMistakes": [
+      "At diagnostisera ein hardan bremsupedal sum ein hovudsylindur- ella boostara-feilur uttan fyrst at kanna um vacuum pumpan yvirhøvur veitir vacuum."
+    ]
+  },
+  {
+    "slug": "steering",
+    "number": 18,
+    "title": "Stýri",
+    "category": "Chassis",
+    "objective": "At eftirlita stýriskomponentar, ið vórðu rørdir av motorrúms- og fjaðringararbeiði.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "1–3 tímar",
+    "tools": ["Trektnykil", "Toppasett"],
+    "parts": ["Stýrisstongarendar (um sliðnir)"],
+    "warnings": ["Stýrissúlu-universalliðs-klemmibolturin er sikkerheitskritiskur — trekta sambært TQ-027 og endurbrúka ongantíð ein skaddan bolt."],
+    "steps": [
+      { "order": 1, "text": "Eftirlit stýriskassaboots, stýrisstongarendar, og súlu-universalliðið." },
+      { "order": 2, "text": "Trekta stýrissúlu-klemmiboltin sambært TQ-027 um rørdur." },
+      { "order": 3, "text": "Kanna servostýri-vøkustøði/tilstand." },
+      { "order": 4, "text": "Vátta at stýrishjólið er miðjað og ongin ovnormal leiku eftir samanseting." }
+    ],
+    "checklist": [
+      "Stýriskomponentar eftirlitnir",
+      "Súlu-klemmibolt trektaður sambært TQ-027 um rørdur",
+      "Ongin ovnormal leiku í stýrishjólinum"
+    ],
+    "proTips": [
+      "Varð framundirvognin lækkað fyri motor- ella fjaðringararbeiði, dupultkanna stýriskassa-javning og boots-tilstand áðrenn síðsta undirvogn-trekt — tað er lætt at skera eitt boots á undirvognakantinum undir lækking/lyfting uttan at leggja merki til tað fyrr enn seinni."
+    ],
+    "commonMistakes": [
+      "At meta stýri vera óávirkað av undirvogn-/motorarbeiði bara tí einki varð beinleiðis skrúvað av á sjálvari kassuni."
+    ]
+  },
+  {
+    "slug": "electrical",
+    "number": 19,
+    "title": "Elektronikkur",
+    "category": "Electrical & Coding",
+    "objective": "At halda leiðingarheilsu og jarðsambondum uppi um alla verkætlanina við Merkingarskipanini fyri Leiðingar.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "Løbandi",
+    "tools": ["Digital multimeter", "Merkingarútgerð til leiðingar"],
+    "parts": ["Bilroynd (AGM)", "Gløðingsplugg-sett", "Gløðingsplugg-stýringareind (um brotin)"],
+    "warnings": ["Ein einstøk manglaða ella illa reinsaða jarðsambandsreim er tann vanligasta orsøkin til torfør-diagnostiseraðar intermitterandi feilir eftir eina motorútskifting."],
+    "steps": [
+      { "order": 1, "text": "Nýt Merkingarskipanina fyri Leiðingar til at skráseta hvørja koblingsstøð áðrenn hon verður frákobluð hvar sum er á vogninum." },
+      { "order": 2, "text": "Prógva kontinuitet á øllum jarðsambandsreimum eftir samanseting, serstakliga á naknum metallkontaktpunktum." },
+      { "order": 3, "text": "Eftirlit og prógva gløðingsplugg eina fyri eina við einum multimeter." },
+      { "order": 4, "text": "Vátta bilroynd-skráseting eftir hvørja bilroyndar-útskifting — ein óskrásett bilroynd orsakar at ladingsskipanin feilstýrir spennu og kann útloysa eina kaskadu av óskyldum varselásum." },
+      { "order": 5, "text": "Koyr ein fullan feilkotu-skan eftir hvørt elektriskt arbeiði sum eina síðstu kanning." }
+    ],
+    "checklist": [
+      "Allar rørdar koblingsstaðir skrásettar í Merkingarskipanini fyri Leiðingar",
+      "Jarðsambandsreimar kontinuitets-prógvaðar á naknum metalli, ikki bara sjónliga koblaðar aftur",
+      "Gløðingsplugg prógvaðir eina fyri eina",
+      "Bilroynd skrásett um útskift",
+      "Eftir-arbeiðis feilkotu-skan reinur"
+    ],
+    "proTips": [
+      "Ein vacuum pump-húsing-oljuleki kann líta út sum ein óskyldur elektriskur ella turbo-trupulleiki við einum skjótum glygg — eftirlit húsingina fyri oljusiving og sliðnar selir um tú jagar ein løgnan turbo-nærliggjandi kotu uttan sjónliga mekaniska orsøk.",
+      "Skiftir tú gløðingsplugg-stýringareindina, er hennara atburð tætt bundin at yvirskipaðu leiðingar-/jarðsambandsheilsu — vátta at jarðsambond eru rein fyrst, tí eitt marginalt jarðsamband kann apa eina brotna eind."
+    ],
+    "commonMistakes": [
+      "At kobla eina jarðsambandsreim aftur til eitt punkt, ið lítur reint út men enn hevur eitt tunt lag av farva ella rusti undir, orsakandi intermitterandi feilir, ið eru ergiligar at spora seinni.",
+      "At skifta ein komponent (eind, sensor, gløðingsplugg) fyri at jaga ein feil, ið veruliga var ein leiðingar-/jarðsambandstrupulleiki innførdur undir sundurtøku."
+    ]
+  },
+  {
+    "slug": "coding-diagnostics",
+    "number": 20,
+    "title": "Coding & Diagnostikk",
+    "category": "Electrical & Coding",
+    "objective": "At seta upp og nýta BMW diagnostik-/coding-amboð til feillesing, injector-coding, transfer case-adaptatión-endurstillingar, og eind-skráseting.",
+    "difficulty": "Advanced",
+    "estimatedTime": "Løbandi",
+    "tools": ["OBD / BMW diagnostiskt interface (ENET ella K+DCAN)", "Fartøl við ISTA-D / ISTA-P ella E-Sys"],
+    "parts": [],
+    "warnings": ["Coding-/flashing-arbeiði bera eina lítla váðan fyri at 'brikkja' eina eind um avbrotin — tryggja altíð støðuga strøym (batterilaðari/maintainer tengdur) undir hvørjari coding-lotu."],
+    "steps": [
+      { "order": 1, "text": "Set ENET ella K+DCAN interface upp saman við ISTA-D (diagnostikk) og/ella E-Sys (coding) á einum serstøkum fartøli." },
+      { "order": 2, "text": "Tengja ein batterilaðari/maintainer áðrenn hvørja coding-lotu." },
+      { "order": 3, "text": "Les og skráset allar feilkotur áðrenn nakað viðgerð byrjar, sum ein grundmáting." },
+      { "order": 4, "text": "Eftir injector-útskifting, skriva injector-rættingarkotur inn við ISTA/serstøkum amboði." },
+      { "order": 5, "text": "Eftir bilroyndar-útskifting, ger bilroyndar-skráseting." },
+      { "order": 6, "text": "Eftir transfer case-oljuskifting, ger transfer case-adaptatión-endurstillingina." },
+      { "order": 7, "text": "Eftir ECU-/eind-arbeiði, vátta at VIN og ISN (immobilizer) dáta samsvarar við vognin." },
+      { "order": 8, "text": "Skráset allar coding-tiltøk og úrslit í hesa kapitulsins Notatar-øki til seinni tilvísing." }
+    ],
+    "checklist": [
+      "Diagnostik-interface og hugbúnaður settur upp",
+      "Grundmátingar-feilkotu-skan skrásett",
+      "Injector-kotur innskrivaðar eftir injector-arbeiði",
+      "Transfer case-adaptatión-endurstilling eftir oljuskifting",
+      "Bilroynd skrásett eftir útskifting"
+    ],
+    "proTips": [
+      "Underboost/overboost kotur merkja næstan altíð tann mekaniska turbo-/vingja-mekanismuna, ikki bara aktuatorin einsæris — lat ikki ein generiska kotu-lesara-lýsing senda teg beint til eina aktuator-útskifting uttan fyrst at kanna hina mekanisku síðuna.",
+      "Hav ein løbandi log (hendan appin's Notatar-øki virkar væl) av hvørjari kotu, tú hevur sæð og strikað, við dato og kontekst — atkomandi kotur eftir eina 'fíksing' eru tað greiðasta tekinið um tú viðgjørdi eitt sympton, ikki upprunaorsøkina."
+    ],
+    "commonMistakes": [
+      "At avbróta eina coding-lotu á einum batterii, ið bert er sindur ladið, vágandi eina partvíst flashaða eind.",
+      "At strika kotur uttan fyrst at skráseta tær, missandi tann diagnostiska sporið, ið hevði hjálpt at vátta um ein fíksing veruliga virkaði."
+    ]
+  },
+  {
+    "slug": "sound-system",
+    "number": 21,
+    "title": "Ljóðskipan",
+    "category": "Electrical & Coding",
+    "objective": "At ætlana og útføra eina ljóðskipanaruppgradering við Ljóðskipanarætlanini.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "4–10 tímar eftir stigi",
+    "tools": ["Trimburturtøkusett", "Digital multimeter", "Leiðingar-krimping/lóðingaramboð"],
+    "parts": ["Amplifikator (aftermarket)", "Framkomponent-hátalarasett", "Subwoofer + kassi"],
+    "warnings": ["Ávís um ein verksmiðju-amplifikator er til staðar áðrenn aftermarket-komponentar verða leiðingaðir inn — at bypassa hann skeivt kann orsaka fordreiing ella skaða."],
+    "steps": [
+      { "order": 1, "text": "Dokumentera núverandi/verksmiðjuskipanina í Ljóðskipanarætlanini." },
+      { "order": 2, "text": "Vel eitt uppgraderingarstig (Verksmiðju-Grundstøði / Byrjan / Miðjustig / Referansu)." },
+      { "order": 3, "text": "Ætlana leiðingarvegir fyri strøym, jarðsamband, remote turn-on, og signal-kablar." },
+      { "order": 4, "text": "Set inn amplifikator, hátalarar, og subwoofer sambært valdum stigi." },
+      { "order": 5, "text": "Merk allar nýggjar leiðingar við Merkingarskipanini fyri Leiðingar til framtíðar servisføri." },
+      { "order": 6, "text": "Prógva og stilla skipanina, kannandi fyri skrallur/panel-resonans." }
+    ],
+    "checklist": [
+      "Núverandi skipan dokumenterað",
+      "Uppgraderingarstig valt og budsjetterað",
+      "Nýggjar leiðingar merktar",
+      "Skipan prógvað fyri ljóð-/fordreingartrupulleikar"
+    ],
+    "proTips": [
+      "Legg ein serstakan, sikraðan strøymleiðing beint til batteriið fyri hvønn veruligan amplifikator heldur enn at tappa ein verandi kring — tað er ein lítil ekstra átøk undir innseting og forðar spennufalls-fordreiing seinni."
+    ],
+    "commonMistakes": [
+      "At jarðsambanda ein aftermarket-amplifikator til ein makilig nærliggjandi bolt heldur enn eitt váttað reint chassis-jarðsamband, orsakandi alternator-hvíslan ella ljóð í ljóðinum."
+    ]
+  },
+  {
+    "slug": "interior-restoration",
+    "number": 22,
+    "title": "Innanhýsis Restavrering",
+    "category": "Restoration",
+    "objective": "At endurnýggja innanhýsis trim, sessatilfar, og elektronikkur.",
+    "difficulty": "Beginner",
+    "estimatedTime": "Løbandi",
+    "tools": ["Trimburturtøkusett", "Ryksuga/gufureinsari"],
+    "parts": ["Innanhýsis trim-endurnýggjansett (leðurumsorgan + trim-klip)"],
+    "warnings": ["Kobla bilroyndina frá áðrenn nakað trimpanel, ið inniheldur airbag-leiðingar (síðugordina, sess-monterada airbags), verður tikið av."],
+    "steps": [
+      { "order": 1, "text": "Djúpreinsa sessir, teppi, og loft." },
+      { "order": 2, "text": "Eftirlit leður-/sessatilfarstilstand og legg conditioner ella rættingarsett á eftir tørvi." },
+      { "order": 3, "text": "Skift brotnar innanhýsis trim-klip og sliðin brytarar/knappar." },
+      { "order": 4, "text": "Prógva allan elektronikk (rúður, sessir, klimaanlegg, infotainment) og skráset feilir til Coding & Diagnostikk-kapitulin." },
+      { "order": 5, "text": "Dokumentera before/after-tilstand við myndum." }
+    ],
+    "checklist": [
+      "Innanhýsi djúpreinsað",
+      "Trim og klip eftirlitin/útskift",
+      "Elektronikkur funktionsprógvaður",
+      "Before/after-myndir skrásettar"
+    ],
+    "proTips": [
+      "Tak mynd av trim-klip-støðum áðrenn burturtøku — E70 innanhýsis trim nýtir fleiri sjónliga líknandi men ymiskt stórar klip, og at rugla teimum saman er ein vanlig orsøk til skrallur eftir samanseting."
+    ],
+    "commonMistakes": [
+      "At vekja trimpanel uttan fyrst at finna allar fjaldu festingarnar, brótandi aldnar, meira sprøkar klip enn tær líta út."
+    ]
+  },
+  {
+    "slug": "exterior-restoration",
+    "number": 23,
+    "title": "Uttanhýsis Restavrering",
+    "category": "Restoration",
+    "objective": "At viðgera uttanhýsis bygningararbeiði, trim, og panelstandi.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "Løbandi",
+    "tools": ["Panelgap-mátari", "Grundleggjandi bygningararbeiðisamboð"],
+    "parts": ["Uttanhýsis trim-klip/festingar eftir tørvi"],
+    "warnings": ["Eftirlit fyri undanfarna vanlukku-viðgerð ella rust áðrenn tú fjárfestir í kosmetiskum arbeiði."],
+    "steps": [
+      { "order": 1, "text": "Eftirlit øll panelgap og farvatilstand fyri tekin um undanfarna vanlukku-viðgerð." },
+      { "order": 2, "text": "Kanna fyri rust á vanligum E70-trupulleikastøðum (aftara hjólkassar, aftandurini, sunroof-tappar)." },
+      { "order": 3, "text": "Skift skaddar ella burturmissaðar uttanhýsis trim/klip." },
+      { "order": 4, "text": "Ætlana og skráset neyðugt bygningararbeiði áðrenn Farvarætting-kapitulin." }
+    ],
+    "checklist": [
+      "Panelgap og farvatilstand eftirlitin",
+      "Rust kannaður á vanligum trupulleikastøðum",
+      "Skaddur trim staðfestur og útvegaður",
+      "Bygningararbeiðisætlan skrásett"
+    ],
+    "proTips": [
+      "Reinsa sunroof-tappaleiðingar sum vanligt viðlíkahald, ikki bara tá ein leki sæst — steptar tappar á hesi plattformuni eru ein væl kend orsøk til at vatn finnur veg til støðir, tað ikki skuldi, íroknað gólvpláss."
+    ],
+    "commonMistakes": [
+      "At meta ein vátspletti á innanhýsis teppinum sum ein rúðuselur-trupulleika áðrenn sunroof-tappar verða kannaðir fyrst, sum er tann vanligari orsøkin á hesum bilstílinum."
+    ]
+  },
+  {
+    "slug": "paint-correction",
+    "number": 24,
+    "title": "Farvarætting",
+    "category": "Restoration",
+    "objective": "At endurskapa farvans klárleika og gloans við rætting og vernan.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "1–2 dagar",
+    "tools": ["Dual-action pólerari", "Farvatjúktleiksmátari", "Detailing-leir"],
+    "parts": ["Farvarætting-/detailing-forbrúksvørur (compounds, pads, sealant/keramikk-húðing)"],
+    "warnings": ["Mát altíð farvatjúktleika áðrenn ágenga compounding fyri at forða at brenna gjøgnum klarfarvað."],
+    "steps": [
+      { "order": 1, "text": "Vask og leirstong alt uttanhýsi." },
+      { "order": 2, "text": "Mát farvatjúktleika um øll panel og nota nakrar undanfarnar endurmálingsstøðir." },
+      { "order": 3, "text": "Ger ein test-flakka-póler fyri at avgera neyðugt rættingarstig." },
+      { "order": 4, "text": "Compound og póler panel fyri panel." },
+      { "order": 5, "text": "Legg sealant ella keramikk-húðing á til vernan." },
+      { "order": 6, "text": "Tak myndir av endaligum úrsliti til verkætlanarskrásetingina." }
+    ],
+    "checklist": [
+      "Farvatjúktleiki mátaður áðrenn rætting",
+      "Test-flakki gjørdur",
+      "Øll panel rætta og verjaði",
+      "Endaligar myndir skrásettar"
+    ],
+    "proTips": [
+      "Ein munandi tunnari farvamáting á einum paneli samanborið við grannapanel er ein áleiðiligur, objektivur hátt at finna undanfarna endurmáling/vanlukkuviðgerð, sjálvt tá farvasamsvarið lítur perfekt út fyri eyganum."
+    ],
+    "commonMistakes": [
+      "At compounda eitt endurmálað panel við somu ágongd sum verksmiðju-klarfarvað — aftermarket endurmálingar-klarfarvað er sera ofta tunnari og brennur gjøgnum nógv skjótari."
+    ]
+  },
+  {
+    "slug": "m-sport-conversion",
+    "number": 25,
+    "title": "M Sport Umbygging",
+    "category": "Restoration",
+    "objective": "At ætlana og valfrítt útføra eina M Sport útsjóndar-/koyriliga-pakka umbygging.",
+    "difficulty": "Advanced",
+    "estimatedTime": "Løbandi / valfrítt",
+    "tools": ["Standard trim/bygningaramboð", "Javningarútgerð (eftir innseting)"],
+    "parts": ["M Sport bumperar, síðuskirtir, spoiler (útveguð sundurfrá)", "M Sport fjaðringarkomponentar (valfrítt)"],
+    "warnings": ["Vátta partasambæri við hetta sjálva chassis og valmøguleikar (sensorar, park distance control-hol, o.a.) áðrenn keyp."],
+    "steps": [
+      { "order": 1, "text": "Definera umfang: bert kosmetiskt (bumperar/skirtir/felgur) ímóti fulla M Sport fjaðringarumbygging." },
+      { "order": 2, "text": "Útvega partar, ið samsvara við sensor-hol (PDC, sprútujettir), longu ásett á hetta VIN." },
+      { "order": 3, "text": "Set uttanhýsis komponentar á, flytandi sensorar/útgerð frá standard-partum." },
+      { "order": 4, "text": "Um fjaðringin verður umbygd, set inn M Sport-specifikaðar fjaðrar/dempar og javna aftur." },
+      { "order": 5, "text": "Coda allar viðkomandi valmøguleikar við diagnostikamboðnum um elektronisk funktiónsvirkjan ynskt." }
+    ],
+    "checklist": [
+      "Umfang definerað og budsjetterað",
+      "Partar váttaðir sambærilig við sensor-hol",
+      "Komponentar ásett og sensorar flutt",
+      "Javning gjørd um fjaðring broytt"
+    ],
+    "proTips": [
+      "Hevur vognurin nú aftara sjálvjavnandi luftfjaðring, er umbygging til M Sport fjøður-yvir-dempara fjaðring ein størri uppgáva enn bara at skifta fjaðrar — íroknað ferðhædd-sensorin og stýringareindir mismun, ikki bara tey fysisku partarnar."
+    ],
+    "commonMistakes": [
+      "At keypa eitt fult M Sport fjaðringarsett uttan fyrst at vátta um donor-partarnir ganga út frá standard ella sjálvjavnandi aftara fjaðring sum útgangsstøði."
+    ]
+  },
+  {
+    "slug": "maintenance-schedule",
+    "number": 26,
+    "title": "Viðlíkahaldsætlan",
+    "category": "Reference",
+    "objective": "At fylgja løbandi viðlíkahaldsintervøll eftir at motorútskiftingin er liðug.",
+    "difficulty": "Beginner",
+    "estimatedTime": "Løbandi",
+    "tools": [],
+    "parts": [],
+    "warnings": ["Endurtrekta hjólboltar eftir teir fyrstu 50km eftir hvørt hjól-av-arbeiði."],
+    "steps": [
+      { "order": 1, "text": "Skráset fyrsta-start-dato og mílutal í Yvirlitsins viðlíkahaldslog." },
+      { "order": 2, "text": "Ætlana eina oljú- og filturkanning kring ~1.000km eftir nýggja motorsins fyrsta start." },
+      { "order": 3, "text": "Endurtrekta hjólboltar kring ~50km." },
+      { "order": 4, "text": "Endurkanna kælivatnsstøði og blæð fyri innibyrgda luft eftir teir fyrstu hitasyklusarnar." },
+      { "order": 5, "text": "Set eitt fast oljuskiftingarintervall heldur enn at troysta BMW's fleksibla Condition Based Service-mátingu — eitt fast intervall minkar munandi um sludge-/slitingsváðan, ið verður hildin at hava íverkað upprunamotorsins legubrot." },
+      { "order": 6, "text": "Set atkomandi minnisorð fyri transfer case- og differential-oljuservis (BMW kallar hesar 'lifetime fill,' men proaktivar skiftingar eru ódýr forsikring í mun til komponentarnar, tær verja)." },
+      { "order": 7, "text": "Set atkomandi minnisorð fyri standard BMW diesel-servisintervøll (brenniievnisfiltur, luftfiltur) fram á." }
+    ],
+    "checklist": [
+      "Fyrsta-start skrásett í viðlíkahaldslog",
+      "Eftir-innseting oljukanning ætlanað",
+      "Hjól-endurtrekting ætlanað",
+      "Fast oljuskiftingarintervall sett, ikki bara mátarins fleksibla mát",
+      "Transfer case-/differential-oljuminnisorð sett",
+      "Atkomandi servisintervøll sett"
+    ],
+    "proTips": [
+      "Eitt stytri, fast oljuskiftingarintervall enn BMW's Condition Based Service-mátan er ein av teimum enkulu tiltøkunum, ið gevur mest fyri hesa motorsins langtíðar botnenda-heilsu, íroknað hesa sjálvu vognsins brotssøgu.",
+      "Kaldur-start-skrallur, EGR-kælara-mynstrað kælivatnsmangul, og transfer case-symptom (binding í trongum svingum, landavegarskjálvi) eru allir tingir vert at lurta/hyggja eftir aktivt við hvørjum servis, ikki bara skjóta upp í tá tey verða ábending."
+    ],
+    "commonMistakes": [
+      "At venda aftur til 'lifetime fill'-ábendingar fyri gearkassa-, transfer case-, og differential-olju, tá hitt beinleiðis endurbyggingar-spenningið dovnar — hesi intervøll hava mest at siga ár tvey og fram, ikki bara í løtuni fyri endurbygging."
+    ]
+  },
+  {
+    "slug": "fault-code-library",
+    "number": 27,
+    "title": "Feilkotusavn",
+    "category": "Reference",
+    "objective": "At vísa til vanligar feilkotur relevantar fyri hesa plattformuna gjøgnum Feilkotusavnið / Trekt & Leita-amboðini.",
+    "difficulty": "Beginner",
+    "estimatedTime": "Løbandi",
+    "tools": ["OBD / BMW diagnostiskt interface"],
+    "parts": [],
+    "warnings": ["Feilkotu-lýsingar í hesum appinum eru almennar referansur — vátta altíð nágreiniliga merking og viðgerðarleiðbeining í ISTA fyri hendan sjálva vognin."],
+    "steps": [
+      { "order": 1, "text": "Nýt Feilkotusavns-síðuna til at leita eftir kotum sum tær koma fram undir diagnostikk." },
+      { "order": 2, "text": "Samanber vanligar orsøkir listaðar ímóti tínum veruligu sympomum áðrenn partar verða pantaðir." },
+      { "order": 3, "text": "Skráset loystar kotur og fíksingar í Viðlíkahaldsloggin til seinni tilvísing." }
+    ],
+    "checklist": [
+      "Feilkotusavn kannað fyri virkin kotur",
+      "Upprunaorsøk váttað áðrenn partar pantaðir",
+      "Loysingar skrásettar"
+    ],
+    "proTips": [
+      "Turbo-boost-kotur (over-/underboost) benda á tann mekaniska turbo-/vingja-skipanina nógv oftari enn bara aktuatorin — kanna Turboskipan-kapitulin áðrenn partar verða útskiftir bert grundað á kotu-lýsingina.",
+      "EGR-relateradar kotur saman við óforklárligum kælivatnsmangli skulu senda teg beint til EGR-kælaran, ikki bara EGR-ventilin — hesar eru ymiskar brotsmátar við sera ymiskum viðgerðarkostnaði."
+    ],
+    "commonMistakes": [
+      "At skifta tann mest kostnaðarmikla komponentin, ein feilkotu-lýsing nevnir fyrst, heldur enn at fylgja teimum billigaru diagnostisku stigunum, ið avmarkar veruligu orsøkina."
+    ]
+  },
+  {
+    "slug": "resources",
+    "number": 28,
+    "title": "Heimildir",
+    "category": "Reference",
+    "objective": "Miðstøðutur listi av heimildum at brúka saman við hesum verkstaðskervi.",
+    "difficulty": "Beginner",
+    "estimatedTime": "N/A",
+    "tools": [],
+    "parts": [],
+    "warnings": [],
+    "steps": [
+      { "order": 1, "text": "BMW TIS (Technical Information System) — myndugleiktur uppspring fyri allar trektspecifikatiónir, framgongdir, og leiðingardiagram. VÁTTA allar sikkerheitskritiskar virðir her." },
+      { "order": 2, "text": "ISTA-D / ISTA-P — official BMW diagnostikk- og programmeringarhugbúnaður." },
+      { "order": 3, "text": "E-Sys — codingamboð til funktiónsvirkjan og eind-coding." },
+      { "order": 4, "text": "BMW E70 og M57TU2 eigara-/áhugafólkafora og felagsskapir (t.d. Bimmerfest, Xoutpost, BimmerForums) — nýtiligt fyri verulig royndir við nettupp hesa motor-/chassis-kombinatión, samanber altíð við TIS áðrenn tú fylgir eftir." },
+      { "order": 5, "text": "Lokal BMW-serfrøðingur / óheftur diesel-verkstaður — fyri hvørt stig, tú ikki ert vísur í at gera sjálvur, serstakliga sikkerheitskritiskar torque-to-yield-festingar." }
+    ],
+    "checklist": [
+      "TIS-atkoma váttað",
+      "Diagnostikk-hugbúnaður installeraður og prógvaður",
+      "Lokal serfrøðingskontakt staðfestur til fallback-stuðul"
+    ],
+    "proTips": [
+      "Hendan handbókin's rannsókn byggir á breitt dokumenteradar, verulig royndir við M57TU2D30 (306D5) motorinum og E70 xDrive35d plattformuni — swirl flaps, EGR-kælari, timing chain guides, turbo-aktuatorar, ZF 6HP26, og ATC-400 transfer case eru allir sanniliga væl dokumenteradir veikleikapunktir tvørtur um nógvar eigarars royndir, ikki vognsserstøk giskingar. Framvegis, vátta altíð nágreiniligar framgongdir, trektvirðir, og partanummar fyri hetta sjálva VIN í BMW TIS áðrenn síðsta samanseting."
+    ],
+    "commonMistakes": [
+      "At meta áhugafólkafora-samdøkkir sum ein ersetning fyri sjálvu TIS-framgongdina á sikkerheitskritiskum arbeiði, heldur enn sum ein nýtiligan peikara til hvat skal kannast."
+    ]
+  }
+]

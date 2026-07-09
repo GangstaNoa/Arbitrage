@@ -8,10 +8,14 @@ import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { STORAGE_KEYS, downloadJson } from "@/lib/storage";
 import { applyOverlay } from "@/lib/overlay";
 import { generateId } from "@/lib/id";
-import budgetBase from "@/data/budget.json";
+import budgetBaseEn from "@/data/budget.json";
+import budgetBaseFo from "@/data/budget.fo.json";
+import { useLanguage, useLocalizedData } from "@/lib/i18n/LanguageContext";
 import type { BudgetItem } from "@/lib/types";
 
 export default function BudgetPage() {
+  const { t } = useLanguage();
+  const budgetBase = useLocalizedData(budgetBaseEn, budgetBaseFo);
   const [overlay, setOverlay] = useLocalStorage<Record<string, Partial<BudgetItem>>>(
     STORAGE_KEYS.budget,
     {}
@@ -25,7 +29,7 @@ export default function BudgetPage() {
   const items = useMemo(() => {
     const base = applyOverlay<BudgetItem>(budgetBase as BudgetItem[], overlay);
     return [...base, ...applyOverlay<BudgetItem>(extraItems, overlay)];
-  }, [overlay, extraItems]);
+  }, [budgetBase, overlay, extraItems]);
 
   const totalEstimate = items.reduce((s, b) => s + b.estimateDkk, 0);
   const totalActual = items.reduce((s, b) => s + (b.actualDkk ?? 0), 0);
@@ -56,7 +60,7 @@ export default function BudgetPage() {
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
         <GlassPanel glow className="p-4 text-center">
           <div className="text-[11px] uppercase tracking-widest text-jarvis-dim">
-            Total Estimate
+            {t("budget.totalEstimate")}
           </div>
           <div className="mt-1 font-display text-2xl font-bold text-jarvis-cyan text-glow">
             {totalEstimate.toLocaleString()} DKK
@@ -64,7 +68,7 @@ export default function BudgetPage() {
         </GlassPanel>
         <GlassPanel className="p-4 text-center">
           <div className="text-[11px] uppercase tracking-widest text-jarvis-dim">
-            Actual Spent (logged)
+            {t("budget.actualSpent")}
           </div>
           <div className="mt-1 font-display text-2xl font-bold text-jarvis-green">
             {totalActual.toLocaleString()} DKK
@@ -72,7 +76,7 @@ export default function BudgetPage() {
         </GlassPanel>
         <GlassPanel className="p-4 text-center">
           <div className="text-[11px] uppercase tracking-widest text-jarvis-dim">
-            Running Total (actual or estimate)
+            {t("budget.runningTotal")}
           </div>
           <div className="mt-1 font-display text-2xl font-bold text-jarvis-amber">
             {totalTracked.toLocaleString()} DKK
@@ -84,7 +88,7 @@ export default function BudgetPage() {
         <div className="no-print mb-3 flex flex-wrap items-end gap-2">
           <div>
             <label className="mb-1 block text-[10px] uppercase text-jarvis-dim">
-              Category
+              {t("budget.category")}
             </label>
             <input
               value={newItem.category}
@@ -94,7 +98,7 @@ export default function BudgetPage() {
           </div>
           <div>
             <label className="mb-1 block text-[10px] uppercase text-jarvis-dim">
-              Label
+              {t("budget.label")}
             </label>
             <input
               value={newItem.label}
@@ -104,7 +108,7 @@ export default function BudgetPage() {
           </div>
           <div>
             <label className="mb-1 block text-[10px] uppercase text-jarvis-dim">
-              Estimate (DKK)
+              {t("budget.estimateDkk")}
             </label>
             <input
               type="number"
@@ -115,7 +119,7 @@ export default function BudgetPage() {
               className="w-32 rounded border border-jarvis-border bg-jarvis-bg/60 px-2 py-1.5 text-sm"
             />
           </div>
-          <GlowButton onClick={addItem}>+ Add Line Item</GlowButton>
+          <GlowButton onClick={addItem}>{t("budget.addLineItem")}</GlowButton>
           <div className="ml-auto flex gap-2">
             <PrintButton />
             <GlowButton
@@ -123,7 +127,7 @@ export default function BudgetPage() {
               variant="ghost"
               onClick={() => downloadJson(`budget-${Date.now()}.json`, items)}
             >
-              ⬇ Export JSON
+              ⬇ {t("common.exportJson")}
             </GlowButton>
           </div>
         </div>
@@ -132,11 +136,11 @@ export default function BudgetPage() {
           <table className="w-full min-w-[760px] text-left text-sm">
             <thead>
               <tr className="border-b border-jarvis-border text-[11px] uppercase tracking-wide text-jarvis-dim">
-                <th className="py-2 pr-3">Category</th>
-                <th className="py-2 pr-3">Item</th>
-                <th className="py-2 pr-3">Estimate</th>
-                <th className="py-2 pr-3">Actual</th>
-                <th className="py-2 pr-3">Notes</th>
+                <th className="py-2 pr-3">{t("budget.category")}</th>
+                <th className="py-2 pr-3">{t("budget.item")}</th>
+                <th className="py-2 pr-3">{t("budget.estimate")}</th>
+                <th className="py-2 pr-3">{t("budget.actual")}</th>
+                <th className="py-2 pr-3">{t("budget.notes")}</th>
                 <th className="no-print py-2 pr-3"></th>
               </tr>
             </thead>
@@ -178,7 +182,7 @@ export default function BudgetPage() {
                           onClick={() => removeExtra(b.id)}
                           className="text-[11px] text-jarvis-red hover:underline"
                         >
-                          Delete
+                          {t("budget.delete")}
                         </button>
                       )}
                     </td>

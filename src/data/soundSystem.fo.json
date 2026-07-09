@@ -1,0 +1,50 @@
+{
+  "currentSystem": {
+    "headUnit": "Verksmiðju BMW Professional/CD hovudeind — PLASSHÁLDARI, vátta nágreiniliga variantin ásettan á hetta VIN",
+    "amp": "Verksmiðju-amplifikator-tilstøði ókent — kanna fyri ein verksmiðju-amp-módul aftanfyri bagasjarúms-trim (Harman/Kardon ímóti grund-Hi-Fi ímóti eingin amp)",
+    "speakers": "Verksmiðju dura-/panel-/afturhillu-hátalarar — standi og tal óváttað",
+    "notes": "Eftirlit og dokumentera tað-sum-er-funnið-skipanina áðrenn nakrar uppgraderingarákvarðir verða tiknar. Nógvar E70-eindir hava ein verksmiðju-amp, ið kann varðveitast ella bypassast eftir valdum stigi."
+  },
+  "tiers": [
+    {
+      "id": "factory-baseline",
+      "tier": "Verksmiðju-Grundstøði",
+      "headUnit": "Varðveit verksmiðju-hovudeindina",
+      "amp": "Varðveit verksmiðju-amp um til staðar og virkin",
+      "speakers": "Reinsa/servisera verandi hátalarar, skift brotnar einingar við verksmiðju-specifikaðum útskiftingum",
+      "subwoofer": "Eingin",
+      "wiringNotes": "Ongin nýggj leiðing krevjað umframt at gera við skaddar verksmiðju-leiðingarnetspartar funnar undir motorrúms-/innanhýsis-arbeiði.",
+      "estimateDkk": "0 – 1.500"
+    },
+    {
+      "id": "entry-upgrade",
+      "tier": "Byrjanaruppgradering",
+      "headUnit": "Varðveit verksmiðju-hovudeindina (ella legg afturat Bluetooth/CarPlay-adapter)",
+      "amp": "Legg afturat ein kompakt 4-kanals aftermarket-amp til framstig",
+      "speakers": "Uppgrader framdura-hátalarar til eitt kvalitets coaxial ella komponentsett",
+      "subwoofer": "Lítil elektrisk under-sess-subwoofer",
+      "wiringNotes": "Tapp verksmiðju hátalara-stigs-útgangar inn í nýggja amp via ein line-output-converter; leið nýggja strøym-/jarðsambands-/remote-leiðing til bagasjarúms-ásettu amp.",
+      "estimateDkk": "4.000 – 8.500"
+    },
+    {
+      "id": "mid-upgrade",
+      "tier": "Miðjustigsuppgradering",
+      "headUnit": "Aftermarket hovudeind við CarPlay/Android Auto (adapter-leiðingarnet krevjað til stýrishjóls-stýring)",
+      "amp": "4- ella 5-kanals amp, ið veitir strøym til allar hátalarar plus ein serstakan sub-kanal",
+      "speakers": "Fult komponent-hátalarasett (fram + aftan)",
+      "subwoofer": "10-12tuma elektrisk kassi í eini sealed kassu, gólv- ella bagasjarúms-ásett",
+      "wiringNotes": "Full RCA-signalleiðing frá hovudeind til bagasjarúms-amp, serstøk sikraður strøymleiðing frá bilroyndini, uppgraderaður jarðsambandspunktur.",
+      "estimateDkk": "10.000 – 18.000"
+    },
+    {
+      "id": "reference-build",
+      "tier": "Referansu-Bygging",
+      "headUnit": "Aftermarket keldueind ella DSP-integreradur processari, ið varðveitir verksmiðju-hovudeindina sum kelda",
+      "amp": "Fleiri-kanals amp(ar) við aktivari crossover-/DSP-stilling",
+      "speakers": "Høgkvalitets komponentsett fram og aftan, serstøk tweeter- og midrange-staging",
+      "subwoofer": "Sernýggjaði sealed ella ported kassi, samsvaraður farmøkis-avmarkingum",
+      "wiringNotes": "Full DSP-basereda signalkeðja, uppgraderaður elektronikkur (møguliga sekundera bilroynd/big-3-uppgradering), fakligt stilling viðmælt.",
+      "estimateDkk": "20.000+"
+    }
+  ]
+}

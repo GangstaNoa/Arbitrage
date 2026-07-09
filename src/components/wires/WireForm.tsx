@@ -3,6 +3,8 @@
 import { useState } from "react";
 import GlowButton from "@/components/ui/GlowButton";
 import { generateId, nextConnectorId } from "@/lib/id";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+import type { DictKey } from "@/lib/i18n/dictionary";
 import type { WireCategory, WireLabel, WireStatus } from "@/lib/types";
 
 const categories: WireCategory[] = [
@@ -33,6 +35,7 @@ export default function WireForm({
   existingIds: string[];
   onCreate: (label: WireLabel) => void;
 }) {
+  const { t } = useLanguage();
   const blank = {
     name: "",
     system: "sensor" as WireCategory,
@@ -77,7 +80,7 @@ export default function WireForm({
 
   if (!open) {
     return (
-      <GlowButton onClick={() => setOpen(true)}>+ New Connector Label</GlowButton>
+      <GlowButton onClick={() => setOpen(true)}>{t("wireForm.newConnectorLabel")}</GlowButton>
     );
   }
 
@@ -85,22 +88,22 @@ export default function WireForm({
     <div className="space-y-3 rounded border border-jarvis-cyan/40 bg-jarvis-bg/50 p-4">
       <div className="flex items-center justify-between">
         <h3 className="font-display text-sm font-bold uppercase tracking-widest text-jarvis-cyan">
-          New Connector — will be assigned {nextConnectorId(existingIds)}
+          {t("wireForm.newConnectorTitle")} {nextConnectorId(existingIds)}
         </h3>
         <button onClick={() => setOpen(false)} className="text-jarvis-dim hover:text-jarvis-red">
           ✕
         </button>
       </div>
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-        <Field label="Name">
+        <Field label={t("wireForm.name")}>
           <input
             value={form.name}
             onChange={(e) => setForm((s) => ({ ...s, name: e.target.value }))}
-            placeholder="e.g. MAF sensor connector"
+            placeholder={t("wireForm.namePlaceholder")}
             className="input"
           />
         </Field>
-        <Field label="System / Category">
+        <Field label={t("wireForm.systemCategory")}>
           <select
             value={form.system}
             onChange={(e) =>
@@ -110,46 +113,46 @@ export default function WireForm({
           >
             {categories.map((c) => (
               <option key={c} value={c}>
-                {c}
+                {t(`wire.category.${c}` as DictKey)}
               </option>
             ))}
           </select>
         </Field>
-        <Field label="Location">
+        <Field label={t("wireForm.location")}>
           <input
             value={form.location}
             onChange={(e) => setForm((s) => ({ ...s, location: e.target.value }))}
-            placeholder="e.g. driver side, near intake"
+            placeholder={t("wireForm.locationPlaceholder")}
             className="input"
           />
         </Field>
-        <Field label="Connector Shape">
+        <Field label={t("wireForm.connectorShape")}>
           <input
             value={form.connectorShape}
             onChange={(e) =>
               setForm((s) => ({ ...s, connectorShape: e.target.value }))
             }
-            placeholder="e.g. 3-pin black rectangular"
+            placeholder={t("wireForm.connectorShapePlaceholder")}
             className="input"
           />
         </Field>
-        <Field label="Wire Colors">
+        <Field label={t("wireForm.wireColors")}>
           <input
             value={form.wireColors}
             onChange={(e) => setForm((s) => ({ ...s, wireColors: e.target.value }))}
-            placeholder="e.g. brown / grey / red"
+            placeholder={t("wireForm.wireColorsPlaceholder")}
             className="input"
           />
         </Field>
-        <Field label="Connects To">
+        <Field label={t("wireForm.connectsTo")}>
           <input
             value={form.connectsTo}
             onChange={(e) => setForm((s) => ({ ...s, connectsTo: e.target.value }))}
-            placeholder="e.g. DDE main harness pin 42"
+            placeholder={t("wireForm.connectsToPlaceholder")}
             className="input"
           />
         </Field>
-        <Field label="Removal Date">
+        <Field label={t("wireForm.removalDate")}>
           <input
             type="date"
             value={form.removalDate}
@@ -157,7 +160,7 @@ export default function WireForm({
             className="input"
           />
         </Field>
-        <Field label="Status">
+        <Field label={t("wireForm.status")}>
           <select
             value={form.status}
             onChange={(e) =>
@@ -167,12 +170,12 @@ export default function WireForm({
           >
             {statuses.map((s) => (
               <option key={s} value={s}>
-                {s}
+                {t(`wire.status.${s}` as DictKey)}
               </option>
             ))}
           </select>
         </Field>
-        <Field label="Photo Before Removal">
+        <Field label={t("wireForm.photoBefore")}>
           <input
             type="file"
             accept="image/*"
@@ -183,7 +186,7 @@ export default function WireForm({
             className="input file:mr-2 file:rounded file:border-0 file:bg-jarvis-cyan/20 file:px-2 file:py-1 file:text-jarvis-cyan"
           />
         </Field>
-        <Field label="Photo After Removal">
+        <Field label={t("wireForm.photoAfter")}>
           <input
             type="file"
             accept="image/*"
@@ -195,7 +198,7 @@ export default function WireForm({
           />
         </Field>
         <div className="sm:col-span-2">
-          <Field label="Notes">
+          <Field label={t("wireForm.notes")}>
             <textarea
               value={form.notes}
               onChange={(e) => setForm((s) => ({ ...s, notes: e.target.value }))}
@@ -205,11 +208,8 @@ export default function WireForm({
           </Field>
         </div>
       </div>
-      <GlowButton onClick={submit}>Save Connector Label</GlowButton>
-      <p className="text-[10px] text-jarvis-dim">
-        Photos are stored locally in your browser (localStorage). Large or many
-        photos may exceed browser storage limits — keep images small.
-      </p>
+      <GlowButton onClick={submit}>{t("wireForm.save")}</GlowButton>
+      <p className="text-[10px] text-jarvis-dim">{t("wireForm.storageNote")}</p>
       <style jsx global>{`
         .input {
           width: 100%;

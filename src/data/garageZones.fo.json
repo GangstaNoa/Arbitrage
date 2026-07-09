@@ -1,0 +1,17 @@
+[
+  { "id": "front-bumper", "name": "Frambumper / Framklip", "chapterSlug": "engine-removal", "position": [0, 0.5, 2.2], "description": "Frambumper-lok og framljósaberari — vanliga tikin frammantil av á E70 fyri fulla motorrúms-atkomu.", "disassemblyOrder": 1 },
+  { "id": "radiator-pack", "name": "Radiator-Festingarpakki", "chapterSlug": "cooling-system", "position": [0, 0.85, 1.85], "description": "Radiator, kondensator, intercooler og vifta-samanseting ásett sum ein pakki frammanfyri motorin.", "disassemblyOrder": 2 },
+  { "id": "cooling-system", "name": "Kælivatnsskipan", "chapterSlug": "cooling-system", "position": [0, 0.95, 1.5], "description": "Sløngur, termostatur, vatnspumpa og kælivatns-ekspansiónstankur.", "disassemblyOrder": 3 },
+  { "id": "engine-bay", "name": "Motorrúm", "chapterSlug": "engine-removal", "position": [0, 1.05, 1.0], "description": "Fulla motorrúmið — miðstøð fyri motorútbúrturtøku- og innsetingar-arbeiðsgongdina.", "disassemblyOrder": 4 },
+  { "id": "intake-system", "name": "Inntaksskipan", "chapterSlug": "turbo-system", "position": [0.4, 1.1, 0.9], "description": "Luftkassi, MAF-sensor og inntaksrøgar til turbo-inntakið.", "disassemblyOrder": 5 },
+  { "id": "turbo-system", "name": "Turboskipan", "chapterSlug": "turbo-system", "position": [0.25, 0.85, 0.8], "description": "Sequential lítil/stór turbo-samanseting á útlátsmanifoldinum.", "disassemblyOrder": 6 },
+  { "id": "fuel-system", "name": "Brenniskipan", "chapterSlug": "fuel-system", "position": [-0.3, 0.85, 0.7], "description": "Common-rail brenniskipan: injectorar, høgtrýstispumpa, brenniskrá og leiðingar.", "disassemblyOrder": 7 },
+  { "id": "transmission", "name": "Gearkassi", "chapterSlug": "transmission", "position": [0, 0.55, 0.0], "description": "ZF 6-gongdar automatgearkassi og bellhousing-sameining.", "disassemblyOrder": 8 },
+  { "id": "transfer-case", "name": "Transfer Case", "chapterSlug": "transfer-case", "position": [0, 0.45, -0.4], "description": "xDrive transfer case, ið býtir kraft til fram- og aftanaksil.", "disassemblyOrder": 9 },
+  { "id": "front-suspension", "name": "Framfjaðring", "chapterSlug": "suspension", "position": [0.81, 0.45, 1.54], "description": "Framdempar, kontrollarmar og undirvogn-bushingar.", "disassemblyOrder": 10 },
+  { "id": "rear-suspension", "name": "Aftanfjaðring", "chapterSlug": "suspension", "position": [-0.81, 0.45, -1.32], "description": "Aftara undirvogn, trailing arms og fjaðrar/dempar.", "disassemblyOrder": 11 },
+  { "id": "brakes", "name": "Bremsur", "chapterSlug": "brakes", "position": [-0.81, 0.45, 1.54], "description": "Fram- og aftanbremsuklampir, berarar, klossar og skívur.", "disassemblyOrder": 12 },
+  { "id": "interior", "name": "Innanhýsi", "chapterSlug": "interior-restoration", "position": [0, 1.35, 0.1], "description": "Sessir, panel, trim og elektronikkur til innanhýsis restavreringsætlanina.", "disassemblyOrder": 13 },
+  { "id": "sound-system", "name": "Ljóðskipan", "chapterSlug": "sound-system", "position": [0, 1.2, -1.0], "description": "Hovudeind, amplifikator, hátalarar og subwoofer-ætlanarøki.", "disassemblyOrder": 14 },
+  { "id": "exterior-panels", "name": "Uttanhýsis Panel", "chapterSlug": "exterior-restoration", "position": [-1.05, 0.9, -0.2], "description": "Bygningarpanel, farvi og trim til uttanhýsis restavreringsætlanina.", "disassemblyOrder": 15 }
+]

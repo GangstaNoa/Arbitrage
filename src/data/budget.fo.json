@@ -1,0 +1,13 @@
+[
+  { "id": "BG-001", "category": "Keyp", "label": "Vognakeypsprís", "estimateDkk": 12000, "actualDkk": 12000, "notes": "2009 BMW X5 E70 xDrive35d, keypt við kendum motorbroti (sveivarhjóls-/stangarlegu-skaða)." },
+  { "id": "BG-002", "category": "Motor", "label": "Útskiftingarmotor (long block/komplett)", "estimateDkk": 25000, "actualDkk": null, "notes": "Sí Partadátugrunnur PT-001." },
+  { "id": "BG-003", "category": "Motor", "label": "Motorgaskets, selir, legur, timing-sett", "estimateDkk": 6600, "actualDkk": null, "notes": "PT-002 til PT-005." },
+  { "id": "BG-004", "category": "Sending", "label": "Motor-sending / frakt / innflutningur", "estimateDkk": 3500, "actualDkk": null, "notes": "Broytist munandi eftir upprunalandi — plasshaldari-mátingur." },
+  { "id": "BG-005", "category": "Amboð", "label": "Amboðsútveging (lyftari, trektamboð, diagnostikk, o.a.)", "estimateDkk": 10000, "actualDkk": null, "notes": "Sí Amboðsdátugrunnur — íalt fyri neyðug amboð ikki longu í eigu." },
+  { "id": "BG-006", "category": "Partar", "label": "Almennir partar (kæling, brenni, turbo, elektronikkur)", "estimateDkk": 22000, "actualDkk": null, "notes": "Sí Partadátugrunnur, undantikið motor-/ljóð-/fjaðringar-lutir." },
+  { "id": "BG-007", "category": "Vøkur", "label": "Olja, kælivatn, gearkassaolja, bremsuvøka", "estimateDkk": 1800, "actualDkk": null, "notes": "" },
+  { "id": "BG-008", "category": "Detailing", "label": "Farvarætting & detailing-forbrúksvørur", "estimateDkk": 1500, "actualDkk": null, "notes": "PT-029." },
+  { "id": "BG-009", "category": "Ljóðskipan", "label": "Amp, hátalarar, subwoofer, leiðingar (byrjanaruppgraderingarstig)", "estimateDkk": 8500, "actualDkk": null, "notes": "Sí Ljóðskipanarætlanina." },
+  { "id": "BG-010", "category": "Fjaðring", "label": "Framfjaðringar-endurnýggjansett", "estimateDkk": 4500, "actualDkk": null, "notes": "PT-024." },
+  { "id": "BG-011", "category": "Óvæntað", "label": "Fyrivarni / óvæntaðir kostnaðir (15%)", "estimateDkk": 14000, "actualDkk": null, "notes": "Viðmælt buffara fyri eina brúkt-motor-swap-verkætlan — stilla eftir sum veruligir kostnaðir koma." }
+]

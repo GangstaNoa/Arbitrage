@@ -4,41 +4,43 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { exportAllData, downloadJson } from "@/lib/storage";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+import type { DictKey } from "@/lib/i18n/dictionary";
 
-const nav = [
+const nav: { groupKey: DictKey; items: { href: string; labelKey: DictKey; icon: string }[] }[] = [
   {
-    group: "Command",
+    groupKey: "nav.group.command",
     items: [
-      { href: "/", label: "Dashboard", icon: "◈" },
-      { href: "/garage", label: "3D Garage Viewer", icon: "▲" },
-      { href: "/engine-bay", label: "Engine Bay", icon: "⚙" },
+      { href: "/", labelKey: "nav.dashboard", icon: "◈" },
+      { href: "/garage", labelKey: "nav.garage", icon: "▲" },
+      { href: "/engine-bay", labelKey: "nav.engineBay", icon: "⚙" },
     ],
   },
   {
-    group: "Documentation",
+    groupKey: "nav.group.documentation",
     items: [
-      { href: "/manual", label: "Manual Chapters", icon: "📖" },
-      { href: "/wires", label: "Wire Labeling", icon: "🔌" },
-      { href: "/photos", label: "Photo Notes", icon: "📷" },
+      { href: "/manual", labelKey: "nav.manual", icon: "📖" },
+      { href: "/wires", labelKey: "nav.wires", icon: "🔌" },
+      { href: "/photos", labelKey: "nav.photos", icon: "📷" },
     ],
   },
   {
-    group: "Databases",
+    groupKey: "nav.group.databases",
     items: [
-      { href: "/torque", label: "Torque Specs", icon: "🔧" },
-      { href: "/parts", label: "Parts Database", icon: "🔩" },
-      { href: "/tools", label: "Tools Database", icon: "🧰" },
-      { href: "/fault-codes", label: "Fault Codes", icon: "⚠" },
+      { href: "/torque", labelKey: "nav.torque", icon: "🔧" },
+      { href: "/parts", labelKey: "nav.parts", icon: "🔩" },
+      { href: "/tools", labelKey: "nav.tools", icon: "🧰" },
+      { href: "/fault-codes", labelKey: "nav.faultCodes", icon: "⚠" },
     ],
   },
   {
-    group: "Project",
+    groupKey: "nav.group.project",
     items: [
-      { href: "/checklists", label: "Checklists", icon: "☑" },
-      { href: "/budget", label: "Budget Tracker", icon: "💰" },
-      { href: "/sound-system", label: "Sound System", icon: "🔊" },
-      { href: "/coding-diagnostics", label: "Coding & Diagnostics", icon: "💻" },
-      { href: "/restoration", label: "Restoration Planner", icon: "✨" },
+      { href: "/checklists", labelKey: "nav.checklists", icon: "☑" },
+      { href: "/budget", labelKey: "nav.budget", icon: "💰" },
+      { href: "/sound-system", labelKey: "nav.soundSystem", icon: "🔊" },
+      { href: "/coding-diagnostics", labelKey: "nav.codingDiagnostics", icon: "💻" },
+      { href: "/restoration", labelKey: "nav.restoration", icon: "✨" },
     ],
   },
 ];
@@ -47,6 +49,7 @@ export default function Sidebar() {
   const pathname = usePathname();
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { t } = useLanguage();
 
   const handleSignOut = async () => {
     await fetch("/api/auth/logout", { method: "POST" });
@@ -70,16 +73,16 @@ export default function Sidebar() {
             JARVIS X5
           </div>
           <div className="text-[10px] uppercase tracking-widest text-jarvis-dim">
-            Garage OS
+            {t("sidebar.subtitle")}
           </div>
         </div>
       </div>
 
       <nav className="flex-1 space-y-5 px-3 py-4">
         {nav.map((group) => (
-          <div key={group.group}>
+          <div key={group.groupKey}>
             <div className="mb-1.5 px-2 text-[10px] font-semibold uppercase tracking-widest text-jarvis-dim/80">
-              {group.group}
+              {t(group.groupKey)}
             </div>
             <div className="space-y-0.5">
               {group.items.map((item) => {
@@ -96,7 +99,7 @@ export default function Sidebar() {
                     }`}
                   >
                     <span className="w-4 text-center">{item.icon}</span>
-                    {item.label}
+                    {t(item.labelKey)}
                   </Link>
                 );
               })}
@@ -113,22 +116,20 @@ export default function Sidebar() {
           }
           className="mb-2 w-full rounded border border-jarvis-cyan/40 px-2.5 py-1.5 text-[11px] uppercase tracking-wide text-jarvis-cyan hover:bg-jarvis-cyan/10 hover:shadow-glow-sm"
         >
-          ⬇ Export Project Data
+          ⬇ {t("sidebar.export")}
         </button>
         <button
           onClick={handleSignOut}
           className="mb-2 w-full rounded border border-jarvis-border px-2.5 py-1.5 text-[11px] uppercase tracking-wide text-jarvis-dim hover:border-jarvis-red/50 hover:text-jarvis-red"
         >
-          ⏻ Sign Out
+          ⏻ {t("sidebar.signOut")}
         </button>
         <div className="text-[10px] leading-relaxed text-jarvis-dim">
           2009 BMW X5 E70 xDrive35d
           <br />
           VIN WBAFF01070L319611
           <br />
-          <span className="text-jarvis-cyan/80">
-            Local storage, synced to the cloud if configured.
-          </span>
+          <span className="text-jarvis-cyan/80">{t("sidebar.storageNote")}</span>
         </div>
       </div>
     </div>

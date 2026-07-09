@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ML-001",
+    "date": "2026-06-01",
+    "title": "Vognur keyptur",
+    "details": "Keypti ein 2009 BMW X5 E70 xDrive35d, VIN WBAFF01070L319611, fyri 12.000 DKK við kendum motorbroti (sveivarhjóls-/stangarlegu-skaða).",
+    "mileageKm": null
+  },
+  {
+    "id": "ML-002",
+    "date": "2026-06-03",
+    "title": "Fyrsti diagnostikskan",
+    "details": "Váttaði mekaniskt motorbrot. Mæli til fulla sundurtøku áðrenn ein endurbygging-ímóti-útskifting-ákvørð verður tikin. Útskiftingarmotor-swap valdur sum verkætlanarleið.",
+    "mileageKm": null
+  },
+  {
+    "id": "ML-003",
+    "date": "2026-06-08",
+    "title": "Verkætlanar-OS sett upp",
+    "details": "JARVIS X5 GARAGE OS tikin í nýtslu sum tann einu heimildaruppspringið fyri partar, amboð, budsjett, tíðarplan, og dokumentasjón.",
+    "mileageKm": null
+  }
+]

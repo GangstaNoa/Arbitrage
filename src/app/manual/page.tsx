@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import GlassPanel from "@/components/ui/GlassPanel";
 import StatusBadge from "@/components/ui/StatusBadge";
-import chapters from "@/data/chapters.json";
+import chaptersEn from "@/data/chapters.json";
+import chaptersFo from "@/data/chapters.fo.json";
+import { useLanguage, useLocalizedData } from "@/lib/i18n/LanguageContext";
+import type { DictKey } from "@/lib/i18n/dictionary";
 import type { Chapter } from "@/lib/types";
 
 const difficultyTone: Record<string, "green" | "cyan" | "amber" | "red"> = {
@@ -12,8 +17,11 @@ const difficultyTone: Record<string, "green" | "cyan" | "amber" | "red"> = {
 };
 
 export default function ManualPage() {
+  const { t } = useLanguage();
+  const chapters = useLocalizedData(chaptersEn, chaptersFo) as Chapter[];
+
   const byCategory = new Map<string, Chapter[]>();
-  for (const c of chapters as Chapter[]) {
+  for (const c of chapters) {
     if (!byCategory.has(c.category)) byCategory.set(c.category, []);
     byCategory.get(c.category)!.push(c);
   }
@@ -21,19 +29,16 @@ export default function ManualPage() {
   return (
     <div className="space-y-10">
       <p className="max-w-2xl text-sm leading-relaxed text-jarvis-ink/80">
-        28 chapters covering the full engine replacement project, from
-        first-day planning through ongoing maintenance. Each one now includes
-        researched pro tips and common mistakes specific to the M57TU2D30
-        (306D5) engine and E70 xDrive35d platform, not just generic steps.
+        {t("manual.intro")}
       </p>
       {Array.from(byCategory.entries()).map(([category, list]) => (
         <div key={category}>
           <div className="mb-3 flex items-baseline gap-2 border-b border-jarvis-border/50 pb-2">
             <h2 className="font-display text-sm font-bold uppercase tracking-widest text-jarvis-cyan">
-              {category}
+              {t(`category.${category}` as DictKey)}
             </h2>
             <span className="text-[11px] text-jarvis-dim">
-              {list.length} chapter{list.length === 1 ? "" : "s"}
+              {list.length} {list.length === 1 ? t("manual.chapterSingular") : t("manual.chapterPlural")}
             </span>
           </div>
           <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
@@ -42,10 +47,10 @@ export default function ManualPage() {
                 <GlassPanel className="h-full p-5 transition-all hover:border-jarvis-cyan/60 hover:shadow-glow">
                   <div className="flex items-start justify-between gap-2">
                     <span className="text-[11px] text-jarvis-dim">
-                      Ch. {c.number.toString().padStart(2, "0")}
+                      {t("manual.chapterAbbr")} {c.number.toString().padStart(2, "0")}
                     </span>
                     <StatusBadge tone={difficultyTone[c.difficulty]}>
-                      {c.difficulty}
+                      {t(`difficulty.${c.difficulty}` as DictKey)}
                     </StatusBadge>
                   </div>
                   <h3 className="mt-1.5 font-display text-base font-bold text-jarvis-cyan text-glow">
@@ -58,7 +63,7 @@ export default function ManualPage() {
                     <span>⏱ {c.estimatedTime}</span>
                     {c.proTips.length > 0 && (
                       <span className="text-jarvis-green/80">
-                        ✓ {c.proTips.length} pro tip{c.proTips.length === 1 ? "" : "s"}
+                        ✓ {c.proTips.length} {c.proTips.length === 1 ? t("manual.proTipSingular") : t("manual.proTipPlural")}
                       </span>
                     )}
                   </div>

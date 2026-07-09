@@ -3,16 +3,20 @@
 import GlassPanel from "@/components/ui/GlassPanel";
 import PrintButton from "@/components/ui/PrintButton";
 import { useChecklistState } from "@/hooks/useChecklistState";
+import { useLanguage, useLocalizedData } from "@/lib/i18n/LanguageContext";
 import type { EngineBaySection, TorqueSpec } from "@/lib/types";
-import torqueSpecs from "@/data/torqueSpecs.json";
+import torqueSpecsEn from "@/data/torqueSpecs.json";
+import torqueSpecsFo from "@/data/torqueSpecs.fo.json";
 
 export default function SectionDetail({
   section,
 }: {
   section: EngineBaySection;
 }) {
+  const { t } = useLanguage();
   const { isChecked, toggle } = useChecklistState();
   const checklistId = `engine-bay:${section.id}`;
+  const torqueSpecs = useLocalizedData(torqueSpecsEn, torqueSpecsFo);
 
   const specs = (torqueSpecs as TorqueSpec[]).filter((t) =>
     section.torqueSpecRefs.includes(t.id)
@@ -23,7 +27,7 @@ export default function SectionDetail({
       <div className="mb-3 flex items-start justify-between gap-3">
         <div>
           <div className="text-[11px] uppercase tracking-widest text-jarvis-dim">
-            Engine Bay Section
+            {t("engineBay.sectionLabel")}
           </div>
           <h2 className="font-display text-xl font-bold text-jarvis-cyan text-glow">
             {section.name}
@@ -39,15 +43,15 @@ export default function SectionDetail({
       <div className="mb-4 grid grid-cols-2 gap-2 sm:grid-cols-2">
         <div className="flex aspect-video flex-col items-center justify-center gap-1 rounded border border-dashed border-jarvis-border/70 text-[11px] text-jarvis-dim">
           <span className="text-lg">📷</span>
-          Photo before removal
+          {t("engineBay.photoBefore")}
         </div>
         <div className="flex aspect-video flex-col items-center justify-center gap-1 rounded border border-dashed border-jarvis-border/70 text-[11px] text-jarvis-dim">
           <span className="text-lg">📷</span>
-          Photo after removal
+          {t("engineBay.photoAfter")}
         </div>
       </div>
 
-      <Section title="Removal Steps">
+      <Section title={t("engineBay.removalSteps")}>
         <ol className="list-decimal space-y-1.5 pl-4 text-[14px] leading-relaxed text-jarvis-ink/90">
           {section.removalSteps.map((s, i) => (
             <li key={i}>{s}</li>
@@ -55,7 +59,7 @@ export default function SectionDetail({
         </ol>
       </Section>
 
-      <Section title="Inspection Points">
+      <Section title={t("engineBay.inspectionPoints")}>
         <ul className="list-disc space-y-1.5 pl-4 text-[14px] leading-relaxed text-jarvis-ink/90">
           {section.inspectionPoints.map((s, i) => (
             <li key={i}>{s}</li>
@@ -63,12 +67,9 @@ export default function SectionDetail({
         </ul>
       </Section>
 
-      <Section title="Torque Specs">
+      <Section title={t("engineBay.torqueSpecs")}>
         {specs.length === 0 ? (
-          <p className="text-sm text-jarvis-dim">
-            No torque-critical fasteners referenced for this section. VERIFY IN
-            BMW TIS for any fastener not listed here.
-          </p>
+          <p className="text-sm text-jarvis-dim">{t("engineBay.noTorqueSpecs")}</p>
         ) : (
           <div className="space-y-1.5">
             {specs.map((spec) => (
@@ -86,7 +87,7 @@ export default function SectionDetail({
         )}
       </Section>
 
-      <Section title="Common Mistakes" tone="red">
+      <Section title={t("engineBay.commonMistakes")} tone="red">
         <ul className="list-disc space-y-1.5 pl-4 text-[14px] leading-relaxed text-jarvis-ink/90">
           {section.commonMistakes.map((s, i) => (
             <li key={i}>{s}</li>
@@ -94,7 +95,7 @@ export default function SectionDetail({
         </ul>
       </Section>
 
-      <Section title="Reconnect Checklist">
+      <Section title={t("engineBay.reconnectChecklist")}>
         <ul className="space-y-2">
           {section.reconnectChecklist.map((text, i) => {
             const itemId = `item-${i}`;

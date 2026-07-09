@@ -1,0 +1,118 @@
+[
+  {
+    "id": "pre-removal",
+    "title": "Fyrframburturtøku-Sjekklisti",
+    "description": "Fullfør áðrenn motorlyftarin nakrantíð nertir vognin.",
+    "items": [
+      { "id": "pr-1", "text": "Diagnostikskan gjørdur og allar feilkotur skrásettar" },
+      { "id": "pr-2", "text": "VIN-serstakur partalisti váttaður (WBAFF01070L319611)" },
+      { "id": "pr-3", "text": "Handbókarkapitlar fyri Motorútbúrturtøku kannaðir" },
+      { "id": "pr-4", "text": "Merkingarskipanin fyri Leiðingar sett upp og prentaði merki klár" },
+      { "id": "pr-5", "text": "Øll neyðug amboð til staðar og virkin" },
+      { "id": "pr-6", "text": "Vognurin á javnari jørð við hjólkilir" },
+      { "id": "pr-7", "text": "Bilroynd frákoblað og radio-/navigatiónskotur skrásettar" },
+      { "id": "pr-8", "text": "Vøkur tappaðar niður í merktar íløtur (olja, kælivatn, A/C um viðkomandi)" },
+      { "id": "pr-9", "text": "Myndir tiknar av øllum motorrúminum úr fleiri sjónarhornum" },
+      { "id": "pr-10", "text": "Parta-organizer-bakkar merktir eftir burturtøku-stigi" }
+    ]
+  },
+  {
+    "id": "engine-removal",
+    "title": "Motorútbúrturtøku-Sjekklisti",
+    "description": "Stig-fyri-stig váttan meðan motorurin verður tikin út.",
+    "items": [
+      { "id": "er-1", "text": "Frambumper / klip tikið av" },
+      { "id": "er-2", "text": "Radiatorpakki tikin av og goymdur trygt" },
+      { "id": "er-3", "text": "Allir motorleiðingarnetskoblingar merktir og frákoblaðir" },
+      { "id": "er-4", "text": "Brenniievnisleiðingar frákoblaðar og koppaðar" },
+      { "id": "er-5", "text": "Útlátsdownpipe kobla frá turboinum" },
+      { "id": "er-6", "text": "A/C-kompressor tikin av og lagdur til viks uttan at opna kølimediums-kretsin" },
+      { "id": "er-7", "text": "Gearkassa-bellhousing skilt sundur" },
+      { "id": "er-8", "text": "Motorfestingar tiknar av við lyftaranum hildandi fulla vekt" },
+      { "id": "er-9", "text": "Motorurin lyftur út uttan fastnýrdar leiðingar/sløngur" },
+      { "id": "er-10", "text": "Motorurin lagdur á standin og gamli motorurin myndatikin til skjalfesting" }
+    ]
+  },
+  {
+    "id": "engine-bay-cleaning",
+    "title": "Motorrúmsreinsingar-Sjekklisti",
+    "description": "Djúpreinsa meðan rúmið er tómt og fulliga atkomuligt.",
+    "items": [
+      { "id": "ec-1", "text": "Avfeitgjørt og høgtrýstisvaskað (elektriskir partar vernaðir/tildekkaðir)" },
+      { "id": "ec-2", "text": "Undirvogn og bygningur eftirlitin fyri rust ella skaða" },
+      { "id": "ec-3", "text": "Allir jarðsambandspunktar eftirlitnir og reinsaðir til nakið metall" },
+      { "id": "ec-4", "text": "Leiðingarnet eftirlitið fyri gnídd/hitaskaði og gjørt við um neyðugt" },
+      { "id": "ec-5", "text": "Rættingarfarvi/rustviðgerð lagt á har neyðugt" },
+      { "id": "ec-6", "text": "Motorrúms-isolering/ljóðdeyving eftirlitin" },
+      { "id": "ec-7", "text": "Allar festingar bólkaðar, reinsaðar, og samsvaraðar trektspecifikatiónslistanum" },
+      { "id": "ec-8", "text": "Rúmið turkað og myndatikið reint áðrenn innseting" }
+    ]
+  },
+  {
+    "id": "replacement-engine-inspection",
+    "title": "Eftirlit-av-Útskiftingarmotor-Sjekklisti",
+    "description": "Vátta útskiftingarmotorin áðrenn hann kemur nær vognin.",
+    "items": [
+      { "id": "ri-1", "text": "Motorkoda og støypunummar samsvara krøvda útgávu" },
+      { "id": "ri-2", "text": "Kompressión-/leak-down-test gjørdur á øllum 6 sylindrum" },
+      { "id": "ri-3", "text": "Sveivarhjólið dreiað við hondini — smøkkurt uttan bindingar" },
+      { "id": "ri-4", "text": "Oljupanna tikin av og botnendin sjónliga eftirlitin" },
+      { "id": "ri-5", "text": "Hovds- og stangarlegur eftirlitnar óansæð uppgivnum mílutali" },
+      { "id": "ri-6", "text": "Timing chain og guides eftirlitnir/útskiftir" },
+      { "id": "ri-7", "text": "Turboar benkikannaðir fyri akselleiku" },
+      { "id": "ri-8", "text": "Allir sensorar og gløðingsplugg prógvaðir" },
+      { "id": "ri-9", "text": "Uttanáliggjandi motorurin reinsaður og endurmálaður har viðkomandi" },
+      { "id": "ri-10", "text": "Fult gasket-sett og selir klár til innseting" }
+    ]
+  },
+  {
+    "id": "installation",
+    "title": "Motorinnsetingar-Sjekklisti",
+    "description": "Váttan av samansetingar-røðini.",
+    "items": [
+      { "id": "in-1", "text": "Motorurin lækkaður niður á festingar við lyftara-studning til fulliga trygdur" },
+      { "id": "in-2", "text": "Motorfestingarboltar trektaðir sambært TQ-007 / TQ-008" },
+      { "id": "in-3", "text": "Gearkassa-bellhousing boltaður sambært TQ-009, omformari sambært TQ-010" },
+      { "id": "in-4", "text": "Allir leiðingarnetskoblingar koblaðir aftur til og samsvaraðir leiðingarmerkjum" },
+      { "id": "in-5", "text": "Allar jarðsambandsreimar koblaðar aftur til sambært TQ-026" },
+      { "id": "in-6", "text": "Brenniskipan kobluð aftur til við nýggjum selum sambært Brenniskipan-kapitulinum" },
+      { "id": "in-7", "text": "Kælivatnssløngur koblaðar aftur til og klampaðar" },
+      { "id": "in-8", "text": "Turbo olju-/kæliliðslur koblaðar aftur til og primed" },
+      { "id": "in-9", "text": "Radiatorpakki og frambumper aftur ásett" },
+      { "id": "in-10", "text": "Allar vøkur fyltar til rætta støði (olja, kælivatn, gearkassaolja)" },
+      { "id": "in-11", "text": "Síðsta sjónliga umferð fyri amboð/klutar latnir eftir í rúminum" }
+    ]
+  },
+  {
+    "id": "first-start",
+    "title": "Fyrsta-Start-Sjekklisti",
+    "description": "Kritisk trygdarrøð fyri fyrstu start eftir innseting.",
+    "items": [
+      { "id": "fs-1", "text": "Bilroynd kobluð aftur til, negativ síðst" },
+      { "id": "fs-2", "text": "Bilroynd skrásett við kodingamboðnum" },
+      { "id": "fs-3", "text": "Tendran á (uttan sveiving) — kanna panelið fyri varselás og DDE-vekjan" },
+      { "id": "fs-4", "text": "Fullur diagnostikskan fyri goymdar feilir áðrenn fyrsta sveiving" },
+      { "id": "fs-5", "text": "Oljutrýst-forkanning (sveiva við brenniskipan sløktari um møguligt, sambært kapitulins framgongd)" },
+      { "id": "fs-6", "text": "Slokkiapparat innan raksvídd, øki rudt, ventilatión nóg mikið" },
+      { "id": "fs-7", "text": "Fyrsti start gjørdur, motorurin bert latin ganga í tómgongd — hyggja eftir oljutrýst og hita" },
+      { "id": "fs-8", "text": "Beinanvegin steðgan um okkurt ovvanligt ljóð, varselás, ella vøkuleki sæst" },
+      { "id": "fs-9", "text": "Leka-kanning av øllum rúminum eftir tómgongd (olja, kælivatn, brenni, boost)" },
+      { "id": "fs-10", "text": "Injector-rættingarkotur og gløðingsplugg-koyring váttaði via diagnostikamboðnum" }
+    ]
+  },
+  {
+    "id": "test-drive",
+    "title": "Test-Koyrslu-Sjekklisti",
+    "description": "Áðrenn og eftir fyrstu veruligu koyrsluna.",
+    "items": [
+      { "id": "td-1", "text": "Vøkustøði endurkannað eftir tómgongd-/upphitingarsyklus" },
+      { "id": "td-2", "text": "Hjólboltar trektaðir sambært TQ-022 og endurtrekt ætlanað við 50km" },
+      { "id": "td-3", "text": "Bremsur prógvaðar við lágari ferð áðrenn økið verður forlatið" },
+      { "id": "td-4", "text": "Stutt lágferðar-koyrsla fyrst, løgandi mátarum" },
+      { "id": "td-5", "text": "Lurta eftir boost-lekum, útlátslekum, ella ovvanligum drivverksljóði" },
+      { "id": "td-6", "text": "Fullur diagnostikskan eftir testkoyrslu fyri nýggjar kotur" },
+      { "id": "td-7", "text": "Eftir-koyrslu sjónlig eftirlit fyri lekar undir vogninum" },
+      { "id": "td-8", "text": "Testkoyrslu-úrslit skrásett í Viðlíkahaldsloggin" }
+    ]
+  }
+]

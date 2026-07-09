@@ -8,7 +8,10 @@ import GlowButton from "@/components/ui/GlowButton";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { STORAGE_KEYS, downloadJson } from "@/lib/storage";
 import { applyOverlay } from "@/lib/overlay";
-import partsBase from "@/data/parts.json";
+import partsBaseEn from "@/data/parts.json";
+import partsBaseFo from "@/data/parts.fo.json";
+import { useLanguage, useLocalizedData } from "@/lib/i18n/LanguageContext";
+import type { DictKey } from "@/lib/i18n/dictionary";
 import type { Part, PartStatus, Priority } from "@/lib/types";
 
 const statuses: PartStatus[] = ["needed", "ordered", "installed"];
@@ -20,6 +23,8 @@ const priorityTone: Record<Priority, "red" | "amber" | "cyan" | "dim"> = {
 };
 
 export default function PartsPage() {
+  const { t } = useLanguage();
+  const partsBase = useLocalizedData(partsBaseEn, partsBaseFo);
   const [overlay, setOverlay] = useLocalStorage<Record<string, Partial<Part>>>(
     STORAGE_KEYS.partsOverlay,
     {}
@@ -30,7 +35,7 @@ export default function PartsPage() {
 
   const parts = useMemo(
     () => applyOverlay<Part>(partsBase as Part[], overlay),
-    [overlay]
+    [partsBase, overlay]
   );
 
   const systems = useMemo(
@@ -61,19 +66,19 @@ export default function PartsPage() {
     <div className="space-y-4">
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <GlassPanel className="p-3 text-center">
-          <div className="text-[11px] text-jarvis-dim">Needed</div>
+          <div className="text-[11px] text-jarvis-dim">{t("parts.needed")}</div>
           <div className="font-display text-xl text-jarvis-amber">{totals.needed}</div>
         </GlassPanel>
         <GlassPanel className="p-3 text-center">
-          <div className="text-[11px] text-jarvis-dim">Ordered</div>
+          <div className="text-[11px] text-jarvis-dim">{t("parts.ordered")}</div>
           <div className="font-display text-xl text-jarvis-cyan">{totals.ordered}</div>
         </GlassPanel>
         <GlassPanel className="p-3 text-center">
-          <div className="text-[11px] text-jarvis-dim">Installed</div>
+          <div className="text-[11px] text-jarvis-dim">{t("parts.installed")}</div>
           <div className="font-display text-xl text-jarvis-green">{totals.installed}</div>
         </GlassPanel>
         <GlassPanel className="p-3 text-center">
-          <div className="text-[11px] text-jarvis-dim">Est. Total</div>
+          <div className="text-[11px] text-jarvis-dim">{t("parts.estTotal")}</div>
           <div className="font-display text-xl text-jarvis-cyan">
             {totals.estCost.toLocaleString()} DKK
           </div>
@@ -85,7 +90,7 @@ export default function PartsPage() {
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search parts…"
+            placeholder={t("parts.searchPlaceholder")}
             className="w-56 rounded border border-jarvis-border bg-jarvis-bg/60 px-2 py-1.5 text-sm focus:border-jarvis-cyan/60 focus:outline-none"
           />
           <select
@@ -95,7 +100,7 @@ export default function PartsPage() {
           >
             {systems.map((s) => (
               <option key={s} value={s}>
-                {s}
+                {s === "all" ? t("common.all") : s}
               </option>
             ))}
           </select>
@@ -104,14 +109,14 @@ export default function PartsPage() {
             onChange={(e) => setStatus(e.target.value as PartStatus | "all")}
             className="rounded border border-jarvis-border bg-jarvis-bg/60 px-2 py-1.5 text-sm text-jarvis-cyan"
           >
-            <option value="all">all statuses</option>
+            <option value="all">{t("parts.allStatuses")}</option>
             {statuses.map((s) => (
               <option key={s} value={s}>
-                {s}
+                {t(`parts.status.${s}` as DictKey)}
               </option>
             ))}
           </select>
-          <span className="text-xs text-jarvis-dim">{filtered.length} parts</span>
+          <span className="text-xs text-jarvis-dim">{filtered.length} {t("parts.partsCount")}</span>
           <div className="ml-auto flex gap-2">
             <PrintButton />
             <GlowButton
@@ -119,7 +124,7 @@ export default function PartsPage() {
               variant="ghost"
               onClick={() => downloadJson(`parts-${Date.now()}.json`, parts)}
             >
-              ⬇ Export JSON
+              ⬇ {t("common.exportJson")}
             </GlowButton>
           </div>
         </div>
@@ -128,13 +133,13 @@ export default function PartsPage() {
           <table className="w-full min-w-[900px] text-left text-sm">
             <thead>
               <tr className="border-b border-jarvis-border text-[11px] uppercase tracking-wide text-jarvis-dim">
-                <th className="py-2 pr-3">Part</th>
-                <th className="py-2 pr-3">System</th>
-                <th className="py-2 pr-3">OEM #</th>
-                <th className="py-2 pr-3">Brand</th>
-                <th className="py-2 pr-3">Est. Price</th>
-                <th className="py-2 pr-3">Priority</th>
-                <th className="py-2 pr-3">Status</th>
+                <th className="py-2 pr-3">{t("parts.part")}</th>
+                <th className="py-2 pr-3">{t("parts.system")}</th>
+                <th className="py-2 pr-3">{t("parts.oemNumber")}</th>
+                <th className="py-2 pr-3">{t("parts.brand")}</th>
+                <th className="py-2 pr-3">{t("parts.estPrice")}</th>
+                <th className="py-2 pr-3">{t("parts.priority")}</th>
+                <th className="py-2 pr-3">{t("parts.status")}</th>
               </tr>
             </thead>
             <tbody>
@@ -151,7 +156,9 @@ export default function PartsPage() {
                   <td className="py-2 pr-3 text-jarvis-dim">{p.recommendedBrand}</td>
                   <td className="py-2 pr-3">{p.priceEstimateDkk.toLocaleString()} DKK</td>
                   <td className="py-2 pr-3">
-                    <StatusBadge tone={priorityTone[p.priority]}>{p.priority}</StatusBadge>
+                    <StatusBadge tone={priorityTone[p.priority]}>
+                      {t(`parts.priority.${p.priority}` as DictKey)}
+                    </StatusBadge>
                   </td>
                   <td className="py-2 pr-3">
                     <select
@@ -163,12 +170,14 @@ export default function PartsPage() {
                     >
                       {statuses.map((s) => (
                         <option key={s} value={s}>
-                          {s}
+                          {t(`parts.status.${s}` as DictKey)}
                         </option>
                       ))}
                     </select>
                     <span className="hidden print:inline">
-                      <StatusBadge tone={statusToTone(p.status)}>{p.status}</StatusBadge>
+                      <StatusBadge tone={statusToTone(p.status)}>
+                        {t(`parts.status.${p.status}` as DictKey)}
+                      </StatusBadge>
                     </span>
                   </td>
                 </tr>
