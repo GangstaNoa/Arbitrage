@@ -1,0 +1,13 @@
+[
+  { "id": "BG-001", "category": "Purchase", "label": "Vehicle purchase price", "estimateDkk": 12000, "actualDkk": 12000, "notes": "2009 BMW X5 E70 xDrive35d, purchased with known engine failure (crank/rod bearing damage)." },
+  { "id": "BG-002", "category": "Engine", "label": "Replacement engine (long block/complete)", "estimateDkk": 25000, "actualDkk": null, "notes": "See Parts Database PT-001." },
+  { "id": "BG-003", "category": "Engine", "label": "Engine gaskets, seals, bearings, timing kit", "estimateDkk": 6600, "actualDkk": null, "notes": "PT-002 through PT-005." },
+  { "id": "BG-004", "category": "Shipping", "label": "Engine shipping / freight / import", "estimateDkk": 3500, "actualDkk": null, "notes": "Varies significantly by source country — placeholder estimate." },
+  { "id": "BG-005", "category": "Tools", "label": "Tool acquisition (hoist, torque tools, diagnostics, etc.)", "estimateDkk": 10000, "actualDkk": null, "notes": "See Tools Database — total of required tools not already owned." },
+  { "id": "BG-006", "category": "Parts", "label": "General parts (cooling, fuel, turbo, electrical)", "estimateDkk": 22000, "actualDkk": null, "notes": "See Parts Database, excluding engine/sound/suspension line items." },
+  { "id": "BG-007", "category": "Fluids", "label": "Oil, coolant, transmission fluid, brake fluid", "estimateDkk": 1800, "actualDkk": null, "notes": "" },
+  { "id": "BG-008", "category": "Detailing", "label": "Paint correction & detailing consumables", "estimateDkk": 1500, "actualDkk": null, "notes": "PT-029." },
+  { "id": "BG-009", "category": "Sound System", "label": "Amp, speakers, subwoofer, wiring (entry-upgrade tier)", "estimateDkk": 8500, "actualDkk": null, "notes": "See Sound System Planner." },
+  { "id": "BG-010", "category": "Suspension", "label": "Front suspension refresh kit", "estimateDkk": 4500, "actualDkk": null, "notes": "PT-024." },
+  { "id": "BG-011", "category": "Unexpected", "label": "Contingency / unexpected costs (15%)", "estimateDkk": 14000, "actualDkk": null, "notes": "Recommended buffer for a used-engine swap project — adjust as real costs land." }
+]

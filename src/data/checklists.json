@@ -1,0 +1,118 @@
+[
+  {
+    "id": "pre-removal",
+    "title": "Pre-Removal Checklist",
+    "description": "Complete before the engine hoist ever touches the car.",
+    "items": [
+      { "id": "pr-1", "text": "Diagnostic scan performed and all fault codes logged" },
+      { "id": "pr-2", "text": "VIN-specific parts list confirmed (WBAFF01070L319611)" },
+      { "id": "pr-3", "text": "Workshop manual chapters reviewed for Engine Removal" },
+      { "id": "pr-4", "text": "Wire Labeling System set up and printed labels ready" },
+      { "id": "pr-5", "text": "All required tools present and functional" },
+      { "id": "pr-6", "text": "Vehicle on level ground with wheels chocked" },
+      { "id": "pr-7", "text": "Battery disconnected and radio/nav codes recorded" },
+      { "id": "pr-8", "text": "Fluids drained into labeled containers (oil, coolant, A/C if applicable)" },
+      { "id": "pr-9", "text": "Photos taken of full engine bay from multiple angles" },
+      { "id": "pr-10", "text": "Parts organizer bins labeled by removal stage" }
+    ]
+  },
+  {
+    "id": "engine-removal",
+    "title": "Engine Removal Checklist",
+    "description": "Step-by-step confirmation while pulling the engine.",
+    "items": [
+      { "id": "er-1", "text": "Front bumper / clip removed" },
+      { "id": "er-2", "text": "Radiator pack removed and stored safely" },
+      { "id": "er-3", "text": "All engine harness connectors labeled and disconnected" },
+      { "id": "er-4", "text": "Fuel lines disconnected and capped" },
+      { "id": "er-5", "text": "Exhaust downpipe disconnected from turbo" },
+      { "id": "er-6", "text": "A/C compressor unbolted and set aside without opening refrigerant circuit" },
+      { "id": "er-7", "text": "Transmission bellhousing separated" },
+      { "id": "er-8", "text": "Engine mounts unbolted with hoist supporting full weight" },
+      { "id": "er-9", "text": "Engine lifted clear with no snagged lines/hoses" },
+      { "id": "er-10", "text": "Engine placed on stand and old engine photographed for records" }
+    ]
+  },
+  {
+    "id": "engine-bay-cleaning",
+    "title": "Engine Bay Cleaning Checklist",
+    "description": "Deep clean while the bay is empty and fully accessible.",
+    "items": [
+      { "id": "ec-1", "text": "Degrease and pressure wash bay (electrical components protected/covered)" },
+      { "id": "ec-2", "text": "Inspect subframe and body for rust or damage" },
+      { "id": "ec-3", "text": "Inspect and clean all ground points to bare metal" },
+      { "id": "ec-4", "text": "Wire harness inspected for chafing/heat damage and repaired if needed" },
+      { "id": "ec-5", "text": "Touch-up paint/rust treatment applied where needed" },
+      { "id": "ec-6", "text": "Engine bay insulation/sound deadening inspected" },
+      { "id": "ec-7", "text": "All fasteners sorted, cleaned, and matched to torque spec list" },
+      { "id": "ec-8", "text": "Bay dried and photographed clean before install" }
+    ]
+  },
+  {
+    "id": "replacement-engine-inspection",
+    "title": "Replacement Engine Inspection Checklist",
+    "description": "Verify the replacement engine before it goes anywhere near the car.",
+    "items": [
+      { "id": "ri-1", "text": "Engine code and casting numbers match required application" },
+      { "id": "ri-2", "text": "Compression / leak-down test performed on all 6 cylinders" },
+      { "id": "ri-3", "text": "Crank turned by hand — smooth with no binding" },
+      { "id": "ri-4", "text": "Oil pan dropped and bottom end visually inspected" },
+      { "id": "ri-5", "text": "Main and rod bearings inspected regardless of stated mileage" },
+      { "id": "ri-6", "text": "Timing chain and guides inspected/replaced" },
+      { "id": "ri-7", "text": "Turbochargers bench-checked for shaft play" },
+      { "id": "ri-8", "text": "All sensors and glow plugs tested" },
+      { "id": "ri-9", "text": "External engine cleaned and repainted where appropriate" },
+      { "id": "ri-10", "text": "Full gasket set and seals ready for installation" }
+    ]
+  },
+  {
+    "id": "installation",
+    "title": "Engine Installation Checklist",
+    "description": "Reassembly sequence confirmation.",
+    "items": [
+      { "id": "in-1", "text": "Engine lowered onto mounts with hoist support until fully secured" },
+      { "id": "in-2", "text": "Engine mount bolts torqued per TQ-007 / TQ-008" },
+      { "id": "in-3", "text": "Transmission bellhousing bolted per TQ-009, converter per TQ-010" },
+      { "id": "in-4", "text": "All wiring harness connectors reconnected and matched to wire labels" },
+      { "id": "in-5", "text": "All grounding straps reconnected per TQ-026" },
+      { "id": "in-6", "text": "Fuel system reconnected with new seals per Fuel System chapter" },
+      { "id": "in-7", "text": "Cooling system hoses reconnected and clamped" },
+      { "id": "in-8", "text": "Turbo oil/coolant lines reconnected and primed" },
+      { "id": "in-9", "text": "Radiator pack and front bumper reinstalled" },
+      { "id": "in-10", "text": "All fluids filled to correct level (oil, coolant, transmission)" },
+      { "id": "in-11", "text": "Final visual sweep for tools/rags left in bay" }
+    ]
+  },
+  {
+    "id": "first-start",
+    "title": "First Start Checklist",
+    "description": "Critical safety sequence for the first startup after install.",
+    "items": [
+      { "id": "fs-1", "text": "Battery reconnected, negative last" },
+      { "id": "fs-2", "text": "Battery registered via coding tool" },
+      { "id": "fs-3", "text": "Ignition on (no crank) — check dash for warning lights and DDE wake-up" },
+      { "id": "fs-4", "text": "Full diagnostic scan for stored faults before first crank" },
+      { "id": "fs-5", "text": "Oil pressure pre-check (crank with fuel disabled if possible, per chapter procedure)" },
+      { "id": "fs-6", "text": "Fire extinguisher on hand, area clear, ventilation adequate" },
+      { "id": "fs-7", "text": "First start performed, engine allowed to idle only — watch oil pressure and temperature" },
+      { "id": "fs-8", "text": "Immediate shutdown if any abnormal noise, warning light, or fluid leak observed" },
+      { "id": "fs-9", "text": "Leak-check entire bay after idle (oil, coolant, fuel, boost)" },
+      { "id": "fs-10", "text": "Injector correction codes and glow plug cycle confirmed via diagnostic tool" }
+    ]
+  },
+  {
+    "id": "test-drive",
+    "title": "Test Drive Checklist",
+    "description": "Before and after the first real drive.",
+    "items": [
+      { "id": "td-1", "text": "Fluid levels rechecked after idle/warm-up cycle" },
+      { "id": "td-2", "text": "Wheel bolts torqued per TQ-022 and re-torque scheduled at 50km" },
+      { "id": "td-3", "text": "Brakes tested at low speed before leaving the property" },
+      { "id": "td-4", "text": "Short low-speed drive first, monitoring gauges continuously" },
+      { "id": "td-5", "text": "Listen for boost leaks, exhaust leaks, or unusual drivetrain noise" },
+      { "id": "td-6", "text": "Full diagnostic scan after test drive for any new codes" },
+      { "id": "td-7", "text": "Post-drive visual inspection for leaks under the vehicle" },
+      { "id": "td-8", "text": "Log test drive results in Maintenance Log" }
+    ]
+  }
+]

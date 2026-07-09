@@ -1,0 +1,514 @@
+[
+  {
+    "id": "battery",
+    "name": "Battery",
+    "x": 78,
+    "y": 86,
+    "description": "AGM battery located in the trunk on most E70 diesels, with a jump/positive terminal post in the engine bay. Always disconnect first and reconnect last.",
+    "removalSteps": [
+      "Switch off ignition and remove key from vicinity of vehicle.",
+      "Disconnect negative terminal first, insulate the clamp.",
+      "Disconnect positive terminal, insulate the clamp.",
+      "Remove battery hold-down clamp.",
+      "Lift battery out, keeping it upright."
+    ],
+    "inspectionPoints": [
+      "Terminal corrosion",
+      "Case swelling or damage",
+      "Load test / state of health",
+      "Battery date code vs vehicle age"
+    ],
+    "torqueSpecRefs": ["TQ-025"],
+    "commonMistakes": [
+      "Disconnecting positive before negative (risk of short circuit against body)",
+      "Forgetting battery registration/coding after replacing with a new battery",
+      "Not noting radio/infotainment codes before disconnect"
+    ],
+    "reconnectChecklist": [
+      "Terminals clean and corrosion-free",
+      "Negative connected last",
+      "Hold-down clamp torqued and secure",
+      "Battery registered via coding tool if replaced",
+      "Confirm all comfort electronics (windows, sunroof) relearned"
+    ]
+  },
+  {
+    "id": "ecu-box",
+    "name": "ECU Box (DDE)",
+    "x": 60,
+    "y": 88,
+    "description": "Digital Diesel Electronics (DDE) control unit housing at the rear of the engine bay near the firewall. Controls fuel injection, turbo boost, glow plugs, and emissions.",
+    "removalSteps": [
+      "Disconnect battery per Battery section first.",
+      "Release ECU box cover latches.",
+      "Disconnect main harness connectors — label each with wire label system before removal.",
+      "Unbolt ECU box mounting bracket.",
+      "Lift ECU/box assembly clear."
+    ],
+    "inspectionPoints": [
+      "Connector pin corrosion",
+      "Water intrusion in box",
+      "Mounting rubber isolators condition"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "Swapping ECU between vehicles without ISN (immobilizer sync) matching",
+      "Not labeling multi-pin connectors before disconnect",
+      "Forcing connector latches — BMW connectors release with a specific pull/lever motion"
+    ],
+    "reconnectChecklist": [
+      "All harness connectors fully seated and latched",
+      "Box cover sealed",
+      "Ground straps to ECU bracket reconnected",
+      "Read fault codes after first power-up"
+    ]
+  },
+  {
+    "id": "intake",
+    "name": "Intake System",
+    "x": 40,
+    "y": 50,
+    "description": "Air intake tract from airbox through MAF sensor to turbo inlet, including intake resonator and ducting.",
+    "removalSteps": [
+      "Release intake ducting clamps.",
+      "Disconnect MAF sensor electrical connector.",
+      "Remove airbox lid and filter.",
+      "Unbolt airbox base if full removal needed."
+    ],
+    "inspectionPoints": [
+      "Air filter condition/contamination",
+      "Ducting cracks or loose clamps (boost/vacuum leak source)",
+      "Oil residue inside intake (may indicate turbo seal wear)"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "Leaving intake clamps loose causing unmetered air / boost leaks",
+      "Debris left in intake tract during engine-out work"
+    ],
+    "reconnectChecklist": [
+      "All ducting clamps tight",
+      "MAF connector seated",
+      "New air filter installed",
+      "No foreign objects in intake path before first start"
+    ]
+  },
+  {
+    "id": "maf-sensor",
+    "name": "MAF Sensor",
+    "x": 30,
+    "y": 45,
+    "description": "Mass Air Flow sensor measuring intake air volume, mounted in the intake ducting ahead of the turbo inlet.",
+    "removalSteps": [
+      "Disconnect electrical connector — label as its own wire ID.",
+      "Loosen retaining clamp or screws.",
+      "Slide sensor out of housing carefully — hot-wire element is fragile."
+    ],
+    "inspectionPoints": [
+      "Hot-wire element cleanliness",
+      "Connector pin condition",
+      "O-ring / seal condition"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "Touching or cleaning the wire element with the wrong solvent",
+      "Forcing sensor housing causing element damage"
+    ],
+    "reconnectChecklist": [
+      "Sensor fully seated and clamped",
+      "Connector latched",
+      "Confirm live MAF data via diagnostic tool after first start"
+    ]
+  },
+  {
+    "id": "map-sensor",
+    "name": "MAP / Boost Sensor",
+    "x": 46,
+    "y": 55,
+    "description": "Manifold Absolute Pressure sensor reading intake manifold boost pressure, used by the DDE for turbo boost control.",
+    "removalSteps": [
+      "Disconnect electrical connector — label wire ID.",
+      "Remove single retaining screw or clip.",
+      "Withdraw sensor from manifold port."
+    ],
+    "inspectionPoints": [
+      "Port cleanliness (carbon/oil buildup)",
+      "Sensor seal/O-ring condition"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "Reusing a damaged O-ring causing false boost readings"
+    ],
+    "reconnectChecklist": [
+      "Seated fully in manifold port",
+      "Connector latched",
+      "Live boost data plausible at idle/rev after first start"
+    ]
+  },
+  {
+    "id": "glow-plug-controller",
+    "name": "Glow Plug Controller",
+    "x": 56,
+    "y": 70,
+    "description": "Relay/control module managing glow plug preheat timing for cold starts, mounted on or near the intake manifold.",
+    "removalSteps": [
+      "Disconnect battery first.",
+      "Disconnect main harness connector — label wire ID.",
+      "Disconnect individual glow plug leads.",
+      "Unbolt controller from mounting bracket."
+    ],
+    "inspectionPoints": [
+      "Heat damage/discoloration on housing",
+      "Connector pin corrosion"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "Mixing up individual glow plug lead order",
+      "Not checking for a related fault code before condemning the controller"
+    ],
+    "reconnectChecklist": [
+      "All 6 glow plug leads reconnected to correct cylinder",
+      "Main connector latched",
+      "Glow plug cycle confirmed via diagnostic tool"
+    ]
+  },
+  {
+    "id": "injectors",
+    "name": "Fuel Injectors",
+    "x": 50,
+    "y": 60,
+    "description": "Piezo/solenoid common-rail injectors, one per cylinder, mounted through the cylinder head under the valve cover.",
+    "removalSteps": [
+      "Relieve fuel system pressure per manufacturer procedure.",
+      "Disconnect injector electrical connectors — label each wire ID by cylinder number.",
+      "Remove fuel rail per Fuel Rail section.",
+      "Remove injector clamp bolts (see torque spec TQ-016).",
+      "Extract injectors with a suitable puller — do not pry."
+    ],
+    "inspectionPoints": [
+      "Injector seal/washer condition (always replace)",
+      "Carbon buildup on injector tip",
+      "Injector code label legible for ECU coding"
+    ],
+    "torqueSpecRefs": ["TQ-016"],
+    "commonMistakes": [
+      "Reusing old injector seal washers (causes combustion leak)",
+      "Not recording injector correction codes before install — required for ECU coding",
+      "Contaminating injector tips/holes with debris"
+    ],
+    "reconnectChecklist": [
+      "New seal washers fitted",
+      "Clamp bolts torqued per TQ-016 with angle stage",
+      "Injector correction codes entered into ECU via diagnostic tool",
+      "Leak-off return lines reconnected"
+    ]
+  },
+  {
+    "id": "fuel-rail",
+    "name": "Fuel Rail (High Pressure)",
+    "x": 50,
+    "y": 58,
+    "description": "Common rail fuel distribution manifold feeding all 6 injectors at high pressure from the HP fuel pump.",
+    "removalSteps": [
+      "Relieve system pressure and clean area to prevent contamination.",
+      "Disconnect rail pressure sensor connector — label wire ID.",
+      "Disconnect high pressure supply line from pump.",
+      "Disconnect individual injector high pressure lines.",
+      "Remove rail mounting bolts (TQ-015) and lift rail clear."
+    ],
+    "inspectionPoints": [
+      "High pressure line sealing surfaces for damage",
+      "Rail pressure sensor condition"
+    ],
+    "torqueSpecRefs": ["TQ-015"],
+    "commonMistakes": [
+      "Any dirt ingress into open fuel lines — cap immediately when disconnected",
+      "Reusing crush washers/seals on high pressure line fittings"
+    ],
+    "reconnectChecklist": [
+      "All high pressure line fittings torqued evenly",
+      "Rail mounting bolts torqued per TQ-015",
+      "Pressure sensor connector latched",
+      "System primed and checked for leaks before full start"
+    ]
+  },
+  {
+    "id": "turbochargers",
+    "name": "Turbocharger System (sequential twin-turbo)",
+    "x": 50,
+    "y": 40,
+    "description": "Small high-pressure and large low-pressure turbochargers operating sequentially, mounted at the front of the engine on the exhaust manifold.",
+    "removalSteps": [
+      "Drain coolant if turbo is water-cooled at this stage.",
+      "Disconnect oil feed and return lines — cap immediately.",
+      "Disconnect vacuum actuator lines — label each.",
+      "Remove exhaust manifold nuts (TQ-011).",
+      "Remove turbo-to-downpipe connection.",
+      "Support and remove turbo assembly."
+    ],
+    "inspectionPoints": [
+      "Shaft play (radial and axial) on both turbos",
+      "Oil residue in compressor housing (seal wear indicator)",
+      "Actuator linkage smooth operation",
+      "Wastegate/VNC mechanism condition"
+    ],
+    "torqueSpecRefs": ["TQ-011", "TQ-012"],
+    "commonMistakes": [
+      "Not priming oil feed before first start (causes dry startup bearing wear)",
+      "Reusing manifold gaskets/nuts instead of new ones",
+      "Mixing up small/large turbo oil and vacuum line routing"
+    ],
+    "reconnectChecklist": [
+      "Oil feed line primed and torqued per TQ-012",
+      "Manifold nuts torqued per TQ-011",
+      "Vacuum actuator lines correctly routed and labeled",
+      "Boost leak test performed after start"
+    ]
+  },
+  {
+    "id": "vacuum-lines",
+    "name": "Vacuum Lines",
+    "x": 42,
+    "y": 48,
+    "description": "Vacuum hose network controlling turbo actuators, intake flaps, and EGR components.",
+    "removalSteps": [
+      "Photograph/label routing before disconnecting anything.",
+      "Disconnect each line at the manifold and component end, labeling with wire/hose ID.",
+      "Cap open ports to prevent debris ingress."
+    ],
+    "inspectionPoints": [
+      "Cracking, hardening, or collapse of hose material",
+      "Correct routing vs factory diagram"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "Misrouting lines causing turbo actuator faults or limp mode",
+      "Reusing brittle old vacuum hose"
+    ],
+    "reconnectChecklist": [
+      "All lines matched to labeled IDs",
+      "No kinks or pinch points",
+      "Vacuum system holds pressure on smoke/vacuum test"
+    ]
+  },
+  {
+    "id": "coolant-hoses",
+    "name": "Coolant Hoses",
+    "x": 35,
+    "y": 30,
+    "description": "Upper/lower radiator hoses, heater core hoses, and turbo coolant lines forming the cooling circuit.",
+    "removalSteps": [
+      "Drain cooling system fully into a clean catch container.",
+      "Release hose clamps at each end.",
+      "Label each hose with its wire/hose ID before removal."
+    ],
+    "inspectionPoints": [
+      "Hose softness/swelling or hardening",
+      "Clamp condition — replace spring clamps with worm-drive if reused often"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "Air pockets left in system after refill (diesel cooling systems need proper bleed procedure)",
+      "Reusing degraded factory hose clamps"
+    ],
+    "reconnectChecklist": [
+      "All hoses matched to correct ports",
+      "Clamps secure",
+      "System bled per Cooling System chapter procedure",
+      "No leaks after warm-up cycle"
+    ]
+  },
+  {
+    "id": "radiator",
+    "name": "Radiator",
+    "x": 50,
+    "y": 8,
+    "description": "Primary coolant radiator at the front of the radiator support pack, ahead of the intercooler and condenser.",
+    "removalSteps": [
+      "Drain coolant.",
+      "Disconnect upper/lower hoses.",
+      "Disconnect fan shroud and electrical connectors if equipped.",
+      "Remove radiator mounting bolts (TQ-013).",
+      "Lift radiator clear, protecting fins."
+    ],
+    "inspectionPoints": [
+      "Fin damage/blockage",
+      "End tank cracking (plastic tanks are common failure point)",
+      "Core for internal blockage/corrosion"
+    ],
+    "torqueSpecRefs": ["TQ-013"],
+    "commonMistakes": [
+      "Overtightening plastic end tank fittings",
+      "Bending fins during reinstall"
+    ],
+    "reconnectChecklist": [
+      "Mounts torqued per TQ-013",
+      "Hoses reconnected and clamped",
+      "Fan shroud aligned and secure",
+      "System refilled and bled"
+    ]
+  },
+  {
+    "id": "intercooler",
+    "name": "Intercooler",
+    "x": 50,
+    "y": 15,
+    "description": "Charge air cooler mounted in the front bumper support, cooling compressed air between turbo stages and the intake manifold.",
+    "removalSteps": [
+      "Remove front bumper or access panel per chapter procedure.",
+      "Disconnect charge pipes at both ends.",
+      "Remove mounting brackets.",
+      "Lift intercooler clear."
+    ],
+    "inspectionPoints": [
+      "Oil residue inside core (turbo seal wear indicator)",
+      "Fin/core damage",
+      "Charge pipe seal condition"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "Not clamping charge pipes fully — boost leak after reassembly",
+      "Cross-contaminating intercooler core with oil residue not cleaned before reinstall"
+    ],
+    "reconnectChecklist": [
+      "Charge pipes clamped tight both ends",
+      "Mounting brackets secure",
+      "Boost leak test performed"
+    ]
+  },
+  {
+    "id": "fan",
+    "name": "Cooling Fan Assembly",
+    "x": 50,
+    "y": 20,
+    "description": "Electric or viscous-clutch fan assembly mounted behind the radiator, drawing air through the radiator pack.",
+    "removalSteps": [
+      "Disconnect fan electrical connector or unbolt viscous clutch (special tool, opposite thread).",
+      "Remove fan shroud retaining clips.",
+      "Lift fan assembly clear."
+    ],
+    "inspectionPoints": [
+      "Blade cracking",
+      "Viscous clutch free play (if equipped)",
+      "Electrical connector condition"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "Using wrong rotation direction on viscous clutch removal tool (left-hand thread on many BMW fans)"
+    ],
+    "reconnectChecklist": [
+      "Fan spins freely without shroud contact",
+      "Connector latched",
+      "Fan activation confirmed via diagnostic tool or thermal test"
+    ]
+  },
+  {
+    "id": "engine-mounts",
+    "name": "Engine Mounts",
+    "x": 50,
+    "y": 75,
+    "description": "Left and right hydraulic engine mounts connecting the block to the front subframe, isolating vibration.",
+    "removalSteps": [
+      "Support engine securely with hoist or under-engine support before removal.",
+      "Remove mount-to-bracket bolts (TQ-008).",
+      "Remove mount-to-subframe bolts (TQ-007).",
+      "Lift mount clear."
+    ],
+    "inspectionPoints": [
+      "Hydraulic fluid leakage",
+      "Rubber cracking or separation",
+      "Bracket cracks"
+    ],
+    "torqueSpecRefs": ["TQ-007", "TQ-008"],
+    "commonMistakes": [
+      "Removing both mounts simultaneously without engine support — engine can shift and damage components",
+      "Under-torquing mount bolts after engine settles onto them"
+    ],
+    "reconnectChecklist": [
+      "Mounts torqued per TQ-007 and TQ-008",
+      "Engine sits level, no strain on hoses/lines",
+      "Recheck torque after engine settles under its own weight"
+    ]
+  },
+  {
+    "id": "transmission-bellhousing",
+    "name": "Transmission Bellhousing",
+    "x": 50,
+    "y": 90,
+    "description": "Interface between engine and ZF 6-speed automatic transmission, housing the torque converter.",
+    "removalSteps": [
+      "Support transmission independently before separating from engine.",
+      "Remove torque converter bolts through inspection cover (TQ-010).",
+      "Remove bellhousing bolts (TQ-009).",
+      "Carefully separate engine and transmission, keeping them aligned on dowels."
+    ],
+    "inspectionPoints": [
+      "Torque converter seal / pilot condition",
+      "Dowel sleeve condition",
+      "Flywheel/flexplate wear"
+    ],
+    "torqueSpecRefs": ["TQ-009", "TQ-010"],
+    "commonMistakes": [
+      "Letting transmission hang unsupported on the input shaft",
+      "Torque converter not fully seated before bolting to flexplate — measure gap first"
+    ],
+    "reconnectChecklist": [
+      "Torque converter confirmed fully seated before bolt-up",
+      "Bellhousing bolts torqued per TQ-009",
+      "Converter bolts torqued per TQ-010",
+      "Transmission fluid level checked after reassembly"
+    ]
+  },
+  {
+    "id": "grounding-straps",
+    "name": "Grounding Straps",
+    "x": 66,
+    "y": 80,
+    "description": "Engine-to-body and engine-to-chassis ground straps critical for reliable CAN bus communication, glow plug operation, and starter current path.",
+    "removalSteps": [
+      "Note strap locations and label each with a wire ID.",
+      "Remove strap mounting bolts (TQ-026).",
+      "Set aside straps for cleaning."
+    ],
+    "inspectionPoints": [
+      "Corrosion at strap ends",
+      "Strap braid integrity (no broken/frayed strands)"
+    ],
+    "torqueSpecRefs": ["TQ-026"],
+    "commonMistakes": [
+      "Skipping straps during reassembly — causes intermittent electrical faults that are hard to diagnose later",
+      "Painting over ground points instead of masking them"
+    ],
+    "reconnectChecklist": [
+      "All mating surfaces cleaned to bare metal",
+      "Straps torqued per TQ-026",
+      "Continuity checked with multimeter engine-to-body and engine-to-battery negative"
+    ]
+  },
+  {
+    "id": "wiring-harness",
+    "name": "Engine Wiring Harness",
+    "x": 58,
+    "y": 52,
+    "description": "Main engine harness routing power, ground, and signal wiring to sensors, injectors, glow plugs, and the DDE.",
+    "removalSteps": [
+      "Work systematically front-to-back, labeling every connector using the Wire Labeling System before disconnecting.",
+      "Release harness clips and conduit from brackets.",
+      "Free harness from engine and lift clear with connectors protected."
+    ],
+    "inspectionPoints": [
+      "Chafed or melted insulation, especially near turbo/exhaust heat sources",
+      "Connector lock tab condition",
+      "Corrosion at any exposed splices"
+    ],
+    "torqueSpecRefs": [],
+    "commonMistakes": [
+      "Not labeling connectors before removal — leads to guesswork on reassembly",
+      "Routing harness too close to hot turbo components on reinstall"
+    ],
+    "reconnectChecklist": [
+      "Every connector matched to its labeled ID and marked reinstalled",
+      "Harness clipped clear of heat sources and moving parts",
+      "Full fault code scan performed after first start to confirm no open circuits"
+    ]
+  }
+]

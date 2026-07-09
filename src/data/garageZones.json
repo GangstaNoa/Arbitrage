@@ -1,0 +1,17 @@
+[
+  { "id": "front-bumper", "name": "Front Bumper / Front Clip", "chapterSlug": "engine-removal", "position": [0, 0.45, 2.3], "description": "Front bumper cover and headlight carrier — typically dropped forward on E70 to gain full engine bay access.", "disassemblyOrder": 1 },
+  { "id": "radiator-pack", "name": "Radiator Support Pack", "chapterSlug": "cooling-system", "position": [0, 0.6, 1.95], "description": "Radiator, condenser, intercooler and fan assembly mounted as a pack ahead of the engine.", "disassemblyOrder": 2 },
+  { "id": "cooling-system", "name": "Cooling System", "chapterSlug": "cooling-system", "position": [0, 0.55, 1.6], "description": "Hoses, thermostat, water pump and coolant expansion tank.", "disassemblyOrder": 3 },
+  { "id": "engine-bay", "name": "Engine Bay", "chapterSlug": "engine-removal", "position": [0, 0.75, 1.1], "description": "Full engine bay — hub for the engine removal and installation workflow.", "disassemblyOrder": 4 },
+  { "id": "intake-system", "name": "Intake System", "chapterSlug": "turbo-system", "position": [0.4, 0.85, 1.05], "description": "Airbox, MAF sensor and intake ducting feeding the turbo inlet.", "disassemblyOrder": 5 },
+  { "id": "turbo-system", "name": "Turbo System", "chapterSlug": "turbo-system", "position": [0.25, 0.65, 0.95], "description": "Sequential small/large turbocharger assembly on the exhaust manifold.", "disassemblyOrder": 6 },
+  { "id": "fuel-system", "name": "Fuel System", "chapterSlug": "fuel-system", "position": [-0.3, 0.65, 0.85], "description": "Common-rail fuel system: injectors, high pressure pump, fuel rail and lines.", "disassemblyOrder": 7 },
+  { "id": "transmission", "name": "Transmission", "chapterSlug": "transmission", "position": [0, 0.5, 0.1], "description": "ZF 6-speed automatic transmission and bellhousing interface.", "disassemblyOrder": 8 },
+  { "id": "transfer-case", "name": "Transfer Case", "chapterSlug": "transfer-case", "position": [0, 0.35, -0.25], "description": "xDrive transfer case distributing power to front and rear axles.", "disassemblyOrder": 9 },
+  { "id": "front-suspension", "name": "Front Suspension", "chapterSlug": "suspension", "position": [0.85, 0.25, 1.3], "description": "Front struts, control arms and subframe bushings.", "disassemblyOrder": 10 },
+  { "id": "rear-suspension", "name": "Rear Suspension", "chapterSlug": "suspension", "position": [0.85, 0.25, -1.6], "description": "Rear subframe, trailing arms and springs/shocks.", "disassemblyOrder": 11 },
+  { "id": "brakes", "name": "Brakes", "chapterSlug": "brakes", "position": [0.9, 0.25, 0], "description": "Front and rear brake calipers, carriers, pads and rotors.", "disassemblyOrder": 12 },
+  { "id": "interior", "name": "Interior", "chapterSlug": "interior-restoration", "position": [0, 0.9, -0.3], "description": "Seats, dash, trim and electronics for the interior restoration plan.", "disassemblyOrder": 13 },
+  { "id": "sound-system", "name": "Sound System", "chapterSlug": "sound-system", "position": [0, 0.9, -1.05], "description": "Head unit, amplifier, speakers and subwoofer planning zone.", "disassemblyOrder": 14 },
+  { "id": "exterior-panels", "name": "Exterior Panels", "chapterSlug": "exterior-restoration", "position": [-0.9, 0.6, 0], "description": "Body panels, paint and trim for the exterior restoration plan.", "disassemblyOrder": 15 }
+]

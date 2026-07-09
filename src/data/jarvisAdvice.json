@@ -1,0 +1,12 @@
+[
+  "Good evening. Engine bay analysis pending — recommend completing the Pre-Removal Checklist before any wrench touches the M57TU2D30.",
+  "Reminder: every connector should carry a wire label before disconnection. Retroactive labeling has a significantly higher error rate.",
+  "Recommendation: verify the replacement engine's bottom end personally. The original failure mode was a bearing fault that likely went unnoticed for some time.",
+  "Budget status nominal. Contingency reserve of 15% is holding — recommend not dipping below it before the install phase.",
+  "All safety-critical torque values in this system are placeholders pending BMW TIS verification. Do not proceed with final assembly on any flagged fastener without confirming the real spec.",
+  "Ground straps are the most under-rated component on this platform. I recommend inspecting every one during reassembly, not just the ones that look disconnected.",
+  "Diagnostics tip: after any battery disconnect, expect comfort access relearn procedures (windows, sunroof) — budget extra time for this.",
+  "Fuel system cleanliness is non-negotiable on a common-rail diesel. Treat every open fitting as contaminated until capped.",
+  "Suggest scheduling suspension and brake work while the front subframe is already accessible — efficient use of teardown time.",
+  "Sound system planning can proceed in parallel with mechanical work — wiring runs are easiest while interior trim is already disturbed."
+]
