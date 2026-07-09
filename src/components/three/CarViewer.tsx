@@ -5,6 +5,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import {
   OrbitControls,
   Html,
+  Line,
   Grid,
   Environment,
   Lightformer,
@@ -70,8 +71,11 @@ function RealCarBody() {
 
   // Model is authored close to real-world scale (~4.85m long) with its
   // origin roughly at mid-height — nudge it down so wheels sit on the grid.
+  // The source file's root node also carries a leftover ~35 deg yaw from
+  // the original scene/turntable it was exported from; cancel it out so
+  // +Z is actually straight ahead (matching garageZones.json positions).
   return (
-    <group scale={0.88} position={[0, 0.32, 0]}>
+    <group scale={0.88} position={[0, 0.0153, 0]} rotation={[0, 0.6094, 0]}>
       <primitive object={scene} />
     </group>
   );
@@ -111,6 +115,12 @@ function ZoneMarker({
   });
 
   const color = isCurrent ? "#ffb020" : active ? "#28ffb0" : CYAN;
+  const showCallout = hover || active;
+
+  // Leader line runs straight up from the marker to a label anchor above it,
+  // like an exploded-diagram callout, so the name is never left floating
+  // disconnected from the point it refers to.
+  const anchor: [number, number, number] = [0, 0.4, 0];
 
   return (
     <group position={zone.position}>
@@ -126,13 +136,20 @@ function ZoneMarker({
         <sphereGeometry args={[0.07, 16, 16]} />
         <meshStandardMaterial color={color} emissive={color} emissiveIntensity={1.2} />
       </mesh>
-      {(hover || active) && (
-        <Html distanceFactor={8} center>
-          <div className="pointer-events-none whitespace-nowrap rounded border border-cyan-400/60 bg-[#26282c]/95 px-2 py-1 text-[11px] text-cyan-300 shadow-[0_0_8px_rgba(57,244,255,0.5)]">
-            {orderMode ? `#${zone.disassemblyOrder} · ` : ""}
-            {zone.name}
-          </div>
-        </Html>
+      {showCallout && (
+        <>
+          <Line points={[[0, 0, 0], anchor]} color={color} lineWidth={1.5} transparent opacity={0.85} />
+          <mesh position={anchor}>
+            <sphereGeometry args={[0.018, 8, 8]} />
+            <meshStandardMaterial color={color} emissive={color} emissiveIntensity={1} />
+          </mesh>
+          <Html position={anchor} distanceFactor={8} center={false}>
+            <div className="pointer-events-none -translate-x-1/2 -translate-y-full whitespace-nowrap rounded border border-cyan-400/60 bg-[#26282c]/95 px-2 py-1 text-[11px] text-cyan-300 shadow-[0_0_8px_rgba(57,244,255,0.5)]">
+              {orderMode ? `#${zone.disassemblyOrder} · ` : ""}
+              {zone.name}
+            </div>
+          </Html>
+        </>
       )}
     </group>
   );
