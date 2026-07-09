@@ -205,39 +205,37 @@ unless you have personally confirmed the exact spec.**
 
 ---
 
-## How to add a real 3D model later
+## 3D Garage Viewer model
 
-The current 3D Garage Viewer (`src/components/three/CarViewer.tsx`) draws
-a stylized, geometry-only SUV (boxes + cylinders) so the app works
-out-of-the-box with zero external assets and zero copyrighted content.
+`public/models/bmw-x5.glb` is a real glTF car model (converted from an
+FBX source the project owner sourced and provided directly — no license
+file shipped with it, so if you're forking this repo, confirm you have
+rights to redistribute it, or swap it out per the steps below). It's
+loaded in `src/components/three/CarViewer.tsx` via `useGLTF` and repainted
+at runtime to BMW color 354 "Titanium Silver Metallic" by targeting the
+model's `_091614SSUV_bodycolor` material — see `RealCarBody` in that file.
 
-To swap in a real model:
+To swap in a different model:
 
-1. Get or create a **glTF/GLB** model of an E70-style SUV (no copyrighted
-   badges/logos — build your own or use a licensed/generic asset). Place it
-   at `public/models/x5.glb`.
-2. Install the loader helper (already available via `@react-three/drei`):
-   `useGLTF` from `@react-three/drei`.
-3. In `CarViewer.tsx`, replace the `<CarBody />` component with something
-   like:
-
-   ```tsx
-   import { useGLTF } from "@react-three/drei";
-
-   function CarBody() {
-     const { scene } = useGLTF("/models/x5.glb");
-     return <primitive object={scene} scale={1} position={[0, 0, 0]} />;
-   }
-   ```
-
-4. Re-check the `garageZones.json` `position` values ([x, y, z] in meters)
-   against your model's actual dimensions/origin and adjust so the glowing
-   zone markers line up with the real geometry.
-5. For an "exploded view" with a real model, either author separate
-   named meshes/groups per assembly in your GLB (engine, hood, bumper,
-   etc.) and translate each on the `exploded` boolean, or keep the current
-   marker-explode behavior (zone markers spread outward) which already
-   works with any body mesh.
+1. Get or create a **glTF/GLB** model of an E70-style SUV and place it at
+   `public/models/bmw-x5.glb` (or update `MODEL_URL` in `CarViewer.tsx`).
+2. If it has a dedicated "paintable" material (a solid color with no
+   texture, often named something like `bodycolor`), update the material
+   name check in `RealCarBody`'s traversal to match it, so the Titanium
+   Silver repaint still targets the right slot. Otherwise the model will
+   render in its own baked-in colors.
+3. Re-check the `garageZones.json` `position` values ([x, y, z] in meters)
+   against your model's actual dimensions/origin, and the `scale`/`position`
+   on the wrapping `<group>` in `RealCarBody`, so the glowing zone markers
+   line up with the real geometry and the wheels sit on the grid.
+4. True panel-separation "exploded view" isn't wired up for the real model
+   (its body is one combined mesh) — only the zone markers spread outward
+   in explode mode. To get panel-level explode, author separate named
+   meshes/groups per assembly (hood, doors, bumpers) in your GLB and
+   translate each on the `exploded` boolean, the way the original
+   procedural version did.
+5. If `bmw-x5.glb` won't load (e.g. you removed it), `CarViewer` falls back
+   to a plain wireframe box via React Suspense — it won't crash the page.
 
 ---
 

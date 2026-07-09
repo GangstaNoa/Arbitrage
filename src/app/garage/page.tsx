@@ -88,8 +88,8 @@ export default function GaragePage() {
 
         <div className="no-print absolute bottom-3 left-3 right-3 z-10 rounded border border-jarvis-border/60 bg-jarvis-bg/80 px-3 py-2 text-[11px] text-jarvis-dim backdrop-blur">
           Drag to rotate · Pinch/scroll to zoom · Tap a glowing node to open its
-          chapter. This is a placeholder geometric SUV — see README for how to
-          swap in a real 3D model.
+          chapter. Model repainted to BMW 354 Titanium Silver Metallic to match
+          this car.
         </div>
       </GlassPanel>
 
