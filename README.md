@@ -51,8 +51,8 @@ npm run start
 
 Everything you enter (checklists, wire labels, notes, photo placeholders,
 budget edits, coding logs, restoration tasks) is saved to your browser's
-localStorage under keys prefixed `jarvis-x5-os:`. Nothing leaves your
-machine. Use the **"Export Project Data"** button in the sidebar at any
+localStorage under keys prefixed `jarvis-x5-os:`. By default nothing leaves
+your machine. Use the **"Export Project Data"** button in the sidebar at any
 time to download a full JSON backup of everything you've entered.
 
 ### Using it on an iPhone in the garage
@@ -62,6 +62,53 @@ visit `http://<your-laptop-LAN-IP>:3000` from Safari on the iPhone. The UI
 is responsive down to phone width, the 3D viewer supports touch
 drag/pinch-zoom, and print buttons work from the iPhone's share sheet →
 Print if you need a paper copy of a chapter or checklist.
+
+Note that this LAN-only setup does **not** share data between devices —
+your laptop's browser and your phone's browser each have their own
+localStorage. See the next section if you want the same checklist/budget/
+wire-label data to show up on both.
+
+---
+
+## Optional: deploy it + sync across devices (Supabase)
+
+By default every browser/device has its own local copy of your data. If
+you want your PC and phone to see the *same* data — and to reach the app
+from a URL instead of running `npm run dev` locally every time — you can
+deploy it (e.g. to [Vercel](https://vercel.com)) and back it with a free
+[Supabase](https://supabase.com) project. This is entirely optional; with
+none of the env vars below set, the app behaves exactly as described above.
+
+1. **Create a Supabase project** (free tier is enough) and open the SQL
+   editor. Run the contents of [`supabase/schema.sql`](./supabase/schema.sql)
+   to create the single `app_state` table sync uses.
+2. **Get your credentials** from Supabase → Project Settings → API:
+   the Project URL and the **`service_role`** secret key (not the
+   `anon`/public key — the service role key is only ever used server-side
+   here and must stay secret).
+3. **Choose a passcode and a session secret.** Since the app will now be
+   reachable from a public URL instead of just your home Wi-Fi, set
+   `APP_PASSCODE` to a PIN/password of your choice, and `APP_SESSION_SECRET`
+   to a random string (e.g. `openssl rand -hex 32`). Every device has to
+   enter the passcode once; it's then remembered for 30 days via a signed,
+   httpOnly cookie.
+4. **Set the four env vars** — copy [`.env.example`](./.env.example) to
+   `.env.local` for local testing, and add the same four vars in your
+   Vercel project's Settings → Environment Variables for the deployed app:
+   `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `APP_PASSCODE`,
+   `APP_SESSION_SECRET`.
+5. **Deploy to Vercel**: push this repo to GitHub, import it at
+   [vercel.com/new](https://vercel.com/new), add the env vars, deploy. Visit
+   the resulting URL from both your PC and your phone and enter the
+   passcode on each.
+
+How it works: none of these env vars are `NEXT_PUBLIC_*`, so the Supabase
+credentials never reach the browser. Every read/write still goes through
+`localStorage` first (instant, works offline), and in the background the
+app mirrors each change to Supabase through its own `/api/state/[key]`
+route and polls every ~15s for changes made on another device. If Supabase
+or the network is unreachable, everything silently falls back to
+local-only behavior — nothing breaks.
 
 ---
 

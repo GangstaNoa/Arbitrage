@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Orbitron, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Sidebar from "@/components/layout/Sidebar";
-import TopBar from "@/components/layout/TopBar";
+import AppShell from "@/components/layout/AppShell";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -42,15 +41,7 @@ export default function RootLayout({
       className={`dark ${orbitron.variable} ${jetbrainsMono.variable}`}
     >
       <body className="hud-grid-bg antialiased">
-        <div className="flex min-h-screen">
-          <Sidebar />
-          <div className="flex min-h-screen flex-1 flex-col lg:pl-64">
-            <TopBar />
-            <main className="flex-1 px-3 pb-16 pt-4 sm:px-5 lg:px-8">
-              {children}
-            </main>
-          </div>
-        </div>
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );
