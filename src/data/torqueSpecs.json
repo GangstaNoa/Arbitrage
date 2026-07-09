@@ -3,223 +3,223 @@
     "id": "TQ-001",
     "component": "Engine",
     "fastener": "Main bearing cap bolts (M57TU2D30)",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "angle": "VERIFY IN BMW TIS",
-    "notes": "Safety-critical. Likely multi-stage torque-to-yield with angle spec. Replace bolts if TIS specifies single-use. Commonly-published enthusiast/workshop reference figures for this bolt on M57-family engines are in the rough neighborhood of an initial ~20 Nm followed by a ~50° angle stage — treat that as context only, not a value to torque to; get the exact figure and stage count for this specific casting from TIS.",
-    "source": "UNVERIFIED"
+    "torqueValue": "~20 Nm",
+    "angle": "+ ~50°",
+    "notes": "Safety-critical, torque-to-yield, single-use — always fit new bolts, never reuse. This is a commonly-published reference figure for the M57 family (settle torque + angle stage), cross-referenced across multiple independent workshop-manual sources, but casting/bolt revisions can differ. Confirm the exact figure and stage count for this specific block casting in BMW TIS before final assembly — this fastener is the root cause category of the original engine's failure, so do not guess.",
+    "source": "Community/workshop reference (M57 family) — cross-check BMW TIS"
   },
   {
     "id": "TQ-002",
     "component": "Engine",
     "fastener": "Connecting rod bearing cap bolts (M57TU2D30)",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "angle": "VERIFY IN BMW TIS",
-    "notes": "Safety-critical, root cause of failure event. Always use new bolts and new bearings. Confirm bearing color/size code against crank journal measurement. Commonly-published reference figures for this bolt on M57-family engines are roughly a ~5 Nm settle stage, then ~20 Nm, then a further angle stage around ~70° — again, context only, not a substitute for the exact TIS spec.",
-    "source": "UNVERIFIED"
+    "torqueValue": "~5 Nm settle, then ~20 Nm",
+    "angle": "+ ~70°",
+    "notes": "Safety-critical, torque-to-yield, single-use — always fit new bolts and new bearings. Confirm bearing color/size code against measured crank journal before assembly. Commonly-published reference figure for the M57 family, cross-referenced across multiple workshop-manual sources. Confirm exact figure in BMW TIS for this casting — this is the exact fastener category responsible for the original engine's failure.",
+    "source": "Community/workshop reference (M57 family) — cross-check BMW TIS"
   },
   {
     "id": "TQ-003",
     "component": "Engine",
     "fastener": "Cylinder head bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "angle": "VERIFY IN BMW TIS",
-    "notes": "Torque-to-yield, multi-stage sequence required. Single-use bolts — replace every time. Commonly-published reference figures for M57-family head bolts describe a sequence roughly like ~80 Nm, fully loosen, ~50 Nm, then two further ~90° angle stages — this pattern (torque, loosen, re-torque, angle, angle) is a useful sanity check that you're following the right shape of procedure, but the exact numbers and stage count must come from TIS for this casting.",
-    "source": "UNVERIFIED"
+    "torqueValue": "~80 Nm, fully loosen, then ~50 Nm",
+    "angle": "+ ~90° + ~90°",
+    "notes": "Torque-to-yield, multi-stage sequence, single-use bolts — replace every time. This torque-loosen-retorque-angle-angle shape is commonly published and cross-referenced across multiple M57 workshop-manual sources, but confirm the exact numbers and stage count for this casting in BMW TIS before final assembly.",
+    "source": "Community/workshop reference (M57 family) — cross-check BMW TIS"
   },
   {
     "id": "TQ-004",
     "component": "Engine",
     "fastener": "Oil pan bolts (lower + upper sump)",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Two-piece sump on E70 diesel. Confirm bolt length map before reinstall — mixed lengths are a common mistake.",
-    "source": "UNVERIFIED"
+    "torqueValue": "VERIFY IN BMW TIS (not confidently sourced in research)",
+    "notes": "Two-piece sump on E70 diesel. Confirm bolt length map before reinstall — mixed lengths are a common mistake. No reliable published figure was found for this exact fastener during research — this is a low-consequence fastener (sump gasket leak at worst if under-torqued) but still confirm in TIS rather than guess.",
+    "source": "UNVERIFIED — not found in research"
   },
   {
     "id": "TQ-005",
     "component": "Engine",
     "fastener": "Flywheel / flexplate bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
+    "torqueValue": "VERIFY IN BMW TIS (not confidently sourced in research)",
     "angle": "VERIFY IN BMW TIS",
-    "notes": "Safety-critical rotating assembly fastener. Loctite per TIS if specified.",
-    "source": "UNVERIFIED"
+    "notes": "Safety-critical rotating assembly fastener. Loctite per TIS if specified. No reliable M57/E70-specific published figure was found during research — do not substitute a generic BMW figure for a rotating-assembly fastener like this one.",
+    "source": "UNVERIFIED — not found in research"
   },
   {
     "id": "TQ-006",
     "component": "Engine",
     "fastener": "Vibration damper / crank pulley bolt",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "angle": "VERIFY IN BMW TIS",
-    "notes": "High torque value — requires crank holding tool. Do not use starter motor to lock crank.",
-    "source": "UNVERIFIED"
+    "torqueValue": "~40 Nm",
+    "angle": "+ ~120°",
+    "notes": "High torque value overall once the angle stage is applied — requires a crank holding tool. Do not use the starter motor to lock the crank. Torque-to-yield per commonly-published M57 workshop-manual references — confirm in BMW TIS before final assembly.",
+    "source": "Community/workshop reference (M57 family) — cross-check BMW TIS"
   },
   {
     "id": "TQ-007",
     "component": "Engine mounts",
     "fastener": "Engine mount to subframe bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Confirm left/right mount part numbers match xDrive35d application.",
-    "source": "UNVERIFIED"
+    "torqueValue": "VERIFY IN BMW TIS (not confidently sourced in research)",
+    "notes": "Confirm left/right mount part numbers match xDrive35d application (see Parts Database PT-008 — sources disagree on whether L/R share one part number).",
+    "source": "UNVERIFIED — not found in research"
   },
   {
     "id": "TQ-008",
     "component": "Engine mounts",
     "fastener": "Engine mount to block bracket bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
+    "torqueValue": "VERIFY IN BMW TIS (not confidently sourced in research)",
     "notes": "Inspect brackets for cracking before reuse.",
-    "source": "UNVERIFIED"
+    "source": "UNVERIFIED — not found in research"
   },
   {
     "id": "TQ-009",
     "component": "Transmission",
     "fastener": "Bellhousing to engine bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
+    "torqueValue": "VERIFY IN BMW TIS (not confidently sourced in research)",
     "notes": "Confirm dowel sleeve alignment before torquing sequence.",
-    "source": "UNVERIFIED"
+    "source": "UNVERIFIED — not found in research"
   },
   {
     "id": "TQ-010",
     "component": "Transmission",
     "fastener": "Torque converter to flexplate bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
+    "torqueValue": "VERIFY IN BMW TIS (not confidently sourced in research)",
     "notes": "Rotate engine to access each bolt; verify converter is fully seated (measure gap) before bolting.",
-    "source": "UNVERIFIED"
+    "source": "UNVERIFIED — not found in research"
   },
   {
     "id": "TQ-011",
     "component": "Turbo system",
     "fastener": "Turbocharger to exhaust manifold nuts (both stages)",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Use new gaskets and new self-locking nuts. Anti-seize on studs per TIS guidance.",
-    "source": "UNVERIFIED"
+    "torqueValue": "~220 Nm (ring nut to manifold)",
+    "notes": "Use new gaskets and new self-locking nuts. Anti-seize on studs per TIS guidance. Cross-referenced across several M57-family official-style workshop-manual sources (E39 530d, E53 X5 3.0d, E91 335d) — the figure appears consistent across these related applications, but confirm for this exact turbo stage in BMW TIS.",
+    "source": "Community/workshop-manual reference (M57 family) — cross-check BMW TIS"
   },
   {
     "id": "TQ-012",
     "component": "Turbo system",
     "fastener": "Turbo oil feed / return line banjo bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "New copper sealing washers every time. Low torque value — do not overtighten banjo bolts.",
-    "source": "UNVERIFIED"
+    "torqueValue": "~25 Nm",
+    "notes": "New copper sealing washers every time. Low torque value — do not overtighten banjo bolts (they seal via the crush washer, not clamping force alone). Cross-referenced across several M57-family workshop-manual sources.",
+    "source": "Community/workshop-manual reference (M57 family) — cross-check BMW TIS"
   },
   {
     "id": "TQ-013",
     "component": "Cooling system",
     "fastener": "Radiator mount bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Plastic end tank fittings — hand-tight plus small torque only, do not overtighten.",
-    "source": "UNVERIFIED"
+    "torqueValue": "VERIFY IN BMW TIS (not confidently sourced in research)",
+    "notes": "Plastic end tank fittings — hand-tight plus small torque only, do not overtighten. Low-consequence fastener (cracked plastic tank at worst if over-torqued) — a light touch matters more here than an exact number.",
+    "source": "UNVERIFIED — not found in research"
   },
   {
     "id": "TQ-014",
     "component": "Cooling system",
     "fastener": "Water pump bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Confirm mechanical vs electric pump variant for VIN before ordering.",
-    "source": "UNVERIFIED"
+    "torqueValue": "VERIFY IN BMW TIS (not confidently sourced in research)",
+    "notes": "Confirm mechanical vs electric pump variant for VIN before ordering (see Parts Database PT-012, commonly cited as 11517801063).",
+    "source": "UNVERIFIED — not found in research"
   },
   {
     "id": "TQ-015",
     "component": "Fuel system",
     "fastener": "High pressure fuel rail bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Safety-critical, high pressure common-rail diesel system. Cleanliness is critical — zero contamination tolerance.",
-    "source": "UNVERIFIED"
+    "torqueValue": "~13 Nm (roughly 9.5 ft-lb, lower confidence)",
+    "notes": "Safety-critical, high pressure common-rail diesel system. Cleanliness is critical — zero contamination tolerance. This figure was only found for generically-described 'turbo 3-series' applications rather than confirmed specifically for M57TU2D30 — treat as a rough sanity-check figure only, not a value to torque to without confirming in TIS.",
+    "source": "Low-confidence cross-reference — confirm in BMW TIS before use"
   },
   {
     "id": "TQ-016",
     "component": "Fuel system",
     "fastener": "Injector clamp bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
+    "torqueValue": "~10 Nm (M6 clamp bolts) or ~30 Nm (M8 clamp bolts, engine-dependent)",
     "angle": "VERIFY IN BMW TIS",
-    "notes": "Safety-critical. Injector coding/matching to ECU may be required after replacement — confirm via ISTA.",
-    "source": "UNVERIFIED"
+    "notes": "Safety-critical. Injector coding/matching to ECU is required after replacement — confirm via ISTA. Published M57/M57TU references show a real split depending on which clamp bolt size this specific engine uses (M6 vs M8) — confirm which applies to this casting in BMW TIS rather than assuming.",
+    "source": "Community/workshop reference (M57 family, bolt-size dependent) — cross-check BMW TIS"
   },
   {
     "id": "TQ-017",
     "component": "Suspension — Front",
     "fastener": "Front strut top mount nuts",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "If self-leveling / adaptive suspension equipped, confirm correct strut variant for VIN.",
-    "source": "UNVERIFIED"
+    "torqueValue": "~34 Nm (3 nuts)",
+    "notes": "If self-leveling / adaptive suspension equipped, confirm correct strut variant for VIN. Figure is commonly cited for related BMW chassis of this era (E90/E46-adjacent sources) — the heavier E70 X5 strut top may differ, so treat as a reference point and confirm in TIS.",
+    "source": "Cross-chassis reference (E90/E46-era BMW) — cross-check BMW TIS for E70"
   },
   {
     "id": "TQ-018",
     "component": "Suspension — Front",
     "fastener": "Lower control arm ball joint pinch bolt",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Safety-critical steering/suspension fastener.",
-    "source": "UNVERIFIED"
+    "torqueValue": "~81 Nm",
+    "notes": "Safety-critical steering/suspension fastener. Commonly cited as the steering-knuckle-to-ball-joint pinch bolt torque on related BMW chassis of this era — confirm for E70 specifically in BMW TIS before final assembly.",
+    "source": "Cross-chassis reference (E90-era BMW) — cross-check BMW TIS for E70"
   },
   {
     "id": "TQ-019",
     "component": "Suspension — Rear",
     "fastener": "Rear subframe to body bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
+    "torqueValue": "Sources conflict: ~100 Nm cited as TIS-documented for E90/E91/E92/E93, ~143 Nm cited elsewhere for a similar rear subframe bolt",
     "angle": "VERIFY IN BMW TIS",
-    "notes": "Safety-critical structural fastener. Torque-to-yield on many BMW subframe applications — verify single-use status.",
-    "source": "UNVERIFIED"
+    "notes": "Safety-critical structural fastener, likely torque-to-yield and single-use on many BMW subframe applications. Research surfaced two meaningfully different published figures for what may be different bolt positions or different chassis — this is exactly the kind of conflict that means you should NOT pick one and proceed. Confirm the exact figure, position-by-position, in BMW TIS for this E70 chassis before final assembly.",
+    "source": "CONFLICTING sources — do not use without TIS confirmation"
   },
   {
     "id": "TQ-020",
     "component": "Brakes",
     "fastener": "Front caliper carrier bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Safety-critical. Torque wrench mandatory, no impact gun.",
-    "source": "UNVERIFIED"
+    "torqueValue": "~110 Nm",
+    "notes": "Safety-critical. Torque wrench mandatory, no impact gun. Commonly cited for E70 X5 front brakes across several independent sources.",
+    "source": "Community/workshop reference (E70 X5) — cross-check BMW TIS"
   },
   {
     "id": "TQ-021",
     "component": "Brakes",
     "fastener": "Rear caliper carrier bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Safety-critical. Torque wrench mandatory, no impact gun.",
-    "source": "UNVERIFIED"
+    "torqueValue": "~65 Nm",
+    "notes": "Safety-critical. Torque wrench mandatory, no impact gun. Commonly cited for E70 X5 rear brakes. Caliper guide pins themselves (a different, smaller fastener) are commonly cited around ~30 Nm — don't confuse the two when reassembling.",
+    "source": "Community/workshop reference (E70 X5) — cross-check BMW TIS"
   },
   {
     "id": "TQ-022",
     "component": "Wheels",
     "fastener": "Wheel bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Safety-critical. Confirm spec for factory wheel type (alloy vs aftermarket) and re-torque after first 50km.",
-    "source": "UNVERIFIED"
+    "torqueValue": "~140 Nm (14mm wheel bolts, all E70 X5 variants)",
+    "notes": "Safety-critical. This figure is specifically and consistently cited as the X5-wide spec for the 14mm-thread wheel bolts fitted to all E70 X5s — most other BMW models use a smaller 12mm bolt torqued to ~120 Nm, so don't carry over a figure from a 3-Series/5-Series reference by mistake. Re-torque after the first ~50 km following any wheel-off work.",
+    "source": "Community/workshop reference (E70 X5-specific) — cross-check BMW TIS"
   },
   {
     "id": "TQ-023",
     "component": "Transfer case",
     "fastener": "Transfer case to transmission bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Check output flange alignment before final torque.",
-    "source": "UNVERIFIED"
+    "torqueValue": "VERIFY IN BMW TIS (not confidently sourced in research)",
+    "notes": "Check output flange alignment before final torque. Perform the transfer case adaptation reset via diagnostic tool after any fluid service, regardless of this fastener's spec.",
+    "source": "UNVERIFIED — not found in research"
   },
   {
     "id": "TQ-024",
     "component": "Driveshaft",
     "fastener": "Driveshaft flange bolts (front & rear)",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Safety-critical rotating assembly. Use new self-locking bolts if specified.",
-    "source": "UNVERIFIED"
+    "torqueValue": "~85 Nm (rear diff flange, Torx-head, cross-chassis reference only)",
+    "notes": "Safety-critical rotating assembly. Use new self-locking bolts if specified. The figure found during research was for a different BMW chassis (E46) rear differential flange, not confirmed for E70 — treat as a rough sanity-check only and confirm the real E70 figure in BMW TIS before final assembly.",
+    "source": "Low-confidence cross-chassis reference (E46) — confirm in BMW TIS for E70"
   },
   {
     "id": "TQ-025",
     "component": "Electrical",
     "fastener": "Battery terminal clamps",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Low torque value. Disconnect negative first, connect negative last.",
-    "source": "UNVERIFIED"
+    "torqueValue": "VERIFY IN BMW TIS (not confidently sourced in research)",
+    "notes": "Low torque value, low consequence if slightly off — but a loose terminal can still cause intermittent electrical faults and a charging-system warning. Disconnect negative first, connect negative last.",
+    "source": "UNVERIFIED — not found in research"
   },
   {
     "id": "TQ-026",
     "component": "Electrical",
     "fastener": "Engine-to-body grounding strap bolts",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Clean all mating surfaces to bare metal for good ground continuity — critical for CAN bus and glow plug system reliability.",
-    "source": "UNVERIFIED"
+    "torqueValue": "VERIFY IN BMW TIS (not confidently sourced in research)",
+    "notes": "Clean all mating surfaces to bare metal for good ground continuity — critical for CAN bus and glow plug system reliability. A missed or poorly cleaned ground is a far more common real-world fault than an under-torqued strap bolt.",
+    "source": "UNVERIFIED — not found in research"
   },
   {
     "id": "TQ-027",
     "component": "Steering",
     "fastener": "Steering column universal joint pinch bolt",
-    "torqueValue": "VERIFY IN BMW TIS",
-    "notes": "Safety-critical steering fastener.",
-    "source": "UNVERIFIED"
+    "torqueValue": "VERIFY IN BMW TIS (not confidently sourced in research)",
+    "notes": "Safety-critical steering fastener. No reliable M57/E70-specific published figure was found during research — this is a steering-safety fastener, so do not substitute a guessed or generic value.",
+    "source": "UNVERIFIED — not found in research"
   }
 ]

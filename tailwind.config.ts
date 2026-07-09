@@ -11,18 +11,18 @@ const config: Config = {
     extend: {
       colors: {
         jarvis: {
-          bg: "#04070d",
-          panel: "#0a1220",
-          panel2: "#0d1a2b",
-          border: "#1c3a52",
+          bg: "#26282c",
+          panel: "#303338",
+          panel2: "#3a3d43",
+          border: "#4c4f56",
           cyan: "#39f4ff",
           cyan2: "#0ff0fc",
           blue: "#2d8fff",
           amber: "#ffb020",
-          red: "#ff3b5c",
+          red: "#ff5c78",
           green: "#28ffb0",
-          dim: "#5c7f96",
-          ink: "#dceaf2",
+          dim: "#a3a6ac",
+          ink: "#f2f3f5",
         },
       },
       fontFamily: {
@@ -32,7 +32,7 @@ const config: Config = {
       boxShadow: {
         glow: "0 0 8px rgba(57,244,255,0.55), 0 0 24px rgba(57,244,255,0.25)",
         "glow-sm": "0 0 4px rgba(57,244,255,0.5)",
-        "glow-red": "0 0 8px rgba(255,59,92,0.55), 0 0 24px rgba(255,59,92,0.25)",
+        "glow-red": "0 0 8px rgba(255,92,120,0.55), 0 0 24px rgba(255,92,120,0.25)",
         "glow-amber": "0 0 8px rgba(255,176,32,0.5), 0 0 24px rgba(255,176,32,0.2)",
         "glow-green": "0 0 8px rgba(40,255,176,0.5), 0 0 24px rgba(40,255,176,0.2)",
         panel: "0 4px 30px rgba(0,0,0,0.5)",

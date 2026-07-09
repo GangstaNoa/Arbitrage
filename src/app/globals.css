@@ -8,16 +8,16 @@
 
 html,
 body {
-  background-color: #04070d;
-  color: #d8f4ff;
+  background-color: #26282c;
+  color: #f2f3f5;
 }
 
 body {
   font-family: var(--font-mono);
   min-height: 100vh;
   background-image:
-    radial-gradient(circle at 20% 0%, rgba(57, 244, 255, 0.08), transparent 55%),
-    radial-gradient(circle at 85% 15%, rgba(45, 143, 255, 0.06), transparent 45%);
+    radial-gradient(circle at 20% 0%, rgba(57, 244, 255, 0.06), transparent 55%),
+    radial-gradient(circle at 85% 15%, rgba(45, 143, 255, 0.05), transparent 45%);
   background-attachment: fixed;
 }
 
@@ -32,14 +32,14 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #060b14;
+  background: #2c2f34;
 }
 ::-webkit-scrollbar-thumb {
-  background: #144357;
+  background: #55585f;
   border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #1c5a72;
+  background: #6b6e76;
 }
 
 /* HUD grid backdrop */
