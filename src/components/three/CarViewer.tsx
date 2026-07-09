@@ -65,13 +65,14 @@ function CarBody({ exploded }: { exploded: boolean }) {
   const bumperOffset = exploded ? 0.6 : 0;
   const doorOffset = exploded ? 0.75 : 0;
 
+  // BMW 354 "Titan(ium) Silver Metallic" — warm-toned medium silver.
   const paint = useMemo(
     () => ({
-      color: "#2b3946",
-      roughness: 0.32,
-      metalness: 0.65,
+      color: "#a3a19b",
+      roughness: 0.28,
+      metalness: 0.75,
       clearcoat: 1,
-      clearcoatRoughness: 0.12,
+      clearcoatRoughness: 0.08,
     }),
     []
   );
@@ -126,7 +127,7 @@ function CarBody({ exploded }: { exploded: boolean }) {
         smoothness={3}
         position={[0, 0.94, -0.2]}
       >
-        <meshStandardMaterial color="#3a4a58" roughness={0.3} metalness={0.7} />
+        <meshStandardMaterial color="#818177" roughness={0.3} metalness={0.7} />
       </RoundedBox>
 
       {/* Cabin / greenhouse (glass) */}
